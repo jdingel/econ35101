@@ -82,7 +82,7 @@ Here are a few notes on getting started in Julia:
     [DFS1977\_example\_juliabox.png](DFS1977_example_juliabox.png)
 -   To install Julia on your own machine, download Julia 1.1 from
     <https://julialang.org/downloads>. The first ten lines
-    of [DFS1977\_example.jl](DFS1977_example.jl)show how to install packages. 
+    of [DFS1977\_example.jl](DFS1977_example.jl) show how to install packages. 
 	You might also consider those that are [dependencies for the QuantEcon package](https://github.com/QuantEcon/QuantEcon.jl/blob/master/REQUIRE) and those listed as [Useful
     Libraries](https://lectures.quantecon.org/jl/julia_libraries.html)
     by QuantEcon.

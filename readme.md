@@ -61,6 +61,10 @@ To get started doing economics in Julia, see Perla, Sargent, and Stachurski’s
 You may submit Julia or Matlab code as homework solutions.
 Please confer with me before submitting code written in other languages.
 
+Standards for transparency and replicability are rising quickly.
+The AEA has appointed a [Data Editor](https://github.com/AEADataEditor/) who will verify that code works [prior](https://www.aeaweb.org/journals/policies/data-code) to accepting papers for publication.
+Please write code for this class that is transparent and self-contained.
+
 ### Other resources
 
 -   I borrow considerably from Arnaud Costinot and Dave Donaldson’s PhD [class
@@ -209,7 +213,7 @@ books:
     “[The Determinants of Quality Specialization](http://academic.oup.com.proxy.uchicago.edu/restud/article/84/4/1551/2684498)”,
     *Review of Economic Studies*, 84(4): 1551-1582.
 
--   Matsuyama, Kiminori. 2015. 
+-   Matsuyama, Kiminori. 2019. 
     “[Engel's Law in the Global Economy: Demand‐Induced Patterns of Structural Change, Innovation, and Trade](https://onlinelibrary-wiley-com.proxy.uchicago.edu/doi/10.3982/ECTA13765)”,
     *Econometrica* 87: 497-528. 
 
