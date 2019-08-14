@@ -14,7 +14,7 @@ Email: <jdingel@chicagobooth.edu> | Phone: 773-834-5458 | Office: Harper 380\
 Office hours: By appointment, please email\
 Teaching assistant: Takashi Onoda (<onoda@uchicago.edu>)\
 Course materials: [github.com/jdingel/econ35101](http://github.com/jdingel/econ35101) and
-[canvas.uchicago.edu](http://canvas.uchicago.edu/)\
+[canvas.uchicago.edu](https://canvas.uchicago.edu/courses/22781)\
 Class schedule: Mondays 8:30 AM - 11:30 AM in Harper Center 3A\
 This course will **start September 23** and run through December 2.
 We will not meet on October 21.
