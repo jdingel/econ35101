@@ -21,8 +21,8 @@ We will not meet on October 21.
 
 ### Assessment
 
-Grades will be based on comprehension checks (20%), assignments (50%),
-and a final exam (30%).
+Grades will be based on comprehension checks (15%), assignments (60%),
+and a final exam (25%).
 
 -   Comprehension checks should require little more than comprehending
     the assigned readings.
@@ -49,8 +49,8 @@ Submit your work via the Canvas site.
 
 ### Computation
 
-Scientific computation is important. You have choices to make. See “[A
-Comparison of Programming Languages in
+Scientific computation is important. You have choices to make. 
+See “[A Comparison of Programming Languages in
 Economics](https://github.com/jesusfv/Comparison-Programming-Languages-Economics).”
 [I recommend](https://tradediversion.net/2018/09/17/why-i-encourage-econ-phd-students-to-learn-julia/)
 the [Julia language](http://www.julialang.org).
