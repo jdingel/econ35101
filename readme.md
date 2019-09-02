@@ -49,14 +49,19 @@ Submit your work via the Canvas site.
 
 ### Computation
 
-Scientific computation is important. You have choices to make. 
+Scientific computation is important.
+I hope that you have already been exposed to the basics.
+Please glance at Jesus Fernandez-Villaverde's "[Computational Methods for Economists](https://www.sas.upenn.edu/~jesusfv/teaching.html)" course.
+My workflow is outlined in my [project template](https://github.com/jdingel/projecttemplate).
+
+You have choices to make.
 See “[A Comparison of Programming Languages in
 Economics](https://github.com/jesusfv/Comparison-Programming-Languages-Economics).”
 [I recommend](https://tradediversion.net/2018/09/17/why-i-encourage-econ-phd-students-to-learn-julia/)
 the [Julia language](http://www.julialang.org).
-Julia’s advantages are that it is open source and typically faster than Matlab.
+Julia's advantages are that it is open source and typically faster than Matlab.
 Its downside is that it is a young language, so its syntax is evolving.
-To get started doing economics in Julia, see Perla, Sargent, and Stachurski’s
+To get started doing economics in Julia, see Perla, Sargent, and Stachurski's
 “[Lectures in Quantitative Economics](https://lectures.quantecon.org/jl/).”
 You may submit Julia or Matlab code as homework solutions.
 Please confer with me before submitting code written in other languages.
@@ -67,13 +72,13 @@ Please write code for this class that is transparent and self-contained.
 
 ### Other resources
 
--   I borrow considerably from Arnaud Costinot and Dave Donaldson’s PhD [class
+-   I borrow considerably from Arnaud Costinot and Dave Donaldson's PhD [class
     materials](https://dave-donaldson.com/teaching/)
 
 -   I will link to relevant [Trade
     Diversion](https://tradediversion.net) blog posts
 
--   Alan Deardorff’s [Glossary of International
+-   Alan Deardorff's [Glossary of International
     Economics](http://www-personal.umich.edu/~alandear/glossary/)
 
 ### Presentation and writing
@@ -153,7 +158,7 @@ books:
 
 -   Costinot, Arnaud and David Donaldson, and Ivana Komunjer. 2012.
     “[What Goods Do Countries Trade? A Quantitative Exploration of
-    Ricardo’s
+    Ricardo's
     Ideas](http://academic.oup.com.proxy.uchicago.edu/restud/issue/79/2).”
     *Review of Economic Studies,* 79(2): 581-608.
 
