@@ -1,0 +1,46 @@
+%Jonathan Dingel; PhD trade course
+
+% PACKAGES
+\usepackage{graphics}  % Support for images/figures
+\usepackage{graphicx}  % Includes the \resizebox command
+\usepackage{url}	   % Includes \urldef and \url commands
+\usepackage{soul}      % Includes the underline \ul command
+%\usepackage{framed}	   % Includes the \framed command for box around text
+\usepackage{booktabs} %\toprule,\bottomrule
+\usepackage{natbib}
+\usepackage{bibentry}  % Includes the \nobibliography command
+\usepackage{bbm}       %
+%\usepackage{pgfpages}  %Supports "notes on second screen" option for beamer
+\usepackage{verbatim}  %Supports comments
+\usepackage{tikz}		%Supports graphing/drawing
+\usepackage{pgfplots} %Supports graphing/drawing
+\usepackage{amsfonts}  % Lots of stuff, including \mathbb 
+\usepackage{amsmath}   % Standard math package
+\usepackage{amsthm}    % Includes the comment functions
+\usepackage{physics}
+
+% CUSTOM DEFINITIONS
+\urldef{\dingelhomepage}\url{faculty.chicagobooth.edu/jonathan.dingel/}
+\urldef{\dingelemail}\url{jdingel@chicagobooth.edu}
+\def\newblock{} %Get beamer to cooperate with BibTeX
+\linespread{1.2}
+\hypersetup{backref,pdfpagemode=FullScreen,colorlinks=true,linkcolor=blue,urlcolor=blue}
+\newtheorem{proposition}{Proposition}
+\newtheorem{assumption}{Assumption}
+
+% IDENTIFYING INFORMATION
+\title{International Macroeconomics and Trade}
+\author{Jonathan I. Dingel}
+\date{Autumn \the\year}
+
+% BEAMER TEACHING STUFF
+%\setbeameroption{show notes on second screen}
+\setbeamertemplate{navigation symbols}{}  %Turn off navigation bar
+%\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- Managing the Firm in the Global Economy -- Week X -- \insertframenumber}\end{center}}
+
+% THEMATIC OPTIONS
+\definecolor{maroon}{RGB}{152,0,46}  %Booth maroon defined at http://staff.chicagobooth.edu/marketing/docs/email-signature-standards.pdf
+\setbeamercovered{transparent=5}
+\setbeamercolor{frametitle}{fg=maroon}
+\setbeamercolor{item}{fg=maroon}
+\usefonttheme{serif}
