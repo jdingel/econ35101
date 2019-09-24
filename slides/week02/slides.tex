@@ -1,0 +1,450 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 2 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 2}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Outline of today}
+\begin{itemize}
+	\item Preview of assignments
+	\item Overview of neoclassical models
+	\item Canonical Ricardian model: DFS 1977
+	\item A Ricardian assignment model: Costinot 2009
+	\item DFS with non-homothetic preferences: Matsuyama 2000
+	\item Trade and growth: Acemoglu \& Ventura 2002, briefly
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Preview of assignments}
+Assignments are available at \url{https://github.com/jdingel/econ35101}
+\begin{itemize}
+	\item Due week 4: DFS exercise
+	\item Due week 6: gravity estimation exercise
+	\item Due week 10: theory exercise
+	\item Due week 11: referee report and final exam
+\end{itemize}
+Submit assignments via Canvas.\\
+Comprehension checks are due in weeks 4, 6, and 10.\\
+Due dates are backloaded: don't procastinate.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Taxonomy of neoclassical trade models}
+\begin{itemize}
+	\item In a neoclassical model, comparative advantage (lower relative autarkic marginal cost) is the basis for trade
+	\item Autarky costs might reflect demand or supply differences
+	\item Demand differences typically neglected by assumption
+	\item Supply-side explanations for autarkic cost differences:
+	\begin{itemize}
+		\item Technological differences (Ricardian theory)
+		\item Factor-endowment differences (Ricardo-Viner and Heckscher-Ohlin, week 5)
+		\item Increasing returns to scale (beyond neoclassical scope)
+	\end{itemize}
+	\item In theoretical models,
+	the roles of factor proportions and technological differences are typically kept separate:
+	\begin{itemize}
+		\item Ricardian model assumes one factor of production
+		\item Factor-proportions theory typically assumes common production function
+	\end{itemize}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Technology vs factors}
+Different models for different questions?\footnote{\scriptsize Jones \& Neary (1980): ``positive trade theory uses a variety of models, each one suited to a limited but still important range of questions''}
+\begin{itemize}
+	\item What is the effect of rising Chinese productivity on US real wages? (DFS 1977, \href{https://tradediversion.net/2011/03/29/ricardo-revisited-back-to-2004/}{its interpretation}, \href{https://faculty.chicagobooth.edu/chang-tai.hsieh/research/hsieh_ossa_jie.pdf}{Hsieh and Ossa 2016})
+	\item What are distributional consequences of trade? Need multiple factors
+\end{itemize}
+Interaction of technology and factors might matter
+\begin{itemize}
+	\item Does fact of intra-industry trade necessitate increasing returns in theory? No, says \href{https://www.sciencedirect.com/science/article/pii/0022199695013833}{Davis (1995)}.
+	\item \href{https://ideas.repec.org/a/eee/inecon/v82y2010i2p152-167.html}{Chor (JIE 2010)} and \href{https://ideas.repec.org/a/eee/inecon/v82y2010i2p137-151.html}{Morrow (JIE 2010)} 
+	\item Factor-biased technical change
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Canonical Ricardian model of DFS 1977}
+\begin{itemize}
+	\item Two countries, Home and Foreign; asterisk denotes latter
+	\item One factor of production, call it labor, endowed in amounts $L$ and $L^*$ and paid wages $w$ and $w^*$
+	\item[] [efficiency units, and see ``Hicksian composite'']
+	\item Unit labor costs for good $z$ are $a(z)$ and $a^*(z)$
+	\item WLOG, order goods such that $A(z) \equiv \frac{a^*(z)}{a(z)}$ is decreasing
+	\item Home has comparative advantage in low-$z$ goods
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Recall the concepts and insights of two-good case}
+Consider two goods, $z$ and $z'$
+\begin{itemize}
+	\item Home has \textit{absolute advantage} in $z$ when $a(z) < a^*(z)$
+	\item Home has \textit{comparative advantage} in $z$ when its relative autarkic marginal cost is lower: $\frac{a(z)}{a(z')} < \frac{a^*(z)}{a^*(z')}$
+\end{itemize}
+What is equilibrium pattern of specialization?
+\begin{itemize}
+	\item For factor markets to clear, Home cannot be least-cost provider of both goods. It is not possible that
+	\begin{equation*}w a(z) < w^{*}a^{*}(z) \text{ and } w a(z') < w^*a^*(z')\end{equation*}
+	\item If Home has comparative advantage in $z$, it must be that 
+	\begin{equation*}\frac{a(z)}{a^*(z)} \leq \frac{w^{*}}{w} \leq \frac{a(z')}{a^*(z')}\end{equation*}
+	\item Absolute advantage determines wages; comparative advantage determines specialization
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Pattern of specialization in DFS 1977}
+\begin{itemize}
+	\item Let $p(z)$ denote the price of good $z$ under free trade
+	\item Profit maximization and factor-market clearing require
+		\vspace{-2mm}
+		\begin{equation*}p(z) \leq w a(z)   \text{ and } p(z) \leq w^{*} a^{*}(z) \end{equation*}
+		with equality if produced in Home or Foreign, respectively
+	\item There exists $\tilde{z}$ such that Home produces all of $z<\tilde{z}$ and Foreign produces all of $z>\tilde{z}$ (proof by contradiction)
+	\item Countries specialize according to comparative advantage
+	\item Define relative wage $\omega \equiv \frac{w}{w^*}$
+	\item Given relative wages, cost-minimizing specialization is $[0,\tilde{z}]$ at Home and $[\tilde{z},1]$ in Foreign such that $A(\tilde{z}) = \omega$
+	\item Continuum of $z$ and $A'(\tilde{z})<0$ makes $\tilde{z} = A^{-1}(\omega)$
+	\item Second curve in $z$-$\omega$ space requires demand
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Cobb-Douglas preferences}
+Identical Cobb-Douglas preferences with expenditure shares $b(z)$
+\begin{align*}
+b\left(z\right) 	 =\frac{p\left(z\right) c\left(z\right) }{wL}
+&=b^{*}\left(z\right) =\frac{p^{\ast}\left(z\right) c^{\ast}\left(z\right)}{w^{\ast}L^{\ast}}
+\\
+\int_{0}^{1}b\left(z\right) dz 
+& = \int_{0}^{1}b^{\ast}\left(z\right) dz
+=1
+\end{align*}
+Denote the share of expenditure on Home goods by $\theta\left(\tilde{z}\right)$
+\begin{equation*}
+\theta \left( \tilde{z}\right) =\int_{0}^{\tilde{z}}b\left( z\right) dz\text{
+\ \ \ and \ \ \ }1-\theta \left( \tilde{z}\right) =\int_{\tilde{z}%
+}^{1}b\left( z\right) dz
+\end{equation*}
+Trade balance then requires 
+$\theta \left(\tilde{z}\right) w^{*}L^{*}
+=\left[1-\theta \left(\tilde{z}\right) \right] wL$,
+which implies
+\begin{equation*}
+\omega =\frac{\theta \left(\tilde{z}\right) }{1-\theta \left(\tilde{z}%
+\right) }\frac{L^{*}}{L}\equiv B\left(\tilde{z}\right)
+\end{equation*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade in DFS 1977}
+\begin{itemize}
+	\item It's a neoclassical model with a free-trade equilibrium,
+	so last week's results apply: there are gains from trade
+	\item Given functional forms, we can speak to magnitudes
+	\begin{equation*}
+		\ln (U/L) = {\ln w} - \int_{0}^{1} b(z) \ln p(z) dz
+	\end{equation*}
+	\item Choose $w=1$ in both autarky and trade equilibria
+	\begin{equation*}
+	 \int_{0}^{1} b(z) \ln a(z) dz \text{ vs } \int_{0}^{\tilde{z}} b(z) \ln a(z) dz + \int_{\tilde{z}}^{1} b(z) \ln \left[w^{*} a^{*}(z)\right] dz 
+	\end{equation*}
+	\item Connect to \href{http://www-personal.umich.edu/~alandear/glossary/d.html\#DoubleFactoralTermsOfTrade}{double-factoral terms of trade} and dissimilarity as source of GFT
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Comparative statics for population growth}
+An increase in $L^{*}/L$, DFS Figure 2:
+\begin{itemize}
+	\item Equilibrium is a decrease in $\tilde{z}$ and increase in $\omega$
+	\item At initial $\omega$, larger $L^{*}/L$ means trade surplus for Home, so its terms of trade must improve
+	\item Goods produced at Home before and after shock have no change in price
+	\item Goods produced in Foreign before and after shock become cheaper for Home consumers
+	\item What about the goods that switch?
+	\item Each good is produced using CRS, but akin to country-level DRS
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Comparative statics for technical change}
+What happens with each of the following shocks?
+\begin{itemize}
+	\item Uniform global technical progress:  $d\ln a(z) = d\ln a^{*}(z) = x < 0$
+	\item Uniform Foreign technical progress: $d\ln a^{*}(z) = x < d\ln a(z) = 0$
+	\item Technical transfer: Convergence to $a(z) = a^{*}(z)$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trade costs}
+``Iceberg'' trade costs $g(z) = g$ (in fact, \href{https://ideas.repec.org/p/ces/ceswps/_6881.html}{shipping ice is IRS})
+\begin{columns}
+\begin{column}{.53\textwidth}
+\begin{center}\includegraphics[width=\textwidth]{../images/DornbuschFisherSamuelson1977_fig3.pdf}\end{center}
+\end{column}
+\begin{column}{.45\textwidth}
+\begin{itemize}
+	\item Home produces if $w a(z) \leq (1/g) w^{*} a^{*}(z)$
+	\item Foreign produces if $w^{*} a^{*}(z) \leq (1/g) w a(z)$
+	\item Trade balance is $(1-\lambda)w L  = (1-\lambda^{*}) w^{*}L^{*}$
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{What about three or more countries?}
+Wilson (Ecma, 1980):
+\begin{quote}
+{\small The DFS paper represents a significant contribution in demonstrating how one might modify the standard Ricardian model in order to make it more tractable for comparative statics analysis.
+Their assumptions are so restrictive, however, that the extent to which their approach can be generalized is not readily apparent.
+Besides the possibility of relaxing their assumptions on demand, it is not at all clear from their examples how the analysis would proceed if we wished to allow for more than two countries.\par}
+\end{quote}
+Costinot (Ecma, 2009): 
+Log-supermodularity,
+a strong assumption borrowed from the \textit{monotone comparative statics} literature,
+delivers the two-country logic in a many-country setting
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Ricardo-Roy assignment models}
+\href{https://www.annualreviews.org/doi/full/10.1146/annurev-economics-080213-041435}{Costinot and Vogel (2015)} survey Ricardo-Roy models
+\begin{itemize}
+	\item Ricardo: Linear production functions
+	\item Roy: Multiple factors of production ($\omega$)
+\end{itemize}
+Output in sector $\sigma$ in country $c$ is
+\begin{align*}
+Q(\sigma,c)=\int_{\Omega} A(\omega,\sigma,c)L(\omega,\sigma,c)d\omega
+\end{align*}
+Ricardo 1817: $\textnormal{England}=c>c'=\textnormal{Portugal}$ and $\textnormal{cloth}=\sigma>\sigma'=\textnormal{wine}$
+\begin{align*}
+A(\sigma,c) / A(\sigma',c) \geq A(\sigma,c') / A(\sigma',c')
+\end{align*}
+Dornbusch, Fischer \& Samuelson 1977: 
+\begin{align*}
+A(\sigma) \equiv \frac{A(\sigma,c)}{A(\sigma,c')} \qquad A'(\sigma)<0
+\end{align*}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Log-supermodularity (1/2)}
+\begin{definition}[Log-supermodularity]
+A function $g:\mathbb{R}^n\to\mathbb{R}^{+}$ is \emph{log-supermodular} if $\forall x,x'\in\mathbb{R}^n$
+\begin{align*}
+g\left(\max\left(x,x'\right)\right)\cdot g\left(\min\left(x,x'\right)\right)\geq g(x)\cdot g(x')
+\end{align*}
+where $\max$ and $\min$ are component-wise operators.
+\end{definition}
+\begin{itemize}
+	\item Example: $A: \Sigma\times\mathbb{C}\to\mathbb{R}^{+}$, where $\Sigma\subseteq\mathbb{R}$ and $\mathbb{C}\subseteq\mathbb{R}$, with $\sigma>\sigma'$ and $c>c'$
+		\begin{align*}
+		A(\sigma,c)A(\sigma',c')\geq A(\sigma',c)A(\sigma,c')
+		\end{align*}
+	\item $g(x)$ is LSM in $(x_i,x_j)$ if $g(x_i,x_j;x_{-i,-j})$ is LSM 
+	\item $g(x)$ is LSM $\iff g(x)$ is LSM in $(x_i,x_j)$  $\forall i,j$
+	\item $g>0$ and $g$ is $C^2$ $\Rightarrow \frac{\partial^2 \ln g}{\partial x_i \partial x_j}\geq 0 \iff g(x)$ is LSM in $(x_i,x_j)$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Log-supermodularity (2/2)}
+Three handy properties:
+\begin{enumerate}
+\item If $g,h:\mathbb{R}^n\to\mathbb{R}^{+}$ are log-supermodular, then $gh$ is log-supermodular.
+\item If $g:\mathbb{R}^n\to\mathbb{R}^{+}$ is log-supermodular, then $G(x_{-i})\equiv \int g(x_i,x_{-i})dx_i$ is log-supermodular.
+\item If $g:\mathbb{R}^n\to\mathbb{R}^{+}$ is log-supermodular, then $x_i^* (x_{-i}) \equiv \arg\max_{x_i\in\mathbb{R}} g(x_i,x_{-i})$ is increasing in $x_{-i}$.
+\end{enumerate}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The Ricardo-Roy setup in one slide}
+Primitives: 
+\begin{itemize}
+	\item Technologies $A(\omega,\sigma,\gamma_{A,c})$
+	\item Endowments $L(\omega,\gamma_{L,c})$
+	\item Demands $D(p,I_c\vert\sigma,\gamma_{D,c})$
+\end{itemize}
+Equilibrium:
+\begin{itemize}
+	\item Profit maximization by firms
+\begin{align*}
+Q(\sigma,c) =&\int_{\Omega} A(\omega,\sigma,\gamma_{A,c})L(\omega,\sigma,c)d\omega \\
+\Rightarrow & p(\sigma) \leq \min_{\omega\in\Omega} \{w(\omega,c) / A(\omega,\sigma,\gamma_{A,c}) \} \\
+ \Omega(\sigma,c) \equiv & \{\omega\in\Omega:L(\omega,\sigma,c)>0)\}  \subseteq \arg\min_{\omega\in\Omega} \{w(\omega,c) / A(\omega,\sigma,\gamma_{A,c}) \} 
+\end{align*}
+\item Market clearing
+\begin{align*}
+\int_{\Sigma} L(\omega,\sigma,c)d\sigma &= L(\omega,\gamma_{L,c}) \quad \forall \omega,c \\
+\int_{\mathbb{C}} D(p,I_c\vert\sigma,\gamma_{D,c})dc  &= \int_{\mathbb{C}} Q(\sigma,c) dc \quad \forall \sigma
+\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The Ricardian case of Ricardo-Roy}
+Costinot (2009) introduces a particular neoclassical environment:
+\begin{itemize}
+	\item Linear production functions
+	\item Assumption 0 is that the solution to the revenue-maximization problem is unique.
+		This will help pin down assignments.
+	\item Assumption 0 always holds if there is a continuum of factors.
+\end{itemize}
+Ricardian case (ignore Roy until week 5):
+\begin{itemize}
+	\item $A(\omega,\sigma,\gamma_{A,c}) = h(\omega)A(\sigma,\gamma)$
+	\item Given this technology and free trade, endowment and demand shifters don't matter
+	\item Assumption 0 implies that each country produces one good
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The Ricardian case of Ricardo-Roy}
+Assume that $A(\sigma,\gamma)$ is log-supermodular
+\begin{itemize}
+	\item Then, for $\sigma > \sigma'$ and $\gamma > \gamma'$ and non-zero productivities,
+		\begin{equation*}\frac{A(\sigma,\gamma)}{A(\sigma,\gamma')} \geq \frac{A(\sigma',\gamma)}{A(\sigma',\gamma')}\end{equation*}
+	\item Return to the two-good logic:
+	there must be an ordering in which higher-$\gamma$ countries produce higher-$\sigma$ goods
+	\item This doesn't require Assumption 0: the set $\Sigma(\gamma)$ is increasing in the strong set order (intervals of specialization ordered by $\gamma$)
+\end{itemize}
+Two payoffs to this section of Costinot (2009):
+\begin{itemize}
+	\item You can deliver a many-country Ricardian model with sufficiently strong assumptions
+	\item A number of 2005-2007 papers on trade and institutions amount to microfoundations for LSM of ``institutional dependence'' $\sigma$ and ``institutional quality'' $\gamma$
+\end{itemize}
+How would you introduce trade costs?
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (2000): The DFS model without homotheticity}
+Why might income elasticities of goods be interesting?
+\begin{itemize}
+	\item Terms of trade might be shaped by global growth
+	\item Product cycles in which rich buy innovations first
+	\item ``Neutral'' productivity shifts aren't neutral
+	\item Scope for normative implications
+\end{itemize}
+Some themes in this paper are echoed in \href{https://onlinelibrary-wiley-com.proxy.uchicago.edu/doi/10.3982/ECTA13765}{Matsuyama (2019)} [week 6]
+\begin{itemize}
+	\item Product cycles via income elasticities
+	\item Demand: Gross substitutes and ``quality'' or not
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (2000) set up}
+Mostly as in DFS 1977, however
+\begin{itemize}
+	\item $z \in [0,\infty)$ and cutoff good $m$ given by $w=A(m)$ with $w^{*}=1$ 
+	\item $A(z)$ schedule in Figure 1 same as DFS Figure 1
+	\item Hierarchical demand of Murphy, Shleifer, Vishny (1989):
+	\begin{equation*} V = \int_{0}^{\infty} b(z)x(z)dz \text { where } x(z) \in \{0,1\} \end{equation*}
+	\item Assume $b(z)/a(z)$ and $b(z)/a^{*}(z)$ both decreasing so that households ``prioritize'' lower-$z$ goods
+	\item The expenditure needed to consume goods $[0,z]$ is $E(z)\equiv \int_{0}^{z} p(s)ds$. This is monotone in the utility level.
+	\item The CDFs of household effective labor are $F(h)$ and $F(h^{*})$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (2000) trade-balance equation}
+Equation (8) is
+\begin{align*} 
+N \int_{0}^{\infty} &\max \left\{h-\int_{0}^{m}a(s) ds,0\right\} dF(h) 
+\\ 
+&= 
+N^{*} \int_{0}^{\infty} \min \left\{\frac{h^*}{w},\int_{0}^{m}a(s) ds\right\} dF^{*}(h^*)
+\end{align*}
+\vspace{-4mm}
+\begin{itemize}
+	\item Thus the ``B'' schedule in our figure will have a vertical portion for low values of $w$
+	\item Upward-sloping portion is where an increase in $w$ causes poor Foreign households to cut imports. Greater $m$ balances.
+	\item Compared to DFS, $F(h)$ and $F^*(h^*)$ matter
+	\item Compared to DFS, ``B'' schedule depends on $a(z)$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (2000): Homogeneous households}
+\begin{itemize}
+	\item ``North-South trade'' is $a(z)>a^*(z) \ \forall z$. Implies $w<1$.
+	\item With degenerate $F$ and $F^*$, equation (8) simplifies to
+		\begin{equation*}
+		\int_{0}^{m}a(s) ds = \left\{ 
+		\begin{array}{lc}
+		\frac{N}{N+N^*} & \text{ if } w \leq 1 + N^*/N \\
+		1 - \frac{N^*}{wN} & \text{ if } w > 1 + N^*/N
+		\end{array} \right.
+		\end{equation*}
+\end{itemize}
+\begin{columns}
+\begin{column}{.49\textwidth}
+\includegraphics[height=.7\textheight]{../images/Matsuyama2000_fig2.pdf}
+\end{column}
+\begin{column}{.49\textwidth}
+\begin{itemize}
+	\item In equilibrium, $u^*>u>m$
+	\item $\int_{0}^{m}a(s) ds = n \equiv \frac{N}{N+N^*}$ [equation (10)]
+	\item $w a(m) = a^{*}(m)$ [equation (2) or (11)]
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (2000): Comparative statics}
+Increase in $N$ $\to$
+\begin{itemize}
+	\item increase in $m$: shift ``B'' to right, since $n$ increases
+	\item fall in $w$: walk down $A$ schedule $\to$ worse Home terms of trade
+	\item $du < 0$ and $du^*>0$: via factor terms of trade [differentiate (12) and (13)]
+\end{itemize}
+Northern productivity growth (which affects only $A$):
+\begin{itemize}
+	\item $dw<0$ and $du^*>0$: factor terms of trade improve for North and new goods are produced
+	\item $du$ is more complicated, see uniform export productivity growth for $du=0$
+\end{itemize}
+Southern productivity growth (which affects both $A$ and ``B''):
+\begin{itemize}
+	\item $dm>0$ due to $A$ rising and ``B'' shifting right
+	\item ambiguous effects on $w$, $u$, and $u^*$
+	\item immiserizing growth is possible
+\end{itemize}
+Uniform growth (for countries, not for $z$): $du$ depends on $A$ slope
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (2000): A Multicountry World}
+\begin{itemize}
+	\item Claim (p.1116): ``One advantage of the present model over the Dornbusch et al. model is that it is relatively straightforward to extend the model to incorporate more than two countries.''
+	\item Assumption 4: For all $j=1,\dots,J-1$, $a_{j+1}(z)/a_{j}(z)$ is continuous and decreasing in $z$.
+	\item Assumption 5: $a_3(z)<a_2(z)<a_1(z) \ \forall z$.
+\end{itemize}
+Evaluate the claim.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Acemoglu and Ventura (2002): World Income Distribution}
+\begin{itemize}
+	\item Armington (1969) assumption is a Ricardian assumption
+	\item Demands is CES with $\epsilon>1$ ruling out immiserizing growth
+	\item Terms of trade are a source of DRS returns at a country level despite CRS technologies of AK model
+	\item Empirics on terms of trade hampered by OVB of $\Delta\ln\mu$ (technical progress in number of varieties)
+	\item Conditional convergence is basis for initial level of income (relative to steady state) as IV
+	\item Perhaps higher output growth due to accumulation worsens terms of trade
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Wrapping up}
+Theory
+\begin{itemize}
+	\item DFS 1977 is an extremely elegant version of the Ricardian model
+	\item Strong assumptions allow extension to many countries
+	\item More interesting patterns of demand make comparative statics more interesting
+	\item In theory, terms of trade key to many of these questions
+\end{itemize}
+Whither empirics?
+\begin{itemize}
+	\item How to avoid two-country or MCS assumptions?
+	\item How to take highly stylized model to the data?
+	\item How to measure relevant objects?
+\end{itemize}
+Food for thought:
+\begin{itemize}
+	\item Matsuyama, ``\href{http://faculty.wcas.northwestern.edu/\~kmatsu/Ricardian\%20Trade\%20Theory.pdf}{Ricardian Trade Theory}'', 2008
+	\item Eaton and Kortum, ``\href{https://www.aeaweb.org/articles?id=10.1257/jep.26.2.65}{Putting Ricardo to Work}'', 2012
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\end{document}
