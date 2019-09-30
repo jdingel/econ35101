@@ -1,0 +1,613 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 3 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 3}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Probabilistic Ricardian models}
+Today we study a class of Ricardian models that make more structural assumptions to facilitate quantitative exercises
+\begin{itemize}
+	\item \href{https://www.aeaweb.org/articles?id=10.1257/jep.26.2.65}{Eaton and Kortum (2012)} call this ``putting Ricardo to work''
+	\item Probabilistic Ricardian models do not attempt to predict which countries make which goods
+	\item Akin to Wilson (1980), we focus on what account of trade patterns is needed to conduct certain counterfactuals
+	\item Borrow tools from discrete-choice models to deliver closed-form solutions that depend on few key parameters
+	\item Over time, we've learned that some of this is not so different -- an Armington or CGE model in Fr\'{e}chet clothing
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Armington model with CES prefs (Anderson 1979)}
+\begin{itemize}
+	\item Each country produces its own ``signature'' good (others have zero productivity in this good; maximal absolute advantage)
+	\item Consumers in each country have identical CES preferences over the $N$ goods with elasticity of substitution $\sigma$
+	\item Bilateral trade costs of the iceberg form $\tau_{ij}$
+	\item Consumer demand (see \href{http://www.columbia.edu/~jid2106/td/dixitstiglitzbasics.pdf}{Dingel 2009} for refresher)
+	\begin{equation*}
+	X_{ij}	= \frac{(p_i\tau_{ij} )^{1-\sigma}}{\sum_{\ell} (p_\ell\tau_{\ell j})^{1-\sigma}} X_j
+			= \frac{(p_i\tau_{ij} )^{1-\sigma}}{P_j^{1-\sigma}} X_j
+	\end{equation*}
+	\item Economy $i$ endowed with $Q_i$ units so GDP $Y_i$ and $p_i=Y_i/Q_i$
+	\begin{equation*}
+	X_{ij}	= \frac{Y_i^{1-\sigma}}{Q_i^{1-\sigma}} \frac{X_j}{P_j^{1-\sigma}}\tau_{ij}^{1-\sigma}
+	\end{equation*}
+	\item A Ricardian ``corner'' case gives us a ``gravity'' equation for multiple countries with trade costs that we can take to data
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The logit model of discrete choice}
+Individual $i$ considers choice $j$ (see \href{https://eml.berkeley.edu/books/choice2.html}{Train 2009})
+\begin{itemize}
+	\item Utility $U_{ij} = V_{ij} + \epsilon_{ij}$
+	\item Assume error is iid T1EV: $F\left(\epsilon_{ij}\right)=\exp(-\exp(-\epsilon_{ij}))$
+	\item Choice probabilities are
+	\begin{equation*}\Pr(U_{ij}>U_{ij'} \ \forall j' \neq j) = \frac{\exp(V_{ij})}{\sum_{j'}\exp(V_{ij'})} \end{equation*}
+\end{itemize}
+Now try a cost-minimization problem with multiplicative error term
+\begin{itemize}
+	\item Cost $\ln c_{ji} = \ln c_j + \ln \tau_{ji} - \epsilon_{ji}$
+	\item Least-cost probability
+	\begin{align*}
+	\Pr(-\ln c_{ji}> -\ln c_{j'i} \ \forall j' \neq j) \\
+	= \Pr(\ln c_{ji}<\ln c_{j'i} \ \forall j' \neq j) 
+	& 
+	= \frac{1/(c_j\tau_{ji})}{\sum_{j'}1/(c_{j'}\tau_{j'i})} \\
+	\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Eaton \& Kortum (Ecma 2002): Environment}
+Before we start: Questions about the big picture?
+\begin{itemize}
+	\item $N$ countries indexed by $i=1,\dots,N$
+	\item Continuum of goods indexed by $u \in [0,1]$ [EK use ``$j$'']
+	\item CES preferences
+	\begin{equation*}
+	U=\left( \int_{0}^{1}Q(u) ^{\frac{\sigma -1}{\sigma }}du\right)
+	^{\frac{\sigma }{\sigma -1}}
+	\end{equation*}
+	\item Trade costs ``$d_{ni}$'' (as in Train book) from $i$ to $n$ (contra ``$\tau_{ij}$'')
+	\item One factor of production labor with wage $w_i$ (perhaps intermediate goods too)
+	\item $c_i$ is the unit cost of sole (or composite) input in $i$
+	\item Perfect competition with good-specific idiosyncratic productivity $z_i(u)$ so that cost of delivering $u$ to $n$ from $i$ is 
+	\begin{equation*}c_{ni}(u) = c_i d_{ni} / z_i(u)\end{equation*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Eaton \& Kortum (2002): Probabilistic technology}
+\begin{itemize}
+	\item $Z_i(u)$ is drawn independently from a Fr\'{e}chet distribution
+	\begin{equation*}
+	F_{i}\left( z\right) =\exp \left( -T_{i}z^{-\theta }\right) \text{, \ \ \ \ }%
+	T_{i}>0\text{, } \theta>\sigma-1
+	\end{equation*}
+	\item $T_i$ is distribution's location parameter (shifts absolute advantage for all goods)
+	\item $\theta$ is distribution's shape parameter (scope of comparative advantage)
+	\item The Fr\'{e}chet distribution is a ``max stable'' distribution, and this is the key property that delivers the results that follow
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Price distribution}
+The distribution of prices offered by $i$ to $n$ is
+\begin{align*}
+G_{ni}\left( p\right) 
+&=\Pr \left( p_{ni}(u) \leq p\right)
+=\Pr \left( \frac{d _{ni}c_{i}}{z_{i}(u) }\leq p\right)
+=1-\Pr \left( z_{i}(u) \leq \frac{d _{ni}c_{i}}{p}\right) \\
+&=1-\exp \left( -T_{i}\left( d _{ni}c_{i}\right) ^{-\theta}p^{\theta}\right)
+\end{align*}
+The distribution of minimum prices in $n$ is
+\begin{align*}
+G_{n}\left( p\right) 
+&=1-\prod_{i=1}^{N}\left( 1-G_{ni}\left( p\right) \right)
+=1-\prod_{i=1}^{N}\exp \left( -T_{i}\left(d_{ni}c_{i}\right) ^{-\theta}p^{\theta }\right) \\
+&=1-\exp \left(-{\sum_{i=1}^{N}T_{i}\left(d_{ni}c_{i}\right) ^{-\theta}}p^{\theta }\right) \\
+&=1-\exp \left( -\Phi _{n}p^{\theta }\right)
+\end{align*}
+where $\Phi_{n}$ summarizes $n$'s ``market access'',
+which depends on all partners' technologies, input costs, and bilateral trade costs
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Allocation of purchases}
+Probability that $i$ provides good $u$ at the lowest price in $n$ is
+\begin{equation*}
+\pi_{ni}=\frac{T_{i}\left(d_{ni}c_{i}\right) ^{-\theta}}{\Phi_{n}}
+\end{equation*}
+Proof:
+\begin{align*}
+\pi_{ni}
+& = \Pr\left(p_{ni} \leq \min_{i'\neq i} p_{ni'}\right) 
+ = \prod_{i' \neq i} \Pr \left(p_{ni'} \geq p_{ni}\right) \\
+& = \prod_{i' \neq i} \left[1 - G_{ni'}(p)\right]
+ = \exp\left(-\Phi_{n,\neg i}p_{ni}^{\theta}\right)
+\end{align*}
+where $\Phi_{n,\neg i} \equiv {\sum_{i' \neq i}T_{i'}\left(d_{ni'}c_{i'}\right) ^{-\theta}}$.
+Integrate over all $p$. % with density $dG_{ni}(p)$
+\begin{align*}
+&\int_{0}^{\infty} \exp\left(-\Phi_{n,\neg i}p^{\theta}\right) dG_{ni}(p) \\
+&=
+\int_{0}^{\infty} \exp\left(-\Phi_{n,\neg i}p^{\theta}\right) \theta p^{\theta-1} T_{i}\left( d _{ni}c_{i}\right) ^{-\theta} \exp \left( -T_{i}\left( d _{ni}c_{i}\right) ^{-\theta}p^{\theta}\right) dp \\
+&=
+T_{i}\left(d _{ni}c_{i}\right)^{-\theta}
+\int_{0}^{\infty} \exp\left(-\Phi_{n}p^{\theta}\right) \theta p^{\theta-1} dp
+= \pi_{ni} \int_{0}^{\infty} dG_n(p) = \pi_{ni}
+\end{align*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Bilateral import price distributions}
+Prices of goods imported by $n$ from $i$ also have distribution $G_n(p)$.\\
+What is probability $i$ is least-cost supplier at price $p$?
+\begin{itemize}
+	\item Goods imported by $n$ from $i$ also have price distribution $G_n(p)$.
+	\item What is probability $i$ is least-cost supplier given its price is $q$? 
+	$\Pr\left(q \leq \min_{i'\neq i} p_{ni'}\right) = \exp\left(-\Phi_{n,\neg i}q^{\theta}\right)$
+	\item Joint probability that $i$ is least-cost supplier at price $q$ is
+	$\exp\left(-\Phi_{n,\neg i}q^{\theta}\right)d G_{ni}(q)$
+	\item Integrate this probability from $0$ to $p$ to find CDF of bilateral import prices
+	\begin{equation*}
+	\int_{0}^{p} \exp\left(-\Phi_{n,\neg i}q^{\theta}\right)d G_{ni}(q)
+	= \pi_{ni} G_n(p)
+	\end{equation*}
+	\item Since $\pi_{ni}$ is the probability that any good is imported from $i$, the conditional distribution of the price paid by $n$ for goods actually imported from $i$ is $G_n(p)$
+\end{itemize}
+All action is on the extensive margin of varieties purchased. Price distributions are independent of exporter. Expenditure shares are $\pi_{ni}$.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The CES price index}
+\begin{itemize}
+\item The CES price index in country $n$ is 
+\begin{align*}
+P_{n}^{1-\sigma } 
+&=\int_{0}^{1}p_{n}^{1-\sigma }(u) du 
+=\int_{0}^{\infty }p^{1-\sigma }dG_{n}\left( p\right) \\
+&=\int_{0}^{\infty }p^{1-\sigma }e^{-\Phi _{n}p^{\theta }}\Phi _{n}\theta
+p^{\theta -1}dp
+\end{align*}
+\item Change of variable $x=\Phi _{n}p^{\theta }\Rightarrow
+dx=\Phi _{n}\theta p^{\theta -1}dp$
+\begin{equation*}
+P_{n}^{1-\sigma }
+=\int_{0}^{\infty }\left( \frac{x}{\Phi _{n}}\right) ^{\frac{1-\sigma }{\theta }}e^{-x}dx
+=\Phi _{n}^{-\frac{1-\sigma }{\theta }}\int_{0}^{\infty }x^{\frac{1-\sigma 
+}{\theta }}e^{-x}dx
+\end{equation*}
+\item Integral is finite if $\theta>\sigma-1$
+\begin{equation*}
+P_{n} = \Phi _{n}^{-\frac{1}{\theta }} \Gamma \left( \frac{\theta +1-\sigma }{\theta }\right)
+\end{equation*}
+where $\Gamma()$ is the gamma function, $\Gamma(a)\equiv \int_{0}^{\infty} x^{a-1} \exp(-x)dx$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Equilibrium}
+\begin{itemize}
+	\item Let $X_{ni}$ be $n$'s expenditure on imports from $i$
+	\item $X_n \equiv \sum_{i} X_{ni}$ is $n$'s total expenditure
+	\item Since $X_{ni} / X_n = \pi_{ni}$, we obtain a gravity equation
+	\begin{equation*} 
+	X_{ni} 
+	= \frac{T_{i}\left( d _{ni}c_{i}\right) ^{-\theta}}{\Phi_n} X_n 
+	= T_{i}c_{i}^{-\theta} \frac{X_n}{\Phi_n} d_{ni}^{-\theta} 
+	\end{equation*}
+	\item Suppose no intermediate goods so that $c_i = w_i$.
+	\item The value of sales by $i$ is $w_i L_i = \sum_{n} X_{ni}$
+	\item By budget balance, $w_i L_i = X_i$.
+	\item We get a system of equations in the wage vector
+		\begin{equation*}w_i L_i = \sum_n \frac{T_{i}\left( d _{ni}w_{i}\right) ^{-\theta}}{\sum _j T_{i}\left( d _{nj}w_{ij}\right) ^{-\theta}} w_n L_n
+		\end{equation*}
+\end{itemize}
+We will discuss gravity more in week 4. Note the similarity to Armington system of equations.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Estimating the trade elasticity $\theta$}
+Write bilateral trade flows as ``normalized import shares''
+\begin{align*}
+\frac{X_{ni}/X_{n}}{X_{ii}/X_{i}} 
+&=
+\left( \frac{p_{i}d_{ni}}{p_{n}}\right) ^{-\theta} \\
+\ln \left(X_{ni}X_{i}/X_{n} X_{ii} \right)
+&=
+-\theta \ln p_{i}+\theta \ln
+p_{n}-\theta \ln d_{ni}
+\end{align*}
+The trade elasticity $-\theta$ governs how bilateral trade flows respond to bilateral trade costs.
+Note the absence of preference parameter $\sigma$.
+\begin{columns}
+\begin{column}{.68\textwidth}
+\includegraphics[width=\textwidth]{../images/EatonKortum2002_fig1.pdf}
+\end{column}
+\begin{column}{.3\textwidth}
+A proxy for $d_{ni}$ \\(e.g., distance) \\ won't deliver an estimate of $\theta$
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Estimating the trade elasticity $\theta$}
+Eaton and Kortum (2002) infer $d_{ni}$ from price data for 50 goods and a price-differential inequality:
+$%\begin{equation*}
+{p_{n}(u)} / {p_{i}(u)}\leq d_{ni} 
+$%\end{equation*}
+\begin{equation*}
+\widehat{\ln d_{ni}}
+=
+\max2_{u}\left\{ \ln p_{n}(u) -\ln p_{i}(u) \right\}
+\end{equation*}
+\begin{columns}
+\begin{column}{.6\textwidth}
+\includegraphics[width=\textwidth]{../images/EatonKortum2002_fig2.pdf}
+\end{column}
+\begin{column}{.38\textwidth}
+\begin{itemize}
+\item Eaton and Kortum (2002) get $\hat{\theta} =8.28$.
+\item \href{https://ideas.repec.org/a/eee/inecon/v92y2014i1p34-50.html}{Simonovska and Waugh (2014)} refine the max estimator of the inequality and find $\hat{\theta} \in \left[3,5
+\right]$
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Intermediates \`{a} la Ethier (1982)}
+\begin{itemize}
+	\item Imagine that goods are produced using labor and a composite intermediate that is a CES aggregate coinciding with the consumption good (as in Ethier AER 1982)
+	\item Thus, the composite may be consumed or used as an intermediate
+	\item Assume Cobb-Douglas: $c_i = w_i^\beta p_i^{1-\beta}$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Eaton and Kortum (2002) counterfactuals}
+Three counterfactuals in Eaton and Kortum (2002):
+\begin{itemize}
+	\item Autarky: $d_{ni} \to \infty \ \forall i\neq n$. Single-digit percentage-point welfare loss for most countries.
+	\item Free trade: $d_{ni}=1 \ \forall n,i$. Welfare gains on order of 20\%.
+	\item Technological advances: Increase $T_{\text{US}}$ and  $T_{\text{Germany}}$ 20\%. Favors trading partners.
+\end{itemize}
+We have since learned from Dekle, Eaton, and Kortum (2008) that this model's counterfactual predictions can be obtained without knowing all parameter values by a procedure that we now call ``\href{https://tradediversion.net/2018/05/07/on-hat-algebra/}{exact hat algebra}''
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Exact hat algebra (in traditional ``$ij$'' notation)}
+Start from the market-clearing condition and the gravity equation:
+\begin{equation*}
+w_i L_i
+=
+\sum_{j=1}^{N} \lambda_{ij} w_j L_j 
+\quad \quad
+\lambda_{ij} 
+=
+\frac{T_{i} \left(\tau_{ij}w_i\right)^{-\epsilon}}{\sum_{l=1}^{N} T_{l}  \left(\tau_{lj}w_l\right)^{-\epsilon}}
+\end{equation*}
+We consider a shock to $\hat{T}_{i} \equiv \frac{T'_{i}}{T_{i}}$.
+By assumption, $\hat{\tau}=1$ and $\hat{L}=1$.
+We want to solve for the endogenous variables $\hat{\lambda}_{ij}, \hat{X}_{ij}$ and $\hat{w}_{i}$.
+In the following derivation, 
+define ``sales shares'' by
+$\gamma_{ij}\equiv\frac{X_{ij}}{Y_{i}}$.
+\begin{align}
+w_i L_i
+&=
+\sum_{j=1}^{N} \lambda_{ij} w_j L_j,
+\quad
+w'_i L_i
+=
+\sum_{j=1}^{N} \lambda'_{ij} w'_j L_j
+=
+\sum_{j=1}^{N} X'_{ij}
+\nonumber \\
+\hat{w}_i \hat{L}_i
+&= 
+\sum_{j=1}^{N} \frac{X'_{ij}}{w_i L_i}
+=
+\sum_{j=1}^{N} \frac{X_{ij}}{w_i L_i} \hat{X}_{ij}
+\equiv
+\sum_{j=1}^{N} \gamma_{ij} \hat{X}_{ij}  \label{eqn:20180428:1sector:hatincome}
+\end{align}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Exact hat algebra (in traditional ``$ij$'' notation)}
+\begin{align}
+\lambda_{ij} 
+&=
+\frac{T_{i} \left(\tau_{ij}w_i\right)^{-\epsilon}}{\sum_{l=1}^{N} T_{l}  \left(\tau_{lj}w_l\right)^{-\epsilon}},
+\quad
+\lambda'_{ij} 
+=
+\frac{T'_{i} \left(\tau_{ij}w'_i\right)^{-\epsilon}}{\sum_{l=1}^{N} T'_{l}  \left(\tau_{lj}w'_l\right)^{-\epsilon}}
+\nonumber \\
+\hat{\lambda}_{ij}
+\equiv 
+\frac{\lambda'_{ij}}{\lambda_{ij}}
+&=
+\hat{T}_{i} \hat{w}_{i}^{-\epsilon} \hat{\tau}_{ij}^{-\epsilon}
+\frac{\sum_{l=1}^{N} T_{l}  \left(\tau_{lj}w_l \right)^{-\epsilon}}
+	 {\sum_{l=1}^{N} T'_{l} \left(\tau_{lj}w'_l\right)^{-\epsilon}}
+%\nonumber \\
+%&=
+%\hat{T}_{i} \hat{w}_{i}^{-\epsilon} \hat{\tau}_{ij}^{-\epsilon}
+%\frac{\sum_{l=1}^{N} T_{l}  \left(\tau_{lj}w_l \right)^{-\epsilon}}
+%	 {\sum_{l=1}^{N} \hat{T}_{l} T_{l} \left(\hat{\tau}_{lj}\tau_{lj}\hat{w}_l w_l \right)^{-\epsilon}}
+%\nonumber \\
+%&=
+%\hat{T}_{i} \hat{w}_{i}^{-\epsilon} \hat{\tau}_{ij}^{-\epsilon}
+%\frac{1}{\sum_{l=1}^{N}\frac{\hat{T}_{l} \left(\hat{\tau}_{lj}\hat{w}_l\right)^{-\epsilon} T_{l} \left(\tau_{lj} w_l \right)^{-\epsilon}}
+%			  {\sum_{l=1}^{N} T_{l}  \left(\tau_{lj}w_l \right)^{-\epsilon}}}
+%\nonumber \\
+%&
+=
+\frac{\hat{T}_{i} \hat{w}_{i}^{-\epsilon}\hat{\tau}_{ij}^{-\epsilon}}{\sum_{l=1}^{N} \lambda_{lj} \hat{T}_{l} \hat{w}_l^{-\epsilon} \hat{\tau}_{lj}^{-\epsilon}}
+\label{eqn:20180428:1sector:hatgravity}
+\end{align}
+Combining equations \eqref{eqn:20180428:1sector:hatincome} and \eqref{eqn:20180428:1sector:hatgravity}
+under the assumptions that $\hat{Y}_{i}=\hat{X}_{i}$ and $\hat{\tau}=\hat{L}=1$, we
+obtain a system of equation characterizing an equilibrium $\hat{w}_i$ as a
+function of shocks $\hat{T}_i$, initial equilibrium shares $\lambda_{ij}$ and
+$\gamma_{ij}$, and the trade elasticity $\epsilon$:
+\begin{equation}
+\hat{w}_i \hat{L}_i
+= 
+\sum_{j=1}^{N} \gamma_{ij} \hat{X}_{ij}
+=
+\sum_{j=1}^{N} \gamma_{ij} \hat{\lambda}_{ij} \hat{w}_{j}
+\nonumber 
+\Rightarrow
+\hat{w}_i
+= 
+\sum_{j=1}^{N}
+\frac{\gamma_{ij} \hat{T}_{i} \hat{w}_{i}^{-\epsilon} \hat{w}_{j} }
+{\sum_{l=1}^{N} \lambda_{lj} \hat{T}_{l} \hat{w}_l^{-\epsilon}}
+\label{eqn:20180428:1sector:hatequilibriumequations}
+\end{equation}
+If we use data to pin down $\epsilon, \lambda_{ij}$, and $\gamma_{ij}$, then
+we can feed in productivity shocks $\hat{T}$ and solve for $\hat{w}$.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Empirical estimation of Ricardian predictions}
+Alan Deardorff (\textit{Handbook}, 1984) on ``Testing Trade Theories and Predicting Trade Flows'':
+\begin{quote}
+The intuitive content of most trade theories is quite simple and straightforward\dots 
+seldom stated in forms that are compatible with the real world complexities that empirical research cannot escape.
+\end{quote}
+\begin{itemize}
+	\item Given difficulty of testing $p^a \cdot T \leq 0$,
+	we typically model $p^a$ as function of primitives
+	\item In the Ricardian model, this seems simple: 
+	relative prices equal relative labor costs (in both trade and autarky)
+	\item Model predicts which goods countries trade (not with whom or how much)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Empirical challenges for Ricardian models}
+\begin{itemize}
+	\item Specialization is selection:
+	If countries don't produce some goods in the trade equilibrium, 
+	we cannot infer relative labor costs.\footnote{
+		\href{https://www.jstor.org/stable/2728516}{Sattinger (1993, p.832)}: 
+		``Empirical modeling of the distribution of earnings requires the econometric specification of worker alternatives, even though only the chosen sector or job is observed.
+		This generates a set of econometric problems that have been addressed in applications of Roy's and Tinbergen's models.''
+	}
+	\begin{itemize}
+		\item In fact, data suggests that countries aren't specializing at commodity-code level (intraindustry trade)
+	\end{itemize}
+	\item Suspicions that relative labor costs in trade equilibrium do not reveal relative labor costs in autarky
+	\begin{itemize}
+		\item Multiple factors of production
+		\item Relative costs endogenous to trade flows
+	\end{itemize}
+	\item Dimensionality mismatch:
+	How to take two-country predictions to many-country data?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Ad hoc regressions}
+Challenges evident in early empirical work (Deardorff 1984)
+\begin{itemize}
+	\item MacDougall (1951, 1952), Stern (1962), and Balassa (1963) regress relative exports volumes on relative productivities
+	\item 95\% of US and UK trade are with third markets, so regress relative exports to third markets on relative productivities
+	\item Absent trade costs, the Ricardian model predicts no overlap in exports to third markets
+\end{itemize}
+\begin{center}
+\includegraphics[width=.77\textwidth]{../images/Stern1962_fig1.pdf}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Regressions of exports on sector-country interactions}
+A wave of papers in the 2000s examined sector-country interactions to test 
+whether observable sources of comparative advantage govern trade patterns
+\begin{itemize}
+	\item \href{https://ideas.repec.org/a/aea/aecrev/v88y1998i3p559-86.html}{Rajan and Zingales (1998)} is early, non-trade exemplar
+	\item \href{https://www.aeaweb.org/articles?id=10.1257/000282804322970715}{Romalis (2004)} interacts sectoral factor intensity with country factor abundance (we discuss factor-proportions theory in week 5)
+	\item Costinot (2009) provides the general logic: log-supermodularity
+	\item This has been described as ``the typical way trade economists would explore'' comparative advantage
+	\item \href{https://www.nber.org/papers/w22368}{Ciccone and Papaioannou} raise concern that sectoral characteristics aren't commonly ordered across countries
+	\item As one example of these trade papers, \href{https://academic.oup.com/qje/article/122/2/569/1942086}{Nunn (2007)} looks at countries' contract enforcement and the relationship specificity of goods' intermediate inputs
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Nunn (2007)}
+``I find that countries with better contract enforcement export relatively more in industries for which relationship-specific investments are most important''
+\begin{equation*}
+\ln x_{ic} = 
+\alpha_i + \alpha_c 
++ \beta_1 z_i Q_c + \beta_2 h_i H_c + \beta_3 k_i K_c 
++ \epsilon_{ic},
+\end{equation*}
+where $z_i$ is inputs' relationship specificity, $h_i$ is skill intensity, and $k_i$ is capital intesity
+\begin{itemize}
+	\item $z_i$ is average of inputs' Rauch (1999) indicators weighted by input cost shares from US input-output table
+	\item Rauch (1999) indicator say commodity is neither `sold on an organized exchange' nor `reference priced in industry journals'
+	\item $Q_c$ is investors' perceptions from World Bank survey; uses legal origin as IV for $Q_c$
+	\item No explicit model linking lower relative unit costs to export volume; appeals to Romalis (2004) two-country model
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Nunn (2007): Sectoral characteristic}
+\begin{center}\includegraphics[height=.95\textheight]{../images/Nunn2007_tab2.pdf}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Nunn (2007): ``Determinants of Comparative Advantage''}
+\begin{center}\includegraphics[width=1.05\textwidth]{../images/Nunn2007_tab4.pdf}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDK: ``A Quantitative Exploration of Ricardo's Ideas''}
+Costinot, Donaldson, and Komunjer (2012) introduce a multi-sector model in which each sector behaves like Eaton and Kortum (2002)
+\begin{itemize}
+	\item EK's Ricardian model says nothing about a key Ricardian question: what's the pattern of specialization and trade?
+	\item In CDK, while specialization within industries is indeterminate, now model predicts (aggregate) sectoral trade flows
+\end{itemize}
+The structural model guides the empirical estimation
+\begin{itemize}
+	\item Derive a valid estimating equation from theory (and contrast with ad hoc regressions)
+	\item Think about the error term's contents and plausibility of orthogonality requirements
+	\item Explicitly tackle the selection problem associated with unobserved productivities
+	\item Quantify welfare importance of Ricardian comparative advantage under model assumptions
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDK model: Technology}
+\begin{itemize}
+	\item Index countries by $i$, industries by $k$, and varieties by $\omega$
+	\item Labor is sole factor of production, endowed in quantity $L_i$ and paid wage $w_i$
+	\item Unit cost is $w_i/z_i^k(\omega)$ with productivity $z_i^k(\omega)$ randomly drawn
+	\item CDK's notation for the Fr\'{e}chet distribution is
+	\begin{equation*}
+		F_i^k(z) = \exp\left[-\left(z/z_i^k\right)^{-\theta}\right]
+	\end{equation*}
+	\item $z_i^k$ is the ``fundamental productivity'', an industry-country location parameter, that generates Ricardian comparative advantage by sector
+	\item $\theta$ governs idiosyncratic comparative advantage across varieties within sector, as in EK (2002). Note that it does not vary.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDK model: Rest of the setup}
+\begin{itemize}
+	\item Iceberg trade costs $d_{ij}^k$ from $i$ to $j$ with $d_{ii}^k=1$ and triangle inequality
+	\item Perfect competition: $p_{j}^k(\omega) = \min_i \left[c_{ij}^k(\omega)\right] = \min_i \left[w_i d_{ij}^k/z_i^k(\omega)\right] $
+	\item See paper for Bertrand competition case (\`{a} la BEJK 2003)
+	\item Preferences: Cobb-Douglas upper tier and CES lower tier
+	\begin{equation*}
+	x_j^k(\omega) = \left[\frac{p_j^k(\omega)}{p_j^k} \right]^{1-\sigma_j^k} \alpha_j^k w_j L_j
+	\end{equation*}
+	\item Trade is balanced (\textit{not} sector by sector!)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDK Lemma 1: Trade and fundamental productivities}
+Start from gravity equation:
+\begin{equation*}
+	x_{ij}^{k}
+	= \frac{  \left(w_i d_{ij}^k/z_i^k\right)^{-\theta}}
+	{\sum_{i'}\left(w_i d_{ij}^k/z_i^k\right)^{-\theta}} 
+	\alpha_j^k w_j L_j
+\end{equation*}
+This implies a difference-in-differences version:
+\begin{equation*}
+\ln \left(\frac{x_{ij}^{k}x_{i'j}^{k'}}{x_{ij}^{k'}x_{i'j}^{k}}\right)
+=
+\theta \ln \left(\frac{z_{i}^{k}z_{i'}^{k'}}{z_{i}^{k'}z_{i'}^{k}}\right)
+-
+\theta \ln \left(\frac{d_{ij}^{k}d_{i'j}^{k'}}{d_{ij}^{k'}d_{i'j}^{k}}\right)
+\end{equation*}
+But we don't observe $z_{i}^k$ and we need a measure of $d_{ij}^k$
+\begin{itemize}
+	\item We cannot observe fundamental productivity
+	$z_{i}^k = \mathbb{E}\left[z_i^k(\omega)\right]$
+	\item We observe the endogenous object
+	$\tilde{z}_{i}^k = \mathbb{E}\left[z_i^k(\omega) \vert \Omega_{i}^k\right]$
+	where $\Omega_{i}^k$ is the set of varieties produced in equilibrium
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDK Theorem 1: Trade and observed productivities}
+CDK show that
+\begin{equation*}
+\frac{\tilde{z}_i^k}{\tilde{z}_{i'}^k} = \left(\frac{z_i^k}{z_{i'}^k}\right)  \left(\frac{\pi_{ii}^k}{\pi_{i'i'}^k}\right)^{-1/\theta}
+\end{equation*}
+Plug that in
+\begin{equation*}
+\ln \left(\frac{\tilde{x}_{ij}^{k}\tilde{x}_{i'j}^{k'}}{\tilde{x}_{ij}^{k'}\tilde{x}_{i'j}^{k}}\right)
+=
+\theta \ln \left(\frac{\tilde{z}_{i}^{k}\tilde{z}_{i'}^{k'}}{\tilde{z}_{i}^{k'}\tilde{z}_{i'}^{k}}\right)
+-
+\theta \ln \left(\frac{d_{ij}^{k}d_{i'j}^{k'}}{d_{ij}^{k'}d_{i'j}^{k}}\right)
+\end{equation*}
+where $\tilde{x}_{ij}^{k} = {x}_{ij}^{k} / \pi_{ii}^k$
+\begin{itemize}
+	\item Special case of $d_{ij}^{k} = d_{ij} d_j^k$ is illuminating
+	\item We get pairwise predictions that feel like 2-by-2 Ricardian story but are for quantities, destination by destination
+\end{itemize}
+Can also state as gravity regression
+\begin{equation*}
+\ln \tilde{x}_{ij}^{k} = \gamma_{ij} + \gamma_j^k + \theta \ln \tilde{z}_{i}^{k} - \theta \ln d_{ij}^k
+\end{equation*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDK's structural answers to specification questions}
+Gravity regression, so this isn't a test of Ricardian story vs other stories that deliver a similar gravity equation. 
+\begin{equation*}
+\ln \left({x}_{ij}^{k}/\pi_{ii}^k \right) = \gamma_{ij} + \gamma_j^k + \theta \ln \tilde{z}_{i}^{k} - \theta \ln d_{ij}^k
+\end{equation*}
+But it gives structural answers to many questions that lurk in prior empirical work.
+\begin{itemize}
+	\item What's the appropriate dependent variable?
+	\item How do we aggregate across multiple countries/destinations?
+	\item What is the meaning of the slope coefficient?
+	\item Levels vs logs vs semi-log
+	\item What fixed effect are required?
+	\item What is in the error term?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Data on productivity $\tilde{z}_i^k$}
+\begin{itemize}
+	\item Tough to compare productivity across industries and countries (need producer price deflators to get physical quantities)
+	\item CDK use International Comparisions of Output and Productivity (ICOP) Industry Database from GGDC (Groningen)
+	\item 1997 cross section has 21 OECD countries for 13 manufacturing industries
+	\item Since wages are common across industries in a one-factor model,
+	relative producivity $\tilde{z}_i^k$ shows up straightforwardly in relative (inverse) producer prices
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Estimating equation}
+Empirical specification is
+\begin{equation*}
+\ln \left({x}_{ij}^{k}/\pi_{ii}^k \right) = \gamma_{ij} + \gamma_j^k + \theta \ln \tilde{z}_{i}^{k} + \epsilon_{ij}^k
+\end{equation*}
+\begin{itemize}
+	\item Given fixed effects, log producer price $\ln p_i^k$ is a measure of $-\ln \tilde{z}_{i}^{k}$
+	\item Industry-pair specific trade costs $\ln d_{ij}^k$ are sitting in the error term,
+	threating OLS assumption that $\mathbb{E}\left[\ln p_i^k \epsilon_{ij}^k\vert \gamma_{ij},\gamma_j^k\right]=0$
+	\item (Classical) measurement error in $\ln p_i^k$ will attenuate $\hat{\theta}$
+	\item Exporting and productivity may be simultaneously determined
+	\item CDK employ R\&D expenditure as IV for productivity (why isn't R\&D endogenous to trade?)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Estimates of $\theta$}
+\includegraphics[width=\textwidth]{../images/CostinotDonaldsonKomunjer2012_tab3.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDK's welfare counterfactuals}
+\begin{itemize}
+	\item ``According to our estimates, the removal of Ricardian comparative advantage at the industry level would only lead, on average, to a 5.3\% decrease in the total gains from trade.''
+	\item Some countries actually gain from eliminating comparative advantage
+	\item See section 5.3 discussion of heterogeneous trade costs and heterogeneous tastes as potential explanations
+	\item The key is that CDK's double-differenced gravity regression did not restrict Cobb-Douglas shares nor $\ln d_{ij}^k$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Next week}
+\begin{itemize}
+	\item Gravity and gains from trade in more detail
+	\item Submit your Armington model comprehension check
+	\item Submit your DFS 1977 computational assignment
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\end{document}
