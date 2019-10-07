@@ -1,0 +1,682 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 4 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 4}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Today}
+\begin{itemize}
+	\item The gravity equation
+	\item Trade costs
+	\item Gains from trade
+\end{itemize}
+The \textit{Handbook} chapters on the gravity equation and gains from trade are excellent.
+Rely on them.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The gravity equation}
+General gravity (Allen Arkolakis Takahashi 2014) [not 2018 revision]:
+\begin{equation*}
+X_{ij} = G \times S_i \times M_j \times \phi_{ij}
+\end{equation*}
+Structural gravity (Head and Mayer 2014) [true by $Y_i = \sum_j X_{ij}$]:
+\begin{align*}
+X_{ij} &= \underbrace{\frac{Y_i}{\Omega_i}}_{S_i} \times \underbrace{\frac{X_j}{\Phi_j}}_{M_j} \times \phi_{ij}\\
+\Phi_j  &= \sum_{\ell} \frac{Y_{\ell}}{\Omega_{\ell}} \phi_{\ell j}
+\quad \Omega_i = \sum_{\ell} \frac{X_{\ell}}{\Phi_{\ell}} \phi_{i \ell}
+\end{align*}
+Naive gravity (``gold medal error'' of Baldwin and Taglioni):
+\begin{equation*}
+X_{ij} = G \times Y_i^a \times Y_j^b \times \phi_{ij}
+\end{equation*}
+Recall last week's Armington model (this is general, is it structural?):
+\begin{equation*}
+X_{ij}	= \frac{Y_i^{1-\sigma}}{Q_i^{1-\sigma}} \frac{X_j}{P_j^{1-\sigma}}\tau_{ij}^{1-\sigma}
+%\quad
+%S_i = w_i^{1-\sigma} \Rightarrow \Omega_i = w_i^\sigma/L_i
+\end{equation*}
+%This is structural gravity with $S_i = w_i^{1-\sigma} \Rightarrow \Omega_i = w_i^\sigma/L_i$
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gravity in urban economics}
+Importing the gravity model into urban economics:
+\begin{itemize}
+	\item Gravity for commuting flows: 
+	Ahlfeldt Redding Sturm Wolf (Ecma 2015), Monte Redding Rossi-Hansberg (AER 2018), Owens Rossi-Hansberg Sarte (2019), Severen (2019), Tsivanidis (2019)
+	\item Gravity for consumption in the city:
+	Davis Dingel Monras Morales (JPE 2019), Allen Arkolakis Li
+\end{itemize}
+These settings differ slightly from canonical trade model: 
+\begin{itemize}
+	\item Model of discrete choice rather than CES demand (see Anderson, de Palma, Thisse book)
+	\item Trade flows need not balance due to commuting (workplace income is residential expenditure)
+	\item Zeros are far more pervasive (Dingel \& Tintelnot 2019)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gravity and goodness of fit}
+Naive gravity,
+the Newtonian analogy of force $\propto \frac{\text{mass}_i \times \text{mass}_j}{\text{distance}_{ij}}$,
+does quite well with GDP as mass:
+\includegraphics[width=\textwidth]{../images/HeadMayer2014_fig1.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gravity and goodness of fit}
+A broad notion of ``distance'' does well:
+\includegraphics[width=\textwidth]{../images/HeadMayer2014_fig2.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gravity and goodness of fit}
+\begin{equation*}
+X_{ij} = {\frac{Y_i}{\Omega_i}} \times {\frac{X_j}{\Phi_j}} \times \phi_{ij}
+\end{equation*}
+\vspace{-4mm}
+\begin{itemize}
+	\item $Y_i$ is not terribly interesting because $Y_i = \sum_{j} X_{ij}$ is an identity
+	\item $\frac{X_{ij}}{X_j} = \frac{S_{i} \phi_{ij}}{\Phi_j} = \frac{S_{i} \phi_{ij}}{\sum_{\ell} S_{\ell} \phi_{\ell j}}$ has substantive content, since it says that preferences are homothetic (budget shares don't depend on $X_j$)
+	\item The meat of the structural models is in $\frac{\phi_{ij}}{\Omega_i \Phi_j}$
+	\item \href{http://www-2.rotman.utoronto.ca/~dtrefler/papers/Lai_Trefler_2002.pdf}{Lai and Trefler (2002)} estimate monopolistic-competition model via NLLS using panel data on manufacturing trade while assuming $\phi_{ij}$ depends only on tariffs
+	\item {\footnotesize Lai and Trefler (2002): ``do changes in tariffs over time predict changes in bilateral trade flows? No. The data are completely at odds with the model's core behavioural and general equilibrium predictions about  [tariff changes].''}
+	\item {\small Head and Mayer (2014): ``Nevertheless, the standard CES model is too entrenched — partly because it is so useful! — that it will not be abandoned based on one finding.''}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trade costs and preference shifters are isomorphic}
+Consider an Armington model with asymmetric preferences:
+	\begin{align*}
+	U_j &= \left(\sum_{i} \beta_{ij} q_{ij}^{(\sigma-1)/\sigma}\right)^{\sigma/(\sigma-1)}
+	\\
+	\Rightarrow
+	\frac{X_{ij}}{X_j} &= \beta_{ij} \left(\frac{p_{ij}}{P_j}\right)^{1-\sigma} 
+	=
+	\frac{w_i^{1-\sigma}}{P_j^{1-\sigma}}\beta_{ij}\tau_{ij}^{1-\sigma}
+	\end{align*}
+Now you have a structural gravity setting in which $\phi_{ij}=\beta_{ij}\tau_{ij}^{1-\sigma}$.
+\begin{itemize}
+	\item Could bilateral preference shifters be correlated with common language, colonial status, or distance? Of course. 
+	\item \href{https://www.sciencedirect.com/science/article/pii/S0022199606000225}{Blum and Goldfarb (2006)}: {\small ``Americans are more likely to visit websites from nearby countries, even controlling for language, income, immigrant stock, etc. Furthermore, we show that this effect only holds for taste-dependent digital products, such as music, games, and pornography.''}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Estimating gravity regressions}
+\begin{itemize}
+	\item Approximating $\Omega_i$ and $\Phi_j$: ``remoteness'' or ``market potential''
+	\item Estimating $\Omega_i$ and $\Phi_j$: NLLS, SILS, or PPML for structural gravity
+	\item Fixed effects:
+	$\ln X_{ij} = \ln S_i + \ln M_j + \ln \phi_{ij}$
+	\item Double ratios (tetrads):
+	\begin{equation*}
+	\frac{X_{ij}/X_{ik}}{X_{\ell j}/X_{\ell k}} = \frac{\phi_{ij}/\phi_{ik}}{\phi_{\ell j}/\phi_{\ell k}} 
+	\end{equation*}
+	\item Triple ratios (Caliendo \& Parro 2015):
+	\begin{align*}
+	\phi_{ij} = [(1+t_{ij})d_{ij}^\delta]^{\epsilon} \quad d_{ij}=d_{ji} \ \forall  i,j \\
+	\frac{X_{ij}X_{hi}X_{jh}}{X_{hj}X_{ih}X_{ji}}
+	=
+	\left(
+	\frac{(1+t_{ij})(1+t_{hi})(1+t_{jh})}{(1+t_{hj})(1+t_{ih})(1+t_{ji})} 
+	\right)^{\epsilon}
+	\end{align*}
+\end{itemize}
+The keys to informative estimation are (1) not being naive, (2) distinguishing the trade elasticity from reduced-form coefficients, (3) handling zeros appropriately, and (4) recognizing the endogeneity of trade policy
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Logs vs levels: PPMLE and zeros}
+Silva and Tenreyro (REStat 2006) raise logs vs levels issue:
+\begin{align*}
+X_{ij} &= \alpha_0 Y_i^{\alpha_1}  Y_j^{\alpha_2}  D_{ij}^{\alpha_3} \eta_{ij}
+\\
+\ln X_{ij} &= \alpha_0 +{\alpha_1} \ln  Y_i   +{\alpha_2}\ln  Y_j +{\alpha_3} \ln D_{ij} + \ln \eta_{ij}
+\end{align*}
+\vspace{-8mm}
+\begin{itemize}
+	\item The levels regression requires $\mathbb{E}\left(\eta_{ij}|Y_i,Y_j,D_{ij}\right)=1$.
+	\item What does the logs regression require of $\ln \eta_{ij}$?
+\end{itemize}
+How to handle zeros?
+\begin{itemize}
+	\item I cannot put $\ln(0)$ on the LHS
+	\item Can only generate $X_{ij}=0$ in ``structural gravity'' by $\phi_{ij} = 0$, but this runs up against the triangle inequality for trade costs
+\begin{equation*}
+X_{ij} = {\frac{Y_i}{\Omega_i}} \times {\frac{X_j}{\Phi_j}} \times \phi_{ij}
+\end{equation*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trade costs}
+Trade costs $\phi_{ij}$ are the frictions that make international and intranational trade distinct (from integrated GE) and interesting, yet we struggle to measure them
+\begin{itemize}
+	\item Tariffs (easy to define, but go download TRAINS data)
+	\item Transportation costs (money + time + trade finance)
+	\item Communication costs
+	\item Contractual frictions
+\end{itemize}
+Trade costs are important:
+\begin{itemize}
+	\item Almost essential to rationalizing observed prices and quantities
+	\item Obstfeld and Rogoff (2001) propose that trade frictions key to six puzzles in international macro (\href{https://www.sciencedirect.com/science/article/pii/S0165188916301014}{Eaton, Kortum, Neiman 2016})
+	\item Key to evaluating weflare and government investment in transportation infrastructure, from roads to ports
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Are trade costs large or is the world integrated?}
+Arguments for large trade costs:
+\begin{itemize}
+	\item Exchange declines dramatically with geographic distance ({\small \href{https://www.mitpressjournals.org/doi/10.1162/rest.90.1.37}{Head and Disdier 2008} for countries, \href{http://faculty.chicagobooth.edu/jonathan.dingel/research/thedeterminantsofqualityspecialization.pdf}{Dingel 2017 table C.1} for US cities})
+	\item Large price gaps (from within cities to across countries) aren't arbitraged away
+\end{itemize}
+Arguments for trade costs not being a big deal:
+\begin{itemize}
+	\item MFN tariffs are in the single digits for most of world economy
+	\item The cost of moving manufactured goods fell 90\% over the twentieth century (Glaeser and Kohlhase 2004)
+\end{itemize}
+Is $\phi_{ij}$ a good description of international business frictions?
+\begin{itemize}
+	\item Contrast ad valorem tariffs with specific tariffs
+	\item Contrast border barriers with income differences or regulatory differences
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Inferring trade costs}
+Three strategies:
+\begin{itemize}
+	\item Measure trade costs directly
+	\item Infer trade costs from observed exchange volumes
+	\item Infer trade costs from observed price gaps
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Direct measurement: Transport prices}
+\href{https://www.aeaweb.org/articles?id=10.1257/jep.21.3.131}{Hummels (JEP 2007)} has lots of direct measures:
+\begin{center}
+\includegraphics[width=.9\textwidth]{../images/Hummels_2007_aircosts}
+\end{center}
+Classic example is Limao and Venables (2001), who got price quotes from World Bank's freight forwarder for sending a 40-foot container from Baltimore to 64 destination cities.
+Land costs more than sea.
+%Passenger airfare has also fallen a lot over time, though quality may be down a bit recently
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Container shipping}
+\begin{itemize}
+	\item First used for a Newark-Houston shipment in 1956 %http://pup.princeton.edu/chapters/s8131.html
+	\item In 1964, 10 US ports and 3 Australian ports are containerized %http://www.giselarua.com/diffusion-of-containerization.html
+	\item By 1977, 68 countries had adopted the technology
+\end{itemize}
+\begin{center}\begin{figure}
+	\includegraphics[width=0.3\textwidth]{../images/container_port} \hfill
+	\includegraphics[width=0.3\textwidth]{../images/container_train} \hfill
+	\includegraphics[width=0.3\textwidth]{../images/container_truck}
+\end{figure}  \end{center}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Ocean transport costs}
+\begin{center} Port Productivity, 1953-1980 \begin{figure}\includegraphics[width=.8\textwidth]{../images/Bridgman2014_fig2}\end{figure} \footnotesize{Tons handled per hour worked}\\\scriptsize{Bridgman, ``Why Containerization Did Not Reduce Ocean Trade Shipping Costs'', 2014} \end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Ocean transport costs}
+\begin{center} Real Port Labor Cost per ton, 1953-1980 \begin{figure}\includegraphics[width=.8\textwidth]{../images/Bridgman2014_fig3}\end{figure} \footnotesize{Payments to labor per ton deflated by CPI}\\ \scriptsize{Bridgman, ``Why Containerization Did Not Reduce Ocean Trade Shipping Costs'', 2014}  \end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Doing Business: Trading across borders}
+How much time, how many documents and what cost to import or export a 10-ton 20-foot container worth \$20,000 by sea? \\
+\begin{minipage}{.5\textwidth}\includegraphics[width=\textwidth]{../images/DoingBusinessTradingAcrossBorders.png} \\ \vfill \end{minipage}
+\begin{minipage}{.35\textwidth}\includegraphics[width=\textwidth]{../images/DoingBusinessTradingAcrossBorders2.png}\end{minipage}
+\begin{center}\href{http://www.doingbusiness.org/methodology/trading-across-borders}{methodology}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Doing Business: Trading across borders}
+\begin{center}\includegraphics[width=.77\textwidth]{../images/DoingBusinessWhoMakesExportingEasy.png}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Direct measures of trade costs}
+See Anderson and van Wincoop (JEL 2004) for survey
+\begin{itemize}
+	\item Endogenous price quotes for freight and insurance (above plus the US and Australian import data)
+	\item UNCTAD TRAINS for tariffs (convert specific to ad-valorem equivalent?) (coverage concerns)
+	\item UNCTAD TRAINS for non-tariff barriers (do quotas bind?) (coverage concerns)
+	\item World Bank's Doing Business measures for port/border costs
+\end{itemize}
+In addition to the limitations of these individual measures,
+the overriding concern is that these observables cannot capture all trade costs related to coordination, contracts, intermediaries' market power, uncertainty and just-in-time production, etc
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Inferring from observed exchanges: Gravity residuals}
+Head and Ries (2001) suggest backing out the freeness of trade by assuming
+$\phi_{ii}=1 \ \forall i$ (normalization) and $\phi_{ij}=\phi_{ji} \ \forall i,j$ (symmetry)
+\begin{equation*}
+X_{ij} = {\frac{Y_i}{\Omega_i}} \times {\frac{X_j}{\Phi_j}} \times \phi_{ij}
+\quad \Rightarrow \quad
+\hat{\phi}^k_{ij}=\sqrt{\frac{X^k_{ij}X^k_{ji}}{X^k_{jj}X^k_{ii}}}
+\end{equation*}
+\vspace{-3mm}
+\begin{columns}
+\begin{column}{.52\textwidth}
+\begin{itemize}
+	\item Requires data on internal trade $X_{ii}^k$, which does not appear in customs records
+	\item Requires assumption on tastes and trade elasticity to turn $\phi_{ij}$ into trade costs
+	\item See \href{https://www-sciencedirect-com.proxy.uchicago.edu/science/article/pii/S0014498309000382}{Jacks, Meissner, Novy 2010} and \href{https://onlinelibrary-wiley-com.proxy.uchicago.edu/doi/abs/10.1111/j.1465-7295.2011.00439.x}{Novy 2012} for related applications
+\end{itemize}
+\end{column}
+\begin{column}{.45\textwidth}
+\includegraphics[width=\textwidth]{../images/Novy2013_tab1.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Inferring from observed exchanges: Feyrer (2009)}
+\begin{center}
+\includegraphics[width=.8\textwidth]{../images/Feyrer2009_tab1.pdf}
+\end{center}
+\vspace{-5mm}
+\begin{columns}
+\begin{column}{.62\textwidth}
+\begin{itemize}
+	\item The Suez Canal offer shortest Asia-Europe sea route and today handles $\sim 8\%$ of world trade
+	\item Egypt closed the Suez Canal 1967-1975
+	\item Comments on the specification? LHS? Fixed effects? Sample of observations?
+\end{itemize}
+\end{column}
+\begin{column}{.36\textwidth}
+\includegraphics[width=\textwidth]{../images/Feyrer2009_tab2.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Inferring from observed exchanges across products}
+\begin{itemize}
+	\item \href{https://www.mitpressjournals.org/doi/10.1162/rest.2009.11498}{Djankov, Freund, Pham (REStat 2010)} on ``Trading on Time''
+	\item \href{https://www.sciencedirect.com/science/article/pii/S0022199615001403}{Bernhofen, El-Sahlid, Kneller (JIE 2016)} ``Estimating the effects of the container revolution on world trade''
+	\item Horta\c{c}su, Mart\'{i}nez-Jerez, Douglas - ``\href{http://www.jstor.org.proxy.uchicago.edu/stable/25760347}{The Geography of Trade in Online Transactions: Evidence from eBay and MercadoLibre}'' (2009)
+\begin{itemize}
+	\item Sample of a quarter million eBay listings scraped Feb-May 2004
+	\item Description of item, seller's location, shipping and handling fee
+	\item Buyer's location inferred from previous transactions as seller
+\end{itemize}
+Why is this an interesting empirical setting?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Geography of eBay transactions}
+\begin{figure}
+\includegraphics[width=.9\textwidth]{../images/Hortacsuetal_2009_tab8} \\
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Geography of eBay transactions}
+\begin{figure}
+\includegraphics[width=.95\textwidth]{../images/Hortacsuetal_2009_tab9} \\
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Mis-specified gravity and trade elasticities}
+Yi (JPE 2003) motivates his paper with two puzzles:
+\begin{columns}
+\begin{column}{.49\textwidth}
+\begin{itemize}
+\item Observed trade elasticity (wrt tariffs) of $\sim 20$ much higher than prediction of standard models
+\item This elasticity became much higher, non-linearly, around the 1980s. Why?
+\end{itemize}
+\end{column}
+\begin{column}{.5\textwidth}
+\includegraphics[width=\textwidth]{../images/Yi2003_fig1b.pdf}
+\end{column}
+\end{columns}
+\vspace{2mm}
+Answer is ``vertical specialization'' (tradable intermediate inputs)
+\begin{itemize}
+	\item Yi (JPE 2003): The possibility of international fragmentation of production raises the trade-to-tariff elasticity.
+	\item Yi (AER 2010): Similarly for ``border effect'' estimates
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Yi (2003): Vertical specialization story}
+Yi (2003) introduces a two-country DFS-style model with vertical specialization. Model lacking without VS misses two puzzle.
+\begin{columns}
+\begin{column}{.45\textwidth}
+\begin{itemize}
+	\item Puzzle 1: if goods cross border $N$ times,
+	tariff costs is $(1+\tau)^N$ rather than $1+\tau$
+	\item Puzzle 2: high tariffs $\to$ intermediates are not traded.
+	Elasticity will be initially low (as if $N = 1$) and then suddenly higher (as if $N > 1$).
+\end{itemize}
+\end{column}
+\begin{column}{.53\textwidth}
+\includegraphics[width=\textwidth]{../images/Yi2003_fig10.pdf}
+\end{column}
+\end{columns}
+\vspace{3mm}
+Also see \href{https://www.aeaweb.org/articles?id=10.1257/aer.20150956}{Adao, Costinot, and Donaldson (AER 2017)} on relaxing CES/IIA part of gravity
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Inferring trade costs from price gaps}
+If place $i$ exports homogeneous good $u$ to destination $j$, 
+the no-arbitrage condition for prices is
+$$\ln p_{jt}(u) -\ln p_{it}(u) = \ln \tau_{ijt}(u)$$
+\vspace{-6mm}
+\begin{itemize}
+	\item Need homogeneous products (otherwise there isn't an arbitrage opportunity)
+	\item Need to know that $i$ is selling to $j$
+	\item Need competitive market (arbitrage opportunities are exploited)
+\end{itemize}
+Donaldson (2018) on salt in India differentiated by geographic origin tackles 1 and 2 explicitly; 
+Atkin and Donaldson (Ecma R\&R) work on 1-3
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Border effects in prices}
+\begin{itemize}
+	\item Law of one price (LOP): Identical goods sell at same price
+	\item \href{https://www.aeaweb.org/articles?id=10.1257/aer.101.6.2450}{Gopinath Gourinchas Hsieh Li (2011)} use price data from a multinational retail chain
+\end{itemize}
+	\begin{minipage}{.45\textwidth} \begin{center}\begin{figure} \includegraphics[width=1.0\textwidth]{../images/Gopinathetal_2011_fig8_crop}\end{figure} Oregon-Washington \end{center} \end{minipage}
+	\begin{minipage}{.45\textwidth} \begin{center}\begin{figure} \includegraphics[width=1.0\textwidth]{../images/Gopinathetal_2011_fig1_crop}\end{figure} Canada-USA \end{center} \end{minipage} \\ \vspace{0.1in}
+	{\scriptsize Perrier Sparkling Natural Mineral Water, 25-ounce bottles, log average price. Store distance to the border is positive for Oregon/US, negative for Washington/CA. \par }
+Markups or costs? Authors say variation in retail prices related to exchange rate changes due to change in wholesale costs
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Price gaps over time}
+\begin{center}\includegraphics[width=\textwidth]{../images/Jensen_QJE2007_figure4} \\ \footnotesize{Robert Jensen, ``\href{http://qje.oxfordjournals.org/content/122/3/879.abstract}{The Digital Provide},'' \textit{QJE}, 2007}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Price gaps over time}
+\begin{minipage}{.47\textwidth}\vspace{0pt}\includegraphics[width=\textwidth]{../images/Steinwender_wp2015_fig1}\end{minipage}
+\begin{minipage}{.47\textwidth}\vspace{0pt}\includegraphics[width=\textwidth]{../images/Steinwender_wp2015_fig2}\end{minipage}
+\begin{center}\footnotesize{Steinwender, ``\href{https://sites.google.com/site/clsteinwender/home/research}{Information Frictions and the Law of One Price}'', 2015} \end{center}
+\includegraphics[width=\textwidth]{../images/wired_ragingbull_map.jpg}
+\begin{center}\footnotesize{Adler, ``\href{https://www.wired.com/2012/08/ff_wallstreet_trading/}{Raging Bulls}'', \textit{Wired}, 2012} \hfill Budish \textit{et al} ``\href{https://faculty.chicagobooth.edu/eric.budish/research/HFT-FrequentBatchAuctions.pdf}{HFT Arms Race}'', \textit{QJE}, 2015 \end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade in Armington and EK models}
+Armington:
+	\begin{align*}
+	X_{ij}
+	= \frac{Y_i^{1-\sigma}}{Q_i^{1-\sigma}} \frac{X_j}{P_j^{1-\sigma}}\tau_{ij}^{1-\sigma} 
+	\qquad w_i =  Y_i / Q_i
+	\qquad \tau_{ii}=1
+	\\
+	\Rightarrow
+	\left(\frac{w_i}{P_i}\right)^{\sigma-1}
+	=
+	\frac{X_i}{X_{ii}}
+	\quad 
+	\Rightarrow
+	\frac{w_i}{P_i} 
+	=\left(\frac{X_{ii}}{X_i}\right)^{\frac{-1}{\sigma-1}}
+	\end{align*}
+Eaton \& Kortum (2002):
+\begin{align*}
+	\pi_{ni}
+	&=
+	\frac{T_{i}\left(d_{ni}c_{i}\right) ^{-\theta}}{\Phi_{n}}
+	\quad d_{ii}=1
+	\quad P_{n} = \Phi _{n}^{-\frac{1}{\theta }} \Gamma \left( \left({\theta +1-\sigma}\right) / {\theta}\right)
+	\\
+	\Rightarrow
+	\pi_{ii}
+	&= \left(\frac{w_i}{P_i}\right)^{-\theta} \frac{T_i}{\Gamma(\cdot)}
+	\quad
+	\Rightarrow
+	\frac{w_i}{P_i}
+	=
+	\pi_{ii}^{-1/\theta} \left(\frac{\Gamma(\cdot)}{T_i}\right)^{-1/\theta}
+\end{align*}
+In autarky, $\pi_{ii} = \frac{X_{ii}}{X_i} = 1$,
+so to compute gains from trade,
+we only need observed $\pi_{ii}$ and knowledge of $\theta$ or $\sigma$.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{``The'' trade elasticity and gains from trade}
+\begin{itemize}
+	\item In the Armington model, the partial elasticity
+$\frac{\partial X_{ij}/X_{jj}}{\partial \tau_{i'j}}$
+is a constant
+$1-\sigma$ for $i'=i$ and zero otherwise
+\begin{equation*}
+X_{ij}
+= \frac{Y_i^{1-\sigma}}{Q_i^{1-\sigma}} \frac{X_j}{P_j^{1-\sigma}}\tau_{ij}^{1-\sigma} 
+\end{equation*}
+	\item In the ``ACR'' class of models,
+``the'' trade elasticity is a common constant
+$\epsilon = -\frac{\partial X_{ij}/X_{jj}}{\partial \tau_{i'j}}$ for $i'=i$ and zero otherwise
+	\item This is $\theta$ in EK and $\sigma-1$ in Armington. Microfoundations differ.
+\end{itemize}
+Gains from trade
+\begin{itemize}
+	\item Compare welfare in trade equilibrium $w_i/P_i$ to autarky welfare
+	$$
+	\frac{(w_i / P_i)_{\text{trade}}}
+	{(w_i / P_i)_{\text{autarky}}}
+	=
+	\left(\frac{\pi_{ii}}{1}\right)^{-1/\epsilon} 
+	$$
+	\item This formula says US gains from trade are about 1\% when $\epsilon\approx 5$
+\end{itemize}
+This result generalizes to more models.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Arkolakis, Costinot, and Rodriguez-Clare (AER 2012)}
+``New Trade Models, Same Old Gains?'' is one of the most influential trade papers in the last decade.
+\begin{itemize}
+\item Within a class of gravity models, $\widehat{\lambda}_{ii}$ and $\epsilon$ are sufficient statistics for welfare analyses of changes in trade costs $\hat{\mathbf{\tau}}$ or market size $\hat{L}$
+\begin{equation*}
+\widehat{W}_{i}=\widehat{\lambda}_{ii}^{\frac{-1}{\epsilon}}
+\end{equation*}
+where $W_{i}$ denotes welfare, $\lambda_{ii}$ denotes the domestic share of expenditure, and $\widehat{x}=\frac{x^{\prime}}{x}$ denotes proportional changes
+\item Notice that the gains-from-trade result is just a corollary of this since $\widehat{\lambda}_{ii}=\lambda _{ii}$ when moving from autarky to trade
+	\item The paper provides sufficient conditions for this result and shows the class contains many models
+	\item Optimistic view: welfare predictions of Armington model are more robust than you might have thought
+	\item Pessimistic view: within that class of models, micro-level data do not matter
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{ACR (2012): Environment}
+Consumers have CES utility with ideal price index 
+\begin{equation*}
+P_{i}=\left( \int_{\omega \in \Omega }p_{i}\left( \omega \right) ^{1-\sigma
+}d\omega \right) ^{\frac{1}{1-\sigma }}
+\end{equation*}
+Labor is the only factor of production and the cost function is
+\begin{equation*}
+C_{ij}\left( \omega ,t,q\right) =\underset{\text{variable cost}}{\underbrace{%
+qw_{i}\tau _{ij}\alpha _{ij}\left( \omega \right) t^{\frac{1}{1-\sigma }}}}+%
+\underset{\text{fixed cost}}{\underbrace{w_{i}^{1-\beta }w_{j}^{\beta }\xi
+_{ij}\phi _{ij}\left( \omega \right) m_{ij}\left( t\right) }}\text{,}
+\end{equation*}
+\begin{columns}
+\begin{column}{.49\textwidth}
+\begin{itemize}
+{\footnotesize
+\item $q:$ quantity,
+\item $w_{i}:$ wage,
+\item $\tau_{ij}:$ iceberg transport cost
+\item $\alpha _{ij}\left( \omega \right):$ good-specific heterogeneity
+}
+\end{itemize}
+\end{column}
+\begin{column}{.49\textwidth}
+\begin{itemize}
+{\footnotesize
+\item $\xi_{ij}:$ fixed-cost parameter,
+\item $\phi_{ij}\left(\omega\right) :$ good-specific heterogeneity in fixed costs
+\item $m_{ij}\left(t\right)$: cost for endogenous destination-specific
+technology choice, $t$,
+}
+\end{itemize}
+\end{column}
+\end{columns}
+\begin{equation*}
+t\in \left[ \underline{t},\overline{t}\right],
+m_{ij}^{\prime }>0, 
+m_{ij}^{\prime \prime }\geq 0
+\end{equation*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{ACR (2012): Environment (continued)}
+\begin{itemize}
+\item There is either perfect competition in which case
+\begin{itemize}
+\item Firms can produce any good
+\item There are no fixed exporting costs
+\end{itemize}
+\item Or there is monopolistic competition in which case
+\begin{itemize}
+\item Either firms in $i$ can pay $w_{i}F_{i}$ for monopoly power over a
+random good
+\item Or an exogenous measure of firms, $\bar{N}_{i}<\bar{N}$, receive
+monopoly power
+\end{itemize}
+\item Let $N_{i}$ be the measure of goods that can be produced in $i$%
+\begin{itemize}
+\item Under perfect competition: $N_{i}=\bar{N}$
+\item Under monopolistic competition: $N_{i}<\bar{N}$
+\end{itemize}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{ACR (2012): Macro-level restrictions}
+\begin{itemize}
+\item \textbf{R1} For any country $j$, bilateral trade is balanced%
+\begin{equation*}
+\sum\nolimits_{i\not=j}X_{ij}=\sum\nolimits_{i\not=j}X_{ji}
+\end{equation*}
+\item \textbf{R2}\emph{\ }For any country $j$, variable profits are a
+constant share of sales%
+\begin{equation*}
+\frac{\Pi _{i}}{\sum\nolimits_{j=1}^{n}X_{ij}}\text{\ is constant}
+\end{equation*}
+\item \textbf{R3} The import demand system satisfies,
+\begin{equation*}
+\epsilon _{j}^{ii^{\prime }}\equiv \left. \partial \ln \left(
+X_{ij}/X_{jj}\right) \right/ \partial \ln \tau _{i^{\prime }j}=\left\{ 
+\begin{array}{ccc}
+\epsilon <0 &  & i=i^{\prime }\neq j \\ 
+0 &  & \text{\emph{otherwise}}
+\end{array}%
+\right.
+\end{equation*}
+\item $\mathbf{R3}'$ \ The import demand system satisfies,%
+\begin{equation*}
+X_{ij}=\frac{\chi _{ij}\cdot M_{i}\cdot \left( w_{i}\tau _{ij}\right)
+^{\epsilon }\cdot Y_{j}}{\sum\nolimits_{i^{\prime }=1}^{n}\chi
+_{i^{\prime }j}\cdot M_{i^{\prime }}\cdot \left( w_{i^{\prime }}\tau
+_{i^{\prime }j}\right) ^{\epsilon }}
+\end{equation*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{ACR (2012): Ex-post results}
+\begin{theorem}
+If $\mathbf{R1}$-$\mathbf{R3}$ hold, then a sufficient statistic for the welfare effects of
+foreign shocks is%
+\begin{equation*}
+\widehat{W}_{j}=\widehat{\lambda }_{jj}^{1/\epsilon }
+\end{equation*}
+\end{theorem}
+\begin{corollary}
+The welfare gains of moving from autarky to current levels of trade are
+given by%
+\begin{equation*}
+\widehat{W}_{j}=\lambda _{jj}^{1/\epsilon }
+\end{equation*}
+\end{corollary}
+These are ex-post results in the sense that $\widehat{\lambda}_{jj}$ needs
+to be observed.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{ACR (2012): Ex-ante result}
+\begin{theorem}
+If $\mathbf{R1}$-$\mathbf{R3}'$ hold, then the welfare effects of trade cost changes can be
+predicted from%
+\begin{equation*}
+\widehat{W}_{j}=\widehat{\lambda }_{jj}^{1/\epsilon }
+\end{equation*}%
+where $\widehat{\lambda }_{jj}$ can be calculated from%
+\begin{equation*}
+\widehat{\lambda }_{jj}=\left( \sum\nolimits_{i=1}^{n}\lambda _{ij}\left( 
+\hat{w}_{i}\hat{\tau}_{ij}\right) ^{\epsilon }\right) ^{-1}\text{,}
+\end{equation*}%
+after solving for $\widehat{w}_{i}$ given $\hat{\tau}_{ij}$ from%
+\begin{equation*}
+\widehat{w}_{i}=\sum\nolimits_{j=1}^{n}\frac{\lambda _{ij}\hat{w}%
+_{j}Y_{j}\left( \hat{w}_{i}\hat{\tau}_{ij}\right) ^{\epsilon }}{%
+Y_{i}\sum\nolimits_{i^{\prime }=1}^{n}\lambda _{i^{\prime }j}\left( \hat{w}%
+_{i^{\prime }}\hat{\tau}_{i^{\prime }j}\right) ^{\epsilon }}\text{.}
+\end{equation*}
+\end{theorem}
+This is an ex-ante result which requires the stronger assumption $\mathbf{R3}'$. \\
+Also see \href{https://www.aeaweb.org/articles?id=10.1257/aer.20150956}{Adao, Costinot, and Donaldson (AER 2017)} on relaxing CES/IIA part of gravity
+\end{frame}%
+% -----------------------------------------
+\begin{frame}{Are these gains too small?}
+Ossa (JIE 2015) extends ACR (2012) environment to multiple sectors
+\begin{itemize}
+\item While imports in the average industry do not matter too much, imports
+in some industries are critical to the functioning of the economy
+\item The aggregate formula $G_{j}=\lambda _{j}^{-\frac{1}{\epsilon }}$
+extends to $G_{j}=\lambda _{j}^{-\frac{1}{\tilde{\epsilon}_{j}}}$ with
+multiple industries, where $1/\tilde{\epsilon}_{j}$ is a weighted average
+of the industry-level $1/\epsilon _{s}$
+\item Only a few low-elasticity industries are needed to generate large
+gains from trade which is missed when using the aggregate formula
+\item The industry-level formula predicts about three times larger gains
+from trade than the aggregate formula amounting to an average 55.9\%
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Reduced-form estimates of income gains}
+Feyrer (2009, 2018) revisits the Frankel and Romer (1999) idea using 
+panel settings with changes in trade costs due to the Suez Canal and rise of air transport
+\begin{itemize}
+	\item Zero stage: Predicted trade is sum of predicted changes in bilateral trade flows due to Suez shock or rise of air transport
+	\item First stage: Total trade on predicted trade
+	\item 2SLS regression of GDP per capita on total trade
+\end{itemize}
+Two papers differ in terms of gradual vs sudden shocks and roles of sea vs air transport \\
+\begin{itemize}
+	\item Elasticity of GDP per capita wrt trade for Suez is about 0.2
+	\item Elasticity of GDP per capita wrt trade for air transport is in 0.5-0.7 range
+\end{itemize}
+What do you think?
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Whither ``trade theory with numbers''?}
+Costinot and Rodriguez-Clare (2014): \\
+%\begin{quote}
+{\footnotesize
+new quantitative trade models put more emphasis on transparency and less emphasis on realism. The idea is to construct middle-sized models that are rich enough to speak to first-order features of the data, like the role of country size and geography, yet parsimonious enough so that one can credibly identify its key parameters and understand how their magnitude affects counterfactual analysis.} \\
+%\end{quote}
+\noindent {Donaldson (2018) on Indian railroads:} \\
+%\begin{quote}
+{\footnotesize a little over one-half of the total impact of the railroads estimated in column 1 can be explained by the mechanism of enhanced opportunities to trade according to comparative advantage, represented in the model} \\
+%\end{quote}
+\noindent { \href{https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080213-041015}{Donaldson (2015)} on Feyrer (2009, 2018):} \\
+%\begin{quote}
+{\footnotesize How can we explain the magnitude of the effects in these papers\dots
+[LATE, SUTVA, residual OVB]
+\dots
+or simply the possibility that the stylized and parametric quantitative gravity models—especially those with just one sector and no IO linkages—against which the empirical results here are being compared are too pessimistic about the size of the gains from trade.
+}
+%\end{quote}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Next week and next class}
+\begin{itemize}
+	\item Next week (Oct 21): No class
+	\item Next class (Oct 28): Multiple factors of production
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\end{document}
