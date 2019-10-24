@@ -1,0 +1,499 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 6 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 6}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{comment}
+\begin{frame}{Before we get started}
+\begin{itemize}
+	\item Today we're talking about trade with increasing returns, but let's talk about the DFS '77 assignment briefly.
+\item Recall our friends
+$A(z) \equiv \frac{a^*(z)}{a(z)}$
+and
+$B\left(\tilde{z}\right) \equiv \frac{\theta \left(\tilde{z}\right) }{1-\theta \left(\tilde{z}%
+\right) }\frac{L^{*}}{L}$
+\item Equilibrium relative wage $\omega \equiv \frac{w}{w^*}$ is where $A\left(\tilde{z}\right)=B\left(\tilde{z}\right)$
+\item Can you vary the $A()$ function such that equilibria exhibit the same volume of trade and different gains from trade?
+\end{itemize}
+\begin{align*}
+	\ln (U/L) 
+	&=
+	{\ln w} - \int_{0}^{1} b(z) \ln p(z) dz
+	\\
+	\int_{0}^{1} b(z) \ln a(z) dz 
+	&\geq \int_{0}^{\tilde{z}} b(z) \ln a(z) dz + \int_{\tilde{z}}^{1} b(z) \ln \left[w^{*} a^{*}(z)\right] dz 
+	\\
+	0
+	&\geq
+	\int_{\tilde{z}}^{1} b(z) \ln \left[A(z) / \omega\right] dz
+\end{align*}
+What can be said about the magnitude of the gains from trade in this model if we observe the equilibrium volume of trade and do not observe autarky prices?
+\end{frame}
+\end{comment}
+% -----------------------------------------
+\begin{frame}{Today: Does size matter?}
+\linespread{1.1}
+\begin{itemize}
+	\item In neoclassical trade models, the pattern of specialization is size-invariant:
+	\begin{itemize}
+		\item Ricardian: DFS (1977) $A(z)$ schedule independent of $L/L^{*}$
+		\item Heckscher-Ohlin: Factor intensity and abundance do not depend on size 
+		\item Relative size determines the cutoff good $z^{*}$ or the area of the FPE set, not the pattern of comparative advantage
+	\end{itemize}
+	\item In new trade theory, size can influence the pattern of specialization because there are economies of scale
+\begin{itemize}
+	\item Intuition: Size is advantageous when there are economies of scale
+	\item Implications: strategic trade policy, multiple equilibria
+	\item Formalizing the idea proved challenging
+	%\item With homogeneous demand, larger economy may capture IRS sector %See top of page 832 of Grossman and Rossi-Hansberg (QJE 2010)
+	%\item With heterogeneous demand, larger domestic market may yield competitive advantage
+\end{itemize}
+	\item A ``home-market effect'', in which an economy with greater domestic demand is a (net) exporter of that good, distinguishes new trade theories from neoclassical models
+	\item Empirical challenge is inferring ``greater demand'' from observed equilibrium
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{A short history of size in theory}
+\begin{itemize}
+	\item \href{https://books.google.com/books?id=fJM_cAAACAAJ}{Linder (1961)} posits that home demand is a source of comparative advantage such that rich countries will produce high-quality products
+	%\item %Corden (1970): http://tradediversion.net/2013/10/11/a-prescient-note-on-the-home-market-effect-by-max-corden/
+	\item '60s \& '70s: Theorists struggle to link market size and specialization
+	\item \href{https://assets.aeaweb.org/assets/production/journals/aer/top20/70.5.950-959.pdf}{Krugman (1980)} formalizes two-sector, two-country predictions for (1) exogenous demand differences and (2) country size differences
+%	\item Widely used case is freely traded CRS good and costly-to-trade IRS varieties
+	\item Early 2000s: Empirical work correlates market size with sectoral composition
+	\item 2010s: Income-driven demand composition in theory and empirics
+%	\item Fajgelbaum, Grossman, Helpman (2011) link income levels to quality specialization
+%	\item Matsuyama (2015) links income levels to sectoral specialization
+\end{itemize}
+I focus on internal economies of scale, for external economies see \href{https://mitpress.mit.edu/books/market-structure-and-foreign-trade}{Helpman and Krugman (1985, p.36-38)}, \href{http://qje.oxfordjournals.org/content/125/2/829.abstract}{Grossman and Rossi-Hansberg (2010, p.829-832)}, and \href{http://eml.berkeley.edu/~arodeml/}{Kucheryavyy, Lyn, and Rodriguez-Clare (2015)}
+ 
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Linder hypothesis}
+\linespread{0.95}
+Linder (1961) posits that home demand governs supply capability (p.87--90)
+\begin{quote}{\footnotesize
+[The] range of exportable products is determined by internal demand. It is a necessary, but not a sufficient condition, that a product be consumed (or invested) in the home country for this product to be a potential export product\dots In a world of imperfect knowledge, entrepreneurs will react to profit opportunities of which they are aware. These would tend to arise from domestic needs\dots An invention is, in itself, most likely to have been the outcome of an effort to solve some problem which has been acute in one's own environment\dots the production functions of goods demanded at home are the relatively most advantageous ones.
+}\end{quote}
+Linder hypothesis for trade flows (p.91--94)
+\begin{quote}{\small
+Internal demand determines which products may be imported\dots The range of potential exports is identical to, or included in, the range of potential imports\dots The more similar the demand structure of two countries, the more intensive, potentially, is the trade between these two countries\dots Similarity of average income levels could be used as an index of similarity of demand structures.
+}\end{quote}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{A modeling challenge}
+\linespread{0.95}
+\href{http://tradediversion.net/2013/10/11/a-prescient-note-on-the-home-market-effect-by-max-corden/}{Corden (1970, p.52)}:
+\begin{quote}
+{\small
+Professor Grubel suggests that a country will tend to produce and export those products or `styles' of products for which it has a relatively large domestic market. He explains this in terms of economies of scale. This is essentially the `Linder hypothesis' which has obtained some empirical support, as well as being intuitively plausible. But it does raise an interesting theoretical question which has not, to my knowledge, been explored. In a simple static two-product two-country model with no transport costs, with economies of scale and with the demand patterns differing between the two countries it does not follow that a country will export that product to which its own demand pattern is biased... The question then is: What else must we put into the model? Is it transport costs, or is it rather something `dynamic'?
+}
+\end{quote}
+Two dynamic stories:
+\begin{itemize}
+	\item Larger demand + economies of scale = lower autarky price
+	\item Larger demand + learning by doing = inherited comparative advantage
+\end{itemize}
+Neither links contemporary demand conditions to trade flows
+\end{frame}
+% -----------------------------------------
+\begin{frame}{A modeling challenge}
+\href{http://tradediversion.net/2013/10/11/a-prescient-note-on-the-home-market-effect-by-max-corden/}{Corden (1970, p.54)}:
+\linespread{1.0}
+\begin{quote}
+{\small
+A third approach might be to introduce transport costs. Transporting goods from one country to another uses up resources, and from the point of view of maximising world income it will pay to minimise transport costs. Given that in the final equilibrium both countries will specialise, each country should then specialise on the good for which it has the relatively greater demand, since this will minimise transporting. This seems obvious. Provided we do not introduce other complications, trade along Linder lines will maximise potential world income. But it does not seem so easy to prove that trade will actually assume that pattern. Suppose that, for some reason, one starts with the trade flow in the opposite direction. One might explain this in terms of some dynamic considerations. Will there then be a natural tendency for the pattern of specialisation and hence the flow of trade to reverse itself? It does not seem obvious that this would be so. There is scope for further theoretical explorations here.
+}
+\end{quote}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Today: Increasing returns and home-market effects}
+\begin{itemize}
+\item Print Krugman (JIE 1979): We will go through it in its entirety
+\item Print Krugman (AER 1980): We will go through it in its entirety
+\item Fajgelbaum, Grossman, and Helpman (2011) + Dingel (2017)
+\item Matsuyama (2019) ``\href{https://onlinelibrary-wiley-com.proxy.uchicago.edu/doi/10.3982/ECTA13765}{Engel's Law in the Global Economy}''
+\item Costinot, Donaldson, Kyle, and Williams (2019) ``\href{https://academic.oup.com/qje/article/134/2/843/5298504}{The More We Die, The More We Sell? A Simple Test of the Home-Market Effect}''
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Krugman (JIE 1979)}
+\begin{align*}
+U &= \sum_{i=1}^{n} v(c_i) \quad v'>0, v''<0
+&\text{(1)} &&
+\epsilon_i &= \frac{-v'}{v'' c_i}
+&\text{(2)} \\
+l_i &= \alpha + \beta x_i
+&\text{(3)} &&
+x_i &= L c_i
+&\text{(4)} \\
+L &= \sum_i l_i = \sum_{i=1}^{n} \alpha + \beta x_i
+&\text{(5)} &&
+p &= p_i, x=x_i \ \forall i 
+&\text{(6)} \\
+v'(c_i) &= \lambda p_i \ \forall i 
+&\text{(7)} &&
+p_i &= \lambda^{-1} v'\left(x_i / L\right) 
+&\text{(8)} \\
+\pi_i &= p_i x_i - (\alpha+\beta x_i) w 
+&\text{(9)} &&
+p_i &= \frac{\epsilon}{\epsilon-1}\beta w 
+&\text{(10)} \\
+0 &= px - (\alpha+\beta x)w 
+&\text{(11)} &&
+p/w & = \beta + \alpha/(Lc) 
+&\text{(12)} \\
+n &= \frac{L}{\alpha + \beta x} 
+&\text{(13)}
+\end{align*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Krugman (AER 1980)}
+\begin{align*}
+U &= \sum_i c_i^{\theta} 
+&\text{(1)} \\
+l_i &= \alpha + \beta x_i 
+&\text{(2)} \\
+x_i &= L c_i 
+&\text{(3)} \\
+L &= \sum_i (\alpha + \beta x_i) 
+&\text{(4)} \\
+\theta c_i ^{\theta-1} &= \lambda p_i 
+&\text{(5)} \\
+p_i &=  \theta \lambda^{-1} (x_i / L)^{\theta-1} 
+&\text{(6)} \\
+p_i &= \theta^{-1} \beta w 
+&\text{(7)} \\
+\pi_i &= px_i - (\alpha+\beta x_i) 
+&\text{(8)} \\
+x_i &= \alpha \theta / \beta (1-\theta) 
+&\text{(9)} \\
+n &= L(1-\theta)/\alpha 
+&\text{(10)} \\
+n &= L(1-\theta)/\alpha, \  n^* = L^*(1-\theta)/\alpha 
+&\text{(11)}
+\end{align*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Krugman (1980), section III}
+\begin{itemize}
+	\item Two types of consumers consuming two classes of SDS varieties
+	\begin{align*}U = \sum_{\omega} q(\omega)^{\frac{\sigma-1}{\sigma}} ; \quad \tilde{U} = \sum_{\tilde{\omega}} \tilde{q}(\tilde{\omega})^{\frac{\sigma-1}{\sigma}} \end{align*}
+	\item Home and foreign have same total population; different shares of types
+	\begin{align*}L + \tilde{L} = L^* + \tilde{L}^{*} = \bar{L} ; \quad L = \gamma \bar{L} ; \quad L^* = (1-\gamma)\bar{L}  \end{align*}
+	\item Identical production functions and iceberg trade costs $\tau$
+	\begin{align*} l(\omega) = f + c x(\omega) ; \quad l(\tilde{\omega}) = f + c x(\tilde{\omega}) \\
+	\Rightarrow p = \frac{\sigma}{\sigma-1} c w ; \quad \pi=0\Rightarrow x = \frac{f}{c}\left(\sigma-1\right)
+	\end{align*}
+	\item Symmetry implies $w = \tilde{w} = w^* = \tilde{w}^*$ and thus $p=p^*$
+	\item Only need to solve for $n, \tilde{n}, n^*, \tilde{n}^{*}$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Krugman (1980), section III}
+\begin{itemize}
+	\item \href{http://www.columbia.edu/~jid2106/td/dixitstiglitzbasics.pdf}{Relative expenditure on foreign varieties} when $p=p^*$ is $\tau^{1-\sigma}$
+	\item Expenditure on domestic varieties as share of total is $\frac{n}{n + n^*\tau^{1-\sigma}}$
+	\item Market clearing: industry income equals domestic plus foreign expenditure
+	\begin{align*}
+	npx = \frac{n}{n + n^*\tau^{1-\sigma}} w L + \frac{n\tau^{1-\sigma}}{n\tau^{1-\sigma} + n^*} w^* L^* \\
+	n^*p^*x^* = \frac{n^*\tau^{1-\sigma}}{n + n^*\tau^{1-\sigma}} w L + \frac{n^*}{n^* + n\tau^{1-\sigma}} w^* L^*
+	\end{align*}
+	\item With $p=p^*$, $w=w^*$, $x=x^*$, solve for $\frac{n}{n^*}$
+	\begin{align*}
+	n>0,n^*>0 \Rightarrow \frac{n}{n^*} = \frac{L/L^* - \tau^{1-\sigma}}{1 - \tau^{1-\sigma}L/L^*}, \quad \frac{L}{L^*} \in \{\tau^{1-\sigma},\tau^{\sigma-1}\} \\
+	 \frac{L}{L^*} < \tau^{1-\sigma} \Rightarrow n = 0 ; \quad \frac{L}{L^*} > \tau^{\sigma-1} \Rightarrow n^* = 0 
+	\end{align*}
+	\item $\frac{n}{n^*}$ is increasing in $\frac{L}{L^*}$: greater relative demand calls for domestic supply
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Krugman (1980), section III}
+\linespread{1.0}
+\begin{itemize}
+	\item In autarky, entry is proportionate to demand:
+	\begin{align*}
+	npx = wL; & \quad \tilde{n}\tilde{p}\tilde{x} = \tilde{w}\tilde{L} \\
+	w=\tilde{w}, p=\tilde{p}, x=\tilde{x} & \Rightarrow n/\tilde{n} = L / \tilde{L}
+	\end{align*}
+	\item With trade, entry more than proportionate to demand (Krugman 1980, Fig 2)
+	\begin{align*}
+	\frac{n}{n^*} &= \frac{L/L^* - \tau^{1-\sigma}}{1 - \tau^{1-\sigma}L/L^*} \\
+	\frac{\partial n/n^*}{\partial L/L^*} &= \frac{1 - \left(\tau^{1-\sigma} \right)^2}{\left(1 - \tau^{1-\sigma}\frac{L}{L^*}\right)^2} \geq 1 \text{ if } \frac{L}{L^*}\geq \tau^{1-\sigma}
+	\end{align*}
+	%\includegraphics[width=0.2\textwidth]{../images/Krugman1980Fig2.pdf}
+	\item The market with relatively greater demand for a product type is a net exporter of that type
+	\begin{align*}
+	\textnormal{home net exports of first type}	&=  \frac{n\tau^{1-\sigma}}{n\tau^{1-\sigma} + n^*} w^* L^*  - \frac{n^*\tau^{1-\sigma}}{n + n^*\tau^{1-\sigma}} w L \\
+				&= \frac{\tau^{1-\sigma}wL^*}{\tau^{1-\sigma}n+n^*} \left[n - n^*\right]
+	\end{align*}
+	\item This is the home-market effect
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+%\begin{frame}{A few comments}
+%\begin{itemize}
+%	\item Differences in demand composition are to exogenous differences in preferences
+%	\item The mirror-image assumption complicates interpretation of comparative statics: raising $\frac{L}{L^*}$ means simultaneously lowering $\frac{\tilde{L}}{\tilde{L}^*}$
+%	\item 
+%\end{itemize}
+%
+%\end{frame}
+% -----------------------------------------
+\begin{frame}{An extension}
+\begin{itemize}
+	%\item In Krugman (1980), differences in demand composition are due to exogenous differences in preferences
+	\item That model assumes exogenous differences in preferences
+	%\item In a final ``extension'', Krugman (1980) consider a case of a CRS sector and a IRS sector with two countries of different population sizes
+	\item In a final ``extension'', Krugman posits what has become the popular case
+\end{itemize}
+\includegraphics[width=.45\textwidth]{../images/Krugman1980extension1.pdf} \hfill
+\includegraphics[width=.45\textwidth]{../images/Krugman1980extension2.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The more widely used case}
+\begin{itemize}
+	%\item In Krugman (1980), differences in demand composition are due to exogenous differences in preferences
+	%\item HK (1985, 10.4): two-sector model w/ homogeneous good and SDS sector
+	\item Helpman-Krugman (1985, 10.4) formalize ``another special case''
+	\item Cobb-Douglas upper tier with SDS share $\alpha$ and homogeneous share $1-\alpha$
+	\item Homogeneous good is CRS, freely traded, produced in both $\Rightarrow w = w^*$
+	\pause
+	\item Market clearing, again exploiting $p=p^*$ and now using $\alpha$ 
+	\begin{align*}
+	npx = \frac{n}{n + n^*\tau^{1-\sigma}} \alpha w L + \frac{n\tau^{1-\sigma}}{n\tau^{1-\sigma} + n^*} \alpha w^* L^* \\
+	n^*p^*x^* = \frac{n^*\tau^{1-\sigma}}{n + n^*\tau^{1-\sigma}} \alpha w L + \frac{n^*}{n^* + n\tau^{1-\sigma}} \alpha w^* L^*
+	\end{align*}
+		\item Possible solutions, denoting $\rho\equiv\tau^{1-\sigma}$
+	\begin{align*}
+	n&=0 & n^* &= \frac{\alpha}{x} \left(L + L^* \right)\\
+	n&=\frac{\alpha}{x} \left(L + L^* \right) & n^* &= 0 \\
+	n&=\frac{\alpha}{(1-\rho)x} \left(L-\rho L^*\right) & n^* &= \frac{\alpha}{(1-\rho)x} \left(L^*-\rho L\right)
+	\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The more widely used case}
+\linespread{1.0}
+\begin{itemize}
+	\item Define $s_n = \frac{n}{n+n^*}$ and $s_L = \frac{L}{L+L^*}$
+	\begin{center}\includegraphics[width=0.3\textwidth]{../images/HelpmanKrugman1985Fig10_4.jpg}\end{center}
+	\item {\small HK (1985):  ``In effect a large domestic market serves as a base for exports -- a proposition that has always seemed plausible to practical people but is hard to capture in formal models. We have been able to work only with a highly specialized example; it is probable, however, that `home market effects' of the kind we have illustrated here are actually quite pervasive.''}
+	\item {\small \href{http://www.jstor.org/stable/116870}{Davis (1998)}: ``This result depends on the relative size of trade costs in differentiated and homogeneous industries. In a focal case in which the industries have identical trade costs, the home market effect disappears.''}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Empirics}
+\begin{itemize}
+	\item \href{http://onlinelibrary.wiley.com/doi/10.1111/0008-4085.00082/abstract}{Feenstra, Markusen, Rose (2001)}: In gravity regressions, differentiated goods have higher elasticity of exports wrt exporter GDP than importer GDP; reverse for homogeneous goods
+	\item \href{https://www.aeaweb.org/articles?id=10.1257/0002828042002688}{Hanson and Xiang (2004)}: Differences-in-differences test. Do higher-GDP countries export relatively more of high-transport-cost, low-elasticity-substitution goods? Yes
+	\item \href{http://www.sciencedirect.com/science/article/pii/S0022199602000880}{Davis and Weinstein (2003)}: Infer ``idiosyncratic elements of demand''. Does domestic production rise less than one-for-one or more than one-for-one with demand? More
+	%\item \href{http://economics.mit.edu/faculty/costinot/papers}{Costinot, Donaldson, Kyle, Williams (2016)}: Instrument for pharmaceutical demand for drug class $n$ with age$\times$gender-predicted disease burden, $\theta^n$. Reduced-form regression for exports from $i$ to $j$:
+	%\begin{equation*}
+	%	\ln X_{ij}^n = \beta_X \theta_i^n + \beta_M \theta_j^n +  \delta_{ij} + \delta^n + \epsilon_{ij}^n
+	%\end{equation*}
+	%Result: $\beta_X > \beta_M$
+	\item These papers infer demand differences from GDP levels or expenditure patterns, which are equilibrium objects that may also reflect supply-side differences
+	\item FMR speak to net exports, while DW and HX are less clear
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Back to Linder}
+Linder (1961) differs from Krugman (1980) in two important ways:
+\begin{enumerate}
+	\item Linder predicts that demand generates exports, Krugman predicts demand generate net exports
+	\item The Helpman-Krugman formulation emphasizes country size, Linder focused on incomes:
+	``The level of average income... has... a dominating influence on the structure of demand... when we compare demand structures, it is necessary to define goods by specifying quality.'' (p.94--95)
+\end{enumerate}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The home-market effect, weak and strong}
+Helpful typology from \href{https://academic.oup.com/qje/article/134/2/843/5298504}{Costinot, Donaldson, Kyle, and Williams (2019)}:
+\begin{itemize}
+	\item Weak home-market effect: Demand generates exports.\\Linder (1961): ``The range of exportable products is determined by internal demand.''
+	\item Strong home-market effect: Greater demand generates \textit{net} exports.\\ Krugman (1980): ``If two countries have the same composition of demand, the larger country will be a net exporter of the products whose production involves economies of scale.''
+	\item A weak home-market effect requires economies of scale; the strong HME requires sufficiently strong economies of scale
+	\item Krugman's choice of functional form yielded the strong home-market effect for all parameter values -- only CDKW formalize the weak HME
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The role of income: Non-homothetic preferences in trade}
+\begin{itemize}
+	\item \href{https://www.nber.org/papers/w8675}{Harrigan (2001)}: ``The assumption of identical homothetic preferences is implausible, and uninteresting in the sense that there is no real theory behind it.''
+	\item Linder posited that income composition affects demand composition, which is what every household budget study finds (\href{http://www.cambridge.org/us/academic/subjects/economics/microeconomics/economics-and-consumer-behavior?format=PB&isbn=9780521296762}{Deaton and Muellbauer 1980})
+	\item Non-homothetic preferences make income levels relevant for consumer expenditure allocations
+	\item This heterogeneous demand might predict trade flows through intersectoral or intrasectoral (quality) specialization
+	\item High-income economies might have comparative advantage in income-elastic goods due to a coincidental correlation or a causal home-market effect
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Coincidental correlation: Caron, Fally, Markusen (2014)}
+\begin{itemize}
+	\item \href{http://qje.oxfordjournals.org/content/129/3/1501}{Caron, Fally, Markusen (2014)}: Intersectoral specialization, correlation between income elasticity and skill intensity
+	\item CRIE preferences:	$U = \sum_k \alpha_{1,k} Q_{k}^{\frac{\sigma_k-1}{\sigma_k}} \Rightarrow x_{nk} = \lambda_n^{-\sigma_k} \alpha_{2,k}P_{nk}^{1-\sigma_k}$
+	\item EK-CDK-CP multi-sector production with intermediates (no HME)
+	\item Sectoral gravity:
+	\begin{align*}
+	\frac{X_{nik}}{X_{nk}} = \frac{S_{ik} d_{nik}^{-\theta_k}}{\Phi_{nk}} ; \quad \Phi_{nk} = \sum_i S_{ik} d_{nik}^{-\theta_k}
+	\end{align*}
+	\item Gravity with zero trade costs and no intermediates shows interaction of supply and demand characteristics
+\begin{align*}
+\frac{X_{ni}}{X_n} = \sum_k \underbrace{\left(\frac{S_{ik}}{\sum_j S_{jk}}\right)}_{\textnormal{supply shifters}} \underbrace{\left(\frac{\alpha_{4,k} \lambda_n^{-\sigma_k}} {\sum_{k'} \alpha_{4,k'} \lambda_n^{-\sigma_{k'}}} \right)}_{\textnormal{demand shifters}}
+\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Caron, Fally, Markusen (2014)}
+\linespread{1.0}
+\begin{itemize}
+	\item Sectoral gravity to obtain structural proxy for $\Phi_{nk}$
+	\begin{align*}
+	\ln X_{nik} = \underbrace{\ln S_{ik}}_{ik \textnormal{ FE}} - \theta_k \underbrace{\ln d_{nik}}_{\textnormal{proxies}} + \underbrace{\ln\left(\frac{X_{nk}}{\Phi_{nk}} \right)}_{nk \textnormal{ FE}} \\
+	\Rightarrow \hat{\Phi}_{nk} = \sum_i \exp \left( \widehat{\ln S_{ik}} - \hat{\theta}_k \ln d_{nik} \right)
+	\end{align*}
+	\item Price indices closely related to inward MR, $P_{nk} = \alpha_{3,k} \Phi_{nk}^{-1/\theta_k}$
+	\item Sectoral expenditures to identify $\{\sigma_k, \lambda_n, \alpha_{5,k}, \theta_k\}$ via constrained NLS
+	\begin{align*}
+	\ln x_{nk} = {-\sigma_k}\ln \lambda_n + \ln \alpha_{5,k} + \frac{\sigma_k-1}{\theta_k} \ln \hat{\Phi}_{nk} + \epsilon_{nk} \\
+	\sum_k \exp \left[ {-\sigma_k}\ln \lambda_n + \ln \alpha_{5,k} + \frac{\sigma_k-1}{\theta_k} \ln \hat{\Phi}_{nk} \right] = e_n
+	\end{align*}
+	\item Correlation between a good's income elasticity of demand and its skilled-labor intensity in production is about 50\%
+	\item CFM explain missing factor content, income-openness relationship
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Causal HME in theory: Matsuyama (2019)}
+\begin{itemize}
+	\item \href{https://onlinelibrary-wiley-com.proxy.uchicago.edu/doi/10.3982/ECTA13765}{Matsuyama (2019)}: Intersectoral specialization, causal home-market effect
+	\item Continuum of SDS sectors -- lower tier looks like Krugman (1980)
+	\item Direct implicitly additive CES utility with sector-specific income elasticity parameters (see \href{https://ideas.repec.org/a/ecm/emetrp/v43y1975i3p395-419.html}{Hanoch 1975} or \href{http://faculty.wcas.northwestern.edu/~kmatsu/}{Matsuyama's Canon lecture})
+	\item Ranking sectors by income elasticities, the economy with higher standard of living is a net exporter in higher-ranked sectors
+	\item Comparative statics for productivity improvements and trade costs
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Brief discussion of implicit additive separability}
+\begin{itemize}
+	\item Recall utility functions $U(x)$ and indirect utility $V(p,y)$
+	\item Explicitly additively separable function $U: \mathbb{R}_{+}^{J} \to \mathbb{R}$ is $U(x) = \sum_j u_j(x_j)$
+	\item Bergson (\href{https://www.jstor.org/stable/2967658}{[Burk] 1936}): If $U$ is quasi-concave, increasing, and explicitly additively separable,
+	then it is homothetic if and only if
+	$u_j(x_j) = \alpha_j \frac{x_j^{\rho}}{\rho} + \beta_j \ \forall j$
+	\item Pigou's Law (1910) (\href{https://www.jstor.org/stable/2231258}{Deaton 1974}): If the (direct) utility function is additively separable, then the income elasticity of a good is (approximately) proportionate to the price elasticity of that good
+	\item An implicitly additively separable utility function is
+	$\sum_{j=1}^{J} f_j\left(x_j; U\right)=1$
+\end{itemize}
+Questions about the Matsuyama paper?
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Quality specialization}
+\begin{itemize}
+	\item High-income countries export products at higher prices
+	\item High-income countries import products at higher prices
+	\item Is it correlated comparative advantage or a causal home-market effect?
+	\item \href{https://academic.oup.com/restud/article/84/4/1551/2684498}{Dingel (2017)} extends \href{http://www.journals.uchicago.edu/doi/abs/10.1086/662628}{Fajgelbaum, Grossman, Helpman (2011)} to empirically pursue this question
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW: The More We Die, The More We Sell?}
+Costinot, Donaldson, Kyle, Williams (2019):
+\begin{itemize}
+	\item Theory: Define ``home-market effect'' outside Krugman-like settings
+	\item Empirics: Use demographic differences as source of exogenous variation in demand for pharmaceutical drugs
+\end{itemize}
+This is the must-read paper on home-market effects
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW: Theoretical environment}
+\begin{itemize}
+	\item Demand: Consumption in $j$ of varieties from $i$ targeting disease $n$ is
+	\begin{equation*}d_{ij}^n = d(p_{ij}^n/P_j^n) \theta_j^n D(P_j^n/P_j) D_j \end{equation*}
+	\item Supply: Perfect competition and iceberg trade costs yields supply curve
+	\begin{equation*} s_i^n = \eta_i^n s(p_i^n)\end{equation*}
+	\item Equilibrium: 
+	\begin{equation*} s_i^n = \sum_j \tau_{ij}^n d_{ij}^n \end{equation*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW: Estimating equation}
+\begin{itemize}
+	\item Reduced-form regression for exports from $i$ to $j$:
+	\begin{equation*}
+		\ln X_{ij}^n = \beta_X \theta_i^n + \beta_M \theta_j^n +  \delta_{ij} + \delta^n + \epsilon_{ij}^n
+	\end{equation*}
+ 	\item First-order approximation (log-linearization) around a symmetric equilibrium
+ 	\item Can be derived in perfect competition (with external economies), monopolistic competition (a la Krugman), Bertrand oligopoly, and monopoly settings
+ 	\item Empirical strategy is to proxy for $\theta_i^n$ using $i$'s age$\times$gender-predicted disease burden
+ 	\item $\beta_X > 0$ demonstrates a ``weak home-market effect''
+ 	\item $\beta_X > \beta_M > 0$ demonstrates a ``strong home-market effect''
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW in pictures}
+\begin{center}
+\includegraphics[width=.49\textwidth]{../images/CDKW_figure1.pdf}\\
+\includegraphics[width=.49\textwidth]{../images/CDKW_figure2.pdf}
+\includegraphics[width=.49\textwidth]{../images/CDKW_figure3.pdf}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW: Data}
+\begin{itemize}
+	\item Drug-level pharmaceutical sales for 56 countries; aggregated to countries based on drug's producer's headquarters
+	\item Predicted disease burden from combining WHO's age-gender disease burden in disability-adjusted life years with countries' population demographics
+	\item Theory vs data: Iceberg trade costs vs pricing to market?
+	\item Theory vs data: Multinational production?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW: Is the world symmetric?}
+\begin{equation*}
+	\ln X_{ij}^n = \beta_X \theta_i^n + \beta_M \theta_j^n +  \delta_{ij} + \delta^n + \epsilon_{ij}^n
+\end{equation*}
+\begin{itemize}
+	\item A symmetric equilibrium with $\theta_i = 1 \ \forall i$ and $\tau_{ij} = \tau > 1 \ \forall i,j:i \neq j$
+	\item Symmetry allows omission of multilateral resistance terms
+	\item How do we define HME away from the symmetric equilibrium?
+\end{itemize}
+\begin{center}\includegraphics[width=.8\textwidth]{../images/CDKW_table1.pdf}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW: Main result}
+\begin{center}\includegraphics[width=.8\textwidth]{../images/CDKW_table3.pdf}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW: Robustness checks}
+Attempt to relax symmetry assumption, address spatially correlated demand
+\begin{center}\includegraphics[width=.8\textwidth]{../images/CDKW_table6.pdf}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CDKW: PPML and extensive margin}
+\begin{center}\includegraphics[width=.8\textwidth]{../images/CDKW_table8.pdf}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Home-market effects}
+\begin{itemize}
+	\item Home-market effects are a hallmark of new trade theory relative to neoclassical theories
+	\item Empirical evidence is still in its infancy
+	\item Home-market effects appear important to understanding both (1) quality specialization within US manufacturing and (2) global pharmaceutical sales
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Next week}
+Heterogeneous firms
+\end{frame}
+% -----------------------------------------
+\end{document}

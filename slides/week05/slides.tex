@@ -1,0 +1,807 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 5 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 5}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Today: Multiple factors of production}
+With multiple factors of production, we can talk about distributional consequences of trade
+\begin{itemize}
+	\item Ricardo-Viner specific-factors model
+	\item $2 \times 2$ Heckscher-Ohlin model
+	\item High-dimensional factor-proportions theory
+	\item Trade and regional outcomes (empirics with R-V lens)
+	\item Heckscher-Ohlin-Vanek empirics
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Factor proportions theory}
+\begin{itemize}
+	\item The law of comparative advantage establishes the relationship between relative autarky prices and trade flows
+	\item Factor proportions theory is an account of factor endowments as the source of relative autarky prices
+	\begin{enumerate}
+		\item Countries differ in terms of factor abundance (relative factor supply)
+		\item Goods differ in terms of factor intensity (relative factor demand)
+	\end{enumerate}
+	\item The interplay between these differences governs relative autarky prices and hence trade
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Factor proportions theory}
+\begin{itemize}
+	\item To focus on factor endowments, shut down other channels:
+	\begin{itemize}
+		\item Identical production functions (no Ricardian forces)
+		\item Identical homothetic preferences
+	\end{itemize}
+	\item Two canonical models:
+	\begin{itemize}
+		\item Ricardo-Viner model with 2 goods and 3 factors (2 of which are specific to a good)
+		\item Heckscher-Ohlin model with 2 goods and 2 factors
+	\end{itemize}
+	\item \href{https://www.jstor.org/stable/pdf/2232049.pdf}{Neary (1978)}, among others, treats the specific-factors model as a short-run case, whereas all factors are mobile in longer run
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Ricardo-Viner model: Environment}
+\begin{itemize}
+	\item Two goods ($g=1,2$) with prices $p_1,p_2$
+	\item Three factors with endowments $L$, $K_1$, $K_2$ and prices $w,r_1,r_2$
+	\item Output of good $g$ is
+	\begin{equation*}
+		y_g = f^g \left(L_g,k_g\right)
+	\end{equation*}
+	where $L_g$ is (endogenous) labor working in $g$ and $f^g$ is HD1
+	(payments to specific factors under CRS are profits in DRS)
+	\item Profit maximization (where $f^g_{L} \equiv \pdv{f^g}{L_g}$):
+	\begin{equation*}
+		p_g f^g_{L} \left(L_g,K_g\right) = w 
+		\qquad
+		p_g f^g_{K_g}\left(L_g,K_g\right) = r_g 
+	\end{equation*}
+	\item Labor market clearing: $$L = L_1 + L_2$$
+	\item ``Small open economy'': $p_1,p_2$ exogenous
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Ricardo-Viner model: Equilibrium}
+Combine the expressions for MRPL and $L = L_1 + L_2$ to solve:
+\begin{center}\includegraphics[width=.7\textwidth]{../images/Feenstra2015_fig3_2.png}\end{center}
+See pages 71-75 of Feenstra textbook (first edition)
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Ricardo-Viner model: Comparative statics}
+Suppose that $p_1$ increases
+\begin{center}\includegraphics[width=.55\textwidth]{../images/Feenstra2015_fig3_3.png}\end{center}
+\begin{itemize}
+	\item $w$ increases, $L_1$ increases, $L_2$ decreases
+	\item Differentiate $w=p_1 f^1_{L} \left(L_1,K_1\right)$ wrt $p_1$ to find $\hat{w}<\hat{p}_1$
+	\item From $p_g f^g_{K_g}\left(L_g,K_g\right) = r_g $ we know that $r_1/p_1$ rises while $r_2$ (and thus $r_2/p_1$) falls (e.g., ``Dutch disease'')
+\end{itemize}
+Similar exercises for changes in endowments, etc.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{$2 \times 2$ Heckscher-Ohlin model: Environment}
+Production functions (HD1) using factors $L$ and $K$ are
+\begin{equation*}
+y_{g}=f_{g}\left( L_{g},K_{g}\right) \quad g=1,2
+\end{equation*}
+Unit cost functions are given by
+\begin{equation*}
+c_{g}\left( w,r\right) =\min_{L_{g},K_{g}}\left\{ wL_{g}+rK_{g}|f_{g}\left(
+L_{g},K_{g}\right) \geq 1\right\}
+\end{equation*}
+We write the solution in terms of unit factor demands $a_{gf}$
+\begin{equation*}
+c_{g}\left( w,r\right) =wa_{gL}\left( w,r\right) +ra_{gK}\left( w,r\right)
+\end{equation*}
+From the envelope theorem, we know
+\begin{equation*}
+\frac{\textrm{d} c_{g}}{\textrm{d} w}=a_{gL} \qquad \frac{\textrm{d} c_{g}}{\textrm{d} r}=a_{gK}
+\end{equation*}
+$A(w,r)\equiv [a_{gf}(w,r)]$ denotes the matrix of total factor requirements
+\end{frame}
+% -----------------------------------------
+\begin{frame}{$2 \times 2$ HO: Equilibrium in SOE}
+\begin{itemize}
+	\item Start with ``small open economy'' for which $p_g$ are exogenous
+	\item Profit maximization:
+	\begin{align*}
+	p_{1} &\leq c_{1}\left( w,r\right) \quad \text{equal if produced} \\
+	p_{2} &\leq c_{2}\left( w,r\right) \quad \text{equal if produced} 
+	\end{align*}
+	\item Labor and capital markets clear:
+	\begin{align*}
+	a_{1L}y_{1}+a_{2L}y_{2} &=L \\
+	a_{1K}y_{1}+a_{2K}y_{2} &=K
+	\end{align*}
+	\item These are four nonlinear equations in four unknowns; unique solution not generally guaranteed
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Four theorems}
+\begin{enumerate}
+	\item Factor price equalization: Can trade in goods substitute for trade in factors?
+	\item Stolper-Samuelson: Who wins and who loses from a change in goods prices?
+	\item Rybczynski: How does output mix respond to change in endowments?
+	\item Heckscher-Ohlin: What is the pattern of specialization and trade?
+\end{enumerate}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Factor price insensitivity}
+\begin{itemize}
+\item 
+Good 1 is called labor-intensive if 
+$\frac{a_{1L}\left(w,r\right)}{a_{1K}\left(w,r\right)}
+>\frac{a_{2L}\left(w,r\right)}{a_{2K}\left(w,r\right)}$
+and capital-intensive if 
+$\frac{a_{1L}\left(w,r\right)}{a_{1K}\left(w,r\right)}
+<\frac{a_{2L}\left(w,r\right)}{a_{2K}\left(w,r\right)}$
+\item
+A factor intensity reversal occurs if $\exists w,r,w',r'$ such that good 1 is labor-intensive for $(w,r)$ and capital-intensive for $(w',r')$
+\end{itemize}
+\begin{lemma}
+If both goods are produced, and factor intensity reversals do not occur,
+then factor prices $\omega \equiv (w,r)$ are uniquely determined by goods prices $p \equiv (p_1,p_2)$.
+\end{lemma}
+Proof:
+If both goods are produced in equilibrium, then $p = A(\omega) \omega$. By Gale and Nikaido (1965), this equation admits a unique solution if $a_{fg}(\omega)>0$ for all $f,g$ and $\det[A(\omega)]\neq 0\ \forall \omega$, which no factor intensity reversals guarantees.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Factor intensity reversals}
+\includegraphics[width=.49\textwidth]{../images/Feenstra2015_fig1_5.png}
+\includegraphics[width=.49\textwidth]{../images/Feenstra2015_fig1_6.png}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Factor price equalization}
+\begin{theorem}
+If two countries both produce both goods under free trade with the same technology and there are no factor intensity reversals,
+then factor prices in the two countries are the same.
+\end{theorem}
+\begin{itemize}
+	\item This follow directly from the previous lemma and the no-FIR diagram:
+	\begin{itemize}
+		\item By free trade, goods prices are the same
+		\item By identical technologies, isocost lines are the same
+	\end{itemize}
+	\item Hence, trade in goods is a perfect substitute for factor mobility in this model in the sense that it also equalizes factor prices
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Stolper-Samuelson Theorem}
+\begin{theorem}
+An increase in the relative price of one good raises the real return of the factor used intensively in producing that good and lowers the real return of the other factor.
+\end{theorem}
+%\begin{proof} 
+Proof:\\
+WLOG, let $\frac{a_{1L}(\omega)}{a_{1K}(\omega)}>\frac{a_{2L}(\omega)}{a_{2K}(\omega)}$
+and $\hat{p}_{1}>\hat{p}_{2}$,
+where $\hat{x} \equiv \frac{\textrm{d}x}{x}$. \\
+Differentiating the zero-profit conditions yields
+\begin{equation*}
+\textrm{d}p_{i}=a_{iL}\textrm{d}w+a_{iK}\textrm{d}r
+\end{equation*}
+Define the cost share $\theta _{iL}=\frac{wa_{iL}}{c_{i}}$
+to obtain
+\begin{equation*}
+\hat{p}_{i}=\theta _{iL}\hat{w}+\left( 1-\theta _{iL}\right) \hat{r}
+\end{equation*}
+Goods price changes are weighted averages of factor price changes.
+$\frac{a_{1L}}{a_{1K}}>\frac{a_{2L}}{a_{2K}} \Rightarrow \theta
+_{1L}>\theta _{2L}$
+so 
+\begin{equation*}
+\hat{r}<\hat{p}_{2}<\hat{p}_{1}<\hat{w}
+\end{equation*}
+%\end{proof}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Notes on $2 \times 2$ Stolper-Samuelson Theorem}
+\begin{itemize}
+\item A change in product prices has a magnified effect on factor
+prices
+\item Jones (1965) referred to these inequalities as ``magnification
+effect"
+(This is the \href{https://tradediversion.net/2018/05/07/on-hat-algebra/}{original ``hat algebra''})
+\item Trade liberalization that alters goods prices will thus produce winners and losers across factors
+\item Like FPI and FPE, Stolper-Samuelson result follows from zero-profit condition (+ ``no joint production'')
+\end{itemize}
+\begin{center}
+\includegraphics[width=.55\textwidth]{../images/Feenstra2015_fig1_7.png}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Rybczynski Theorem}
+\begin{theorem}
+For given goods prices, an increase in the endowment of one factor
+causes a more-than-proportionate increase in the output of the good using this factor intensively and
+a decrease in the output of the other good.
+\end{theorem}
+Differentiating the factor market clearing conditions yields,%
+\begin{equation*}
+\textrm{d}L=a_{1L}\textrm{d}y_{1}+a_{2L}\textrm{d}y_{2}\text{ and\ }\textrm{d}K=a_{1K}\textrm{d}y_{1}+a_{2K}\textrm{d}y_{2}
+\end{equation*}
+Defining $\lambda _{iL}=\frac{a_{iL}y_{i}}{L}$ and $\lambda _{iK}=\frac{%
+a_{iK}y_{i}}{K}$ this implies,%
+\begin{equation*}
+\hat{L}=\lambda _{1L}\hat{y}_{1}+\left( 1-\lambda _{1L}\right) \hat{y}_{2}%
+\text{ and }\hat{K}=\lambda _{1K}\hat{y}_{1}+\left( 1-\lambda _{1K}\right) 
+\hat{y}_{2}
+\end{equation*}
+If (w.l.o.g.) $\frac{a_{1L}}{a_{1K}}>\frac{a_{2L}}{a_{2K}}$, then $\lambda
+_{1L}>\lambda _{1K}$ so that,%
+\begin{equation*}
+\hat{y}_{1}>\hat{L}>\hat{K}>\hat{y}_{2}\text{ or }\hat{y}_{1}<\hat{L}<\hat{K}%
+<\hat{y}_{2}
+\end{equation*}
+Hence, if also (w.l.o.g.) $\hat{K}>\hat{L}$, we obtain,%
+\begin{equation*}
+\hat{y}_{1}<\hat{L}<\hat{K}<\hat{y}_{2}
+\end{equation*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Rybczynski Theorem and cone of diversification}
+\includegraphics[width=.37\textwidth]{../images/Feenstra2015_fig1_8.png}
+\includegraphics[width=.59\textwidth]{../images/Feenstra2015_fig1_9.png}
+\begin{itemize}
+	\item Produce both goods iff $\left( L,K\right) $ lies between
+factor requirements vectors $\left( a_{2L},a_{2K}\right) $ and $\left(
+a_{1L},a_{1K}\right) $, the   ``cone of diversification"
+\item At unchanged factor intensities, increase in labor endowment necessitates decrease in output of capital-intensive good
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Heckscher-Ohlin theorem}
+\begin{itemize}
+	\item We now consider world economy with two countries and free trade (prior results derived for small open economies)
+	\item This is a $2 \times 2 \times 2$ model
+	\item Identical technologies and homothetic preferences
+	\item What is the pattern of trade in this global economy?
+	\begin{itemize}
+		\item Rather than starting from autarky, let's start from the integrated equilibrium
+		\item Integrated world economy with world endowment of factors yields integrated equilibrium (good prices, factor prices, resource allocations, etc)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The FPE set}
+\vspace{-3mm}
+\begin{center}\includegraphics[width=.65\textwidth]{../images/Krugman1995_fig1_1.png}\end{center}
+\vspace{-3mm}
+\begin{itemize}
+	\item World endowed with $K$ and $L$
+	\item Integrated factor allocations $OX$ and $OY$
+	\item Samuelson's angel can fragment world into two countries by endowments $E$ or $E'$.
+	\item Can trade reproduce the integrated equilibrium?
+	If FPE holds!
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Heckscher-Ohlin theorem}
+\begin{theorem}
+	In the free-trade equilibrium, each country exports the good that uses its abundant factor intensively.
+\end{theorem}
+\begin{itemize}
+	\item If endowments are in the FPE set, this is a simple corollary of the Rybczynski theorem and homothetic preferences (no assumption on FIRs required).
+	\item Outside the FPE set, need to also consider FIRs.
+	\item To state the prediction in terms of autarky relative factor prices, return to general theorem of Deardorff (1980)
+	\item Is the autarky relative price of the labor-intensive good lower in the labor-abundant country?
+	\item See Feenstra Figure 2.1 and Jones and Neary equation (2.10)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Higher dimensions}
+What if there are $C$ countries, $G$ goods, and $F$ factors?
+\begin{itemize}
+	\item If $F=G$ (``even case''), situation is qualitatively similar
+	\item Integrated equilibrium and FPE set are helpful devices here
+	\item If $F>G$, then FPE set is ``measure zero'' ($F=2,G=1$ on diagonal of Samuelson's angel diagram)
+	\item If $G>F$, then production and trade are indeterminate, but factor content of trade known
+\end{itemize}
+\begin{center}\includegraphics[width=.6\textwidth]{../images/Krugman1995_fig1_2.png}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{High-dimensional predictions}
+\begin{itemize}
+	\item High-dimensional predictions are not much loved, since they are either weak or unintuitive.
+	\item See Ethier (Handbook 1984) for a survey. Lots of comparative statics depend on whether $F$ or $G$ is greater.
+\end{itemize}
+Stolper-Samuelson in higher dimensions is Jones and Scheinkman (JPE 1977) ``friends and enemies'' result:
+\begin{itemize}
+	\item SS theorem follows from differentiating zero-profit condition
+	\item With arbitrary $F$ and $G$, still true that (no joint production)
+	\begin{equation*}
+		\hat{p}_g = \sum_f \theta_{fg} \hat{w}_f
+	\end{equation*}
+	\item Suppose $\hat{p}_1 \leq \dots < \hat{p}_G$. 
+	Then there exist $f_1$ and $f_2$ such that 
+	\begin{equation*}
+		\hat{w}_{f_1} <  \hat{p}_1 \leq \dots < \hat{p}_G < \hat{w}_{f_2}
+	\end{equation*}
+	\item In uneven cases, cannot always identify ``friends'' and ``enemies''
+	\item E.g., in Ricardo-Viner, labor is intermediate, $\hat{p}_1 < \hat{w} < \hat{p}_2$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Heckscher-Ohlin-Vanek Theorem}
+\begin{itemize}
+	\item Without $G=F$, we have results about factor content of trade rather than goods trade
+	\item Define net exports of factor by the vector $T_{F}^{c} = AT^c$, where $A$ is the $F \times G$ matrix of unit factor requirements and $T^c$ is net exports of goods by $c$
+	\item Heckscher-Ohlin-Vanek theorem: In any country $c$, net exports of factors satisfy $T_F^c = V^c - s^c V^{\text{world}}$ where $s^c$ is $c$'s share of world income
+	\item Countries export factors in which they are relatively abundant: $V^c > s^c V^{\text{world}}$ 
+	\item This prediction derives from identical technology, FPE, and homothetic preferences.
+	Good luck.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The Ricardo-Roy setup in one slide}
+Primitives: 
+\begin{itemize}
+	\item Technologies $A(\omega,\sigma,\gamma_{A,c})$
+	\item Endowments $L(\omega,\gamma_{L,c})$
+	\item Demands $D(p,I_c\vert\sigma,\gamma_{D,c})$
+\end{itemize}
+Equilibrium:
+\begin{itemize}
+	\item Profit maximization by firms
+\begin{align*}
+Q(\sigma,c) =&\int_{\Omega} A(\omega,\sigma,\gamma_{A,c})L(\omega,\sigma,c)d\omega \\
+\Rightarrow & p(\sigma) \leq \min_{\omega\in\Omega} \{w(\omega,c) / A(\omega,\sigma,\gamma_{A,c}) \} \\
+ \Omega(\sigma,c) \equiv & \{\omega\in\Omega:L(\omega,\sigma,c)>0)\}  \subseteq \arg\min_{\omega\in\Omega} \{w(\omega,c) / A(\omega,\sigma,\gamma_{A,c}) \} 
+\end{align*}
+\item Market clearing
+\begin{align*}
+\int_{\Sigma} L(\omega,\sigma,c)d\sigma &= L(\omega,\gamma_{L,c}) \quad \forall \omega,c \\
+\int_{\mathbb{C}} D(p,I_c\vert\sigma,\gamma_{D,c})dc  &= \int_{\mathbb{C}} Q(\sigma,c) dc \quad \forall \sigma
+\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Core R-R results}
+Cross-sectional predictions
+\begin{itemize}
+	\item Factor assignments
+	\item Factor prices (FPE)
+	\item Output quantities (Rybczynski)
+\end{itemize}
+Comparative statics
+\begin{itemize}
+	\item Price changes (Stolper-Samuelson)
+	\item Endowment and taste changes
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Factor assignments}
+Taking $p(\sigma)$ as given, who makes what? \\
+\textbf{Assumption 1}: 
+\textit{$A(\omega,\sigma,\gamma_{A,c})$ is strictly log-supermodular in $(\omega,\sigma)$ and in $(\sigma,\gamma_{A,c})$} \\
+Under this assumption:
+\begin{itemize}
+	\item PAM (I). $\Omega(\sigma,c)$ is increasing in $\sigma$.
+	\item[] Recall $\Omega(\sigma,c) \subseteq \arg\min_{\omega\in\Omega} \{w(\omega,c) / A(\omega,\sigma,\gamma_{A,c}) \} $ and property 3 of LSM
+	\item PAM(II). $\Sigma(\omega,\gamma_{A,c})$ is increasing in $\gamma_{A,c}$.
+	\item[] Similarly, $\Sigma(\omega,\gamma_{A,c}) \subseteq \arg\max_\sigma \{p(\sigma)A(\omega,\sigma,\gamma_{A,c})\}$ and property 3 of LSM
+\end{itemize}
+Thus, we can say that
+\begin{itemize}
+	\item High-$\omega$ factors are employed in high-$\sigma$ activities
+	\item High-$\gamma_{A,c}$ locations specialize in high-$\sigma$ activities
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Factor prices}
+\begin{itemize}
+	\item Since factors of production are perfect substitutes within each task,
+factor price equalization necessarily holds in terms of (Hicks-neutral-adjusted) efficiency units.
+\item Just analyze the integrated economy, basically.
+\item Factor prices equalize for common technologies:
+\begin{align*}
+\omega \in \Omega(\sigma,c) \Rightarrow w(\omega,c) = \max_{\sigma} p(\sigma) A(\omega,\sigma,\gamma_{A,c}) \\
+\gamma_{A,c} = \gamma_{A,c'} \Rightarrow w(\omega,c)=w(\omega,c')
+\end{align*}
+\item Assuming a continuum of factors, factor prices are governed by
+\begin{align*}
+w(\omega,c) = p(M(\omega,c))A(\omega,M(\omega,c)),\gamma_{A,c}) \\
+\Rightarrow \frac{d \ln w(\omega,c)}{d\omega} = \frac{\partial \ln A(\omega,M(\omega,c),\gamma_{A,c})}{\partial \omega}
+\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Output quantities}
+We have assignments, but we need a further assumption to get quantities\\
+\textbf{Assumption 2}: 
+\textit{$L(\omega,\gamma_{L,c})$ is log-supermodular}\\
+This means high-$\gamma_{L,c}$ locations are relatively abundant in high-$\omega$ factors
+\begin{align*}
+Q(\sigma,c) & = \int_{\Omega} A(\omega,\sigma,\gamma_{A,c})L(\omega,\sigma,\gamma_{L,c})d\omega \\
+ & = \int_{\Omega(\sigma,c)} A(\omega,\sigma,\gamma_{A,c})L(\omega,\gamma_{L,c})d\omega &\textnormal{by $\Sigma(\omega,c)$ singleton}\\
+ & = \int_{\Omega(\sigma)} A(\omega,\sigma,\gamma_{A,c})L(\omega,\gamma_{L,c})d\omega & \textnormal{by common technologies} 
+\end{align*}
+Rybczynski: Under Assumptions 1 and 2, $Q(\sigma,c)$ is log-supermdular in $(\sigma,\gamma_{L,c})$ \\
+Rybczynski + identical preferences $\Rightarrow$ Heckscher-Ohlin theorem
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Price changes}
+Consider a small open economy $c$ facing prices $p(\sigma,\phi)$, so that assignments $M(\omega,c,\phi)$ and wages $w(\omega,c,\phi)$ respond to an external change from $\phi$ to $\phi'$.
+\\ \textbf{Assumption 3}: \textit{$p(\sigma,\phi)$ is log-supermodular}
+\begin{align*}
+w(\omega,c,\phi) &= \max_{\sigma} \{p(\sigma,\phi)A(\omega,\sigma,\gamma_{A,c})\}\\
+&= p(M(\omega,c,\phi),\phi)A(\omega,M(\omega,c,\phi),\gamma_{A,c}) \\
+\Rightarrow \frac{d \ln w(\omega,c,\phi)}{d\phi} &= \frac{\partial \ln p(M(\omega,c,\phi),\phi)}{\partial \phi} \\
+\frac{d}{d\omega} \left( \frac{\partial \ln p(M(\omega,c,\phi),\phi)}{\partial \phi} \right) &= \frac{\partial^2 \ln p}{\partial \sigma\partial\phi} \frac{dM}{d\omega} \geq 0
+\end{align*}
+Assumptions 1 ($A$ LSM) and 3 ($p$ LSM) imply $w(\omega,c,\phi)$ is LSM in $(\omega,\phi)$
+\end{frame}
+% -----------------------------------------
+\begin{frame}[label=comparativestatics]{Taste and endowment changes}
+Assignments and wages follow from pair of differential equations
+\begin{align*}
+\frac{d \ln w(\omega,c)}{d\omega} &= \frac{\partial \ln A(\omega,M(\omega,c),\gamma_{A,c})}{\partial \omega} \\
+\frac{d M(\omega,c)}{d\omega} &= \frac{(A(\omega,M(\omega,c),\gamma_{A,c}))^{1-\epsilon}(w(\omega,c))^{\epsilon}L(\omega,\gamma_{L,c})}{B(M(\omega,c),\gamma_{D,c})\int_{\Omega}w(\omega',c)L(\omega',\gamma_{L,c})d\omega'}
+\end{align*}
+\textbf{Assumption 4}: \textit{$B(\sigma,\gamma_{D,c})$ is log-submodular} \\
+Comparative statics under Assumptions 1, 2, 4 for CES demand:
+\begin{itemize}
+	\item \textbf{Assignments}. $M(\omega,c)$ is decreasing in $\gamma_{D,c}$ and $\gamma_{L,c}$  
+	\item\textbf{Prices}. $w(\omega,c)$ is log-submodular in $(\omega,\gamma_{D,c})$ and $(\omega,\gamma_{L,c})$
+\end{itemize}
+See Costinot \& Vogel (\emph{JPE} 2010) for polarization cases
+\end{frame}
+% -----------------------------------------
+\begin{frame}{}
+\begin{center}\LARGE{Empirics}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trade and regional outcomes (empirics with R-V lens)}
+\begin{itemize}
+	\item Recent work looking at trade's effects on regional labor markets can be interpreted as using a Ricardo-Viner view
+	\item Cross-sectional regressions testing HO model take long-run view, but recent labor literature exploiting panel data lets us take factor specificity more seriously
+	\item Suppose a trade-policy change affects $p$ (nationwide goods prices)
+	\item What happens to economic outcome in different regions?
+	\item \href{https://www.aeaweb.org/articles?id=10.1257/app.2.4.1}{Topalova (2010)} on India,
+	\href{https://www.aeaweb.org/articles?id=10.1257/aer.103.5.1960}{Kovak (2013)} on Brazil,
+	\href{https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2121}{Autor, Dorn, and Hanson (2013)} on US
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Topalova (2010)}
+Regression for outcome $y$ in district $d$ in year $t$
+	\begin{equation*}
+		y_{dt} = \alpha_d^D + \alpha_t^T + \beta \text{tariff}_{dt} + \epsilon_{dt}
+	\end{equation*}
+\begin{columns}
+\begin{column}{.4\textwidth}
+\includegraphics[width=\textwidth]{../images/Topalova2010_fig1b.pdf}
+\end{column}
+\begin{column}{.58\textwidth}
+\begin{itemize}
+	\item $y$ is poverty rate and tariff is employment-weighted average of national industry import tariffs
+	\item India has long-running poverty surveys, many districts, and a large trade liberalization in 1991
+	\item IV for tariffs: initial level, because tariff harmonization meant ``the higher the tariff, the bigger the cut''
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{}
+\begin{center}
+\includegraphics[height=\textheight]{../images/Topalova2010_tab3a.pdf}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Kovak (2013)}
+Look at Brazil's import liberalization
+\begin{itemize}
+	\item Topalova finds little geographical or intersectoral migration
+	\item In Brazil, substantial migratory responses
+\end{itemize}
+Estimating equation explicitly derived from a RV model
+\begin{itemize}
+	\item Good $i$ with specific factor $K_i$ and labor $L$
+	\item Factor market clearing:
+	\begin{equation*}
+	a_{K_i} Y_i = K_i \qquad \sum_{i} a_{Li} Y_I = L
+	\end{equation*}
+	\item Differentiating, $\hat{L} = \sum_i \lambda_i (\hat{a}_{Li} - \hat{a}_{K_i})$ where $\lambda_i \equiv L_i / L$
+	\item $\hat{p}_i = (1-\theta_i)\hat{w} + \theta_i \hat{r}_i$, where $\theta_i \equiv \frac{r_iK_i}{p_i Y_i}$ is specific factor's cost share
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Kovak (2013): Model, continued}
+If $\sigma_i$ is elasticity of substitution btw $K_i$ and $L$ then
+\begin{equation*}
+\hat{a}_{K_i} - \hat{a}_{Li} = \sigma_i \left(\hat{w} - \hat{r}_i\right)
+\end{equation*}
+Combining with expression for $\hat{L}$, we get
+\begin{equation*}
+\hat{L} = \sum_i \lambda_i \sigma_i \left( \hat{r}_i - \hat{w}\right)
+\end{equation*}
+Solve for $\hat{w}$ using some matrix algebra
+\begin{equation*}
+\hat{w}
+=
+- \frac{1}{\sum_{i'} \lambda_{i'} \frac{\sigma_{i'}}{\theta_{i'}}} \hat{L}
++ \sum_i \frac{\lambda_{i} \frac{\sigma_{i}}{\theta_{i}}}{\sum_{i'} \lambda_{i'} \frac{\sigma_{i'}}{\theta_{i'}}} \hat{p}_i
+\end{equation*}
+\vspace{-3mm}
+\begin{itemize}
+	\item In baseline, no migration, so $\hat{L}=0$
+	\item Idiot's law of elasticities says $\sigma_i =1 \ \forall i$
+	\item Extend to address non-traded goods
+\end{itemize}
+Estimate using region's tariff change assuming full passthrough
+\begin{equation*}
+\Delta \ln w_{r} = \alpha + \beta \cdot \text{RTC}_r + \epsilon_r
+\qquad
+\text{RTC}_r\equiv \sum_i \frac{\lambda_{i} \frac{1}{\theta_{i}}}{\sum_{i'} \lambda_{i'} \frac{1}{\theta_{i'}}} \Delta \ln \left(1 + \tau_i\right)
+\end{equation*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Kovak (2013): Identifying variation}
+\includegraphics[width=.49\textwidth]{../images/Kovak2013_fig1.pdf}
+\includegraphics[width=.49\textwidth]{../images/Kovak2013_fig3.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Kovak (2013): Empirical estimates}
+\includegraphics[width=\textwidth]{../images/Kovak2013_tab1.pdf}
+\href{https://www.aeaweb.org/articles?id=10.1257/aer.20161214}{Dix-Carneiro and Kovak (2017)} estimate dynamic version:
+	\begin{equation*}
+w_{r,t} - w_{r,\text{1991}} = \alpha_{st} + \beta_t \cdot \text{RTC}_r + \gamma_t (w_{r,\text{1990}} - w_{r,\text{1986}}) +  \epsilon_{rt}
+\end{equation*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Autor, Dorn, Hanson (2013)}
+\begin{itemize}
+	\item Use of trade quantities (China shock) rather than prices, so a gravity-based model rather than specific-factor SOE
+	\item Exogenous Chinese export supply shock in industry $j$ is $\hat{A}_{Cj}$ and Chinese import demand shock is $\hat{E}_{Cj}$
+	\item Look at outcomes for wages $\hat{w}_i$, employment in traded goods $\hat{L}^{T}_{i}$, and employment in non-traded goods $\hat{L}^{N}_{i}$
+	\item Treatment is exposure to import competition:
+	\begin{equation*}
+		\Delta \text{IPW}_{uit} = \sum_j \frac{L_{ijt}}{L_{ujt}} \frac{\Delta M_{ucjt}}{L_{it}}
+	\end{equation*}
+	\item Instrument using non-US exposure:
+	\begin{equation*}
+		\Delta \text{IPW}_{oit} = \sum_j \frac{L_{ijt-1}}{L_{ujt-1}} \frac{\Delta M_{ocjt}}{L_{it-1}}
+	\end{equation*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{ADH (2013): Manufacturing employment falls}
+\includegraphics[width=\textwidth]{../images/AutorDornHanson2013_tab2.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Autor, Dorn, Hanson (2013): Population response}
+\includegraphics[width=\textwidth]{../images/AutorDornHanson2013_tab4.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Autor, Dorn, Hanson (2013): Margins of adjustment}
+\includegraphics[width=\textwidth]{../images/AutorDornHanson2013_tab5.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Empirical work on factor content of trade}
+\begin{itemize}
+	\item Leontief (1953) and Leamer (1980)
+	\item Bowen, Leamer and Sveikauskas (1987)
+	\item Trefler (1993)
+	\item Trefler (1995)
+	\item Davis and Weinstein (2001)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Net factor content of trade}
+\begin{itemize}
+	\item HOV says net exports of factors are
+	$T_{F}^{c} = AT^c  = V^c - s^c V^{\text{world}}$
+	\item In reality, production uses intermediate inputs
+	\item Let $A(\omega)$ denote input-output matrix for commodity production and $B(\omega)$ denote matrix of direct factor inputs
+	\item If only final goods are traded, (Leontief shows that)
+	the HOV theorem applies with $\bar{B}(\omega) = B(\omega)\left(I-A(\omega)\right)^{-1}$ in place of $A(\omega)$
+	\item Trefler and Zhu (2010) show that the ``only final goods are traded''assumption is not innocuous and propose extensions to address
+	\item Also note recent work by Johnson and Noguera on gross vs value-added trade
+	\item Prediction of $\bar{B}(\omega) T^c  = V^c - s^c V^{\text{world}}$ is $C \times F$ equalities.
+	\item One can imagine many different tests, and there have been.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Leontief (1953)}
+\begin{itemize}
+	\item Leontief (1953) was the first to empirically examine HOV,
+	since Leontief had just computed (for the first time) the input-output table for the 1947 US economy
+	\item Leontief's table only had $K$ and $L$ as factor inputs, and he only had $\bar{B}^{\text{US}}(\omega^{\text{US}})$,
+	so he assumed $\bar{B}^c(\omega^c) = \bar{B}^{\text{US}}(\omega^{\text{US}}) \ \forall c$
+	\item The US had been presumed to be a capital-abundant economy
+\end{itemize}
+\includegraphics[width=\textwidth]{../images/Feenstra2015_tab2_1.png}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Leamer (1980): ``The Leontief Paradox, Reconsidered''}
+\begin{itemize}
+	\item Leontief's intuitively appealing application of HOV to exports and imports was not particularly robust
+	\item If trade is unbalanced or $F>2$, then US can be a net exporter of both $K$ and $L$ services
+	\item The HOV $T_{F}^{c} = V^c - s^c V^{\text{world}}$ equation implies that
+	if $\frac{K^{\text{US}}}{K^{\text{world}}} > \frac{L^{\text{US}}}{L^{\text{world}}}$, then
+	\begin{equation*}
+		\frac{K^{\text{US}}}{L^{\text{US}}} > \frac{K^{\text{US}} - T_K^{\text{US}}}{L^{\text{US}} - T_L^{\text{US}}} 
+	\end{equation*}
+	which says capital intensity of production exceeds the capital intensity of consumption
+\end{itemize}
+\includegraphics[width=\textwidth]{../images/Feenstra2015_tab2_1.png}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Bowen, Leamer and Sveikauskas (1987)}
+\begin{itemize}
+	\item Data on 12 factors and 27 countries $\Rightarrow$ many tests of $\bar{B}(\omega) T^c  = V^c - s^c V^{\text{world}}$
+	\item Only observe $\bar{B}(\omega)$ in US in 1967, so assume it applies to all countries in 1967
+	\item How to test an equality, since it won't hold exactly?
+	\begin{itemize}
+		\item Sign test: How often does sign of $T_{f}^{c}$ coincide with sign of $V_f^c - s^c V_f^{\text{world}}$? 61\% of the time.
+		\item Rank test: If $T_{f}^{c} > T_{f'}^{c}$, is $V_{f}^c - s^c V_{f}^{\text{world}} > V_{f'}^c - s^c V_{f'}^{\text{world}}$? 49\%!
+	\end{itemize}
+	\item This ``poor performance of the HOV hypothesis'' was disappointing
+	\item Maskus (1985) made a similar point in an article titled ``A test of the Heckscher-Ohlin-Vanek theorem: The Leontief commonplace''
+	\item BLS (1987) suggest technologies not likely identical
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trefler (1993)}
+\begin{itemize}
+	\item Trefler (JPE, 1993) and Trefler (AER, 1995) relaxed the strong assumption that technologies were identical
+	\item The key was to theoretically incorporate heterogeneous productivities in while keeping attractive properties of HOV
+	\item Trefler (1993) introduces country-factor-specific productivity differences $\pi_f^c$ so that effective endowments are $\pi_f^c V_f^c$ and effective factor prices are $w_f^c/\pi_f^c$.
+	\item Conditional FPE in terms of efficiency units and HOV similarly
+	$$T_{f}^{c} = \bar{B}(\omega) T^c  = \pi^c \cdot V^c - s^c \sum_{c'} \pi^{c'} \cdot V^{c'} $$
+	\item There is a (unique) set of $\pi_f^c$ terms that make the HOV equations hold with equality ($\pi_f^{\text{US}}=1$ normalization)
+	\item If HOV cannot be wrong, what do we learn from $\pi_f^c$?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trefler (1993): Sensible $\pi_f^c$?}
+\begin{columns}
+\begin{column}{.6\textwidth}
+\includegraphics[width=\textwidth]{../images/Feenstra2015_fig2_4.png}
+\end{column}
+\begin{column}{.38\textwidth}
+	\begin{itemize}
+		\item Trefler shows that estimated $\pi_f^c$ could be negative. Only 10/384 are.
+		\item Logic thus far hasn't used factor prices. Conditional FPE looks pretty good.
+		\item US is typically more productive ($\pi_f^c<1$)
+	\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trefler (1995)}
+Trefler (1995) revisits HOV:
+\begin{itemize}
+	\item Why have factor-content predictions failed? Trefler points to two key sources of failure
+	\item What parsimonious extensions of theory (as opposed to the generous $\pi_f^c$) could resurrect HOV with decent fit?
+\end{itemize}
+First failure:
+\begin{itemize}
+	\item Define $\epsilon_f^c = T_f^c - (V_f^c - s^c V_f^{\text{world}})$ as HOV deviations
+	\item Plot $\epsilon_f^c$ against $V_f^c - s^c V_f^{\text{world}}$: vertical line is perfect fit; diagonal is $T_f^c=0$
+	\item 100\% ``sign test'' would put all points in lower left or upper right
+	\item Perfect HOV fit is horizontal axis for $\epsilon_f^c=0$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trefler (1995): ``The Case of the Missing Trade''}
+\includegraphics[width=\textwidth]{../images/Trefler1995_fig1.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trefler (1995)}
+Second, plot HOV deviations by country
+\begin{itemize}
+	\item How often is $\epsilon_f^c<0$?
+	\item By missing trade, this is mirrored by $V_f^c - s^c V_f^{\text{world}} >0$
+\end{itemize}
+Visualize a failing of HOV equations:
+\begin{itemize}
+	\item Poor countries appear to be abundant in all factors.
+	\item This cannot be true with balanced trade, and it is not true that poor countries run higher trade imbalances (in Trefler’s sample).
+	\item Is there an omitted factor that is scarce in poor countries? Perhaps we need productivity differences again
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trefler (1995): ``Endowments Paradox''}
+\includegraphics[width=\textwidth]{../images/Trefler1995_fig2.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{}
+Trefler (1995) considers five parsimonious extensions
+\begin{enumerate}
+	\item T1: restrict $\pi_f^c$ in Trefler (1993) to $\pi_f^c = \delta^c$ . (`Neutral technology differences').
+	\item T2: restrict $\pi_f^c$ in Trefler (1993) to $\pi_f^c = \delta^c \phi_f$ for less developed countries (cutoff estimated) and $\pi_f^c = \delta^c$ for developed countries.
+	\item C1: allow the $s^c$ terms to be adjusted to fit the data (variation in countries' demand for investment, services, non-traded goods)
+	\item C2: Armington/home bias/trade costs to explain missing trade.
+	\item TC2: C2 + $\delta^c=y^c/y^{\text{US}}$
+\end{enumerate}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trefler (1995): TC2 improves fit considerably}
+\includegraphics[width=\textwidth]{../images/Trefler1995_tab1.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gabaix (unpublished, 1997)}
+\begin{itemize}
+	\item ``Missing trade'' of Trefler (1995) influenced later empirical work on net factor content of trade considerably
+	\item Ironically, Gabaix (1997) shows that ``missing trade'' makes the impressive fit of $\pi_f^c$ in Figure 1 of Trefler (1993) less impressive
+	\item If trade is entirely missing, $T_f^c=0$, then Trefler (1993) finds $\pi_f^c$ such that $\pi_f^c V_f^c = s^c \sum_{c'} \pi_f^{c'} V_f^{c'}$
+	\item If countries are small, this is basically 
+	$$ \frac{\pi_f^c}{\pi_f^{c'}} = \frac{Y^c / V_f^c}{Y^{c'} / V_f^{c'}}$$
+	relative productivity is relative GDP per factor, so Trefler (1993) fit is unsurprising
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Davis and Weinstein (2001)}
+\begin{itemize}
+	\item Davis, Weinstein, Bradford and Shimpo (1997) found that FCT of trade did reasonably well within Japan, where we may believe FPE is more likely to hold
+	\item Davis and Weinstein (2001) seek to understand departures from FPE within the OECD
+	\item Prior studies have always applied $\bar{B}(\omega)$ from one country to all others; we don't simply want each country's $\bar{B}^c(\omega)$, since that would make the production side of HOV an identity
+	\item Davis and Weinstein (2001) try to parsimoniously parameterize the cross-country differences in $\bar{B}^c(\omega)$ by considering seven nested hypotheses that sequentially drop standard HO assumptions about how endowments affect both \textit{technology} $\bar{B}^c(\cdot)$ and \textit{technique} $\bar{B}^c(\omega)$.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Davis and Weinstein (2001)}
+They need to relax a good bit:
+\begin{quote}
+``a model that allows for technical differences, a breakdown of factor price equalization, the existence of nontraded goods, and costs of trade, is consistent with data for ten OECD countries and a rest-of-world aggregate''
+\end{quote}
+Hypthoses where ``P'' denotes production specification and ``T'' denotes trade specification
+\begin{itemize}
+	\item Let $\mathbf{B}^c$ denote the total factor input matrix
+	\item $\mathbf{V}^c$ is the endowment vector
+	\item $\mathbf{Y}^c$ is the net output vector
+\end{itemize}
+Assume common technology, free trade, and identical homothetic preferences
+$\Rightarrow$ standard HOV theorem
+\begin{itemize}
+	\item P1: $\mathbf{B}^{\text{US}} \mathbf{Y}^c = \mathbf{V}^c$
+	\item T1: 
+	$\mathbf{B}^{\text{US}} \mathbf{T}^c = \mathbf{V}^c - s^{c} \mathbf{V}^{\text{world}}$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Davis and Weinstein (2001) hypotheses}
+Common technology matrix measured with error: 
+$\ln \mathbf{B}^c = \ln \mathbf{B}^{\mu} + \epsilon^c$
+\begin{itemize}
+	\item P2: $\mathbf{B}^{\mu} \mathbf{Y}^c = \mathbf{V}^c$
+	\item T2: 
+	$\mathbf{B}^{\mu} \mathbf{T}^c = \mathbf{V}^c - s^{c} \mathbf{V}^{\text{world}}$
+\end{itemize}
+Hicks-neutral technical differences:
+%$\mathbf{B}^c = \lambda^c \mathbf{B}^{\lambda}$ \\ Implement as 
+$\mathbf{V}^{cE} = \mathbf{V}^c / \lambda^c$
+\begin{itemize}
+	\item P3: $\mathbf{B}^{\lambda} \mathbf{Y}^c = \mathbf{V}^{cE}$
+	\item T3: 
+	$\mathbf{B}^{\lambda} \mathbf{T}^c = \mathbf{V}^{cE} - s^{c} \mathbf{V}^{\text{world}E}$
+\end{itemize}
+Heterogeneous techniques for traded goods, a la DFS (1980) $\Rightarrow P4, T4$ \\
+Violate FPE $\Rightarrow$ heterogeneous techniques for non-traded goods $\Rightarrow P5, T5$ \\
+Trade costs $\Rightarrow P6, T6$ \\
+\ \\
+I'm surely out of time, please look at the paper.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Next week}
+\begin{itemize}
+	\item Increasing returns and home-market effects
+	\item Print Krugman (1980) and bring to class
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\end{document}
