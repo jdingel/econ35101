@@ -2,7 +2,7 @@ International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
 Autumn 2019\
 Comprehension check 2\
-Due: 4 November 2019, 8:30am
+Due: 11 November 2019, 8:30am
 
 ### Productivity in the Melitz (2003) model
 
