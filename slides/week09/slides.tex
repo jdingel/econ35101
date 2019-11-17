@@ -1,0 +1,657 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 9 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 9}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Today: Economic geography}
+Three models:
+\begin{itemize}
+	\item Krugman (1991): The breakthrough paper
+	\item Helpman (1998): A re-formulation more popular in empirical and quantitative exercises
+	\item Allen and Arkolakis (2014): A substantial generalization to almost all continuous geographies
+\end{itemize}
+Evidence:
+\begin{itemize}
+	\item Davis \& Weinstein: ``Bones, Bombs, and Breakpoints''
+	\item Redding \& Sturm: ``The Costs of Remoteness: Evidence from German Division and Reunification''
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{``Increasing Returns and Economic Geography''}
+\begin{itemize}
+	\item The second of Krugman's pair of Nobel-winning papers
+	\item Apply tools from '70s theoretical IO and '80s trade models to look at the geographic concentration of industry
+	\item General story about IRS manufacturing vs CRS agriculture rather than industry localization
+	\item Circular causation: ``manufactures production will tend to concentrate where there is a large market, but the market will be large where manufactures production is concentrated''
+	\item Formalize this unoriginal story
+	\item Comparative statics: Agglomeration depends on transport costs, economies of scale, and manufacturing share [these are all exogenous parameters in Krugman's account]
+	\item Key restrictions: Immobile peasants and only two locations
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Krugman (JPE 1991): ``II. A Two Region Model''}
+\begin{columns}
+\begin{column}{.5\textwidth}
+\begin{align*}
+U 
+&=
+C_M^{\mu}C_A^{1-\mu}
+&
+\text{(1)}
+\\
+C_M 
+&=
+\left[\sum_{i=1}^{N} c_i^{(\sigma-1)/\sigma}\right]^{\sigma/(\sigma-1)}
+&
+\text{(2)}
+\\
+L_1 &+ L_2 
+=
+\mu
+&
+\text{(3)}
+\\
+L_{Mi} 
+&= 
+\alpha + \beta x_i
+&
+\text{(4)}
+\\
+p_1 
+&=
+\frac{\sigma}{\sigma-1} \beta w_1
+&
+\text{(5)}
+\\
+\frac{p_1}{p_2}
+&=
+\frac{w_1}{w_2}  
+&
+\text{(6)}
+\\
+(p_1 &- \beta w_1) x_1 
+=
+\alpha w_1
+&
+\text{(7)}
+\\
+x_1 &= x_2 = \frac{\alpha}{\beta} (\sigma-1)
+&
+\text{(8)}
+\\
+\frac{n_1}{n_2} &= \frac{L_1}{L_2}
+&
+\text{(9)}
+\end{align*}
+\end{column}
+\begin{column}{.48\textwidth}
+\begin{itemize}
+	\item Immobile peasants, mobile workers, and ``clever'' choice of units in (3)
+	\item Usual Dixit-Stiglitz monopolistic competition setup, but $L_i$ endogenous
+	\item Freely traded CRS good but still wages $w_1$ and $w_2$
+	\item As in Krugman (1980), all action on extensive margin
+	\item Iceberg trade costs: Only $\tau<1$ arrives , send $1/\tau$ [inverse of modern notation]
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{III. Short-Run Equilibrium}
+$c_{ij}$ is consumption in $i$ of a variety from $j$; 
+$z_{1i}$ is relative expenditure in $i$ on varieties from 1;
+that's awkward notation;
+eqlbm $w_i,z_{1i}\vert L_i$
+\begin{align*}
+\frac{c_{11}}{c_{12}} 
+&= \left(\frac{p_1\tau}{p_2}\right)^{-\sigma} 
+= \left(\frac{w_1\tau}{w_2}\right)^{-\sigma}
+&
+\text{(10)}
+\\
+z_{11} &= \left(\frac{n_1}{n_2}\right)  \left(\frac{p_1\tau}{p_2}\right) \left(\frac{c_{11}}{c_{12}}\right) 
+= \left(\frac{L_1}{L_2}\right) \left(\frac{w_1\tau}{w_2}\right)^{-(\sigma-1)}
+&
+\text{(11)}
+\\
+z_{12} 
+&=
+\left(\frac{L_1}{L_2}\right) \left(\frac{w_1}{w_2\tau}\right)^{-(\sigma-1)}
+&
+\text{(12)}
+\\
+w_1 L_1 &= 
+\mu \left[\left(\frac{z_{11}}{1+z_{11}}\right) Y_1 + \left(\frac{z_{12}}{1+z_{12}}\right) Y_2   \right]
+&
+\text{(13)}
+\\
+w_2 L_2 &= 
+\mu \left[\left(\frac{1}{1+z_{11}}\right) Y_1 + \left(\frac{1}{1+z_{12}}\right) Y_2   \right]
+&
+\text{(14)}
+\\
+Y_1 &= \frac{1-\mu}{2} + w_1 L_1
+&
+\text{(15)}
+\\
+Y_2 &= \frac{1-\mu}{2} + w_2 L_2
+&
+\text{(16)}
+\end{align*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{III. Long-Run Equilibrium}
+\begin{itemize}
+\item $L_i$ is endogenous, not fixed. Let $f \equiv L_1/\mu$.
+\item Workers care about real wages $\omega_i$, not nominal wages $w_i$.
+\end{itemize}
+\begin{align*}
+P_1 &= \left[fw_1^{-(\sigma-1)} + (1-f) \left(\frac{w_2}{\tau}\right)^{-(\sigma-1)} \right]^{-1/(\sigma-1)}
+&
+\text{(17)}
+\\
+P_2 &= \left[f\left(\frac{w_1}{\tau}\right)^{-(\sigma-1)} + (1-f) \left(w_2\right)^{-(\sigma-1)} \right]^{-1/(\sigma-1)}
+&
+\text{(18)}
+\\
+\omega_1 &= w_1 P_1^{-\mu}
+&
+\text{(19)}
+\\
+\omega_2 &= w_2 P_2^{-\mu}
+&
+\text{(20)}
+\end{align*}
+\begin{itemize}
+	\item Given $w_i$, greater $f$ lowers $P_1/P_2$ and therefore raises $\omega_1/\omega_2$.
+	\item A race between home market effect and price index effect (convergence) and competition for sales to peasants (divergence)
+	\item See Figure 1 for numerical example varying $\tau$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{IV. Necessary Conditions for Mfg Concentration}
+Suppose there are $n$ manufacturing firms and all are in region 1.
+Their value of sales is $V_1$ and a potential defector's value of sales is $V_2$. \\
+Defecting firm must pay workers wage premium to compensate for cost of living.
+\begin{align*}
+\frac{Y_2}{Y_1} 
+&=
+\frac{1-\mu}{1+\mu}
+& \text{(21)} \\
+V_1 
+&=
+\left(\frac{\mu}{n}\right) \left(Y_1+Y_2\right)
+& \text{(22)} \\
+\frac{w_2}{w_1} 
+&=
+\left(\frac{1}{\tau}\right)^{\mu}
+& \text{(23)} \\
+V_2 
+&=
+\left(\frac{\mu}{n}\right)\left[\left(\frac{w_2}{w_1 \tau}\right)^{-(\sigma-1)}Y_1 + \left(\frac{w_2 \tau}{w_1}\right)^{-(\sigma-1)}Y_2 \right]
+& \text{(24)} \\
+\frac{V_2}{V_1} 
+&=
+\frac{1}{2} \tau^{\mu(\sigma-1)}\left[\left(1+\mu\right)\tau^{\sigma-1} + (1-\mu)\tau^{-(\sigma-1)}\right]
+& \text{(25)}
+\end{align*}
+Defection profitable if $V_2/V_1 > w_2 / w_1 = \tau^{-\mu}$.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{IV. Necessary Conditions for Mfg Concentration}
+Defection profitable if $V_2/V_1 > \tau^{-\mu} \iff \nu <1$.
+\begin{align*}
+\nu 
+&=
+\frac{1}{2} \tau^{\mu\sigma}\left[\left(1+\mu\right)\tau^{\sigma-1} + (1-\mu)\tau^{-(\sigma-1)}\right]
+& \text{(26)} \\
+\frac{\partial\nu}{\partial\mu} 
+&=
+\nu\sigma(\ln\tau) + \frac{1}{2}\tau^{\sigma\mu} \left[\tau^{\sigma-1} - \tau^{-(\sigma-1)}\right]
+& \text{(27)} \\
+\frac{\partial\nu}{\partial\tau} 
+&=
+\frac{\mu\sigma\nu}{\tau} + \frac{\tau^{\sigma\mu}(\sigma-1)\left[\left(1+\mu\right)\tau^{\sigma-1} - (1-\mu)\tau^{-(\sigma-1)}\right]}{2\tau}
+& \text{(28)} \\
+\frac{\partial\nu}{\partial\sigma} 
+&=
+\ln(\tau) \left\{\mu\sigma + \frac{1}{2}\tau^{\mu\sigma}\left[\left(1+\mu\right)\tau^{\sigma-1} - (1-\mu)\tau^{-(\sigma-1)}\right]\right\}
+\\
+&= \ln(\tau) \left(\frac{\tau}{\sigma}\right) \left(\frac{\partial \nu}{\partial \tau}\right)
+& \text{(29)} \\
+\end{align*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The bifurcated ``tomahawk'' diagram}
+\begin{columns}
+\begin{column}{.5\textwidth}
+\includegraphics[width=1.15\textwidth]{../images/Neary2001_fig2.pdf}
+\end{column}
+\begin{column}{.48\textwidth}
+\begin{itemize}
+	\item Krugman (1991) established a ``sustain point'' $\nu$ necessary for concentration
+	\item There is also a ``break point'' that is sufficient for concentration to be possible
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{More on that diagram and stability}
+\begin{itemize}
+	\item If firms ``move faster'' than firms, same conclusions about break and sustain points (Puga 1999)
+	\item There are at most two interior asymmetric steady states. If they exist, they're unstable. (Robert-Nicoud 2005)
+\end{itemize}
+\includegraphics[height=.35\textheight]{../images/Puga1999_fig1a.pdf}
+\includegraphics[height=.35\textheight]{../images/Puga1999_fig1b.pdf}
+\includegraphics[height=.35\textheight]{../images/Puga1999_fig1c.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Beyond Krugman (1991)}
+\begin{itemize}
+	\item More than two regions: lines, circles (Fujita Krugman Venables \textit{The Spatial Economy})
+	\item Intermediate inputs (V, KV)
+	\item Alternative demand systems: Ottaviano Tabuchi Thisse
+\end{itemize}
+\begin{center}
+\includegraphics[width=.85\textwidth]{../images/RobertNicoud2005_tab1.pdf} \\
+\vspace{-2mm}
+{\footnotesize Robert-Nicoud (\textit{JEG}, 2005)}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{``Of Hype and Hyperbolas''}
+\href{https://www.aeaweb.org/articles?id=10.1257/jel.39.2.536}{Neary (\textit{JEL} 2001)} on Fujita, Krugman, Venables monograph:
+\begin{itemize}
+{\small
+\item ``the model used throughout the book has a number of special features that make it less suitable for addressing some issues''
+\item ``Though $\sigma$ starts as a taste parameter, it ends up as an index of returns to scale
+\item ``the Dixit-Stiglitz model has almost nothing to say about individual firms''
+\item ``while costs may be fixed they are never sunk, so firms, industries, and even cities are always free to move''
+\item The ``iceberg'' assumption: ``Of all industries, it seems to be characterized by very high ratios of fixed to variable costs''
+\item Davis (1998): This doesn't work with comparable agricultural trade costs
+\item ``The book deals in turn with regions, cities and countries, but there is nothing intrinsic to the models which conclusively identifies these units.''
+}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Davis \& Weinstein: ``Bones, Bombs, and Breakpoints''}
+Assess three competing theories: locational fundamentals, increasing returns, and random growth
+\begin{columns}
+\begin{column}{.49\textwidth}
+\begin{itemize}
+	{\small
+	\item {Bones: In data on Japanese regional population over 8,000 years, there has always been a great deal of variation in measures of regional population density. Zipf's Law holds even in 6,000 BC.\par}
+	\item {Bombs: Does a temporary shock have permanent effects? After the Allied bombing in WWII, most cities returned to their relative position in the distribution of city sizes within about 15 years \par}
+	}
+\end{itemize}
+\end{column}
+\begin{column}{.49\textwidth}
+\includegraphics[width=\textwidth]{../images/DavisWeinstein2002_tab4.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Bombs vs canoes}
+\includegraphics[width=.53\textwidth]{../images/DavisWeinstein2002_fig1.pdf}
+\includegraphics[width=.45\textwidth]{../images/DavisWeinstein2002_fig2.pdf}
+\begin{itemize}
+	\item  Also see \href{https://www.sciencedirect.com/science/article/pii/S0304387810000817}{Miguel and Roland (\textit{JDE} 2011)}: ``even the most intense bombing in human history did not generate local poverty traps in Vietnam''
+	\item On the other hand, see \href{https://academic.oup.com/qje/article-abstract/127/2/587/1825072}{Bleakley and Lin (\textit{QJE} 2012)} on ``Portage and Path Dependence''
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Helpman (1998): Overview}
+\begin{itemize}
+	\item Vocab: centripetal = agglomeration, centrifugal  = dispersion
+	\item Replace freely traded agriculture with non-traded fixed factor (housing) $\Rightarrow$ Cobb-Douglas preferences over housing and varieties
+	\item Replace location-bound peasant income with assumption that housing is owned equally by all individuals (regardless of location) who spend income where they live
+	\item These two deviations flip the comparative statics for trade costs in Krugman (1991)! ``While in Krugman's model low transport costs lead to agglomeration and high transport costs lead to dispersion, in my model, low transport costs lead to dispersion and high transport costs lead to agglomeration.''
+	\item The first deviation (freely traded ag) is the key
+	\item Note difference in equilibria when manufactures are freely traded
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Helpman (1998): Setup}
+\begin{itemize}
+	\item $\beta$ is Cobb-Douglas expenditure share on housing
+	\item $\epsilon$ is elasticity of substitution across differentiated varieties
+	\item $t>1$ is the iceberg trade cost
+	\item $f = N_1 / N$ is the population share of region 1
+	\item $v = u_1 / u_2 $ is the relative utility level of 1
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Helpman (1998)}
+\begin{itemize}
+{\small
+	\item When $t \to 1$, only housing prices matter: Go to less populous place
+	\item When $\beta\epsilon>1$, housing prices relatively more than traded prices
+	\item When $\beta\epsilon<1$, differentiated products are poor substitutes and demand for housing is low. In this case, trade costs matter.
+}
+\end{itemize}
+\includegraphics[height=.55\textheight]{../images/Helpman1995_fig1.pdf}
+\includegraphics[height=.55\textheight]{../images/Helpman1995_fig2.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Helpman (1998): The ``tomahawk'' reverses}
+\includegraphics[width=.2\textwidth]{../images/Helpman1995_fig1.pdf}
+\includegraphics[width=.2\textwidth]{../images/Helpman1995_fig2.pdf} \\
+\includegraphics[height=.65\textheight]{../images/Helpman1995_fig3.pdf}
+\includegraphics[height=.65\textheight]{../images/Helpman1995_fig4.pdf}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Redding and Sturm (2008)}
+\begin{itemize}
+{\small
+	\item ``We exploit the division of Germany after the Second World War and the reunification of East and West Germany in 1990 as a source of exogenous variation to provide evidence for the causal importance of market access for economic development.''
+	\item ``The key idea behind our empirical approach is that West German cities close to the new border experienced a disproportionate loss of market access relative to other West German cities.''
+	\item Extend Helpman (1998) to a multi-region version (assume that $\beta\epsilon>1 \Rightarrow$ unique equilibrium)
+	\item Distinctive prediction: Beyond market-access effet, ``the greater dependence of small cities on markets in other cities implies that this effect will be particularly pronounced for small cities.''
+	\item Difference-in-differences is proximate vs distant West German cities before and after division
+}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Redding and Sturm (2008): Difference-in-differences}
+\begin{center}
+\includegraphics[height=.75\textheight]{../images/ReddingSturm2008_fig3.pdf}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Redding and Sturm (2008): Quantitative model fit}
+\begin{itemize}
+	{\small
+	\item Model can explain ``the quantitative magnitude of the relative decline of small and large cities along the East-West German border relative to other West German cities''
+	\item Choose parameter values to minimize the distance between moments in the simulation and data
+	\item Finding ``plausible parameter values'' is ``further evidence that their relative decline is indeed due to a loss of market access''
+	}
+\end{itemize}
+\begin{center}
+\includegraphics[height=.53\textheight]{../images/ReddingSturm2008_fig6.pdf}
+\end{center}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}
+\frametitle{Allen and Arkolakis (\textit{QJE}, 2014)}
+\begin{itemize}
+\item The stylized nature of geography (e.g., line or circle) in many economic-geography models (FKV and similar) makes them awkward to take to data
+\item Authors develop a quantitative framework (more general than Redding-Sturm) that extends new economic geography to much broader class
+\item Derive sufficient conditions for existence and uniqueness of equilibrium in spatial geography models (with a continuum of locations)
+\item Illustrative quantitative exercise: What was the welfare effect of the interstate highway system?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Allen and Arkolakis (2014): Model -- Geography}
+\begin{itemize}
+\item Continuum of locations, $i \in S$ ($S$ is a closed and bounded set of a finite dimensional Euclidean space) 
+\item Location $i \in S$:
+\begin{itemize}
+\item Endowed with differentiated variety (Armington assumption)
+\item Productivity: $A(i) = \bar{A}(i) L(i)^\alpha$ (exogenous part: $\bar{A}(i)$)
+\item Amenity: $u(i) = \bar{u}\left(i\right) L(i)^\beta $ (exogenous part: $\bar{u}(i)$ )
+\end{itemize}
+\item $\alpha \geq 0$, $\beta \leq 0$. Spillovers are local (only affect $i$)
+\item For all $i,j \in S$, symmetric iceberg bilateral trade cost $T\left(i,j\right)$
+\item Together, $\bar{A}$, $\bar{u}$, and $T$ comprise the \textit{geography} of $S$
+\item A geography is regular if $\bar{A}$, $\bar{u}$, and $T$ are continuous and bounded above and below by strictly positive numbers.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{Allen and Arkolakis (2014): Model -- Workers}
+\begin{itemize}
+\item CES preferences over differentiated varieties with elasticity of substitution $\sigma>1$
+\item Can choose to live/work in any location (free mobility)
+\item Receive wage $w\left(i\right)$ for their inelastically supplied unit of labor
+ \item Welfare in location $i$ is
+\begin{equation*}
+W\left(i\right)=\left(\int_{s\in S}q\left(s,i\right)^{\frac{\sigma-1}{\sigma}}ds\right)^{\frac{\sigma}{\sigma-1}}u\left(i\right)
+\end{equation*}
+ where $q\left(s,i\right)$ is the per capita quantity consumed in location $i$ of the good produced in location $s$ and $u\left(i\right)$ is the local amenity.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{Allen and Arkolakis (2014): Model -- Production}
+\begin{itemize}
+\item Labor is the only factor of production, $L(i)$  is the density of workers.
+\item Productivity of worker in location $i$ is $A(i)$
+\item Price of good from $i$ is $\frac{w\left(i\right)}{A\left(i\right)}T\left(i,j\right)$  in location $j$
+\item Trade flows: $X(i,j) = \left (\frac{T(i,j)w(i)}{A(i)P(j)}\right)^{1-\sigma} w(j)L(j)$
+\item Price index: $P(j)^{1-\sigma} = \int_{S}  T(s,j)^{1-\sigma} A(s)^{\sigma-1} w(s)^{1-\sigma} ds$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{Allen and Arkolakis (2014): Model -- Equilibrium}
+\begin{itemize}
+\item A spatial equilibrium is a distribution of economic activity (functions $w$ and $L$) such that:
+\begin{itemize}
+\item Markets clear, i.e. $w\left(i\right)L\left(i\right)=\int_{S}X\left(i,s\right)ds$, 
+\item Welfare is equalized, i.e. $W\in\mathbb{R}_{++}$  such that for all $ i\in S$ , $W\left(i\right)\leq W$, with equality if $L\left(i\right)>0$, 
+\item The aggregate labor market clears, i.e. $\int_{S}L\left(s\right)ds=\bar{L}$ . 
+\end{itemize}
+\medskip
+\item A spatial equilibrium is regular if $L$ and $w$ are continuous and strictly positive (i.e. every location is inhabited).\medskip
+\item A spatial equilibrium is point-wise locally stable if $\frac{dW\left(i\right)}{dL\left(i\right)}<0$ for all $  i\in S$ (i.e. no small number of workers can increase welfare by moving to another location).
+ 
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Solving for equilibrium}
+Plugging the expression for trade flows and indirect utility function into the goods market clearing condition yields:
+\begin{equation*}
+L(i)w(i)^{\sigma}=\int_{S} W(s)^{1-\sigma} T(i,s)^{1-\sigma}A(i)^{\sigma-1}u(s)^{\sigma-1}L(s)w(s)^{\sigma}ds 
+\end{equation*}
+Combining the price index with the indirect utility function yields:
+\begin{equation*}
+w(i)^{1-\sigma}=\int_{S} W(s)^{1-\sigma} T(s,i)^{1-\sigma}u\left(i\right)^{\sigma-1}A(s)^{\sigma-1}w(s)^{1-\sigma}ds 
+\end{equation*}
+We are looking for functions $w(i)$ and $ L(i)$ that solve these equations and will look for equilibria in which every location is inhabited (regular equilibrium); hence we consider $W(s) = W \ \forall s$
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Solving for equilibrium without spillovers}
+When there are no productivity nor amenity spillovers ($\alpha=\beta=0$) and welfare is equalized across space, the previous equations can be written as:
+\begin{align*}
+x &= \lambda A x \\
+y &= \lambda A' y
+\end{align*}
+where $x(i) = L(i) w(i)^{\sigma}$, $y(i) = w(i)^{1-\sigma}$, $\lambda=W^{1-\sigma}$, and $A(i,j) = T(i,j)^{1-\sigma} A(i)^{\sigma-1} u(j)^{\sigma-1}$. \\
+We know that  $A(i,j) > 0 \ \forall i,j$.
+This pair of equations ``can be viewed as a linear system of equations for which extensions of standard results in linear algebra guarantee the existence and uniqueness of a positive solution.''
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Solving for equilibrium with spillovers}
+When there are productivity or amenity spillovers and welfare is equalized across space, the previous equations yield:
+\begin{align*}
+L(i)^{1-\alpha(\sigma-1)}w(i)^{\sigma}&=W^{1-\sigma}\int_{S}T(i,s)^{1-\sigma}\bar{A}(i)^{\sigma-1}\bar{u}(s)^{\sigma-1}L(s)^{1+\beta(\sigma-1)}w(s)^{\sigma}ds \\ 
+w(i)^{1-\sigma}L(i)^{\beta(1-\sigma)}&=W^{1-\sigma}\int_{S}T(s,i)^{1-\sigma}\bar{A}(s){}^{\sigma-1}\bar{u}(i){}^{\sigma-1}w(s)^{1-\sigma}L(s)^{\alpha(\sigma-1)}ds
+\end{align*}
+If trade costs are symmetric, the system can be written as:
+\begin{align}
+A(i)^{\sigma-1}w(i)^{1-\sigma} =\phi L(i)w(i)^{\sigma}u(i)^{\sigma-1} \label{eq:bla} \\
+L(i)^{\tilde{\sigma}\gamma_{1}} =K_{1}(i)W^{1-\sigma}\int_{S}T\left(s,i\right)^{1-\sigma}K_{2}(s)\left(L(s)^{\tilde{\sigma}\gamma_{1}}\right)^{\frac{\gamma_{2}}{\gamma_{1}}}ds, 
+\end{align}
+where $K_{1}(i)$  and $K_{2}(i)$ are functions of $\bar{A}(i)$ and $\bar{u}(i)$, $\gamma_{1}$, $\gamma_{2}$, and $\tilde{\sigma}$ are functions of $\alpha$, $\beta$, and $\sigma$. 
+\\
+The last equation is a Hammerstein non-linear integral equation 
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Existence and uniqueness (with spillovers)}
+\textbf{Theorem 2}: Consider any regular geography with endogenous productivity and amenities with $T$ symmetric. Define $\gamma_{1} = 1-\alpha\left(\sigma-1\right)-\beta\sigma$, and $\gamma_{2} = 1+\alpha\sigma+\left(\sigma-1\right)\beta$. If $\gamma_{1}\neq0$, then:
+\begin{enumerate}
+\item There exists a regular equilibrium. 
+\item If $\gamma_{1}<0$, no regular equilibria are point-wise locally stable.
+\item If $\gamma_{1}>0$, all equilibria are regular and point-wise locally stable.\medskip
+\item If $\frac{\gamma_{2}}{\gamma_{1}}\in\left[-1,1\right]$, the equilibrium is unique. 
+\end{enumerate}
+\vspace{5mm}
+Note that
+\begin{equation*}
+W(i) = \frac{\left( \int_{S} T(i,s)^{1-\sigma}P(s)^{\sigma-1} w(s) L(s) ds  \right)^{\frac{1}{\sigma}}}{P(i)} \bar{A}(i)^{\frac{\sigma-1}{\sigma}}\bar{u}(i)L(i)^{-\frac{\gamma_{1}}{\sigma}}
+\end{equation*}
+hence parts 2 and 3 follow from $\text{sign}\left(\frac{dW(i)}{dL(i)}\right)=-\text{sign}(\gamma_1)$
+\\ 
+\vspace{1mm}
+Sufficient conditions for uniqueness satisfied only if no net spillovers, i.e. $\alpha + \beta \leq 0$
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Existence and uniqueness (with spillovers)}
+\begin{center}
+\includegraphics[height=.92\textheight]{../images/AllenArkolakis2014_fig1.pdf}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{AA `14: Geographic component $T$}
+\begin{itemize}
+	\item Apart from everything above, Allen and Arkolakis (2014) introduce the ``fast-marching method'' into spatial economics
+	\item Suppose $S$ is a compact surface (e.g., line, plane, cow) 
+	\item Let $\tau: S\to\mathbb{R}_{+}$ be a continuous function where $\tau(i)$ is the instantaneous cost of traveling over location $i$
+	\item Trade cost $T(i,j) = f(t(i,j)), f'>0, f(0)=1$ is the total iceberg trade cost incurred along least-cost route from $i$ to $j$
+	$$t(i,j) = \min_{g\in\Gamma(i,j)} \int_{0}^{1} \tau(g(t)) \left\Vert \frac{dg(t)}{dt} \right\Vert dt$$
+	where $g:[0,1]\to S$ is a path and $\Gamma$ is set of possible continuous once-differentiable paths
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{AA `14: Eikonal equations and FMM}
+\begin{itemize}
+	\item Previous equation is oft-studied in physics (wave propagation)
+	\item A necessary condition for its solution is the following eikonal partial differential equation
+	$$\left\Vert \nabla t(i,j) \right\Vert =\tau(j) $$
+	where the gradient is taken with respect to the destination $j$.
+	\item One solution algorithm for this is the fast marching method
+	\item ``FMM can be interpreted as a generalization of Dijkstra to continuous spaces''
+	\item \href{https://sites.google.com/site/treballen/research}{Treb's website} has an example of implementing FMM in Matlab
+	\item Julia is popular with people who solve PDEs: \url{http://juliadiffeq.org/}
+	\item I have not yet tried \href{https://github.com/JuliaInv/EikonalInv.jl}{EikonalInv.jl}, but I hope to soon
+\end{itemize}
+\end{frame}
+%-----------------------------------------
+\begin{frame}{Application to the US economy}
+\begin{itemize}
+\item Estimate the geography of the United States.
+\item Estimate bilateral trade costs
+\item Given trade costs, identify (composite) productivities and amenities 
+\item Quantify the importance of geographic location.
+\item Perform counterfactual exercise: remove the Interstate Highway System. 
+\item Note: Cannot identify $\alpha, \beta, \sigma$; they do analysis for a large variety of ($\alpha, \beta$) while assuming $\sigma$ = 9.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Estimating trade costs}
+Goal: Find trade costs that best rationalize the bilateral trade flows observed in 2007 Commodity Flow Survey (CFS).
+Three step process:
+\begin{itemize}
+\item Using Fast Marching Method and observed transportation network, calculate the (normalized) distance between every CFS area for each major mode of travel (road, rail, air, and water).
+\item Using a discrete-choice framework and observed mode-specific bilateral trade shares, estimate the relative cost of each mode of travel.
+\item Using a gravity model and observed total bilateral trade flows, pin down normalization (and incorporate non-geographic trade costs).
+\end{itemize}
+Note: The CFS only covers agriculture, manufacturing, mining, and wholesaling. Where do tradable services show up in this model?
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Estimating trade costs}
+\begin{itemize}
+\item For any $i,j\in S$, assume $\exists$ traders $t$ choosing mode $m\in\{1,...,M\}$ of transit where cost is: $\exp\left(\tau_{m}d_{m}\left(i,j\right)+f_{m}+\nu_{tm}\right)$
+ 
+\item Then mode-specific bilateral trade shares are:
+\begin{equation} \label{eq:share}
+\pi_{m}\left(i,j\right)=\frac{\exp\left(-a_{m}d_{m}\left(i,j\right)-b_{m}\right)}{\sum_{k}\left(\exp\left(-a_{k}d_{k}\left(i,j\right)-b_{k}\right)\right)},
+\end{equation}
+  where $a_{m} = \theta\tau_{m}$ and $b_{m} = \theta f_{m}$. 
+  
+\item Combined with model, yields gravity equation:
+\begin{equation} \label{eq:flows}
+\ln X_{ij}=\frac{\sigma-1}{\theta}\ln\sum_{m}\left(\exp\left(-a_{m}d_{mij}-b_{m}\right)\right)+\left(1-\sigma\right)\beta'\ln\mathbf{C}_{ij}+\delta_{i}+\delta_{j}
+ \end{equation}
+\item Estimate $a_{m}$ and $b_{m}$ using bilateral trade share eq (\ref{eq:share}), $\theta$ using gravity eq  (\ref{eq:flows}). Assume $\sigma = 9$.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Trade cost estimates}
+\begin{figure}[htbp] \centering
+\includegraphics[scale = .5, clip]{../images/AllenArkolakis2014_tab2.pdf}
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Estimating productivities and amenities}
+\begin{itemize}
+\item Given data on wages and population across space, productivities $A$ and amenities $u$ can be recovered. 
+\item To see this, plug (\ref{eq:bla}) into the indirect utility function (after substituing the price index into it). This yields:
+\begin{equation*}
+u(i)^{1-\sigma} = \frac{W^{1-\sigma}}{\phi} \int_{S} T(s,i)^{1-\sigma} w(i)^{\sigma-1} w(s)^{\sigma}L(s)u(s)^{\sigma-1}ds 
+\end{equation*}
+\item Again, this is a Hammerstein non-linear integral equation, which can be uniquely solved for $u(i)$. 
+\item Then A(i) can be recovered from (\ref{eq:bla}).
+\item Note: $\bar{A}$   and $\bar{u}$ cannot be identified without knowledge of $\alpha$ and $\beta$.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Population and wages -- data}
+\begin{figure}[htbp] \centering
+\includegraphics[height=.92\textheight]{../images/AllenArkolakis2014_fig12.jpg}
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Estimated composite productivity and amenity}
+\begin{figure}[htbp] \centering
+\includegraphics[height=.92\textheight]{../images/AllenArkolakis2014_fig13.jpg}
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Estimated exogenous productivity and amenity}
+\begin{figure}[htbp] \centering
+\includegraphics[height=.92\textheight]{../images/AllenArkolakis2014_fig14.jpg}
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{AA `14: Estimated price index}
+\begin{figure}[htbp] \centering
+\includegraphics[height=.88\textheight]{../images/AllenArkolakis2014_fig15.jpg}
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{Estimated increase in price index from removing IHS}
+\begin{figure}[htbp] \centering
+\includegraphics[height=.92\textheight]{../images/AllenArkolakis2014_fig17.jpg}
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{Estimated change in population from removing IHS}
+\begin{figure}[htbp] \centering
+\includegraphics[height=.92\textheight]{../images/AllenArkolakis2014_fig18.jpg}
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Next week}
+Spatial sorting of skills and sectors
+\end{frame}
+% -----------------------------------------
+\end{document}
