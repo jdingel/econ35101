@@ -1,8 +1,6 @@
 \documentclass[10pt,notes=hide]{beamer}
-
 \input{../week00/slides_settings.tex}
 \setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 10 -- \insertframenumber}\end{center}}
-
 %Backup slide numbering
 \newcommand{\beginbackup}{
    \newcounter{framenumbervorappendix}
@@ -12,9 +10,7 @@
   \addtocounter{framenumbervorappendix}{-\value{framenumber}}
   \addtocounter{framenumber}{\value{framenumbervorappendix}} 
 }
-
 \begin{document}
-
 % -----------------------------------------
 %TITLE FRAME
 \begin{frame}[plain]
@@ -43,12 +39,8 @@ We'll discuss three papers in some detail:
 	\item Davis \& Dingel - The Comparative Advantage of Cities
 	\item Diamond - The Determinants and Welfare Implications of US Workers' Diverging Location Choices by Skill: 1980-2000 
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
-
-
-
 % -----------------------------------------
 \begin{frame}{Spatial distributions of skills and sectors} 
 Why should we care about the spatial distributions of skills and sectors?
@@ -59,7 +51,6 @@ Why should we care about the spatial distributions of skills and sectors?
 	\item They should help us understand how cities work
 \end{enumerate}
 \end{frame}
-
 % -----------------------------------------
 \begin{frame}{Spatial distributions of skills and sectors}
 \begin{itemize}
@@ -75,7 +66,6 @@ Why should we care about the spatial distributions of skills and sectors?
 	\raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{../images/week10/Silicon_valley_title.png}}
 	\raisebox{-0.5\height}{\includegraphics[width=0.2\textwidth]{../images/week10/detroitbigthree.jpg}}
 	\end{center}
-
 \end{itemize}
 \end{frame}
 % -----------------------------------------
@@ -147,7 +137,6 @@ What variation does the instrument exploit?
 	\item Which elements of the Marshallian trinity imply we'll find finance and dot-coms in big cities?
 	\item Coagglomeration (\href{https://www.aeaweb.org/articles.php?doi=10.1257/aer.100.3.1195}{Ellison Glaeser Kerr 2010}) and heterogeneous agglomeration (\href{https://ideas.repec.org/p/ehl/lserod/58426.html}{Faggio, Silva, Strange 2015}) can provide clues
 	\item Theory is laggard: Most models of sectoral composition are polarized, with \emph{specialized} cities that have only one tradable sector and \emph{perfectly diversified} cities that have all the tradable sectors (\href{http://www.jstor.org/stable/10.1086/676557}{Helsley and Strange 2014})
-
 \end{itemize}
 \end{frame}
 % -----------------------------------------
@@ -237,7 +226,6 @@ Two-type models can be simple -- but what about two-type empirics?
 	\item \href{https://www.aeaweb.org/articles?id=10.1257/aer.20131706}{Diamond (2016)}: ``A MSA's share of college graduates in 1980 is positively associated with larger growth in its share of college workers from 1980 to 2000''
 	\item \href{http://www.econ.brown.edu/fac/nathaniel_baum-snow/capital_all_oct2014.pdf}{Baum-Snow, Freedman, Pavan (2015)}: ``Diamond's result does not hold for CBSAs if those with some college education are included in the skilled group.''
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Dichotomous approach misses relevant variation}
@@ -414,7 +402,6 @@ If  $M_{c} > M_{c'}$ and $\{(1-\beta_{z,c})\mu(z,c)\}$ stochastically dominates 
 then $Z(\{1-\beta_{z,c}\},\{L\cdot\mu(z,c)\})>Z(\{1-\beta_{z,c'}\},\{L\cdot\mu(z,c')\})$.
 }
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Idea exchange: Special case}
@@ -447,7 +434,6 @@ n & \textnormal{ if } z < z_m \end{array}
 \begin{lemma}[Spatial sorting of tradables producers engaged in idea exchange]\label{lemma:spatialsorting}
 Suppose that Assumption 2 holds. For $z>z'>z_m$, if $\mu(z,c)>0$, $\mu(z',c')>0$, $\beta(z,Z_{c})<1$, and $\beta(z',Z_{c'})<1$, then $Z_c \geq Z_{c'}$.
 \end{lemma}
-
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Spatial equilibrium}
@@ -478,7 +464,6 @@ Suppose that Assumptions 1 and 2 hold. In any equilibrium, a larger city has hig
 \begin{itemize}
 	\item Define a city's observed skill premium as its average tradables wage divided by its (common) non-tradables wage, $\frac{\bar{w}_{c}}{p_{n,c}}$
 	\item When a tradables producer of ability $z_b$ is indifferent between cities $c$ and $c'$, this skill premium is higher in $c$ if and only if
-
 \begin{align*} %\left[\Delta(z,c,c')\right] became \Delta(z,c,c')
 \underbrace{\int_{z_m}^{\infty}[\tilde{\mu}(z,c)-\tilde{\mu}(z,c')]\tilde{z}(z,Z_{c'})dz}_{\textnormal{composition}}+\underbrace{\int_{z_m}^{\infty}\tilde{\mu}(z,c)\Delta(z,c,c')dz}_{\textnormal{inframarginal learning}} \\
 \geq \underbrace{\left(p_{n,c}-p_{n,c'}\right)\left(\frac{\bar{w}_{c'}}{p_{n,c'}}-1\right)}_{\textnormal{relative compensation}}\label{eqn:premia_decomp}
@@ -580,7 +565,6 @@ Why? Suppose not:
 	\item Would contradict strict supermodularity of $y(\cdot)$
 \end{itemize}
 \end{frame}
-
 % -----------------------------------------
 \begin{frame}{Ricardian trade model}
 Costinot and Vogel (2015) survey Ricardo-Roy models
@@ -615,7 +599,6 @@ where $\max$ and $\min$ are component-wise operators.
 	\item $g(x)$ is LSM $\iff g(x)$ is LSM in $(x_i,x_j)$  $\forall i,j$
 	\item $g>0$ and $g$ is $C^2$ $\Rightarrow \frac{\partial^2 \ln g}{\partial x_i \partial x_j}\geq 0 \iff g(x)$ is LSM in $(x_i,x_j)$
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Log-supermodularity (2/2)}
@@ -678,18 +661,14 @@ in all activities}
 \end{itemize}
 \end{frame}
 % -----------------------------------------
-
 \begin{frame}{Comparative Advantage of Cities: Empirics (1/2)}
-
 \begin{columns}
-
 \column{.55\textwidth}
 \begin{itemize}
 \item \textcolor{black}{Use US data on skills and sectors}
 \item Characterize the comparative advantage of cities with two tests
 \item \textcolor{blue}{Elasticity test }\textcolor{black}{of variation in
 relative population/employment}
-
 \begin{itemize}
 \item Compare elasticities of different skills, sectors
 \item \textcolor{black}{Steeper slope in log-log plot is higher elasticity}
@@ -697,20 +676,16 @@ relative population/employment}
 \end{itemize}
 \end{itemize}
 \column{.4\textwidth}\includegraphics[height=0.75\textheight]{../images/week10/CAC_figure3half.pdf}
-
 \end{columns}
 \end{frame}
 % -----------------------------------------
-
 \begin{frame}{Comparative Advantage of Cities: Empirics (2/2)}
-
 \textcolor{blue}{Pairwise comparison test} (LSM)
 \begin{itemize}
 \item The function $f(\omega,c)$ is log-supermodular if 
 \begin{align*}
 c>c',\omega>\omega'\Rightarrow f(\omega,c)f(\omega',c')\geq f(\omega',c)f(\omega,c')
 \end{align*}
-
 \item Our theory says skill distribution $f(\omega,c)$ and sectoral employment
 distribution $f(\sigma,c)$ are log-supermodular 
 \item For example, population of skill $\omega$ in city $c$ is $f(\omega,c)$.
@@ -718,7 +693,6 @@ Check whether, for $c>c',\omega>\omega'$,
 \[
 \frac{f(\omega,c)}{f(\omega',c)}\geq\frac{f(\omega,c')}{f(\omega',c')}
 \]
-
 \end{itemize}
 Are larger cities \textcolor{red}{larger in all sectors}?
 \begin{itemize}
@@ -746,7 +720,6 @@ A(c)=J\left(L,\int_{\omega\in\Omega}j(\omega)f(\omega,c)d\omega\right)
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Individual optimization}
-
 Perfectly mobile individuals simultaneously choose
 \begin{itemize}
 \item A sector $\sigma$ of employment
@@ -757,37 +730,26 @@ The productivity of an individual of skill $\omega$ is
 \[
 q(c,\tau,\sigma;\omega)=A(c)T(\tau)H(\omega,\sigma)
 \]
-
-
 Utility is consumption of the numeraire final good, which is income minus locational cost:
 \begin{align*}
 U(c,\tau,\sigma;\omega) & =q(c,\tau,\sigma;\omega)p(\sigma)-r(c,\tau)\\
  & =A(c)T(\tau)H(\omega,\sigma))p(\sigma)-r(c,\tau)
 \end{align*}
-
-
-
 \end{frame}
 % -----------------------------------------
-
-
 \begin{frame}{Sectoral choice}
 \begin{itemize}
 \item Individuals' choices of locations and sectors are separable: 
 \begin{align*}
 \arg\max_{\sigma}\underbrace{A(c)T(\tau)}_{\textnormal{locational}}\underbrace{H(\omega,\sigma)p(\sigma)}_{\textnormal{sectoral}}-r(c,\tau)=\arg\max_{\sigma}H(\omega,\sigma)p(\sigma)
 \end{align*}
-
 \item $H(\omega,\sigma)$ is log-supermodular in $\omega,\sigma$ and strictly increasing in $\omega$
 \item Comparative advantage assigns high-$\omega$ individuals to high-$\sigma$ sectors
 \item Absolute advantage makes more skilled have higher incomes ($G(\omega)=\max_{\sigma}H(\omega,\sigma)p(\sigma)$
 is increasing)
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
-
-
 \begin{frame}{Locational choice}
 \begin{itemize}
 \item \textcolor{black}{A location's attractiveness ${\color{red}\gamma}=A(c)T(\tau)$
@@ -801,15 +763,11 @@ productive opportunities, or consumption value
 \gamma=A(c)T(\tau)=A(c')T(\tau')\\
 A(c)>A(c')\Rightarrow\tau>\tau'
 \end{align*}
-
 \item Locational hierarchy: A smaller city's locations are a subset of larger
 city's in terms of attractiveness: $A(c)T(0)>A(c')T(0)$ 
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
-
-
 \begin{frame}{Equilibrium distributions}
 \begin{itemize}
 \item Skill and sectoral distributions reflect distribution of locational
@@ -829,11 +787,8 @@ where\textrm{ $V(z)\equiv-\frac{\partial}{\partial z}S\left(T^{-1}(z)\right)$
 is }the supply of locations with innate desirability $\tau$ such
 that$T(\tau)=z$
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
-
-
 \begin{frame}{When is $s(\gamma,c)$ log-supermodular?}
 \begin{proposition}[Locational attractiveness distribution]
 \label{prop:LocationDistribution}The supply of locations of attractiveness
@@ -847,14 +802,10 @@ endogenous equilibrium locational supplies $s(\gamma,c)$
 \[
 s(\gamma,c)\propto V\left(\frac{\gamma}{A(c)}\right)\Rightarrow\frac{\partial\ln s(\gamma,c)}{\partial\ln\gamma}=\frac{\partial\ln V\left(\frac{\gamma}{A(c)}\right)}{\partial\ln z}
 \]
-
 \item Satisfied by the canonical von Th\"{u}nen/monocentric geography
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
-
-
 \begin{frame}{The Comparative Advantage of Cities}
 \begin{corollary}[Skill and employment distributions]
 \label{cor:Skills-and-Sectors}If $V(z)$ has a decreasing elasticity,
@@ -873,13 +824,9 @@ Costinot 2009)}{\small \par}\end{itemize}
 then sectoral output $Q(\sigma,c)$ and revenue $R(\sigma,c)\equiv p(\sigma)Q(\sigma,c)$
 are log-supermodular.
 \end{corollary}
-
 \end{frame}
 % -----------------------------------------
-
-
 \begin{frame}{When are bigger cities bigger in everything?}
-
 We identify a sufficient condition under which a larger city has a
 larger supply of locations of a given attractiveness
 \begin{proposition}
@@ -895,24 +842,19 @@ is less than -1 at $z=\frac{K^{-1}(\underline{\omega})}{A(c)}=\frac{\underline{\
 $A(c)>A(c')$ implies $f(\omega,c)\geq f(\omega,c')$ and $f(M(\omega),c)\geq f(M(\omega),c')$
 $\forall\omega\in\Omega$.
 \end{corollary}
-
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Empirical tests}
-
 Our theory says $f(\omega,c)$ and $f(\sigma,c)$ are log-supermodular. 
-
 Two tests to describe skill and sectoral employment distributions:
 \begin{itemize}
 \item Elasticities test: 
-
 \begin{itemize}
 \item Compare population elasticities estimated via linear regression
 \item More skilled types should have higher population elasticities
 \item More skill-intensive sectors should have higher population elasticities
 \end{itemize}
 \item Pairwise comparisons test:
-
 \begin{itemize}
 \item Compare any two cities and any two skills/sectors
 \item Relative population of more skilled should be higher in larger city:
@@ -922,11 +864,8 @@ in larger city: $c>c',\sigma>\sigma'\Rightarrow$ $\frac{f(\sigma,c)}{f(\sigma',c
 \item ``Bin'' together cities ordered by size and compare bins similarly
 \end{itemize}
 \end{itemize}
-
 \end{frame}
 % -----------------------------------------
-
-
 \begin{frame}{Data: Skills}
 \begin{itemize}
 \item Proxy skills by educational attainment, assuming $f(edu,\omega,c)$
@@ -938,12 +877,8 @@ groups.
 \begin{minipage}{.9\textwidth}\begin{center}
 \scriptsize{\flushleft \textsc{Notes}: Sample is individuals 25 and older in the labor force residing in 270 metropolitan areas. Data source: 2000 Census of Population microdata via IPUMS-USA\par}
 \end{center}\end{minipage}
-
-
 \end{frame}
 % -----------------------------------------
-
-
 \begin{frame}{Data: Sectors}
 \begin{itemize}
 \item 19 industrial categories {\scriptsize{} (2-digit NAICS, 2000 County
@@ -1032,7 +967,7 @@ By reading Diamond (2016), you'll learn about a bunch of relevant concepts and t
 %\end{itemize}
 %\end{column}
 %\end{columns}
-\href{https://www.aeaweb.org/articles?id=10.1257/app.5.1.65}{Moretti (2013)} raises welfare questions by pointing out housing price growth for college-abundant cities shrinks nominal wage gap
+\href{https://www.aeaweb.org/articles?id=10.1257/app.5.1.65}{Moretti (2013)} raises welfare questions by pointing out housing price growth for college-abundant cities shrinks nominal wage gap\par
 }
 \end{frame}
 % -----------------------------------------
@@ -1069,26 +1004,27 @@ By reading Diamond (2016), you'll learn about a bunch of relevant concepts and t
 \end{itemize}
 \begin{center}
 \includegraphics[height=.5\textheight]{../images/GlaeserGyourko2005_fig1.pdf}\\
-Glaeser \& Gyourko (JPE 2005)
+\vspace{-2mm}
+{\small Glaeser \& Gyourko (JPE 2005)}
 \end{center}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Housing supply elasticities -- prices vs quantities}
 \begin{center}
-\includegraphics[width=\textwidth]{../images/GlaeserGyourko2018_fig2c.pdf}\\
-Glaeser \& Gyourko (JEP 2018)\end{center}
+\includegraphics[width=\textwidth]{../images/GlaeserGyourko2018_fig2c.png}\\
+\href{https://www.aeaweb.org/articles?id=10.1257/jep.32.1.3}{Glaeser \& Gyourko (JEP 2018)}\end{center}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Housing supply elasticities -- prices vs quantities}
 \begin{center}
-\includegraphics[height=\textheight]{../images/GlaeserGyourko2018_fig2.pdf}
+\includegraphics[height=\textheight]{../images/GlaeserGyourko2018_fig2.png}
 \end{center}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Incidence of building restrictions}
 \begin{center}
-\includegraphics[height=.85\textheight]{../images/GlaeserGyourko2018_fig4.pdf}\\
-Glaeser \& Gyourko (JEP 2018)\end{center}
+\includegraphics[height=.85\textheight]{../images/GlaeserGyourko2018_fig4.png}\\
+\href{https://www.aeaweb.org/articles?id=10.1257/jep.32.1.3}{Glaeser \& Gyourko (JEP 2018)}\end{center}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Diamond (2016) empirical implementation}
@@ -1145,26 +1081,25 @@ w_{jt}^{L} &= g_{L} \left(H_{jt},L_{jt}\right) + \epsilon_{jt}^{L}
 % -----------------------------------------
 \begin{frame}{Housing supply and amenity supply}
 \begin{itemize}
-	\item The elasticity of housing supply depends on geographic and regulatory components from Saiz (2010)
+	\item The elasticity of housing supply depends on geographic and regulatory components from \href{https://doi.org/10.1162/qjec.2010.125.3.1253}{Saiz (\textit{QJE} 2010)}
 	\item Amenities are an endogenous function of the $\frac{H}{L}$ ratio
+	\item You might find it interesting to read Tom Davidoff's ``Supply Constraints Are Not Valid Instrumental Variables for Home Prices Because They Are Correlated With Many Demand Factors'' (\href{https://www.nowpublishers.com/article/Details/CFR-0037}{\textit{Critical Finance Review} 2016})
 \end{itemize}
 \end{frame}
 % -----------------------------------------
 \begin{frame}[plain]{Estimation: Two-step GMM}
-
 {\small
 Instruments:
 \begin{equation*}
 \Delta Z_{jt} \in \left\{
+\Delta B^{H}_{jt}, 
+\Delta B^{L}_{jt}, 
 \Delta B^{H}_{jt} x^{reg}_{j}, 
-\Delta B^{L}_{jt} x^{geo}_{j}, 
-\Delta B^{H}_{jt} x^{reg}_{j}, 
-\Delta B^{L}_{jt} x^{geo}_{j}, 
-\Delta B^{H}_{jt} x^{reg}_{j}, 
+\Delta B^{H}_{jt} x^{geo}_{j}, 
+\Delta B^{L}_{jt} x^{reg}_{j}, 
 \Delta B^{L}_{jt} x^{geo}_{j}
 \right\}
 \end{equation*}
-
 ``the level of land-unavailability and land-use regulation are uncorrelated with unobserved local productivity changes [$\Delta \tilde{\epsilon}_{jt}^{H}$ and $\Delta \tilde{\epsilon}_{jt}^{L}$, which are uncorrelated with the Bartik local labor demand shocks]''
 \begin{align*}
 E \left(\Delta \tilde{\epsilon}_{jt}^{H} \Delta Z_{jt}\right) = 0 
@@ -1188,7 +1123,6 @@ $$
 %\end{comment}
 }
 \end{frame}
-
 % -----------------------------------------
 \begin{frame}{Estimation results}
 \begin{itemize}
@@ -1225,5 +1159,4 @@ $$
 \hyperlink{NLSY_main}{\beamerreturnbutton}
 \end{frame}
 % -----------------------------------------
-
 \end{document}
