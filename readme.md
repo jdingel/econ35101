@@ -2,22 +2,21 @@
 
 BUSN 33946 & ECON 35101\
 Jonathan Dingel\
-Autumn 2019
+Autumn 2020
 
 This is a graduate course in international trade.
-It introduces the fundamental concepts and tools of international trade and economic geography to prepare students to tackle research questions in these
-areas.
+It introduces the fundamental concepts and tools of international trade and economic geography to prepare students to tackle research questions in these areas.
 
 ### Logistics
 
-Email: <jdingel@chicagobooth.edu> | Phone: 773-834-5458 | Office: Harper 380\
-Office hours: By appointment, please email\
+Email: <jdingel@chicagobooth.edu>\
+Office hours: Zoom appointments, please email\
 Teaching assistant: Takashi Onoda (<onoda@uchicago.edu>)\
 Course materials: [github.com/jdingel/econ35101](http://github.com/jdingel/econ35101) and
 [canvas.uchicago.edu](https://canvas.uchicago.edu/courses/22781)\
-Class schedule: Mondays 8:30 AM - 11:30 AM in Harper Center 3A\
-This course will **start September 23** and run through December 2.
-We will not meet on October 21.
+Class schedule: Mondays 8:30 AM - 11:30 AM via Zoom\
+This course will **start September 21** and run through November 30.
+This class is remote-only.
 
 ### Assessment
 
@@ -40,7 +39,11 @@ and a final exam (25%).
     3.  Referee reports: I will ask you to write a referee report on a
         recent working paper.
 
--   In addition to course material, the final exam may ask you to
+-   Students may choose between a traditional final exam or a quarter-long joint replication project.
+    I would prefer the latter.
+    We will discuss this during the first week of class.
+
+-   In addition to course material, the traditional final exam may ask you to
     propose an original research idea, so you should be thinking about
     these during our class (and for the rest of your life!).
 
@@ -132,7 +135,7 @@ books:
 -   Bernhofen, Daniel, M., and John C. Brown. 2005. “[An Empirical
     Assessment of the Comparative Advantage Gains from Trade: Evidence
     from
-    Japan](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/0002828053828491)”
+    Japan](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/0002828053828491).”
     *American Economic Review*, 95 (1): 208-225.
 
 #### Week 2: Deterministic Ricardian models 
@@ -179,9 +182,9 @@ books:
     Experiment](http://www.nber.org.proxy.uchicago.edu/papers/w15557).”
     *NBER Working Papers No. 15557*.
 
--   Feyrer, James. 2018. “[Trade and Income - Exploiting Time Series in
-    Geography](http://www.dartmouth.edu/~jfeyrer/Feyrer_AirSea2018_05_21.pdf).”
-    Manuscript.
+-   Feyrer, James. 2019. “[Trade and Income - Exploiting Time Series in
+    Geography](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/app.20170616).”
+    *American Economic Journal: Applied Economics*, 11(4): 1-35.
 
 #### Week 5: Multiple factors of production 
 
@@ -244,16 +247,18 @@ books:
     Cities](http://www.jstor.org.proxy.uchicago.edu/stable/1813316).”
     *American Economic Review*, 64(4): 640-656.
 
--   :exclamation: Kristian Behrens, Gilles Duranton, and Frédéric Robert-Nicoud. 2014.
+-   Behrens, Kristian, Gilles Duranton, and Frédéric Robert-Nicoud. 2014.
     “[Productive Cities: Sorting, Selection, and
     Agglomeration](http://www.journals.uchicago.edu.proxy.uchicago.edu/doi/abs/10.1086/675534).”
     *Journal of Political Economy*, 122(3): 507-553.
 
--   Ahfeldt, Gabriel M., Stephen J. Redding, Daniel M. Sturm, and
+-   :exclamation: Ahfeldt, Gabriel M., Stephen J. Redding, Daniel M. Sturm, and
     Nikolaus Wolf. 2015. “[The Economics of Density: Evidence from the
     Berlin
     Wall](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/abs/10.3982/ECTA10876).”
     *Econometrica,* 83(6): 2127–2189.
+
+-   Dingel, Jonathan I. and Felix Tintelnot. 2020. "[Spatial Economics for Granular Settings](http://www.jdingel.com/research/DingelTintelnotSEGS.pdf)." Working paper.
 
 #### Week 9: Economic geography 
 
@@ -282,8 +287,8 @@ books:
     Economy](https://www.aeaweb.org/articles?id=10.1257/aer.20130249).”
     *American Economic Review*, 109 (1): 153-70.
 
--   Davis, Donald and Jonathan I. Dingel. 2018. “[The Comparative
+-   Davis, Donald and Jonathan I. Dingel. 2020. “[The Comparative
     Advantage of
     Cities.](http://faculty.chicagobooth.edu/jonathan.dingel/research/DavisDingel-TheComparativeAdvantageofCities.pdf)”
-    Manuscript.
+    *Journal of International Economics*.
 
