@@ -83,7 +83,7 @@ file:
 
 1.  Are your results sensitive to the omission of zeros?
 2.  How well does making the dependent variable log(x+1) perform?
-3.  Examine the residuals from your log-linear regression. Are they heteroskedastic?
+3.  Examine the residuals from your log-linear regression. Are they heteroskedastic? Report a Breusch–Pagan test statistic and a scatterplot of the residuals that addresses this question.
 4.  How do the computation times compare?
 
 #### Table 3: Comparing Stata’s reghdfe and Julia’s FixedEffectModels
