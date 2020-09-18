@@ -1,8 +1,8 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2019\
+Autumn 2020\
 Assignment 1\
-Due: 14 Oct 2019, 8:30am
+Due: 12 Oct 2020, 8:30am
 
 
 Your assignment is to write a function that solves a discrete approximation of Dornbusch, Fischer & Samuelson - A Ricardian Model with a Continuum of Goods (*AER* 1977).

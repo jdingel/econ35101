@@ -1,8 +1,8 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2019\
+Autumn 2020\
 Comprehension check 1\
-Due: 14 October 2019, 8:30am
+Due: 12 October 2020, 8:30am
 
 ### Immiserizing growth in the Armington model
 
@@ -19,7 +19,7 @@ Please submit your PDF via Canvas.
 Assume balanced budgets (Y = X) and free trade (&tau;=1 for all i,j).
 The only endogenous variables are incomes.
 Solve the model.
-Show that the equilibrium income levels take the form Y = Q<sup>&epsilon;/(&epsilon;+1)</sup>.
+Show that the equilibrium income levels take the form Y = Q<sup>&epsilon;/(&epsilon;-1)</sup>.
 What is the value of &epsilon; in this Armington model?
 
 #### Welfare

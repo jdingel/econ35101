@@ -1,8 +1,8 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2019\
+Autumn 2020\
 Assignment 3\
-Due: 2 Dec 2019, 8:30am
+Due: 30 Nov 2020, 8:30am
 
 ### Urban theory
 

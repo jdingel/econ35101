@@ -1,8 +1,8 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2019\
+Autumn 2020\
 Comprehension check 3\
-Due: 2 December 2019, 8:30am
+Due: 30 November 2020, 8:30am
 
 ### Location choice and compensating differentials with heterogeneous agents
 
