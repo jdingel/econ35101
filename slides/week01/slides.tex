@@ -1,0 +1,565 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 1 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 1}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Outline of today}
+\begin{itemize}
+	\item Course logistics
+	\item Why trade is interesting
+	\item Neoclassical model's assumptions
+	\item Gains from trade and comparative advantage
+	\item Empirical evidence from Japan
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Logistics}
+\begin{itemize}
+\item Mondays, 8:30--11:30 on Zoom, ten weeks (skip Nov 23)
+\item Jonathan Dingel
+\begin{itemize}
+	\item Email: \href{mailto:jdingel@chicagobooth.edu}{jdingel@chicagobooth.edu}
+	%\item Office: Harper 380 
+	\item Zoom office hours: By appointment, please email
+\end{itemize}
+\item Teaching assistant: Takashi Onoda (\href{mailto:onoda@uchicago.edu}{onoda@uchicago.edu}) 
+\item Course materials: \href{http://github.com/jdingel/econ35101}{github.com/jdingel/econ35101} and \href{https://canvas.uchicago.edu/courses/22781}{canvas.uchicago.edu}
+\end{itemize}
+\vspace{5mm}
+Also relevant: PhD trade working group, Wednesdays 11:00 %in Saieh 419
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Assessment}
+My goal is to introduce the fundamental concepts and tools of international trade and economic geography so that you can tackle relevant research questions
+\begin{itemize}
+\item Grades will be based on comprehension checks (15\%), assignments (60\%), and a final exam (25\%).
+\item Comprehension checks should be easy if you do assigned readings
+\item Three types of assignments
+\begin{itemize}
+\item Economics: Derive a theoretical result or survey an empirical literature.
+\item Programming: Write a function that solves for equilibrium or estimates a parameter. (n.b. \href{https://tradediversion.net/2018/09/17/why-i-encourage-econ-phd-students-to-learn-julia/}{Julia})
+\item Referee report: Assess a recent working paper.
+\end{itemize}
+\item Let's discuss final-exam choices
+\end{itemize}
+Grab comprehension checks and assignments from GitHub.
+Submit your work via the Canvas site.
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Topics}
+\begin{enumerate}
+\item Gains from trade and comparative advantage
+\item Deterministic Ricardian models
+\item Probabilistic Ricardian models
+\item Gravity and gains from trade
+\item Multiple factors of production
+\item Increasing returns and home-market effects
+\item Heterogeneous firms
+\item Models of agglomeration
+\item Economic geography
+\item Spatial sorting of skills and sectors
+\end{enumerate}
+See my comments on ``\href{https://tradediversion.net/2017/09/17/linkages-between-international-trade-and-urban-economics/}{Linkages between international trade and urban economics}''
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Course sequence}
+\begin{itemize}
+	\item This course is one of three in the Trade \& Growth field
+	\item Ufuk Akcigit's Firm Dynamics and Economic Growth
+	\item Felix Tintelnot's Topics in International Trade and Growth assumes you've masted the material from this class
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Why trade is interesting}
+\begin{itemize}
+	\item International trade has long intellectual history (Smith, Ricardo) and is hot policy topic today (Brexit, Trump)
+	\item Healthy balance of theory and empirics (c.f. theory-dominated from 1817 to 1990s) in which each informs the other
+	\item International trade has tools and insights relevant for topics ranging from intracity commuting patterns to national TFP growth
+	\item Trade economists sometimes have a data advantage because governments track cross-border transactions
+\end{itemize}
+\vspace{0.5cm}
+Why are you interested in trade?
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trade's interplay between theory and empirics}
+Facts motivate theoretical work
+\begin{itemize}
+	\item Observed intra-industry trade motivated ``new trade theory'' (e.g., Krugman 1980)
+	\item Observed firm-level heterogeneity motivated ``new new trade theory'' (e.g., Melitz 2003)
+\end{itemize}
+Empirical evidence comes from wide range of methods
+\begin{itemize}
+	\item Descriptive statistics and simple tests
+	\item Quasi-natural experiments (rare, but see Japanese autarky, Suez Canal, the telegraph, etc)
+	\item Estimated structural models
+	\item Quantitative exercises employing calibrated models
+	\item Applications employing sufficient statistics
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trade's interplay between theory and empirics}
+Even if not structural, empirical trade is typically theory-driven
+\begin{itemize}
+	\item Famous mistakes in which empirical work didn't take theory seriously enough
+	\item General-equilibrium predictions often differ from partial-equilibrium predictions
+\end{itemize}
+``How do you do general-equilibrium empirics?'' will be one motif we repeatedly visit.\\
+See \href{https://www.nber.org/papers/w8675}{Harrigan (2001)} on ``Do the Data Obey the Laws?''
+\begin{itemize}
+	\item Long-running difficulties with what it means to ``test'' a trade model.
+	Is there a clearly specified alternative hypothesis?
+	\item Specifications haven't always isolated the distinct general-equilibrium prediction (relative to PE)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{International trade theory}
+\begin{itemize}
+	\item Any GE model has preferences + technology + equilibrium
+	\item International trade theory focuses on locations, such that preferences (rarely) and technology (typically) are location-specific
+	\item Trade theory traditionally has ``international'' goods markets and ``domestic'' factor markets
+	\item Consumers have preferences over goods; factors are employed to produce goods
+	\item How does international integration affect the goods market, the factor market, and welfare?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Neoclassical trade models}
+\begin{itemize}
+\item ``Neoclassical trade models" are characterized by three key
+assumptions:
+\begin{itemize}
+	\item perfect competition
+	\item constant returns to scale
+	\item no distortions
+\end{itemize}
+\item Can accommodate decreasing returns to scale (DRS) using ``hidden'' factors in fixed supply;
+IRS is ``new trade theory''
+\item Given the generality of these assumptions, we won't obtain a wealth of results, but we can obtain two canonical insights: 
+\begin{itemize}
+	\item gains from trade (Samuelson 1939)
+	\item law of comparative advantage (Deardorff 1980)
+\end{itemize}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Neoclassical environment}
+\begin{itemize}
+\item There are $n=1,...,N$ countries, each populated by $h=1,...,H_{n}$
+households
+\item There are $g=1,...,G$ goods
+\begin{itemize}
+\item Output vector in country $n$:
+$y^{n} \equiv \left(y_{1}^{n},...,y_{G}^{n}\right) $
+\item Consumption vector of household $h$ in country $n$:
+$c^{nh} \equiv \left(c_{1}^{nh},...,c_{G}^{nh}\right) $
+\item Goods price vector in country $n$:
+$p^{n} \equiv \left(p_{1}^{n},...,p_{G}^{n}\right) $
+\end{itemize}
+\item There are $f=1,...,F$ factors in fixed supply
+\begin{itemize}
+\item The endowment vector in country $n$:
+$v^{n} \equiv \left(v_{1}^{n},...,v_{F}^{n}\right) $
+\item The factor price vector in country $n$:
+$w^{n} \equiv \left(w_{1}^{n},...,w_{F}^{n}\right) $
+\end{itemize}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Supply and the revenue function}
+Revenue function of country $n$ is
+\begin{equation*}
+r^{n}\left( p^{n},v^{n}\right) =
+\max_{y^{n}}\left\{ p^{n} \cdot y^{n}|\left(y^{n},v^{n}\right) \text{ feasible}\right\}
+\end{equation*}
+Lots of handy properties in a neoclassical environment (see Dixit \& Norman 1980 p.31-36)
+\begin{itemize}
+	\item Revenue function summarizes all relevant properties of technology
+	\item Under perfect competition, $y^n$ maximizes $r^n$
+	\item Derivatives w.r.t. goods prices give supply curves
+	\begin{equation*}
+	\nabla_p r^{n}\left( p^{n},v^{n}\right) = y^{n}\left( p^{n},v^{n}\right)
+	\end{equation*}
+	\item Derivatives w.r.t endowments give inverse factor demand curves
+	\begin{equation*}
+	\nabla_v r^{n}\left( p^{n},v^{n}\right) = w^{n}\left( p^{n},v^{n}\right)
+	\end{equation*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Demand and the expenditure function}
+Expenditure function for household $h$ in country $n$ with utility function $u^{nh}$ is defined as
+\begin{equation*}
+e^{nh}\left( p^{n},u^{nh}\right) =
+\min_{c^{nh}}\left\{ p^{n} \cdot c^{nh}|\text{ }
+u^{nh}\left( c^{nh}\right) \geq u^{nh}\right\}
+\end{equation*}
+Familiar properties from consumer theory (see Dixit \& Norman 1980 p.59-64)
+\begin{itemize}
+	\item Optimization implies that $e^{nh}\left( p^{n},u^{nh}\right) = p^{n}\cdot c^{nh}$ so
+	\begin{equation*}
+	\nabla_p e^{nh}\left(p^{n},u^{nh}\right) = c^{nh}\left(p^{n},u^{nh}\right)
+	\end{equation*}
+	\item $e^{nh}\left( p,u\right)$ is increasing in $u$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade (representative household)}
+\begin{itemize}
+	\item The revealed-preference argument employs only the revenue and expenditure funtions
+	\item Start with case of a single/representative household
+	\item Drop the $hn$ notation; use $a$ to denote autarky vectors
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade (representative household)}
+\begin{proposition}
+In a neoclassical trade model with one representative household per country,
+all households are (weakly) better off under free trade than autarky
+\end{proposition}
+Proof:
+\begin{align*}
+e\left( p,u^{a}\right) &\leq p \cdot c^{a} , &\text{\quad by definition of the expenditure function} \\
+&=p \cdot y^{a} , &\text{\quad by market clearing under autarky} \\
+&\leq r\left( p,v\right)  , &\text{\quad by definition of the revenue function} \\
+&=e\left( p,u\right)  , &\text{\quad by budget and trade balance}
+\end{align*}
+Since expenditure is increasing in utility, we conclude that $u \geq u^a$.\\
+\begin{itemize}
+	\item Weak inequalities to accommodate kinks in IC or PPF
+	\item Demonstrating gains from trade relative to autarky does not compare trading equilibria
+	\item Draw the two-good case
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade (lump-sum transfers)}
+\begin{itemize}
+\item With multiple households, trade is likely to generate winners and losers but we can show the winners win more than the losers lose
+\item Formally, there exist feasible domestic lump-sum transfers that make every household better off under free trade than autarky
+\item Reintroduce the household superscript notation:
+\begin{itemize}
+\item $c^{ah}$ and $c^{h}$ denote the vector of consumptions of household $h$ under autarky and free trade
+\item $v^{h}$ denotes the vector of endowments of household $h$ under autarky and free trade
+\item $u^{ah}$ and $u^{h}$ denote the utility levels of household $h$ under autarky and free trade
+\item $\tau ^{h}$ denotes the lump-sum transfer (in trade equilibrium) from government to household $h$ (lump-sum tax if negative)
+\end{itemize}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade (lump-sum transfers)}
+\begin{theorem}
+In a neoclassical trade model with multiple households per country, there
+exist domestic lump-sum transfers such that all households are (weakly)
+better off under free trade than autarky.
+\end{theorem}
+\begin{itemize}
+\item Set transfers such that each household can still afford its autarky
+consumption bundle under free trade
+\begin{equation*}
+\tau ^{h}=\left( p-p^{a}\right) \cdot c^{ah}-\left( w-w^{a}\right) \cdot v^{h}
+\end{equation*}
+\item These are feasible (government revenue is non-negative)
+\end{itemize}
+\begin{align*}
+- \sum\nolimits_{h}\tau ^{h} &=&\left( p^{a}-p\right)  \cdot \sum\nolimits_{h}c^{ah}-\left(
+w^{a}-w\right)  \cdot \sum\nolimits_{h}v^{h}\text{, by definition of }\tau ^{h} \\
+&=&\left( p^{a}-p\right)  \cdot y^{a}-\left( w^{a}-w\right)  \cdot v\text{, market
+clearing under autarky} \\
+&=&-p \cdot y^{a}+w \cdot v\text{, income equals expenditure under autarky} \\
+&\geq &-r\left( p,v\right) +w \cdot v\text{, from definition of revenue function}
+\\
+&=&0\text{, income equals expenditure under free trade}
+\end{align*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade (commodity and factor taxation)}
+\begin{itemize}
+	\item Domestic lump-sum transfers are not typically feasible
+	\item Let government set specific taxes on goods and factors so that, e.g., the price of good $g$ is $p_g^{\text{consumer}} = p_g + \tau_g$
+	\item Set $\tau_g = p^a_g - p_g$ and $\tau_f = w - w^a_f$ so household is indifferent
+	\item Government revenue is positive (similar to above):
+	\begin{align*}
+	T &= \sum\nolimits_g \tau_g \sum\nolimits_h c^{ah}_g + \sum\nolimits_f \tau_f \sum\nolimits_h v^h_f \\
+	&= (p^a - p) \cdot \sum_h c^{ah} - (w^a - w) \cdot \sum_h v^h \geq 0
+	\end{align*}
+	\item Remember that you cannot just rebate the revenue, you need to change a consumer price to achieve the strict improvement (Kemp \& Wan \textit{JIE} 1986)
+	\item There's probably a Pareto-improving direction of change in consumer prices in the neighborhood of the autarky price vector (Dixit \& Norman \textit{JIE} 1986)
+\end{itemize}
+{\footnotesize Costinot and Werning (2018) consider more limited set of instruments}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Introducing comparative advantage}
+\begin{itemize}
+	\item ``Comparative advantage'' -- differences in autarkic relative marginal costs -- is the basis for trade
+	\item If autarkic relative prices are identical, then ``zero trade'' is a free-trade equilibrium allocation at those prices
+	\item Theory of comparative advantage (2x2 case): If two countries engage in trade, each will export the good in which it has lower relative marginal cost prior to trade
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Law of comparative advantage for free-trade equilibria}
+\begin{theorem}
+In a neoclassical trade model with representative households
+with autarkic and free-trade prices $p^{na}$ and $p$, 
+$\left(p-p^{na}\right) \cdot t^{n} \geq 0$, 
+where $t^{n}=y^{n}-c^{n}$ is the vector of country $n$'s net exports.
+\end{theorem}
+Proof (Deardorff 1980, \href{https://www.jstor.org/stable/40440263}{1994}):
+\begin{eqnarray*}
+p^{na}\cdot y^{n} &\leq &r\left( p^{na},v^{n}\right) \text{, \ \ by def of revenue function} \\
+p^{na}\cdot c^{n} &\geq &e\left( p^{na},u^{n}\right) \text{, \ \ by def of expenditure function} \\
+p^{na}\cdot t^{n} &\leq &r\left( p^{na},v^{n}\right) -e\left( p^{na},u^{n}\right) \text{, \ \ by previous two inequalities} \\
+e\left( p^{na},u^{n}\right) &\geq &e\left( p^{na},u^{na}\right) \text{,
+since }u^{n}\geq u^{na}\text{ and } \frac{\partial e\left( p,u\right)}{\partial u} \geq 0 \\
+p^{na}\cdot t^{n} &\leq &r\left( p^{na},v^{n}\right) -e\left(
+p^{na},u^{na}\right) \text{, by previous two inequalities} \\
+p^{na}\cdot t^{n} &\leq &0\text{, since autarkic income equals autarkic expenditure}
+\\
+p \cdot t^{n} &=&0\text{, by balanced trade} \\
+\left( p-p^{na}\right) \cdot t^{n} &\geq &0\text{, by combining previous two expressions }
+\end{eqnarray*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Comments on general validity of law of CA}
+\begin{itemize}
+	\item $\left(p-p^{na}\right) \cdot t^{n}$ is a correlation result because covariance of two vectors is simply their inner product if one of the vectors (i.e., normalized $p-p^{na}$) sums to zero
+	\item $\left(p-p^{na}\right) \cdot t^{n}$ depends on both autarky and free-trade prices
+	\item Corollaries 3 and 4 of Deardorff (1980) state result in terms of only autarkic prices (requires world market-clearing assumption)
+	\item Deardorff (1980) covers the case of costly trade, distinguishing	 consumer price $p^q$, producer price $p^t$, and world price $p^w$
+	\item Core of the proof is that $p^{na} \cdot t^n \leq 0$: gains from trade mean that consumption is at most barely attainable under autarky ($p^a y^n \leq p^a c^n$) 
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Deardorff (1980) environment}
+Notation differs: country $i$, ``natural trade'' $n$, quantity $Q$
+{\small
+\begin{align}
+(Q^i,T^i) \in F^i \Rightarrow (Q^i+T^i,0) \in F^i &\quad \text{non-negative trade costs}\\
+&\text{ local non-satiation } \\
+(Q^{ai},0) \in F^i &\quad \text{autarky eqlbm feasible} \\
+p^{ai} Q^{ai} \geq p^{ai} Q \ \forall (Q,0) \in F^i &\quad \text{profit maximizing} \\
+U^i(Q^{ai}) \geq U^i(Q) \ \forall Q: p^{ai} Q \leq p^{ai} Q^{ai} &\quad \text{utility maximizing} \\
+(Q^{ni},T^{ni}) \in F^i &\quad \text{trade eqlbm feasible} \\
+p^{qi} Q^{ni} +p^{ti}T^{ni} \geq p^{qi} Q +p^{ti}T \ \forall (Q,T) \in F^i &\quad \text{profit maximizing} \\
+U^i(Q^{ni}) \geq U^i(Q) \ \forall Q: p^{qi} Q \leq p^{qi} Q^{ni} &\quad \text{utility maximizing} \\
+p^w T^{ni} = 0  &\quad \text{balanced trade} \\
+(p^w_g - p^{ti}_g) T_g^{ni} \geq 0 \ \forall g &\quad \text{``natural trade''} \\
+\sum_i T^{ni} = 0 &\quad \text{world market clears}
+\end{align}
+}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{How should we take comparative advantage to data?}
+Canonical $2\times2$ insight we teach in principles classes isn't amenable to empirical investigation.
+Now we have a general formulation.
+\begin{itemize}
+	\item Good news: {``while the classical theory predicts only the direction and not the magnitude of trade, it nonetheless permits one to infer a negative infer a negative correlation between relative costs and net exports'' (Deardorff 1980) \par}
+	\item Bad news: {``relative antarky prices are not observable. Almost all countries have engaged in trade throughout history, so that there is no experience with autarky from which to draw data.'' (Deardorff 1984) \par}
+	\item Long-standing approach: Use model with observable primitives (technology and factor endowments) to infer autarkic prices. Joint test of CA and model.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Bernhofen and Brown: Sometimes we observe autarky}
+\begin{itemize}
+	\item Japan had ``sudden and complete opening up to international trade in the 1860s'' due to US military
+	\item Bernhofen and Brown use this a natural experiment to test law of comparative advantage
+	\item Key prediction is $p^{na} \cdot t^n \leq 0$, but we never simultaneously observe autarky prices $p^a$ and trade-equilibrium net exports $t^n$
+	\item ``the comparison of autarky with free trade should be understood as a comparison between two alternative histories, not as a change that takes place over time'' (Helpman and Krugman 1985)
+	\item If preferences and technology in 1868-1875 (observed trade years) are same as those in 1858, hope that $p^a$ from 1858 is valid measure of $p^a$ for 1868-1875
+	\item Test $p^{na} \cdot t^n \leq 0$ by computing $p^{a,1958} \cdot t^{n,1968}$ (roughly speaking)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Assumptions}
+\begin{itemize}
+	\item Read Section III of BB (2004) on the assumptions that this is a relevant and valid natural experiment
+	\begin{enumerate}
+		\item Competitive economy in autarky
+		\item Japanese are price takers in international markets
+		\item Exports not subsidized
+		\item PPF shifts from 1859 to 1968 not biased toward importables (if $\mathbf{p_2^a} = \mathbf{p_1^a} + \mathbf{\epsilon}$, then $\mathbf{\epsilon} \mathbf{T} \leq 0$ is sufficient for $\mathbf{p}_1^a \mathbf{T}\leq 0 \Rightarrow \mathbf{p}_2^a \mathbf{T}\leq 0$)
+	\end{enumerate}
+	\item What is the test of $p^{na} \cdot t^n \leq 0$?
+	\begin{itemize}
+		\item Alternative hypothesis $H_1$: $p^{na} \cdot t^n > 0$
+		\item Alternative hypothesis $H_2$: $\Pr\left(p^{na} \cdot t^n \leq 0\right)=\frac{1}{2}$
+	\end{itemize}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Correlation of $p^{a}$ and $t$ in 1969}
+\begin{center}\includegraphics[width=0.9\textwidth]{../images/BernhofenBrown2004_fig4.pdf}\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Inner product of $p^a$ and $t$, year by year}
+\begin{center}\includegraphics[width=0.8\textwidth]{../images/BernhofenBrown2004_tab2.pdf}\end{center}
+{\small ``The p-value is exactly 1/256, where 1/256 is the probability of obtaining eight heads in eight tosses with a balanced coin.''\par}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Comments on Bernhofen and Brown (2004)}
+\begin{itemize}
+	\item What is the autarky price of a good not produced in autarky?
+	\item Plot of prices changes $p-p^{a}$ in Figure 4 okay if $p\cdot t = 0$ by balanced trade (check Figure 3)
+	\item What is the power of this test in the absence of a competing theory?
+	\item Computation of p-value assumes independence of observations
+	\item Does $p^a \cdot t$ exhibit a trend?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade (Bernhofen and Brown 2005)}
+How much did (the representative) Japanese consumer gain from opening to trade?
+\begin{itemize}
+	\item Measure Slutsky compensation (income increase equivalent to consumption change) to consumers in autarky (1858)
+	\begin{equation*}
+		\Delta W = p^a_{\text{1858}} c^t_{\text{1858}} - p^a_{\text{1858}} c^a_{\text{1858}}
+	\end{equation*}
+	[Aside: I didn't use BB's $e(p,c)=p\cdot c$ notation to avoid confusion with expenditure function $e(p,u)$]
+	\item $c^t_{\text{1858}}$ is consumption in the counterfactual trade equilibrium
+	\item By WARP and GFT, $c^t_{\text{1858}}$ was not affordable in 1858
+	\item $\Delta W$ identifies how much more income would have been required to afford $c^t_{\text{1858}}$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{GFT in terms of observables}
+\begin{align*}
+\Delta W 
+&= p^a_{\text{1858}} \cdot c^t_{\text{1858}} - p^a_{\text{1858}} \cdot c^a_{\text{1858}} \\
+&= p^a_{\text{1858}} \cdot (c^t_{\text{1858}} - y^t_{\text{1858}}) + p^a_{\text{1858}} \cdot (y^t_{\text{1858}} -y^a_{\text{1858}}) \\
+&= -p^a_{\text{1858}} \cdot t_{\text{1858}} - p^a_{\text{1858}} \cdot (y^a_{\text{1858}} - y^t_{\text{1858}}) \\
+&\leq -p^a_{\text{1858}} \cdot t_{\text{1858}}
+\end{align*}
+\begin{itemize}
+	\item Inequality by property of revenue function (profit maximization)
+	\item Deardorff-Dixit-Norman inner product is an upper bound on gains from trade (recall role of revealed preference in prior proof)
+	\item Since $t_{\text{1858}}$ is counterfactual, it is not observed
+	\item BB (2005) assume counterfactual $t_{\text{1858}}$ is observed $t_{\text{1868}}$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{An upper bound on 1858 Japan's gains from trade}
+\begin{center}\includegraphics[width=0.9\textwidth]{../images/BernhofenBrown2005_tab2.pdf}\end{center}
+\begin{itemize}
+	\item A ``backcast'' of GDP per capita says that 0.219 gold ry\={o} is 5\%--9\% of 1851-1853 GDP 
+	\item BB contrast with Huber (1971) estimate of 65\% increase in urban worker's real wages by late 1870s
+\end{itemize}
+In week 4, look at Bernhofen and Brown's ``\href{http://microeconomicinsights.org/gains-trade-evidence-nineteenth-century-japan/}{How our research relates to the new structural estimation trade literature}''
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Is this a small upper bound?}
+Missing mechanisms? (Double check the title of BB 2005)
+\begin{itemize}
+	\item Frankel \& Romer (1999): ``there are many channels through which trade can affect income—notably specialization according to comparative advantage, exploitation of increasing returns from larger markets, exchange of ideas through communication and travel, and spread of technology through investment and exposure to new goods.''
+	\item Monopolistic competition puts new varieties, firm selection, and markups on the table
+	\item A static model cannot predict dynamic gains
+\end{itemize}
+In a static world, 5\% of GDP isn't small
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Theory-free gains from trade?}
+\begin{itemize}
+	\item \href{https://tradediversion.net/2010/09/20/how-big-are-the-gains-from-trade/}{Ed Prescott}: ``People can quantify what gains there are from it [trade]. If you calibrate the models\dots most people want to get a big number, but a small number comes out.''
+	\item Can you measure GFT empirically without a model? Do ``we know that periods of openness coincide with periods of strong economic growth and periods of protectionism coincide with recession''?
+	\item Prescott says model needs additional mechanism to generate large ``empirical'' gains: technology diffusion, not just trade in goods
+	\item Can you do theory-free empirics?
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Frankel and Romer (1999)}
+Can trade explain income per capita in a cross-country regression?
+\begin{itemize}
+	\item Frankel and Romer (1999) address endogeneity of trade by proposing an instrumental variable based on geography
+	\item ``Market access'' is proximity to larger potential trading partners
+	\item A big paper that reflects its era (e.g., \href{https://www.journals.uchicago.edu/doi/abs/10.1086/654419}{Rodriguez and Rodrik Macro Annual critique} has 4500+ cites!)
+\end{itemize}
+The method:
+\begin{itemize}
+	\item Second stage: Regress GDP per capita on trade, controlling for country size
+	\item First stage: Instrument for actual trade using ``predicted trade'' (akin to market potential)
+	\item Zero stage: Predict bilateral trade flows using geography (and other countries' characteristics)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Frankel and Romer's ``zero stage''}
+\begin{minipage}{0.49\textwidth}
+\includegraphics[width=\textwidth]{../images/FrankelRomer1999_tab1.pdf}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\begin{itemize}
+	\item Dependent variable is $\ln\left(\frac{\tau_{ij}}{GDP_i}\right)$, where $\tau_{ij}$ is sum of bilateral exports and imports
+	\item This ``gravity'' equation is mis-specified by modern standards, as we'll learn in weeks 3 and 4
+	\item How exogenous are these predictors? (And what do we require of a zero-stage regression?)
+\end{itemize}
+\end{minipage}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Frankel and Romer's first stage}
+\begin{minipage}{0.59\textwidth}
+\includegraphics[width=\textwidth]{../images/FrankelRomer1999_tab2.pdf}
+\end{minipage}
+\begin{minipage}{0.39\textwidth}
+\begin{itemize}
+	\item Use zero-stage estimates to predict trade share $\hat{T}_i = \sum_{j \neq i} \exp\left(\hat{\alpha} X_{ij}\right)$
+	\item Use predicted trade share as instrument for trade share
+	\item Correct first-stage standard errors for generated regressors
+\end{itemize}
+\end{minipage}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Frankel and Romer's second stage}
+\begin{minipage}{0.49\textwidth}
+\includegraphics[width=\textwidth]{../images/FrankelRomer1999_tab3.pdf}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\begin{itemize}
+	\item Most expected OLS estimates to be upward biased
+	\item But these IV estimates are much larger than OLS coefficients
+	\item Led to a lot of discussion
+	\item The paper itself contains important robustness checks/caveats:
+\end{itemize}
+\end{minipage}
+{\footnotesize ``include countries' distance from the equator as a control variable. This variable may reflect the impact of climate, or it may be a proxy for omitted country characteristics that are correlated with latitude. With this approach, the IV estimate of trade and size’s effects are virtually identical to the OLS estimate for the full sample, and only moderately larger than the OLS estimate for the 98-country sample.''\par}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Explaining Frankel and Romer's estimates}
+Why are the IV coefficients larger than OLS?
+\begin{itemize}
+	\item IV isn't larger, check the standard errors (p.393)
+	\item Weak instrument could exacerbate any small amount of endogeneity in the IV
+	\item Measurement error: Physical shipments of goods don't capture all income-increasing interactions, so OLS suffers attentuation bias (p.393)
+	\item LATE vs ATE
+\end{itemize}
+Cross-country regressions are less frequently run today as economists have come to understand the empirical challenges they face (e.g., \href{https://www.journals.uchicago.edu/doi/abs/10.1086/654419}{Rodriguez and Rodrik}, \href{https://www.jstor.org/stable/43189545}{Bazzi and Clemens})
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Interpreting Frankel and Romer's results}
+If valid, what do these parameter estimates mean?
+\begin{itemize}
+	\item Rodriguez and Rodrik: {``To the extent that trade restrictions represent policy responses to real or perceived market imperfections or, at the other extreme, are mechanisms for rent extraction, they will work differently from natural or geographical barriers to trade and other exogenous determinants.''\par}
+	\item Estimates much larger than Bernhofen and Brown (2005) welfare consequence, but real GDP isn't same as welfare in an open economy
+	\item In fact, measured GDP may fall even when trade liberalization raises welfare (\href{http://users.econ.umn.edu/~tkehoe/papers/BajonaGibsonKehoeRuhl.pdf}{Bajona, Gibson, Kehoe, and Ruhl 2010})
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Wrapping up}
+\begin{itemize}
+	\item Two central concepts in international economics are generally valid in a neoclassical sense
+	\item Trade theory can and should inform empirical investigations
+	\item It's hard to come by exogenous variation in country-level trade (and even harder to find cases of autarky)
+	\item Comparative advantage works in one empirical setting
+	\item Welfare consequences of trade are subject to much greater debate
+	\item Next week, we start studying models that make much stronger functional-form assumptions
+\end{itemize}
+Let's head to breakout rooms\dots
+\end{frame}
+% -----------------------------------------
+\end{document}
