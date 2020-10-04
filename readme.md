@@ -260,6 +260,8 @@ books:
 
 -   Dingel, Jonathan I. and Felix Tintelnot. 2020. "[Spatial Economics for Granular Settings](http://www.jdingel.com/research/DingelTintelnotSEGS.pdf)." Working paper.
 
+-   Davis, Morris and Jesse Gregory. 2020. "[Place-Based Redistribution in Simple Location-Choice Models](https://www.ssc.wisc.edu/~jmgregory/md-jg-redistribution.pdf)." Working paper.
+
 #### Week 9: Economic geography 
 
 -   :exclamation: Krugman, Paul. 1991. “[Increasing Returns and Economic
