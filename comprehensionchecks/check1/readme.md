@@ -19,7 +19,7 @@ Please submit your PDF via Canvas.
 Assume balanced budgets (Y = X) and free trade (&tau;=1 for all i,j).
 The only endogenous variables are incomes.
 Solve the model.
-Show that the equilibrium income levels take the form Y = Q<sup>&epsilon;/(&epsilon;-1)</sup>.
+Show that the equilibrium income levels take the form Y = Q<sup>&epsilon;/(&epsilon;+1)</sup>.
 What is the value of &epsilon; in this Armington model?
 
 #### Welfare
