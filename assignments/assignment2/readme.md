@@ -28,7 +28,7 @@ Define a global variable for the filepath at the top of your scripts or, prefera
 
 #### Download data
 
-Grab the [`col_regfile09.zip`](http://econ.sciences-po.fr/sites/default/files/file/tmayer/data/col_regfile09.zip) file made available via the [Gravity Cookbook website](https://sites.google.com/site/hiegravity/data-sources) associated with the Head and Mayer (2014) handbook chapter.
+Grab the [`col_regfile09.zip`](col_regfile09.zip) file, which was made available via the [Gravity Cookbook website](https://sites.google.com/site/hiegravity/data-sources) associated with the Head and Mayer (2014) handbook chapter.
 This contains a 95 MB DTA file that is an unbalanced panel of trade flows between countries for 1948 to 2006.
 You will use the following variables:
  `flow`, `distw`, `iso_o`, `year`, `iso_d`, `contig`, `comlang_off`.
