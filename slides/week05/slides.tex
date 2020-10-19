@@ -84,7 +84,9 @@ See pages 71-75 of Feenstra textbook (first edition)
 % -----------------------------------------
 \begin{frame}{Ricardo-Viner model: Comparative statics}
 Suppose that $p_1$ increases
-\begin{center}\includegraphics[width=.55\textwidth]{../images/Feenstra2015_fig3_3.png}\end{center}
+\\ %\begin{center}
+\includegraphics[width=.55\textwidth]{../images/Feenstra2015_fig3_3.png}
+%\end{center}
 \begin{itemize}
 	\item $w$ increases, $L_1$ increases, $L_2$ decreases
 	\item Differentiate $w=p_1 f^1_{L} \left(L_1,K_1\right)$ wrt $p_1$ to find $\hat{w}<\hat{p}_1$
@@ -189,14 +191,14 @@ Proof:\\
 WLOG, let $\frac{a_{1L}(\omega)}{a_{1K}(\omega)}>\frac{a_{2L}(\omega)}{a_{2K}(\omega)}$
 and $\hat{p}_{1}>\hat{p}_{2}$,
 where $\hat{x} \equiv \frac{\textrm{d}x}{x}$. \\
-Differentiating the zero-profit conditions yields
+Differentiating the zero-profit conditions yields (by envelope theorem)
 \begin{equation*}
-\textrm{d}p_{i}=a_{iL}\textrm{d}w+a_{iK}\textrm{d}r
+\textrm{d}p_{g}=a_{gL}\textrm{d}w+a_{gK}\textrm{d}r
 \end{equation*}
-Define the cost share $\theta _{iL}=\frac{wa_{iL}}{c_{i}}$
+Define the cost share $\theta _{gL}=\frac{wa_{gL}}{c_{g}}$
 to obtain
 \begin{equation*}
-\hat{p}_{i}=\theta _{iL}\hat{w}+\left( 1-\theta _{iL}\right) \hat{r}
+\hat{p}_{g}=\theta _{gL}\hat{w}+\left( 1-\theta _{gL}\right) \hat{r}
 \end{equation*}
 Goods price changes are weighted averages of factor price changes.
 $\frac{a_{1L}}{a_{1K}}>\frac{a_{2L}}{a_{2K}} \Rightarrow \theta
@@ -512,7 +514,7 @@ Estimating equation explicitly derived from a RV model
 	\item Good $i$ with specific factor $K_i$ and labor $L$
 	\item Factor market clearing:
 	\begin{equation*}
-	a_{K_i} Y_i = K_i \qquad \sum_{i} a_{Li} Y_I = L
+	a_{K_i} Y_i = K_i \qquad \sum_{i} a_{Li} Y_i = L
 	\end{equation*}
 	\item Differentiating, $\hat{L} = \sum_i \lambda_i (\hat{a}_{Li} - \hat{a}_{K_i})$ where $\lambda_i \equiv L_i / L$
 	\item $\hat{p}_i = (1-\theta_i)\hat{w} + \theta_i \hat{r}_i$, where $\theta_i \equiv \frac{r_iK_i}{p_i Y_i}$ is specific factor's cost share
@@ -565,15 +567,15 @@ w_{r,t} - w_{r,\text{1991}} = \alpha_{st} + \beta_t \cdot \text{RTC}_r + \gamma_
 \begin{frame}{Autor, Dorn, Hanson (2013)}
 \begin{itemize}
 	\item Use of trade quantities (China shock) rather than prices, so a gravity-based model rather than specific-factor SOE
-	\item Exogenous Chinese export supply shock in industry $j$ is $\hat{A}_{Cj}$ and Chinese import demand shock is $\hat{E}_{Cj}$
-	\item Look at outcomes for wages $\hat{w}_i$, employment in traded goods $\hat{L}^{T}_{i}$, and employment in non-traded goods $\hat{L}^{N}_{i}$
-	\item Treatment is exposure to import competition:
+	\item Exogenous Chinese export supply shock in industry $j$ is $\hat{A}_{Cj}$
+	\item Look at region $i$'s outcomes for wages $\hat{w}_i$, employment in traded goods $\hat{L}^{T}_{i}$, and employment in non-traded goods $\hat{L}^{N}_{i}$
+	\item Treatment is exposure to import competition (shift-share design):
 	\begin{equation*}
-		\Delta \text{IPW}_{uit} = \sum_j \frac{L_{ijt}}{L_{ujt}} \frac{\Delta M_{ucjt}}{L_{it}}
+		\Delta \text{IPW}_{Uit} = \sum_j \frac{L_{ijt}}{L_{Ujt}} \frac{\Delta M_{UCjt}}{L_{it}}
 	\end{equation*}
-	\item Instrument using non-US exposure:
+	\item Instrument using non-US exposure (``other'' $o$):
 	\begin{equation*}
-		\Delta \text{IPW}_{oit} = \sum_j \frac{L_{ijt-1}}{L_{ujt-1}} \frac{\Delta M_{ocjt}}{L_{it-1}}
+		\Delta \text{IPW}_{oit} = \sum_j \frac{L_{ijt-1}}{L_{ujt-1}} \frac{\Delta M_{oCjt}}{L_{it-1}}
 	\end{equation*}
 \end{itemize}
 \end{frame}
@@ -637,7 +639,7 @@ w_{r,t} - w_{r,\text{1991}} = \alpha_{st} + \beta_t \cdot \text{RTC}_r + \gamma_
 	\end{equation*}
 	which says capital intensity of production exceeds the capital intensity of consumption
 \end{itemize}
-\includegraphics[width=\textwidth]{../images/Feenstra2015_tab2_1.png}
+\includegraphics[width=\textwidth]{../images/Feenstra2015_tab2_2.png}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Bowen, Leamer and Sveikauskas (1987)}
