@@ -16,34 +16,6 @@ Autumn \the\year, Week 6}
 \end{center}
 \end{frame}
 % -----------------------------------------
-\begin{comment}
-\begin{frame}{Before we get started}
-\begin{itemize}
-	\item Today we're talking about trade with increasing returns, but let's talk about the DFS '77 assignment briefly.
-\item Recall our friends
-$A(z) \equiv \frac{a^*(z)}{a(z)}$
-and
-$B\left(\tilde{z}\right) \equiv \frac{\theta \left(\tilde{z}\right) }{1-\theta \left(\tilde{z}%
-\right) }\frac{L^{*}}{L}$
-\item Equilibrium relative wage $\omega \equiv \frac{w}{w^*}$ is where $A\left(\tilde{z}\right)=B\left(\tilde{z}\right)$
-\item Can you vary the $A()$ function such that equilibria exhibit the same volume of trade and different gains from trade?
-\end{itemize}
-\begin{align*}
-	\ln (U/L) 
-	&=
-	{\ln w} - \int_{0}^{1} b(z) \ln p(z) dz
-	\\
-	\int_{0}^{1} b(z) \ln a(z) dz 
-	&\geq \int_{0}^{\tilde{z}} b(z) \ln a(z) dz + \int_{\tilde{z}}^{1} b(z) \ln \left[w^{*} a^{*}(z)\right] dz 
-	\\
-	0
-	&\geq
-	\int_{\tilde{z}}^{1} b(z) \ln \left[A(z) / \omega\right] dz
-\end{align*}
-What can be said about the magnitude of the gains from trade in this model if we observe the equilibrium volume of trade and do not observe autarky prices?
-\end{frame}
-\end{comment}
-% -----------------------------------------
 \begin{frame}{Today: Does size matter?}
 \linespread{1.1}
 \begin{itemize}
@@ -177,7 +149,7 @@ p_i &=  \theta \lambda^{-1} (x_i / L)^{\theta-1}
 &\text{(6)} \\
 p_i &= \theta^{-1} \beta w 
 &\text{(7)} \\
-\pi_i &= px_i - (\alpha+\beta x_i) 
+\pi_i &= px_i - (\alpha+\beta x_i)w 
 &\text{(8)} \\
 x_i &= \alpha \theta / \beta (1-\theta) 
 &\text{(9)} \\
@@ -214,10 +186,10 @@ n &= L(1-\theta)/\alpha, \  n^* = L^*(1-\theta)/\alpha
 	\end{align*}
 	\item With $p=p^*$, $w=w^*$, $x=x^*$, solve for $\frac{n}{n^*}$
 	\begin{align*}
-	n>0,n^*>0 \Rightarrow \frac{n}{n^*} = \frac{L/L^* - \tau^{1-\sigma}}{1 - \tau^{1-\sigma}L/L^*}, \quad \frac{L}{L^*} \in \{\tau^{1-\sigma},\tau^{\sigma-1}\} \\
+	n>0,n^*>0 \Rightarrow \frac{n}{n^*} = \frac{L/L^* - \tau^{1-\sigma}}{1 - \tau^{1-\sigma}L/L^*}, \quad \frac{L}{L^*} \in [\tau^{1-\sigma},\tau^{\sigma-1}] \\
 	 \frac{L}{L^*} < \tau^{1-\sigma} \Rightarrow n = 0 ; \quad \frac{L}{L^*} > \tau^{\sigma-1} \Rightarrow n^* = 0 
 	\end{align*}
-	\item $\frac{n}{n^*}$ is increasing in $\frac{L}{L^*}$: greater relative demand calls for domestic supply
+	\item $\frac{n}{n^*}$ is increasing in $\frac{L}{L^*}$: greater relative demand calls forth domestic supply
 \end{itemize}
 \end{frame}
 % -----------------------------------------
@@ -414,7 +386,9 @@ Costinot, Donaldson, Kyle, Williams (2019):
 	\item Theory: Define ``home-market effect'' outside Krugman-like settings
 	\item Empirics: Use demographic differences as source of exogenous variation in demand for pharmaceutical drugs
 \end{itemize}
-This is the must-read paper on home-market effects
+This is the must-read paper on home-market effects\\
+\vspace{5mm}
+\footnotesize{See my blog post on ``\href{https://tradediversion.net/2019/09/23/market-size-effects-across-places-and-over-time/}{Market-size effects, across places and over time}''}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{CDKW: Theoretical environment}
