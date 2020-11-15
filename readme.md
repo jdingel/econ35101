@@ -271,7 +271,7 @@ books:
 -   Helpman, Elhanan. 1998. “The Size of Regions.” *Topics in Public
     Economics: Theoretical and Applied Analysis*, 33-54. Cambridge:
     Cambridge University Press. ([1995 working
-    paper](http://www.brown.edu/Departments/Economics/Faculty/Matthew_Turner/ec2410/readings/Helpman_unp_1995.pdf))
+    paper](https://scholar.google.com/scholar?cluster=1326854383643317769))
 
 -   Allen, Treb and Costas Arkolakis. 2014. “[Trade and the Topography
     of the Spatial
