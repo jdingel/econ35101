@@ -28,6 +28,7 @@ Evidence:
 	\item Davis \& Weinstein: ``Bones, Bombs, and Breakpoints''
 	\item Redding \& Sturm: ``The Costs of Remoteness: Evidence from German Division and Reunification''
 \end{itemize}
+``New Economic Geography'' (NEG) is a spatial monopolistic-competition account emphasizing pecuniary externalities and circular causality
 \end{frame}
 % -----------------------------------------
 \begin{frame}{``Increasing Returns and Economic Geography''}
@@ -103,7 +104,7 @@ x_1 &= x_2 = \frac{\alpha}{\beta} (\sigma-1)
 	\item Usual Dixit-Stiglitz monopolistic competition setup, but $L_i$ endogenous
 	\item Freely traded CRS good but still wages $w_1$ and $w_2$
 	\item As in Krugman (1980), all action on extensive margin
-	\item Iceberg trade costs: Only $\tau<1$ arrives , send $1/\tau$ [inverse of modern notation]
+	\item Iceberg trade costs: Only $\tau<1$ arrives, send $1/\tau$ [inverse of modern notation]
 \end{itemize}
 \end{column}
 \end{columns}
@@ -220,6 +221,7 @@ Defection profitable if $V_2/V_1 > \tau^{-\mu} \iff \nu <1$.
 \frac{\partial\nu}{\partial\mu} 
 &=
 \nu\sigma(\ln\tau) + \frac{1}{2}\tau^{\sigma\mu} \left[\tau^{\sigma-1} - \tau^{-(\sigma-1)}\right]
+< 0
 & \text{(27)} \\
 \frac{\partial\nu}{\partial\tau} 
 &=
@@ -232,6 +234,7 @@ Defection profitable if $V_2/V_1 > \tau^{-\mu} \iff \nu <1$.
 &= \ln(\tau) \left(\frac{\tau}{\sigma}\right) \left(\frac{\partial \nu}{\partial \tau}\right)
 & \text{(29)} \\
 \end{align*}
+Note $\tau=1\implies\nu=1$.
 \end{frame}
 % -----------------------------------------
 \begin{frame}{The bifurcated ``tomahawk'' diagram}
@@ -244,8 +247,9 @@ Defection profitable if $V_2/V_1 > \tau^{-\mu} \iff \nu <1$.
 \end{column}
 \begin{column}{.48\textwidth}
 \begin{itemize}
+	\item {\small Notation: $1/\tau \to T$, $f \to \lambda$}
 	\item Krugman (1991) established a ``sustain point'' $\nu$ necessary for concentration
-	\item There is also a ``break point'' that is sufficient for concentration to be the (stable) equilibrium outcome
+	\item There is also a ``break point'' that is sufficient for concentration to be the (stable) equilibrium outcome (Puga 1999)
 	\item Higher trade costs can prevent regional divergence; sufficiently low trade costs rule out symmetric outcomes
 \end{itemize}
 \end{column}
@@ -254,8 +258,8 @@ Defection profitable if $V_2/V_1 > \tau^{-\mu} \iff \nu <1$.
 % -----------------------------------------
 \begin{frame}{More on that diagram and stability}
 \begin{itemize}
-	\item If firms ``move faster'' than firms, same conclusions about break and sustain points (Puga 1999; see Figure 1 below)
-	\item There are at most two interior asymmetric steady states. If they exist, they're unstable. (Robert-Nicoud 2005)
+	\item If workers ``move faster'' than firms, same conclusions about break and sustain points (Puga 1999; see Figure 1 below; $\tau \geq 1$)
+	\item There are at most two interior asymmetric steady states. If they exist, they're unstable. (\href{https://ideas.repec.org/a/oup/jecgeo/v5y2005i2p201-234.html}{Robert-Nicoud 2005})
 \end{itemize}
 \includegraphics[height=.35\textheight]{../images/Puga1999_fig1a.pdf}
 \includegraphics[height=.35\textheight]{../images/Puga1999_fig1b.pdf} \\
@@ -363,8 +367,8 @@ Assess three competing theories: locational fundamentals, increasing returns, an
 	\item ``We exploit the division of Germany after the Second World War and the reunification of East and West Germany in 1990 as a source of exogenous variation to provide evidence for the causal importance of market access for economic development.''
 	\item ``The key idea behind our empirical approach is that West German cities close to the new border experienced a disproportionate loss of market access relative to other West German cities.''
 	\item Extend Helpman (1998) to a multi-region version (assume that $\beta\epsilon>1 \Rightarrow$ unique equilibrium)
-	\item Distinctive prediction: Beyond market-access effect, ``the greater dependence of small cities on markets in other cities implies that this effect will be particularly pronounced for small cities.''
 	\item Difference-in-differences is proximate vs distant West German cities before and after division
+	\item Triple difference: Beyond market-access effect, ``the greater dependence of small cities on markets in other cities implies that this effect will be particularly pronounced for small cities.''
 }
 \end{itemize}
 \end{frame}
@@ -379,7 +383,7 @@ Assess three competing theories: locational fundamentals, increasing returns, an
 \begin{itemize}
 	{\small
 	\item Model can explain ``the quantitative magnitude of the relative decline of small and large cities along the East-West German border relative to other West German cities''
-	\item Choose parameter values to minimize the distance between moments in the simulation and data
+	\item Choose parameter values to minimize the distance between small-large third difference in the simulation and data
 	\item Finding ``plausible parameter values'' is ``further evidence that their relative decline is indeed due to a loss of market access''
 	}
 \end{itemize}
