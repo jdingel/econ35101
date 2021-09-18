@@ -1,8 +1,8 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2020\
+Autumn 2021\
 Assignment 1\
-Due: 12 Oct 2020, 8:30am
+Due: 18 Oct 2021, 8:30am
 
 
 Your assignment is to write a function that solves a discrete approximation of Dornbusch, Fischer & Samuelson - A Ricardian Model with a Continuum of Goods (*AER* 1977).
@@ -80,7 +80,7 @@ Here are a few notes on getting started in Julia:
     <https://juliabox.com/>.
     I attach a screenshot showing that my code worked when I pasted it into a Jupyter notebook.
     [DFS1977\_example\_juliabox.png](DFS1977_example_juliabox.png)
--   To install Julia on your own machine, download Julia 1.1 from
+-   To install Julia on your own machine, download Julia 1.6 from
     <https://julialang.org/downloads>. The first ten lines
     of [DFS1977\_example.jl](DFS1977_example.jl) show how to install packages. 
 	You might also consider those that are [dependencies for the QuantEcon package](https://github.com/QuantEcon/QuantEcon.jl/blob/master/REQUIRE) and those listed as [Useful
