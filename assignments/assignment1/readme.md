@@ -72,7 +72,7 @@ What can be said about the magnitude of the gains from trade in this model if we
 
 **Programming help**
 
-If you have considerable difficulty getting started in Julia or Matlab, after consulting your classmates, you should ask Takashi for help.
+If you have considerable difficulty getting started in Julia or Matlab, after consulting your classmates, you should ask the TA for help.
 Here are a few notes on getting started in Julia:
 
 -   I recommend that you read the QuantEcon.org lectures on [Programming in Julia](https://lectures.quantecon.org/jl/index_learning_julia.html) to get started.
