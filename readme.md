@@ -183,8 +183,7 @@ books:
     Economy*, 128(2).
 
 -   Feyrer, James. 2021.
- "[Distance, Trade, and Income -- The 1967 to 1975 Closing of the Suez Canal as a Natural Experiment](https://doi.org/10.1016/j.jdeveco.2021.
-102708)."
+ "[Distance, Trade, and Income -- The 1967 to 1975 Closing of the Suez Canal as a Natural Experiment](https://doi.org/10.1016/j.jdeveco.2021.102708)."
     *Journal of Development Economics*.
 
 -   Feyrer, James. 2019.
@@ -264,7 +263,7 @@ books:
  "[Economic Integration and Endogenous Growth](https://www.jstor.org/stable/2937946)," *The Quarterly
     Journal of Economics*, 106(2): 531-555.
 
--   Buera, Francisco J. and Ezra Oberfield. 2020.
+-   :exclamation: Buera, Francisco J. and Ezra Oberfield. 2020.
  "[The Global Diffusion of Ideas](https://doi.org/10.3982/ECTA14044)," *Econometrica*.
 
 #### Week 9: Models of agglomeration 

@@ -76,15 +76,10 @@ If you have considerable difficulty getting started in Julia or Matlab, after co
 Here are a few notes on getting started in Julia:
 
 -   I recommend that you read the QuantEcon.org lectures on [Programming in Julia](https://lectures.quantecon.org/jl/index_learning_julia.html) to get started.
--   You can run Julia in browser for free (for small tasks) at
-    <https://juliabox.com/>.
-    I attach a screenshot showing that my code worked when I pasted it into a Jupyter notebook.
-    [DFS1977\_example\_juliabox.png](DFS1977_example_juliabox.png)
 -   To install Julia on your own machine, download Julia 1.6 from
     <https://julialang.org/downloads>. The first ten lines
-    of [DFS1977\_example.jl](DFS1977_example.jl) show how to install packages. 
-	You might also consider those that are [dependencies for the QuantEcon package](https://github.com/QuantEcon/QuantEcon.jl/blob/master/REQUIRE) and those listed as [Useful
+    of [DFS1977\_example.jl](DFS1977_example.jl) show how to install packages. 
+	You might also consider those that are [dependencies for the QuantEcon package](https://github.com/QuantEcon/QuantEcon.jl/blob/master/REQUIRE) and those listed as [Useful
     Libraries](https://lectures.quantecon.org/jl/julia_libraries.html)
     by QuantEcon.
-    Package installation can take a few minutes. Don't panic. 
-
+    Package installation can take a few minutes. Don't panic.

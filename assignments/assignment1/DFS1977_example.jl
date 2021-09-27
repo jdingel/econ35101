@@ -1,13 +1,16 @@
 ##Dingel, DFS 1977, example of function call
+
 ##Set up Julia packages
 import Pkg
-run(`mkdir -p DFS77project`) ##Create a folder for this project (https://docs.julialang.org/en/v1.0.0/manual/running-external-programs/)
-Pkg.activate("./DFS77project") ##Add packages to this project (https://docs.julialang.org/en/v1/stdlib/Pkg/index.html)
 
-for package in ["CSV","LaTeXStrings","Interpolations","PyCall","PyPlot",]
-  Pkg.add(package)
-end
-using CSV,DelimitedFiles,LaTeXStrings,Interpolations,PyCall,PyPlot,Random  #Load packages
+##Must be run once to install packages: (https://docs.julialang.org/en/v1/stdlib/Pkg/index.html)
+#run(`mkdir -p DFS77project`) ##Create a folder for this project (https://docs.julialang.org/en/v1.0.0/manual/running-external-programs/)
+#for package in ["CSV","LaTeXStrings","Interpolations","Plots"]
+#  Pkg.add(package)
+#end
+
+Pkg.activate("./DFS77project") ##Add packages to this project 
+using CSV,DelimitedFiles,LaTeXStrings,Interpolations,Plots,Random #Load packages
 
 include("DFS1977functions.jl")
 
@@ -29,4 +32,3 @@ z_bar, A_bar,z_bar_star,A_bar_star,omega_bar = DFS1977solver(a,b,L,g)
 println("Solution: z_bar_star = ", z_bar_star, " z_bar = ", z_bar, " omega_bar = ", omega_bar)
 z_bar, A_bar,z_bar_star,A_bar_star,omega_bar = DFS1977solver(a,b,L,0.9)
 println("Solution: z_bar_star = ", z_bar_star, " z_bar = ", z_bar, " omega_bar = ", omega_bar)
-
