@@ -41,6 +41,7 @@ Today we study a class of Ricardian models that make more structural assumptions
 	\begin{equation*}
 	X_{ij}	= \frac{Y_i^{1-\sigma}}{Q_i^{1-\sigma}} \frac{X_j}{P_j^{1-\sigma}}\tau_{ij}^{1-\sigma}
 	\end{equation*}
+	\item Balanced-trade equilibrium is $\{Y_i\}_{i}$ such that $X_i = Y_i = \sum_j X_{ij}$
 	\item A Ricardian ``corner'' case gives us a ``gravity'' equation for multiple countries with trade costs that we can take to data
 \end{itemize}
 \end{frame}
@@ -248,8 +249,9 @@ $%\end{equation*}
 \begin{column}{.38\textwidth}
 \begin{itemize}
 \item Eaton and Kortum (2002) get $\hat{\theta} =8.28$.
-\item \href{https://ideas.repec.org/a/eee/inecon/v92y2014i1p34-50.html}{Simonovska and Waugh (2014)} refine the max estimator of the inequality and find $\hat{\theta} \in \left[3,5
+\item \href{https://ideas.repec.org/a/eee/inecon/v92y2014i1p34-50.html}{Simonovska and Waugh (2014)} refine max estimator of the inequality: $\hat{\theta} \in \left[3,5
 \right]$
+\item See \href{https://ideas.repec.org/p/nbr/nberwo/21439.html}{Atkin and Donaldson (2015)} on inferring trade costs from price gaps
 \end{itemize}
 \end{column}
 \end{columns}
@@ -599,6 +601,60 @@ Empirical specification is
 	\item Some countries actually gain from eliminating comparative advantage
 	\item See section 5.3 discussion of heterogeneous trade costs and heterogeneous tastes as potential explanations
 	\item The key is that CDK's double-differenced gravity regression did not restrict Cobb-Douglas shares nor $\ln d_{ij}^k$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Caliendo \& Parro (2015) model}
+Multi-sector extension of Eaton \& Kortum (2002) with intersectoral linkages used to assess NAFTA
+(Antras \& Chor 2021 notation)
+\begin{itemize}	
+\item EK assumptions sector-by-sector: CES aggregators over varieties, Fréchet distributions of productivities ($T^{s}_{i},\theta^{s}$)
+\item Cobb-Douglas preferences ($\alpha_{j}^s$) and production functions ($\gamma_{j}^{sr}$)
+$$
+c_{j}^{s}
+=
+\Gamma_{j}^{s} w_j^{1-\sum_{r=1}^{S} \gamma_{j}^{rs}} \prod_{r=1}^{S} \left(P_{j}^{r}\right)^{\gamma_{j}^{rs}}
+$$
+\item Gravity equation for sectoral expenditure share:
+$$
+\pi_{ij}^{s}
+=
+\frac{T_{i}^{s}\left(c_{i}^{s}\tau_{ij}^{s}\right)^{-\theta^{s}}}
+{\sum_{k=1}^{J} T_{k}^{s}\left(c_{k}^{s}\tau_{kj}^{s}\right)^{-\theta^{s}}}
+$$
+\item Clear markets for each industry in each country
+$$
+X_{j}^{s} = \sum_{r=1}^{S} \gamma_{j^{sr}}
+\underbrace{\sum_{i=1}^{J} X_i^r \pi_{ji}^{r}}{ = \text{gross output } Y_{j}^{r}}
++ 
+\alpha_{j}^{s}\left(w_j L_j + D_j\right)
+$$
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{CP 2015: Estimation, calibration, counterfactuals}
+\begin{itemize}
+\item Estimate sectoral trade elasticities $\theta^s$
+using a gravity equation assuming non-tariff trade costs are symmetric
+(see next week)
+\item Compute counterfactual by writing everything in relative changes and initial shares
+(extends DEK's ``exact hat algebra'' to multi-sector model)
+\item Use 1993 baseline for 30 countries and 40 sectors
+\item Compute counterfactual for all tariff changes 1993-2005
+and for NAFTA tariff changes 1993-2005
+\item Some trade diversion, but effects on rest of world are small
+\item Larger welfare and trade effects than in one-sector and no-input-output-linkages models
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Caliendo \& Parro (2015) caveats}
+\begin{itemize}
+\item Final-use and intermediate sourcing shares are identical (see Antras and Chor 2021 on extensions that relax)
+\item Roundabout production structure:
+goods are produced via an endless sequence of steps, with each stage using inputs from prior stages in an infinite loop
+\item Compute counterfactuals ``without needing to estimate parameters which are difficult to identify in the data, as productivities and iceberg trade costs'' (p.11)
+\item \href{https://scholar.harvard.edu/files/antras/files/antras_chor_gvc_chapter_long_version.pdf}{Antras and Chor (2021)}:
+`` the lack of `external' evidence supporting the out-of-sample performance of these models remains problematic, and a clear area with room for improvement in future research''
 \end{itemize}
 \end{frame}
 % -----------------------------------------
