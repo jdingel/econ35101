@@ -16,6 +16,33 @@ Autumn \the\year, Week 6}
 \end{center}
 \end{frame}
 % -----------------------------------------
+\begin{comment}
+\begin{frame}{Before we get started}
+\begin{itemize}
+	\item Today we're talking about trade with increasing returns, but let's talk about the DFS '77 assignment briefly.
+\item Recall our friends
+$A(z) \equiv \frac{a^*(z)}{a(z)}$
+and
+$B(z) \equiv \frac{\theta(z)}{1-\theta(z)}\frac{L^{*}}{L}$
+\item Equilibrium relative wage $\omega \equiv \frac{w}{w^*}$ is where $A\left(\tilde{z}\right)=B\left(\tilde{z}\right)$
+\item Can you vary the $A()$ function such that equilibria exhibit the same volume of trade and different gains from trade?
+\end{itemize}
+\begin{align*}
+	\ln (U/L) 
+	&=
+	{\ln w} - \int_{0}^{1} b(z) \ln p(z) dz
+	\\
+	\int_{0}^{1} b(z) \ln a(z) dz 
+	&\geq \int_{0}^{\tilde{z}} b(z) \ln a(z) dz + \int_{\tilde{z}}^{1} b(z) \ln \left[w^{*} a^{*}(z)\right] dz 
+	\\
+	0
+	&\geq
+	\int_{\tilde{z}}^{1} b(z) \ln \left[A(z) / \omega\right] dz
+\end{align*}
+What can be said about the magnitude of the gains from trade in this model if we observe the equilibrium volume of trade and do not observe autarky prices?
+\end{frame}
+\end{comment}
+% -----------------------------------------
 \begin{frame}{Today: Does size matter?}
 \linespread{1.1}
 \begin{itemize}
@@ -367,6 +394,11 @@ Helpful typology from \href{https://academic.oup.com/qje/article/134/2/843/52985
 	\item Pigou's Law (1910) (\href{https://www.jstor.org/stable/2231258}{Deaton 1974}): If the (direct) utility function is additively separable, then the income elasticity of a good is (approximately) proportionate to the price elasticity of that good
 	\item An implicitly additively separable utility function is
 	$\sum_{j=1}^{J} f_j\left(x_j; U\right)=1$
+	\item \href{https://ideas.repec.org/a/mcb/jmoncb/v27y1995i4p1241-77.html}{Kimball (1995)} preferences are popular example:
+	$$
+	\min_{y_j} \int_{0}^{1} p_j y_j \textrm{d}j \text{ s.t. } \int_{0}^{1} \Upsilon \left(\frac{y_j}{Y}\right) \textrm{d}j = 1 
+	\quad \Upsilon(1) = 1, \Upsilon^{'}>0, \Upsilon^{''}<0
+	$$
 \end{itemize}
 Questions about the Matsuyama paper?
 \end{frame}
