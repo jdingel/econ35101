@@ -1,0 +1,597 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 8 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 8}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Open-economy growth}
+Open-economy mechanics may reverse closed-economy mechanics:
+\begin{itemize}
+\item Structural transformation: Matsuyama (1992, 2009)
+\item Neoclassical growth model: Ventura (1997), Acemoglu \& Ventura (2002)
+\end{itemize}
+\vspace{5mm}
+Economic integration as a source of economic growth:
+\begin{itemize}
+\item Rivera-Batiz \& Romer (1991) \item Buera \& Oberfield (2020)
+\end{itemize}
+\vspace{1cm}
+See Chapter 19 of Acemoglu's \textit{Introduction to Modern Economic Growth}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (\textit{JET} 1992) overview}
+{\small ``Agricultural productivity, comparative advantage, and economic growth''}
+\begin{itemize}
+\item Model of endogenous growth driven by learning by doing in the manufacturing sector
+\item Income elasticity of demand for agricultural output $<1$
+\item Closed economy: Agricultural productivity raises growth
+\item Small open economy: Agricultural productivity lowers growth
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (1992) setup/mechanics}
+Learning by doing in manufacturing
+\begin{align*}
+X_t^M 
+&=
+M_t F(n_t)
+\\
+X_t^A 
+&=
+A G(1-n_t)
+\\
+\dot{M}_t 
+&=
+\delta X_t^M \quad \delta>0
+\\
+A G'(1-n_t)
+&=
+p_t M_t F'(n_t)
+&(4)
+\end{align*}
+Stone-Geary preferences with necessity $\gamma$ where $AG(1)>\gamma L > 0$.
+\begin{align*}
+C_t^A &= \gamma L + \beta p_t C_t^M 
+& (7)
+\end{align*}
+Closed-economy has $C_t^M=X_t^M$ and $C_t^A=X_t^A$. Combining with equations (4) and (7), equilibrium $n_t$ satisfies
+$$
+\phi(n_t)
+\equiv
+G(1-n_t)-\beta G'(1-n_t)F(n_t)/F'(n_t)
+=
+\gamma L / A
+$$
+Unique solution $n_t = v(A)$ with $v'()>0$.
+Higher $A$ raises \textit{level} of manufacturing and thus economic growth \textit{rate}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Matsuyama (1992): small open economy}
+World economy has $A^{*}$ and $M_{0}^{*}$.
+World relative price satisfies
+$$
+A^{*} G'(1-n^{*})
+=
+p_t M_t^{*} F'(n^{*})
+$$
+SOE allocation must satisfy
+$$
+A G'(1-n_t)
+=
+p_t M_t F'(n_t)
+$$
+Take ratio, set $t=0$, find $n_0 \lessgtr n^{*}$.
+\smallskip
+Growth rate result: When the Home initially has a comparative advantage in manufacturing,
+its manufacturing productivity will grow faster than the rest of the world
+and accelerate over time.
+\smallskip
+{\small ``a caution to the readers of the recent empirical work, which, in order to test implications of closed economy models of endogenous growth,
+uses cross-country data and treats all economies in the sample as if they were isolated from each other''\par}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Similar warning to empiricists (Matsuyama \textit{JEEA} 2009)}
+`` Structural Change in an Interdependent World: A Global View of Manufacturing Decline''
+\begin{quote}
+This paper presents a simple model of the world economy, in which productivity gains in manufacturing are responsible for the global trend of manufacturing decline, and yet, in a cross-section of countries, faster productivity gains in manufacturing do not necessarily imply faster declines in manufacturing.
+In doing so, it aims to draw attention to the common pitfall of using the cross-country evidence to test a closed economy model, and argues for a global perspective; in order to understand cross-country patterns of structural change, one needs a world economy model in which the interdependence across countries is explicitly spelled out.
+\end{quote}
+\end{frame}
+% -----------------------------------------
+% Slides: neoclassical growth
+% -----------------------------------------
+\begin{frame}{Neoclassical Growth Model}
+% intro
+\begin{itemize}
+\item In a closed economy, neoclassical growth model predicts that:
+\begin{enumerate}
+\item If there are diminishing marginal returns to capital, then different capital-labor ratios across countries lead to different growth rates along the transition path
+\item If there are constant marginal returns to capital (AK model), then different discount factors across countries lead to different growth rates in the steady state
+\end{enumerate}
+\item In an open economy, both predictions can be overturned
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% neoclassical growth, model setup
+% -----------------------------------------
+\begin{frame}{Preferences and technology}
+\begin{itemize}
+\item For simplicity, assume:
+	\begin{itemize}
+	\item No population growth $l(t) = 1$ for all $t$
+	\item No depreciation of capital
+	\end{itemize}
+\item Representative household at $t=0$ has log preferences,
+\begin{equation}
+U = \int_0^{\infty} \exp( - \rho t ) \ln c(t) \textrm{d}t \label{eq:ncg_pref}
+\end{equation} 
+\item Final consumption good is produced according to,
+\[
+y(t) = a F\big( k(t) , l(t) \big) = a f(k(t))
+\]
+where output (per capita) $f$ satisfies,
+\[
+f' > 0 \quad\text{and}\quad f'' \leq 0
+\]
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% ncg, competition, capital lom, no ponzi,
+% -----------------------------------------
+\begin{frame}{Perfect competition, law of motion for capital, and no-Ponzi condition}
+\begin{itemize}
+\item Firms maximize profits, taking factor prices $w(t)$ and $r(t)$ as given,
+\begin{align}
+r(t) &= a f'(k(t)) \label{eq:ncg_foc1} \\ 
+w(t) &= a f(k(t)) - k(t) a f'(k(t))  \label{eq:ncg_foc2}
+ \end{align}
+\item Law of motion for capital is given by, 
+\begin{equation}
+\dot k(t) = r(t) k(t) + w(t) - c(t) \label{eq:ncg_klom}
+\end{equation}
+\item No-Ponzi condition:
+\begin{equation}
+\lim_{t\rightarrow\infty} \bigg[ k(t) \exp\bigg( - \int_0^t r(s) ds \bigg) \bigg] \geq 0 \label{eq:ncg_transversality}
+\end{equation}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% NCG, equilibrium definition,
+% -----------------------------------------
+\begin{frame}{Competitive equilibrium}
+\begin{itemize}
+\item {\bf Definition } Competitive equilibrium of the neoclassical growth model consists in $(c,k,r,w)$ such that the representative household maximizes (\ref{eq:ncg_pref}) subject to (\ref{eq:ncg_klom}) and (\ref{eq:ncg_transversality}) and factor prices satisfy (\ref{eq:ncg_foc1}) and (\ref{eq:ncg_foc2}).
+\item {\bf Proposition 1} In any competitive equilibrium, consumption and capital follow the laws of motion given by,
+\begin{align*}
+{ \dot c(t) \over c(t) } &= a f'(k(t)) - \rho \\ 
+\dot k(t) &= a f(k(t)) - c(t)
+\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Diminishing versus constant MPK}
+Suppose $f''<0$. In this case, Proposition $1$ implies that:
+\begin{enumerate}
+\item The growth rate of consumption declines with $k$
+\item No long-run growth without exogenous technological progress
+\item Starting from $k(0)>0$, there exists a unique equilibrium converging monotonically to $(c^*,k^*)$ such that,
+	\begin{align*}
+	a f' ( k^* ) &= \rho \\ 
+	c^* &= a f(k^*)
+	\end{align*}
+\end{enumerate}
+\pause
+Now suppose $af(k)=ak$ so that $f'' = 0$.
+In this case, Proposition 1 implies a unique equilibrium path with same growth for $c$ and $k$:
+\[
+g^* = a - \rho
+\]
+\pause
+Trade integration, through its effects on factor prices, may transform a model with diminishing marginal returns into an $AK$ model and vice versa.
+\end{frame}
+% -----------------------------------------
+% Ventura (1997)
+% -----------------------------------------
+\begin{frame}{Ventura (1997): Assumptions}
+{\small ``Growth and Interdependence''}
+\begin{itemize}
+\item Neoclassical growth model with multiple countries indexed by $j$
+	\begin{itemize}
+	\item No differences in population size: $I_j(t) = 1$ for all $j$
+	\item No differences in discount rates: $\rho_j = \rho$ for all $j$
+	\item \emph{Diminishing marginal returns}: $f''<0$
+	\end{itemize}
+\item Capital and labor \emph{services} are freely traded across countries
+	\begin{itemize}
+	\item No trade in assets, so trade is balanced period-by-period.
+	\end{itemize}
+\item {\bf Notation}:
+	\begin{itemize}
+	\item $x^l_j(t), x^k_j(t) \equiv $ labor and capital services used in production of final good in country $j$
+	\[
+	y_j(t) = a F\big( x^k_j(t), x^l_j(t) \big) = a x_j^l(t) f\big( x^k_j(t) / x^l_j(t) \big)
+	\]
+	\item $I_j(t) - x_j^l(t)$ and $k_j(t) - x^k_j(t) \equiv$ net exports of factor services
+	\end{itemize}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% free trade eq
+% -----------------------------------------
+\begin{frame}{Ventura (1997): Free-trade equilibrium (1/2)}
+\begin{itemize}
+\item Free trade equilibrium reproduces the integrated equilibrium.
+\item In each period:
+	\begin{enumerate}
+	\item Free trade in factor services implies FPE:
+	\begin{align*}
+	r_j (t) &= r(t) \\ 
+	w_j(t) &= w(t)
+	\end{align*}
+	\item FPE further implies identical capital labor ratios,
+	\[
+	{ x^k_j(t) \over x^l_j(t) } = { x^k(t) \over x^l(t) } = { \sum_j k_j(t) \over \sum_j l_j(t) } = { k^w(t) \over l^w(t) }
+	\]
+	\end{enumerate}
+\item Like static HO, countries with $ k_j(t)/ l_j(t) > k^w(t) / l^w(t) $ export capital and import labor services.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% free trade eq continued
+% -----------------------------------------
+\begin{frame}{Ventura (1997): Free-trade equilibrium (2/2)}
+\begin{itemize}
+\item Let $c(t) \equiv \sum_j c_j(t) / l^w(t)$ and $k(t) \equiv \sum_j k_j(t) / l^w(t) $.
+\item World consumption and capital per capita satisfy
+	\begin{align*}
+	{ \dot c(t) \over c(t) } &= a f'( k(t) ) - \rho \\
+	\dot k(t) &= f(k(t)) - c(t)
+	\end{align*}
+\item For each country, however, we have,
+	\begin{align}
+	{ \dot c_j(t) \over c_j(t) } &= a f'(k(t)) - \rho \label{eq:ventura_lom1} \\
+	\dot k_j(t) &= a f'(k(t)) k_j(t) + w(t) - c_j(t) \label{eq:ventura_lom2} 
+	\end{align}
+\item If $k(t)$ is fixed, equations (\ref{eq:ventura_lom1}) and (\ref{eq:ventura_lom2}) imply that it is \emph{as if} countries were facing an $AK$ technology.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% ventura summary
+% -----------------------------------------
+\begin{frame}{Ventura (1997): Summary and implications}
+\begin{itemize}
+\item Ventura (1997) hence shows that trade may help countries avoid the curse of diminishing marginal returns:
+	\begin{itemize}
+	\item As long as country $j$ is ``small'' relative to the rest of the world, $k_j(t) \ll k(t)$, the return to capital is independent of $k_j(t)$.
+	\item This is the `factor price insensitivity' result from the small open (or partial-equilibrium large) economy HO model.
+	\item ``International trade converts an excess production of capital-intensive goods into exports, instead of falling prices.''
+	\end{itemize}
+\item This insight may help explain growth miracles in East Asia:
+	\begin{itemize}
+	\item Asian economies, which were more open than many developing countries, accumulated capital more rapidly but without rising interest rates or diminishing returns.
+	\item These economies were also heavily industrializing along their development path. HO mechanism requires this.
+	\end{itemize}
+\item Growth miracles cannot go on forever in this model
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% acemoglu and ventura 
+% -----------------------------------------
+\begin{frame}{Acemoglu and Ventura (2002): Assumptions}
+{\small ``The World Income Distribution''}
+\begin{itemize}
+\item Now we go in the opposite direction. 
+\item $AK$ model with multiple countries indexed by $j$.
+	\begin{itemize}
+	\item No differences in population size, $l_j(t) = 1$ for all $j$.
+	\item Constant marginal returns $f'' = 0$. 
+	\end{itemize}
+\item Like in an ``Armington'' model, capital services are differentiated by country of origin. 
+\item Capital services are freely traded and combined into a unique final good (for consumption or investment) per
+\begin{align*}
+	c_j(t) &= \bigg[ \sum_{j'} \mu_{j'}^{1/ \sigma} x_{jj'}(t)^{\sigma - 1 \over \sigma} \bigg]^{\sigma \over \sigma - 1} \\ 
+	i_j(t) &= \bigg[ \sum_{j'} \mu_{j'}^{1/\sigma} x_{jj'}^i(t)^{\sigma - 1 \over \sigma} \bigg]^{\sigma \over \sigma - 1}
+\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% a & v, free trade eq
+% -----------------------------------------
+\begin{frame}{Acemoglu and Ventura (2002): Free trade equilibrium}
+\begin{itemize}
+\item {\bf Lemma} \emph{ In each period,} $c_j(t) = \rho_j k_j(t)$
+\item {\bf Proof}:
+	\begin{enumerate}
+	\item Euler equation implies
+	\[
+	{\dot c_j(t) \over c_j(t) } = r_j(t) - \rho_j
+	\]
+	\item Budget constraint at time $t$ requires:
+	\[
+	\dot k_j(t) = r_j(t) k_j(t) - c_j(t)
+	\]
+	\item Combining these two expressions, we obtain,
+	\[
+	\dot{ \big[ k_j(t) / c_j(t) \big] } = \rho_j[k_j(t) / c_j(t)] - 1 
+	\]
+	\item That plus the no-Ponzi condition implies
+	\[
+	k_j(t) / c_j(t) = 1/\rho_j
+	\]
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% a&v free trade prop 2
+% -----------------------------------------
+\begin{frame}{Acemoglu and Ventura (2002): Free trade equilibrium}
+\begin{itemize}
+\item {\bf Proposition 2} \emph{ In steady-state equilibrium, we must have:}
+	\[
+	{ \dot k_j(t) \over k_j(t) } = { \dot c_j(t) \over c_j(t) } = g^*
+	\]
+\item {\bf Proof}:
+	\begin{enumerate}
+	\item In steady state, by definition, we have $r_j(t) = r_j^*$.
+	\item Lemma $+$ Euler equation $\implies { \dot k_j(t) \over k_j(t) } = r_j(t) - \rho_j$.
+	\item $1 + 2 \implies {\dot k_j(t) \over k_j(t) } = g_j^*$.
+	\item Market clearing implies,
+		\[
+		r_j^* k_j(t) = \mu_j(r^*_j)^{1-\sigma} \sum_{j'} r_{j'}^* k_{j'}(t), \quad\text{for all~}j.
+		\]
+	\item From 4, all countries must grow at the same rate, $g_j^* = g^*$.
+	\item 5 $+$ Lemma $\implies {\dot c_j(t) \over c_j(t) } = g^*$.
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% a&v summary
+% -----------------------------------------
+\begin{frame}{Acemoglu and Ventura (2002): Summary}
+\begin{itemize}
+\item Under autarky, $AK$ model predicts that countries with different discount rates $\rho_j$ should grow at different rates.
+\item Under free trade, Proposition 2 shows that all countries grow at the same rate.
+\item Because of terms of trade effects, everything is \emph{as if} we were back to a model of diminishing marginal returns.
+\item From a theoretical standpoint, Acemoglu and Ventura (2002) is the mirror image of Ventura (1997).
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Economic integration as a source of economic growth}
+\begin{itemize}
+\item Is ``economic integration'' trade in goods or flows of ideas?
+\item Openness vs trade: Recall Ed Prescott quote from week 1
+\item There is no general trade-growth relationship from economic theory.
+In some models, trade restrictions slow global growth rate.
+In others, they speed it up.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Rivera-Batiz \& Romer (1991)}
+Economic integration:
+\begin{itemize}
+\item Scale effects of integration (similar countries)
+\item Two models: goods flows vs ideas flows
+\end{itemize}
+Primitives:
+\begin{itemize}
+\item
+Like Romer (1990),
+production function (for consumption and capital goods) uses human capital $H$, labor $L$, and machines (varieties indexed by $i$)
+$$Y(H,L,x(\cdot)) = H^{\alpha} L^{\beta} \int_{0}^{A} x(i)^{1-\alpha-\beta} \textrm{d} i$$
+$Y=C+\int_{0}^{A}x(i)\textrm{d}i = C + K$
+\item
+Patent holder for machine $j$ rents it out to all manufacturing firms.
+\item
+Patent value is $P_A$, NPV of monopoly rent minus cost of the machines.
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Rivera-Batiz \& Romer: Two possible R\&D functions}
+Knowledge-driven R\&D: $$\dot{A} = \delta H_A A$$
+Prior knowledge stock $A$ is freely available, so price of innovation is hiring human capital,
+with $H = H_A + H_Y$
+Lab-equipment R\&D: $$\dot{A} = B H^{\alpha} L^{\beta} \int_{0}^{A} x(i)^{1-\alpha-\beta} \textrm{d} i$$
+In lab-equipment model, $P_A = 1/B$ because opportunity cost is manufactured output
+Collapse to one output equation
+$$
+C + \dot{K} + \dot{A}/B = H^{\alpha}L^{\beta}A(K/A)^{1-\alpha-\beta} = H^{\alpha}L^{\beta}K^{1-\alpha-\beta}A^{\alpha+\beta}
+$$
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Rivera-Batiz \& Romer (1991): Balanced Growth}
+Euler equation from CRAA prefs with elasticity $\sigma$ yields
+$$r = \rho + \sigma \frac{\dot{C}}{C} = \rho + \sigma g$$
+Knowledge-driven R\&D:
+$$r = \left(\delta H - g\right) \frac{(\alpha+\beta)(1-\alpha-\beta)}{\alpha} = \left(\delta H - g \right) /\Lambda$$
+Equilibrium $r$ is therefore
+$$g = \left(\delta H - \Lambda \rho\right)/\left(\Lambda\sigma+1\right)$$
+Lab-equipment R\&D:
+$$r=\Gamma H^{\alpha}L^{\beta}$$
+Equilibrium $r$ is therefore
+$$g = \left(\Gamma H^{\alpha}L^{\beta} - \rho\right)/\sigma$$
+In both models, the scale of $H$ (and $L$) affects the growth rate.
+Integration of two countries ($2H$ and $2L$) raises growth (but, welfare on transition path?)
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Rivera-Batiz \& Romer (1991): Flows of goods and ideas} 
+\begin{itemize}
+\item Knowledge-driven R\&D: Trade in goods doesn't affect growth
+\begin{itemize}
+	\item Integration doubles marginal product of $H$ in manufacturing
+	\item Integration doubles value of patent holding ($MPH$ in R\&D)
+	\item Level effect courtesy of doubling machine varieties
+	\item $H_A / H_Y$ unaffected, so no growth effect because $\dot{A} = \delta H_A A$
+\end{itemize}
+\item Knowledge-driven R\&D: Ideas flows do affect growth
+\begin{itemize}
+	\item Rise in research productivity: $\dot{A} = \delta H_A (A+A^{*})$
+	\item Level effect is negative because $H$ drawn away from manufacturing
+	\item Trade in goods ensures non-overlapping varieties invented
+\end{itemize}
+\item Lab-equipment R\&D: Trade in goods akin to complete integration
+\begin{itemize}
+	\item Don't think goods = level effect and ideas = growth effect
+	\item Larger market for patent usage and $P_A = 1/B$ $\to$ equilibrium requires higher interest rate
+	\item Higher $r$ yields same $g$ as $2H,2L$ integration
+\end{itemize}
+\item Growth is about increasing returns in both models
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Buera and Oberfield (2020): Overview}
+\begin{itemize}
+\item Openness vs trade: Recall Ed Prescott quote from week 1
+\item Knowledge diffusion/technology imitation models (c.f. Lucas and Moll, Perla and Tonetti 2014) neglect spatial dimension
+\item Model with geography of buyers and sellers lends itself to geography of knowledge diffusion
+\item Learning from foreign sellers (trade $\to$ imitating imports)
+\item Learning from domestic producers (trade $\to$ pool of peers)
+\item Productivity is Fr\'{e}chet so the static mechanics follow Eaton \& Kortum (2002)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Closed economy that motivates Fr\'{e}chet distribution}
+Fixed interval of goods, $s\in[0,1]$. Linear production:
+\begin{align*}
+y(s) &= q l(s)
+& \text{(1)}
+\end{align*}
+New ideas via combination of exogenous ingenuity $z$ with arrival rate $A_{t}\left(z\right)$ and random draw from existing $q'$
+$$
+q = z q'^{\beta}
+$$
+$\beta \in [0,1)$.
+Two observations about this function:
+\begin{itemize}
+\item $\frac{z q_{1}^{\beta}}{z q_{2}^{\beta}} = \left(\frac{q_{1}}{q_{2}}\right)^{\beta}$:
+	$\beta$ governs $q$'s sensitivity to quality of prior $q'$
+\item $\frac{q}{q'} = z q'^{\beta-1}$ declines with $q'$: better $q'$ are harder to improve 
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The closed economy's knowledge frontier $\to$ Fr\'{e}chet}
+$F_t(q)$ denotes the fraction of goods for which no producer's productivity exceeds $q$.
+\begin{equation*}
+{d \over dt} \ln F_t(q) = \lim_{\Delta \rightarrow 0} {F_{t+\Delta}(q) - F_t(q) \over \Delta F_t(q) } = - \int_0^\infty A_t\big(q/{q'}^\beta\big) d G_t(q')
+\end{equation*}
+\begin{itemize}
+\item Assumption 1: 
+$ A_t(z) = \alpha_{t} z^{-\theta} $
+(later, $\alpha_{t} = \alpha_{0}\exp(\gamma t)$)
+\item Proposition 1:
+the appropriately-scaled frontier of knowledge converges asymptotically to Fr\'{e}chet with shape $\theta$
+\item Assumption 2: Initial distribution $F_{0}(q)$ is Fr\'{e}chet
+\item Proposition 1 and Assumption 2 imply knowledge growth is
+\begin{align*}
+{d \over dt} \ln F_t(q) 
+&=
+-\alpha_t q^{-\theta} \int_0^\infty x^{\beta\theta} d G_t(x)
+& \text{(4)}
+\end{align*}
+\item If source distribution is domestic distribution, $G_{t}(q) = F_{t}(q)$,
+$$\dot{\lambda}_{t} = \alpha_{t} \Gamma\left(1-\beta\right)\lambda_{t}^{\beta}$$
+\end{itemize}
+Let's discuss exogenous vs semi-endogenous vs endogenous growth
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Trade model}
+\begin{itemize}
+\item The static trade model is Bernard, Eaton, Jensen, Kortum (2003) with EK's subscript order
+$$\pi_{ij} = \frac{\lambda_{j} \left(w_j \kappa_{ij}\right)^{-\theta}}{\sum_{k}\lambda_{k} \left(w_k \kappa_{ik}\right)^{-\theta}}$$
+\item Learning from sellers: $G_i(q) = G_i^{S}(q) \equiv \sum_{j} H_{ij} (q)$
+\begin{equation*}
+\dot \lambda_{it}
+=  \alpha_{it}  \int_0^\infty x^{\beta\theta} d G_i^S(q)
+= \Gamma(1-\beta) \alpha_{it} \sum_j \pi_{ij} \bigg( {\lambda_j \over \pi_{ij} } \bigg)^\beta
+\end{equation*}
+Trade costs impede goods transfers, not idea transfers
+\item Learning from domestic producers (w/ triangle inequality):
+$G_i(q) = G_i^{P}(q) \equiv \frac{H_{ii}(q)}{H_{ii}(\infty)}$
+\begin{equation*}
+\dot \lambda_{it} 
+=  \alpha_{it}  \int_0^\infty x^{\beta\theta} d G_i^P(q)
+= \Gamma(1-\beta) \alpha_{it} \bigg( { \lambda_i \over \pi_{ii} } \bigg)^\beta
+\end{equation*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Gains from trade}
+\begin{itemize}
+\item ACR (2012) formula applies:
+$%\begin{align*}
+y_i \equiv {w_i \over P_i} \propto \left( { \lambda_i \over \pi_{ii} } \right)^{1/\theta}
+%&\text{(9)}
+$%\end{align*}
+\item Assuming exogenous growth in arrival rate $A_t(z)$ at $\gamma$ on a BGP,
+detrend variables $\hat{\lambda}_{it} = \lambda_{it} \exp\left(\frac{\gamma}{1-\beta}t\right)$
+\item The detrended stocks of knowledge on a BGP solve:
+\begin{align*}
+\text{Sellers:}
+&\quad \hat \lambda_i = { (1-\beta)\Gamma(1-\beta)  \over \gamma } \hat \alpha_i \sum_{j=1}^n \pi_{ij}^{1-\beta} \hat \lambda_j^\beta 
+&\text{(10)}\\
+\text{Producers:}
+&\quad \hat \lambda_i = { (1-\beta)\Gamma(1-\beta)  \over \gamma } \hat \alpha_i \bigg( {\hat \lambda_i \over \pi_{ii} } \bigg)^\beta \propto \hat \alpha_i^{1 \over 1 - \beta} \pi_{ii}^{ - {\beta \over 1 - \beta}} 
+&\text{(11)}
+\end{align*}
+\item Gains relative to autarky along the BGP:
+\begin{align*}
+\text{Sellers:}
+&\quad { \lambda_i \over \lambda_i^{\text{aut}} } = \bigg( \sum_{j=1}^n \pi_{ij}^{1-\beta} \bigg( { \lambda_j \over \lambda_i } \bigg)^\beta \bigg)^{1 \over (1-\beta) }
+&\text{(12)}\\
+\text{Producers:}
+&\quad { \lambda_i \over \lambda_i^{\text{aut}} } = \pi_{ii}^{- {\beta \over 1 - \beta}}
+&\text{(13)}
+\end{align*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{}
+\includegraphics[height=\textheight]{../images/BueraOberfield2020fig1.png}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Quantitative exploration}
+Preferred calibration:
+``both the gains from trade and the fraction of variation of TFP growth accounted for by changes in trade more than double relative to a model without diffusion''
+\vspace{5mm}
+Discuss the following assumptions/choices
+\begin{itemize}
+\item $\gamma = 0.01$ (and $\beta$) to match average US population growth 1962-2000
+\item the exogeneity of physical and human capital paths
+\item the rationalization of trade imbalances
+\item the exclusion of countries with large reexports
+\item backing out $\kappa_{ijt}$ and the triangle inequality
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Conclusions}
+Thinking about growth with trade in mind
+\begin{itemize}
+\item Growth miracles occurred in export-oriented economies
+\item Emerging economies import ideas, not just goods
+\item Closed-economy conclusions can be reversed by trade
+\end{itemize}
+\vspace{1cm}
+Looking ahead to urban economics and economic geography
+\begin{itemize}
+\item Next week: Meet on Zoom (see URL in Canvas)
+\item November 29: Meet in person for final class
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\end{document}

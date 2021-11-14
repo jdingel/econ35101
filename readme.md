@@ -259,7 +259,7 @@ books:
  "[Endogenous Innovation in the Theory of Growth](https://www.aeaweb.org/articles?id=10.1257/jep.8.1.23)",
     *Journal of Economic Perspectives*, 8(1): 23-44.
 
--   Rivera-Batiz, Romer. 1991.
+-   Rivera-Batiz, Luis A. and Paul M. Romer. 1991.
  "[Economic Integration and Endogenous Growth](https://www.jstor.org/stable/2937946)," *The Quarterly
     Journal of Economics*, 106(2): 531-555.
 
