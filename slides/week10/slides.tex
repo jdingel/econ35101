@@ -116,7 +116,7 @@ Skills and sectors are strongly linked to cities' sizes
 \end{frame}
 % -----------------------------------------
 \begin{frame}{They're often the basis for identification}
-Recent JMPs by Notowidigdo, Diamond, and Yagan
+JMPs by Notowidigdo, Diamond, and Yagan
 \begin{itemize}
 	\item Theory: all locations produce a homogeneous good
 	\item Empirics: exploit variation in industrial composition to estimate model parameters via shifts in local labor demand
@@ -136,6 +136,7 @@ What variation does the instrument exploit?
 	\item The answers should be crucial to understanding how cities work
 	\item Which elements of the Marshallian trinity imply we'll find finance and dot-coms in big cities?
 	\item Coagglomeration (\href{https://www.aeaweb.org/articles.php?doi=10.1257/aer.100.3.1195}{Ellison Glaeser Kerr 2010}) and heterogeneous agglomeration (\href{https://ideas.repec.org/p/ehl/lserod/58426.html}{Faggio, Silva, Strange 2015}) can provide clues
+	\item \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3736487}{Eckert, Ganapati, Walsh (2020)}: Growth since 1980 has been faster in larger cities and it's all about ``skilled scalable services''
 	\item Theory is laggard: Most models of sectoral composition are polarized, with \emph{specialized} cities that have only one tradable sector and \emph{perfectly diversified} cities that have all the tradable sectors (\href{http://www.jstor.org/stable/10.1086/676557}{Helsley and Strange 2014})
 \end{itemize}
 \end{frame}
@@ -192,7 +193,7 @@ The data reject our simple model; skill premia are higher in larger cities
 Three possible routes to take
 \begin{enumerate}
 	\item Non-homothetic preferences \only<2->{(\href{https://ideas.repec.org/a/ucp/jlabec/v27y2009i1p21-47.html}{Black, Kolesnikova, Taylor 2009})}
-	\only<3->{\item[$\Rightarrow$] Do more skilled people find big cities less attractive for consumption? (\href{http://davidalbouy.net/housingexpenditures.pdf}{Albouy, Ehrlich, Liu 2015}, \href{https://real-estate.wharton.upenn.edu/profile/21198/research}{Handbury 2012)}}
+	\only<3->{\item[$\Rightarrow$] Do more skilled people find big cities less attractive for consumption? (\href{http://davidalbouy.net/housingexpenditures.pdf}{Albouy, Ehrlich, Liu 2015}, \href{https://www.econometricsociety.org/publications/econometrica/2021/11/01/are-poor-cities-cheap-everyone-non-homotheticity-and-cost}{Handbury 2021)}}
 	\item Upward-sloping local labor supplies \only<2->{(\href{http://www.jstor.org/stable/1837178}{Topel}, \href{https://ideas.repec.org/h/eee/labchp/5-14.html}{Moretti}, \href{https://www.aeaweb.org/articles?id=10.1257/aer.20131706}{Diamond})}
 	\only<4->{\item[$\Rightarrow$] Relative prices and quantities imply higher relative demand for skilled in larger cities}
 	\item More than two skill groups \only<2->{(My focus)}
@@ -239,6 +240,7 @@ Two-type models can be simple -- but what about two-type empirics?
 Contrasting views
 \begin{itemize}
 	\item  ``Workers in cities with a well-educated labor force are likely to have unobserved characteristics that make them more productive than workers with the same level of schooling in cities with a less-educated labor force. For example, a lawyer in New York is likely to be different from a lawyer in El Paso, TX.'' (\href{https://ideas.repec.org/h/eee/regchp/4-51.html}{Moretti 2004, p.2246})
+	\item[] {\small Similar jobs require different tasks and technologies in larger cities (\href{http://www-personal.umich.edu/~ssotelo/research/AST_geography.pdf}{Atalay, Sotelo, Tannenbaum 2021})}
 	\item ``Within broad occupation or education groups, there appears to be little sorting on ability'' (\href{http://diegopuga.org/research/dreams.pdf}{de la Roca, Ottaviano, Puga 2014})
 \end{itemize}
 Data sources for ``no sorting'' evidence
@@ -253,7 +255,7 @@ National Longitudinal Survey of Youth 1979
 \begin{itemize}
 {\small	\item \href{http://econpapers.repec.org/article/eeejuecon/v_3a65_3ay_3a2009_3ai_3a2_3ap_3a136-153.htm}{Bacolod, Blum, Strange (2009)}: ``The mean AFQT scores do not vary much across [four] city sizes'' within occupational categories
 	\item BBS observe only one sales person in MSAs with 0.5m -- 1.0m residents (10th and 90th percentiles of AFQT are equal) \hyperlink{BBS2009tab5}{\beamergotobutton{table}}
-	\item \href{https://ideas.repec.org/a/oup/restud/v79y2012i1p88-127.html}{Baum-Snow \& Pavan (2012)}: Structural estimation of finite-mixture model implies ``sorting on unobserved ability within education group\dots contribute little to observed city size wage premia.''
+	\item \href{https://ideas.repec.org/a/oup/restud/v79y2012i1p88-127.html}{Baum-Snow \& Pavan (2012)}: Estimated finite-mixture model implies ``sorting on unobserved ability within education group\dots contribute little to observed city size wage premia.''
 	\item BSP use NLSY79 data on 1754 white men; 583 have bachelor's degree or more; college wage premia don't rise with city size \hyperlink{BSPvsCensus}{\beamergotobutton{table}}
 }
 \end{itemize} 
@@ -711,7 +713,7 @@ Producers
 Places
 \begin{itemize}
 \item Cities are \emph{ex ante} identical
-\item Locations within cities vary in their desirability
+\item Locations within cities vary in their desirability $\tau$; schedule is $S(\tau)$ 
 \item TFP depends on agglomeration of ``scale and skills''
 \[
 A(c)=J\left(L,\int_{\omega\in\Omega}j(\omega)f(\omega,c)d\omega\right)
@@ -984,15 +986,31 @@ By reading Diamond (2016), you'll learn about a bunch of relevant concepts and t
 \href{https://local.theonion.com/neighborhood-starting-to-get-too-safe-for-family-to-aff-1819578182}{\includegraphics[width=\textwidth]{../images/Onion20150828.png}}
 \end{frame}
 % -----------------------------------------
-\begin{frame}{The ``Bartik'' instrument for local labor demand}
+\begin{frame}{The ``Bartik'' instrument for local labor demand (1/2)}
 \begin{itemize}
-	\item {\small ``The idea is to isolate shifts in local labor demand that come only from national shocks in each sector of the economy, thereby purging potentially endogenous local demand shocks driving variation in employment or wages'' (\href{https://ideas.repec.org/h/eee/regchp/5-3.html}{Baum-Snow and Ferreira 2015})}
+	\item {\small ``The idea is to isolate shifts in local labor demand that come only from national shocks in each sector of the economy, thereby purging potentially endogenous local demand shocks driving variation in employment or wages'' (\href{https://ideas.repec.org/h/eee/regchp/5-3.html}{Baum-Snow and Ferreira 2015})\par}
 	\item ``A host of papers make use of such instruments for identification''
-	\item {\small ``The main source of identifying variation in Bartik instruments comes from differing base year industry compositions across local labor markets. Therefore, validity of these instruments relies on the assertion that neither industry composition nor unobserved variables correlated with it directly predict the outcome of interest conditional on controls.''}
+	\item {\small ``The main source of identifying variation in Bartik instruments comes from differing base year industry compositions across local labor markets. Therefore, validity of these instruments relies on the assertion that neither industry composition nor unobserved variables correlated with it directly predict the outcome of interest conditional on controls.''\par}
 	\item There is suddenly an econometrics literature on this. 
 	See \href{https://academic.oup.com/qje/article-abstract/134/4/1949/5552146}{Adao, Kolesar, Morales} for inference.
-	See \href{https://www.aeaweb.org/articles?id=10.1257\%2Faer.20181047}{Goldsmith-Pinkham, Sorkin, Swift} and \href{http://about.peterhull.net/wp}{Borusyak, Jaravel, Hull} for consistency/validity.
+	See \href{https://www.aeaweb.org/articles?id=10.1257/aer.20181047}{Goldsmith-Pinkham, Sorkin, Swift} and \href{http://about.peterhull.net/wp}{Borusyak, Jaravel, Hull} for consistency/validity.
 \end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{The ``Bartik'' instrument for local labor demand (2/2)}
+BJH:
+\begin{quote}
+The claim for instrument validity in shift-share instrumental variable (SSIV) regressions must rely on some assumptions about the shocks, exposure shares, or both.\par
+\end{quote}
+GPSS say shares are exogenous.
+\begin{quote}
+Once we think about the shares as the instruments, the implied empirical strategy is an exposure research design, where the industry shares measure the differential exogenous exposure to the common shock
+\end{quote}
+AKM and BJH say shocks are exogenous.
+BJH on ADH example:
+\begin{quote}
+exogeneity of industry employment shares is difficult to justify a priori since unobserved industry shocks (e.g., automation or innovation trends) are likely to affect regional outcomes through the same mixture of exposure shares. Our approach, in contrast, allows researchers to specify a set of shocks that are plausibly uncorrelated with such unobserved factors.\par
+\end{quote}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Housing supply elasticities}
@@ -1023,8 +1041,22 @@ By reading Diamond (2016), you'll learn about a bunch of relevant concepts and t
 % -----------------------------------------
 \begin{frame}{Incidence of building restrictions}
 \begin{center}
-\includegraphics[height=.85\textheight]{../images/GlaeserGyourko2018_fig4.png}\\
-\href{https://www.aeaweb.org/articles?id=10.1257/jep.32.1.3}{Glaeser \& Gyourko (JEP 2018)}\end{center}
+\includegraphics[height=.80\textheight]{../images/GlaeserGyourko2018_fig4.png}\\
+\href{https://www.aeaweb.org/articles?id=10.1257/jep.32.1.3}{Glaeser \& Gyourko (JEP 2018)}
+\end{center}
+{\small See also \href{https://www.aeaweb.org/articles?id=10.1257/mac.20170388}{Hsieh and Moretti 2019} for aggregate consequences}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Housing is durable $\to$ filtering}
+How do you build housing for poor people? You build housing for rich people in the past.
+\href{https://www.aeaweb.org/articles?id=10.1257/aer.104.2.687}{Rosenthal (\textit{AER} 2014)}:
+\begin{quote}{\small
+	While filtering has long been considered the primary mechanism by which markets supply low-income housing, direct estimates of that process have been absent.
+	This has contributed to doubts about the viability of markets and to misplaced policy.
+	I fill this gap by estimating a "repeat income" model using 1985-2011 panel data.
+	Real annual filtering rates are faster for rental housing (2.5 percent) than owner-occupied (0.5 percent), vary inversely with the income elasticity of demand and house price inflation, and are sensitive to tenure transitions as homes age.
+	For most locations, filtering is robust which lends support for housing voucher programs.
+\par}\end{quote}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Diamond (2016) empirical implementation}
@@ -1129,6 +1161,7 @@ $$
 	\item ``My results suggest that endogenous local amenity changes are an important mechanism driving workers' migration responses to local labor demand shocks.''
 	\item ``the positive aggregate labor demand elasticities for college workers suggests that the endogenous productivity effects of college workers on college workers' productivity may be large and could overwhelm the standard forces leading to downward-sloping labor demand''
 	\item ``an increase in well-being inequality between college and high school graduates which was significantly larger than would be suggested by the increase in the college wage gap alone''
+	\item Immigrants more attracted to higher nominal wage and less deterred by higher nominal rents (c.f. \href{https://econpapers.repec.org/paper/izaizadps/dp11075.htm}{Albert and Monras 2017})
 \end{itemize}
 \end{frame}
 % -----------------------------------------
@@ -1138,6 +1171,25 @@ $$
 	\item We need models with more than two skills groups and more than perfectly specialized/diversified cities
 	\item Recent research exploits tools from assignment literature to characterize spatial sorting of skills and sectors
 	\item Assignment mechanisms can be used in quantitative work via assumptions on components observed and unobserved by the econometrician -- Fr\'{e}chet distribution is most popular
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{More references}
+See the \href{https://www.aeaweb.org/issues/602}{summer 2020 \textit{JEP} symposium}
+\begin{itemize}
+\item Gilles Duranton and Diego Puga - ``The Economics of Urban Density''
+\item Stuart S. Rosenthal and William C. Strange - ``How Close Is Close? The Spatial Reach of Agglomeration Economies''
+\item William R. Kerr and Frederic Robert-Nicoud - ``Tech Clusters''
+\item Gaetano Basso and Giovanni Peri - ``Internal Mobility: The Greater Responsiveness of Foreign-Born to Economic Conditions''
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Final thoughts}
+\begin{itemize}
+\item There's a final exam next week
+\item This is only the first class in the Trade \& Growth sequence
+\item Spatial economics is \href{https://tradediversion.net/2019/11/11/the-rapid-rise-of-spatial-economics-among-jmcs/}{growing rapidly}
+\item A growing body of UChicago students are doing trade, spatial, and urban economics
 \end{itemize}
 \end{frame}
 % -----------------------------------------
