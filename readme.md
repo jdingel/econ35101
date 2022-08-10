@@ -14,7 +14,8 @@ We will meet in person consistent with University policies.
 
 Email: <rodrigo.adao@chicagobooth.edu> & <jdingel@chicagobooth.edu>\
 Office: Harper 381 & 380\
-Office hours: By appointment, please email <!-- \ Teaching assistant: TBA\ -->
+Office hours: By appointment, please email
+<!--Teaching assistant: TBA-->
 Course materials: [github.com/jdingel/econ35101](http://github.com/jdingel/econ35101) and
 [canvas.uchicago.edu](https://canvas.uchicago.edu/courses/43957)\
 Class schedule: Wednesdays 8:30 AM - 11:30 AM
@@ -204,11 +205,6 @@ books:
     Trade.](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/aer.91.5.1423)
     *American Economic Review*, 91(5): 1423-1453.
 
--   Costinot, Arnaud and Jonathan Vogel. 2010. "[Matching and Inequality
-    in the World
-    Economy.](http://www.journals.uchicago.edu.proxy.uchicago.edu/doi/abs/10.1086/655858)"
-    *Journal of Political Economy*, 118(4): 747-786.
-
 #### Week 6: Increasing returns and home-market effects 
 
 -   :exclamation: Krugman, Paul. 1980. "[Scale Economies, Product Differentiation, and
@@ -251,6 +247,11 @@ books:
 -   Davis, Morris and Jesse Gregory. 2020. "[Place-Based Redistribution in Simple Location-Choice Models](https://www.ssc.wisc.edu/~jmgregory/md-jg-redistribution.pdf)." Working paper.
 
 #### Week 8: Spatial sorting of skills and sectors 
+
+-   Costinot, Arnaud and Jonathan Vogel. 2010. "[Matching and Inequality
+    in the World
+    Economy.](http://www.journals.uchicago.edu.proxy.uchicago.edu/doi/abs/10.1086/655858)"
+    *Journal of Political Economy*, 118(4): 747-786.
 
 -   :exclamation: Diamond, Rebecca. 2016. "[The Determinants and Welfare Implications
     of US Workers’ Diverging Location Choices by Skill:

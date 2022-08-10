@@ -1,0 +1,1126 @@
+\documentclass[10pt,notes=hide]{beamer}
+\input{../week00/slides_settings.tex}
+\setbeamertemplate{footline}{\begin{center}\textcolor{gray}{Dingel -- International Macroeconomics and Trade -- Week 8 -- \insertframenumber}\end{center}}
+\begin{document}
+% -----------------------------------------
+%TITLE FRAME
+\begin{frame}[plain]
+\begin{center}
+\large
+\textcolor{maroon}{BUSN 33946 \& ECON 35101\\
+International Macroeconomics and Trade\\ 
+Jonathan Dingel\\
+Autumn \the\year, Week 9}
+\vfill 
+\includegraphics[width=0.5\textwidth]{../images/chicago_booth_logo}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=1\textwidth]{../images/noaa_nightlights_4096.jpg} \\
+{\small
+Image from \href{ftp://public.sos.noaa.gov/land/earth_night/nightlights/4096.jpg}{NOAA} \\
+(Defense Meteorological Program Operational Linescan System)\\
+Donaldson \& Storeygard, ``\href{https://www.aeaweb.org/articles?id=10.1257/jep.30.4.171}{The View from Above: \\ Applications of Satellite Data in Economics}'', \textit{JEP}, 2016
+\par}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=1\textwidth]{../images/ISS027-E-020129_lrg.jpg} \\
+Image from \href{https://visibleearth.nasa.gov/view.php?id=50671
+}{NASA}
+\end{center}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Today: Agglomeration economies}
+Gross metropolitan product per capita rises with metro population:
+\begin{center}
+\includegraphics[width=.8\textwidth]{../images/GlaeserGottlieb2009_fig1.pdf}
+\end{center}
+\href{https://www.sciencedirect.com/science/article/pii/0304393288901687}{Lucas (1988)} on local external economies:
+\begin{quote}
+What can people be paying Manhattan or downtown Chicago rents \textbf{for}, if not being near other people?\par
+\end{quote}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Today's agenda}
+\begin{itemize}
+\item Spatial equilibrium
+\item Henderson (1974)
+\item Ahlfeldt, Redding, Sturm, and Wolf (2015)
+\item Dingel and Tintelnot (2021)
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Spatial equilibrium}
+Fundamentally, spatial equilibrium is a no-arbitrage condition.
+\href{https://www.aeaweb.org/articles?id=10.1257/jel.47.4.983}{Glaeser and Gottlieb (\textit{JEL} 2009)}:
+\begin{quote}
+The high mobility of labor leads urban economists to assume a spatial equilibrium, where elevated New York incomes do not imply that New Yorkers are better off. Instead, welfare levels are equalized across space and high incomes are offset by negative urban attributes such as high prices or low amenities.
+\end{quote}
+\begin{itemize}
+	\item The benchmark model of spatial equilibrium is dubbed the ``Rosen-Roback'' model, due to the theory of equalizing differences (Sherwin Rosen 1974) applied to cities for both workers and firms (Jennifer Roback 1982)
+	\item I borrow my exposition of Rosen-Roback model from \href{https://scholar.princeton.edu/sites/default/files/zidar/files/zidar_eco524_s2020_lec2.pdf}{Owen Zidar's slides}
+\end{itemize}
+%Take slides 26-48 from Zidar
+\end{frame}
+% -----------------------------------------
+\begin{frame}
+\frametitle{Rosen-Roback framework}
+Goals
+\begin{itemize}
+\item How does change in amenity $s$ alter local prices (wages, rents)?
+\item Infer the value of amenities
+\end{itemize}
+Markets
+\begin{itemize}
+\item Labor: price $w$, quantity $N$
+\item Land: price $r$, quantity $L=L^w + L^p$ for workers and production
+\item Goods: price $p=1$, quantity $X$
+\end{itemize}
+Agents
+\begin{itemize}
+\item Workers (homogenous, perfectly mobile)
+\item Firm (perfectly competitive, CRS)
+\end{itemize}
+Indifference conditions
+\begin{itemize}
+\item Workers have same indirect utility in all locations
+\item Firm has zero profit (i.e., unit costs equal 1)
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Workers: Indirect Utility Condition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Workers: Preferences and budget constraint}
+Utility is $u(x, l^c, s)$
+\begin{itemize}
+\item  $x$ is consumption of private good
+\item  $l^c$ is consumption of land
+\item  $s$ is amenity
+\end{itemize}
+Budget constraint is $x + rl^c - w - I = 0$
+\begin{itemize}
+\item $I$ is non-labor income that is independent of location (e.g., share of national land portfolio)
+\item $w$ is labor income (note: no hours margin).
+\end{itemize}
+Indirect utility is given
+\begin{align*}
+V(w, r, s)  = \max_{x, l^c} u(x, l^c, s) \text{ s.t. }  x + rl^c - w - I = 0
+\end{align*}
+Let $\lambda  = \lambda(w, r, s)$ be the marginal utility of a dollar of income, then 
+\begin{align*}
+V_w = \lambda >0
+& \qquad 
+V_r = -\lambda l^c <0 
+\\
+\Rightarrow
+V_r &= - V_w l^c
+\end{align*}
+%\item Example. $u(x, l^c, s)=s $
+%\end{itemize}
+item]{The Lagrangian is $\mathcal{L} = V(w, r, s) - \lambda(x(w, r, s) + rl^c(w, r, s) - w - I)$. Solving for the FOCs, we get $V_w = \lambda >0$ and $V_r = -\lambda l^c <0$.}
+item]{The third equation is a version of Roy's identity. Recall Roy's identity expresses Marshallian demand in terms of derivatives of the indirect utility function: $x_{i} = - \frac{\partial V}{\partial p_{i}} / \frac{\partial V}{\partial y}$}
+item]{Roy's identity is the French economist Rene Roy. Roy model of occupational choice is a British guy.}
+\end{frame}
+\begin{frame}
+\frametitle{Example: Cobb-Douglas preferences}
+Utility is Cobb Douglas over goods and land with an amenity shifter: 
+$$u(x, l^c, s)=s^{\theta_W} x^{\gamma} (l^c)^{1-\gamma}$$ 
+\begin{itemize}
+\item Then $x=\gamma \left(\frac{w + I}{1} \right)$ and $l^c=(1-\gamma)\left(\frac{w + I}{r}\right)$ \medskip
+\item Let $\Gamma \equiv \gamma^\gamma (1-\gamma)^{(1-\gamma)}$ so that indirect utility is
+\begin{equation*}
+V(w, r, s)  = 
+\underbrace{\Gamma}_{\text{constant}} 
+\underbrace{s^{\theta_W}}_{\text{amenities}} 
+\underbrace{1^{-\gamma} r^{-(1-\gamma)}}_{\text{prices}}
+\underbrace{(w + I)}_{\text{income}}
+\end{equation*}
+\item MU of income is $\lambda(w, r, s)$ 
+\begin{align*}
+V_w &= \lambda = \Gamma s^{\theta_W} r^{-(1-\gamma)}  \\
+V_r &= -\lambda l^c =  -\Gamma s^{\theta_W} r^{-(1-\gamma)} \underbrace{(1-\gamma)\left(\frac{w + I}{r}\right)}_{l^c}  \\
+\Rightarrow  V_r &= - V_w l^c 
+\end{align*}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Firms: No Profit Condition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Firms: Unit cost function}
+CRS production with cost function $C(X, w,r,s)$ 
+\begin{itemize}
+\item  $X$ is output
+\item Unit cost $c(w, r, s)=\frac{C(X,w,r,s)}{X}$
+\item $L^p$ is total amount of land used by firms
+\item $N$ is total employment \medskip
+\end{itemize}
+From Shepard's Lemma, we have
+\begin{align*}
+c_w &= N/X >0 \\
+c_r &= L^p/X >0
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Example: Cobb-Douglas production}
+Suppose the production function is
+$$X=f(N,L^p)= s^{\theta_F} N^\alpha L^{1-\alpha}$$
+Let $\mathcal{A} \equiv \alpha^{-\alpha} (1-\alpha)^{-(1-\alpha)}$.
+Then the cost function is: 
+\begin{align*}
+C(X,w,r,s) &= X (s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} \mathcal{A} \Rightarrow \\
+c(w,r,s)&=(s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} \mathcal{A}
+\end{align*}
+%pg 68 card notes 101
+% Unit cost $c(w,r,s)=(s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} \mathcal{A}$ \medskip
+Then 
+\begin{align*}
+C_w(X,w,r,s) = \alpha \frac{\left(X (s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} \mathcal{A} \right)}{w} = N \\
+C_r(X,w,r,s) = (1-\alpha) \frac{\left(X (s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} \mathcal{A} \right)}{r} = L^p
+\end{align*}
+Dividing both sides by $X$ gives:
+\begin{align*}
+c_w &= N/X >0 \\
+c_r &= L^p/X >0
+\end{align*}
+%\begin{itemize}
+%\item 
+%\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Equilibrium}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exogenous Model Parameters}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Model recap}
+Workers parameters: $s,\theta_W, \gamma, I$
+\begin{itemize}
+\item $s$ is level of amenities
+\item $\theta_W$ governs importance of amenities for utility
+\item $\gamma$ governs importance of goods  for utility
+\item $1-\gamma$ governs importance of land for utility
+\item $I$ is non-labor income \medskip
+\end{itemize}
+Firm Parameters: $s$, ${\theta_F}$, $\alpha$ 
+\begin{itemize}
+\item $s$ is level of amenities
+\item $\theta_F$ governs importance of amenities for productivity
+\item $\alpha$ is output elasticity of labor
+\item $1-\alpha$ is output elasticity of land
+\end{itemize}
+Endogenous outcomes:
+\begin{itemize}
+\item Labor: price $w$, quantity $N$
+\item Land: price $r$, quantities $L^w, L^p$ for workers and production
+\item Goods: price $p=1$, quantity $X$  \medskip
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equilibrium: Indifference Conditions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Equilibrium concept: Two key indifference conditions}
+ In equilibrium, workers and firms are indifferent across cities with different levels of $s$ and endogenously varying wages $w(s)$ and rents $r(s)$:
+\begin{align} 
+c(w(s), r(s), s) &= 1 \label{eq_cond_cost} \\
+V(w(s), r(s), s) &= V^0 \label{eq_cond_V}
+\end{align}
+where $V^0$ is the equilibrium level of indirect utility.
+\bigskip
+Specifically, in our example: \\
+\textit{Given $s,\theta_W, \theta_F, \gamma, I, \alpha$, equilibrium is defined by local prices and quantities $\{w,r,N,L^w,L^p,X\}$ such that \eqref{eq_cond_cost} and \eqref{eq_cond_V} hold and land markets clear.}
+\bigskip
+N.B. We will mainly be focusing on prices: $w(s)$ and $r(s)$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Solving Model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Solving for effect of amenity changes on prices}
+\begin{itemize}
+\item Differentiate \eqref{eq_cond_cost} and \eqref{eq_cond_V} with respect to $s$ and rearrange, we have:
+\begin{align*}
+\begin{bmatrix}
+c_w & c_r \\
+V_w & V_r
+\end{bmatrix}
+\begin{bmatrix}
+w'(s) \\
+r'(s)
+\end{bmatrix} = 
+\begin{bmatrix}
+-c_s\\
+-V_s
+\end{bmatrix}
+\end{align*}
+\item Solving for $w'(s), r'(s)$, we have
+\begin{align*}
+w'(s) = \frac{V_r c_s - c_r V_s}{c_r V_w - c_w V_r} \\
+r'(s) = \frac{V_s c_w - c_s V_w}{c_r V_w - c_w V_r} 
+\end{align*}
+\item Note we can rewrite
+\begin{align*}
+c_r V_w - c_w V_r = \lambda L^p/X + \lambda l^c N/X = \lambda L/X =V_w L/X
+\end{align*}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Aside: example values for matrix elements}
+%\begin{align*}
+%c_w &= \alpha \frac{\left((s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} (\alpha^{-\alpha} (1-\alpha)^{-(1-\alpha)}) \right)}{w} \\
+%c_r &= (1-\alpha) \frac{\left( (s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} (\alpha^{-\alpha} (1-\alpha)^{-(1-\alpha)}) \right)}{r} \\
+%c_s &= \theta_F \frac{\left( (s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} (\alpha^{-\alpha} (1-\alpha)^{-(1-\alpha)})\right)}{s} \\
+%V_w &= \gamma^\gamma (1-\gamma)^{(1-\gamma)} s^{\theta_W} 1^{-\gamma} r^{-(1-\gamma)} \\
+%V_r &= \gamma^\gamma (1-\gamma)^{(1-\gamma)} s^{\theta_W} 1^{-\gamma} r^{-(1-\gamma)} (1-\gamma)\left(\frac{w + I}{r}\right) \\
+%V_s &= \theta_W \frac{\left( \gamma^\gamma (1-\gamma)^{(1-\gamma)} s^{\theta_W} 1^{-\gamma} r^{-(1-\gamma)}  \left(w + I\right) \right)}{s}
+%\end{align*}
+\begin{align*}
+c_w &= \alpha \frac{(s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} \mathcal{A}}{w} \\
+c_r &= (1-\alpha) \frac{(s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} \mathcal{A}}{r} \\
+c_s &= \theta_F \frac{ (s^{\theta_F})^{-1}w^\alpha r^{1-\alpha} \mathcal{A}}{s} \\
+V_w &=s^{\theta_W} 1^{-\gamma} r^{-(1-\gamma)}  \Gamma \\
+V_r &= -s^{\theta_W} 1^{-\gamma} r^{-(1-\gamma)}\Gamma (1-\gamma)\left(\frac{w + I}{r}\right)   \\
+V_s &= \theta_W \frac{\left(  s^{\theta_W} 1^{-\gamma} r^{-(1-\gamma)}\Gamma  \left(w + I\right) \right)}{s}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Effect of amenity changes on prices}
+\begin{itemize}
+\item Price changes
+\begin{align*}
+w'(s) &= \frac{(V_rc_s - c_rV_s) X}{ \lambda L} \\
+r'(s) &= \frac{(V_sc_w - c_sV_w) X}{ \lambda L} 
+\end{align*}
+\item Special cases of interest:
+\begin{enumerate}
+\item Amenity only valued by consumers: $\theta_F=0 \Rightarrow c_s = 0$
+\item Amenity only has productivity effect: $\theta_W=0 \Rightarrow  V_s = 0$
+\item Firms use no land $1-\gamma=0$ and amenity is non-productive $\theta_F=0$: $c(w(s))=1$, $c_r = c_s = 0$
+\end{enumerate}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comparative Statics and Value of Amenities}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Price effects under different assumptions about amenities}
+\begin{frame}
+\frametitle{1. Amenity only valued by consumers: $\theta_F=0 \Rightarrow c_s = 0$}
+\begin{itemize}
+\item When $c_s = 0$, higher $s$ $\Rightarrow$ higher $r$, lower $w$
+\item Workers are willing to pay more in land rents and receive less in wages to have access to higher levels of amenities
+\end{itemize}
+\begin{figure}
+\includegraphics[height=.7\textheight]{../images/Zidar_rosenroback_fig1.pdf}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{2. Amenity only valued by firms: $\theta_W=0 \Rightarrow  V_s = 0$}
+\begin{itemize}
+\item When $V_s = 0$, higher $s$ $\Rightarrow$ higher $r$ and higher $w$
+\item Firms are willing to pay more in land rents and wages to access higher productivity due to amenities
+\end{itemize}
+\begin{figure}
+\includegraphics[height=.7\textheight]{../images/Zidar_rosenroback_fig2.pdf}
+\end{figure}
+item]{Example: see economies of agglomeration}
+\end{frame}
+\begin{frame}{3. Firms don't use land nor value amenity}
+\begin{itemize}
+\item Firms don't use land ($\alpha=1$) nor value amenity ($\theta_F=0$)
+\item Only production input is labor and firms are indifferent across locations, so wages must be the same across cities: $c(w(s))=1$\\$\;$\\
+\item Since  $c_r = c_s = 0$, 
+\begin{align*}
+w'(s) &= 0 \\
+r'(s) &= \frac{V_sc_w}{- c_wV_r} = \frac{V_s}{ l^c V_w}, \text{ since } V_r = -l^c V_w
+\end{align*} 
+\item So the rise in total cost of land for a worker living in a city with higher $s$ is 
+\begin{align*}
+l^c r'(s) &=  \frac{V_s}{ V_w}
+\end{align*} 
+\end{itemize}
+\end{frame}
+\begin{frame}{3. Firms don't use land nor value amenity}
+\begin{itemize}
+\item $\frac{V_s}{ V_w} =$ marginal WTP for a change in $s$ so the marginal value of a change in the amenity is ``fully capitalized" in rents
+\end{itemize}
+\begin{figure}
+\includegraphics[height=.7\textheight]{../images/Zidar_rosenroback_fig3.pdf}
+\end{figure}
+$\frac{V_s}{ V_w} = \theta_W \frac{\left(w + I\right)}{s}$ is increasing in income, decreasing in level of amenities
+\end{frame}
+\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Inferring Amenity Values}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Inferring the Value of Amenities}
+How do we infer the value of amenities in the more general case?
+\begin{itemize}
+\item $\Omega(s) = V(w(s), r(s), s)$ represents total utility of living in city $s$ 
+\item If all cities have equal utility, then 
+\begin{align}
+\Omega'(s) &= V_ww'(s) + V_r r'(s) + V_s  = 0 \text{ in equilibrium} \nonumber\\
+ V_s &= - V_ww'(s) - V_r r'(s) \nonumber\\
+  V_s &= - V_ww'(s) +l^c V_w r'(s) \nonumber\\
+ &\Rightarrow \frac{V_s}{V_w} = l^cr'(s) - w'(s) \label{eq_WTP}
+\end{align}
+\item So WTP for the amenity is extra land cost for consumers less lower wages in a higher-amenity city
+\end{itemize}
+item]{Eqn tells us that workers' WTP for the higher levels of amenity $s$ can be derived from combination of extra land cost and reduced wages}
+\end{frame}
+\begin{frame}
+\frametitle{Inferring the Value of Amenities}
+We can get more insight from looking at firms:
+\begin{itemize}
+\item Firms face $c(w(s), r(s), s) = 1$ across cities, so 
+\begin{align}
+c_w w'(s) + c_r r'(s) + c_s = 0 \label{eq_cost_totaldif}
+\end{align}
+\item Consider 2 cases \\$\;$\\
+\begin{enumerate}
+\item $c_s = 0$ (no productivity effects of higher amenity levels)\\$\;$\\
+\item $c_s \neq 0$\\$\;$\\
+\end{enumerate}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Inferring the Value of Amenities, $c_s = 0$}
+\begin{itemize}
+\item In the case when $c_s = 0$, 
+\begin{align*}
+w'(s) &= \frac{-c_r}{c_w} r'(s)\\
+&= \frac{-L^p}{N} r'(s)
+\end{align*}
+\item Combine \eqref{eq_WTP} and \eqref{eq_cost_totaldif} to get the WTP of the $N$ people in a given city:
+\begin{align}
+N \frac{V_s}{V_w} = N l^cr'(s) + L^p r'(s)  = L r'(s)
+\end{align}
+%N.B. $w'(s)=\frac{1-\alpha}{\alpha} \frac{w}{r} r'(s)$
+Thus, in this case, aggregate WTP can be derived from looking at how the total value of all land changes as $s$ changes
+\end{itemize}
+item]{So when firms use land but productivity is not affected by level of $s$, the aggregate WTP can be derived from looking at how the total value of all land changes as $s$ changes}
+\end{frame}
+\begin{frame}
+\frametitle{Inferring the Value of Amenities, $c_s \neq 0$}
+\begin{itemize}
+\item Define ``social value" $SV$ as the sum of aggregate worker WTP and cost-induced savings. Then the change in $SV$ given changes $s$ is
+\begin{align}
+d SV &= N \frac{V_s}{V_w} - X c_s \nonumber\\
+&= N ( l^cr'(s) - w'(s)) - X (- c_w w'(s) - c_r r'(s)) \nonumber\\
+&= N l^cr'(s) - N w'(s)) + X  \frac{N}{X} w'(s) + X  \frac{L^p}{X} r'(s) \nonumber\\
+&\Rightarrow d SV  = L r'(s)
+\end{align}
+\item So the change in social value is the change in total value of land
+\end{itemize}
+item]{General case encompasses all special cases}
+\end{frame}
+\end{comment}
+% -----------------------------------------
+\begin{frame}{Evidence of agglomeration economies}
+People are concentrated. Are industries concentrated? Yes.
+\begin{itemize}
+	\item Ellison and Glaeser (1997) ``dartboard approach'' to address internal vs external economies
+	\item Duranton and Overman (2005) for continuous space
+\end{itemize}
+Identify agglomeration channels empirically
+\begin{itemize}
+	\item Estimate directly (faces peer-effects problem)
+	\item Infer from observed spatial equilibrium
+	\item Test for multiple equilibria
+\end{itemize}
+References to know
+\begin{itemize}
+	\item \href{https://www.journals.uchicago.edu/doi/abs/10.1086/653714}{Greenstone, Hornbeck, Moretti (2010)} use ``million-dollar plants'' to estimate agglomeration economies
+  (cf \href{https://onlinelibrary.wiley.com/doi/abs/10.1111/ecin.12339}{Patrick 2016})
+	\item Combes and Gobillon - ``\href{https://www.sciencedirect.com/science/article/pii/B9780444595171000052}{The Empirics of Agglomeration Economies}'' (\textit{Handbook} 2015)
+	\item Lin and Rauch - ``\href{https://www.sciencedirect.com/science/article/pii/S0166046220303136}{What future for history dependence in spatial economics?}''
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Bleakley and Lin - Portage and Path Dependence}
+\begin{columns}
+\begin{column}{.49\textwidth}
+\includegraphics[width=1.1\textwidth]{../images/BleakleyLin2012_Figure4.pdf}
+\end{column}
+\begin{column}{.49\textwidth}
+{\tiny Table 1: Proximity to Historical Portage Site and Contemporary Population Density\par}
+\includegraphics[width=1.05\textwidth]{../images/BleakleyLin2012_Table1a.pdf} \\
+\includegraphics[width=1.05\textwidth]{../images/BleakleyLin2012_Table2a.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Davis \& Weinstein: ``Bones, Bombs, and Breakpoints''}
+{\small Bombs: Does a temporary shock have permanent effects? After the Allied bombing in WWII, most cities returned to their relative position in the distribution of city sizes within about 15 years \par}
+\includegraphics[width=.53\textwidth]{../images/DavisWeinstein2002_fig1.pdf}
+\includegraphics[width=.45\textwidth]{../images/DavisWeinstein2002_fig2.pdf}
+Also, \href{https://www.sciencedirect.com/science/article/pii/S0304387810000817}{Miguel and Roland (\textit{JDE} 2011)}: ``even the most intense bombing in human history did not generate local poverty traps in Vietnam''
+\end{frame}
+% -----------------------------------------
+\begin{frame}{(Homogeneous) agglomeration: Henderson (1974)}
+``The Sizes and Types of Cities'' addresses basic, fundamental questions about a system of cities in general equilibrium
+\begin{itemize}
+\item Why do cities exist? 
+\only<2>{\textcolor{gray}{``because there are technological economies of scale in production or consumption''}}
+\item Are cities too large or too small?
+\only<2>{\textcolor{gray}{a stability argument says that cities tend to be too large}}
+\item Why do cities of different sizes exist?
+\only<2>{\textcolor{gray}{
+``because cities of different types specialize in the production of different traded goods''}}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Henderson (1974) environment}
+\begin{itemize}
+\item Factors: land $L$, labor $N$, capital $K$
+\item Tradables production (external economies a la Chipman)
+\begin{equation*}
+    X_1^{1-\rho_1} = L_{1}^{\alpha_1} K_{1}^{\beta_1} N_{1}^{\gamma_1}
+    \qquad
+    \alpha_1 + \beta_1 + \gamma_1 = 1,
+    \rho_1\in(0,1)
+\end{equation*}
+\item Housing production
+\begin{equation*}
+    X_3 = L_{3}^{\alpha_3} K_{3}^{\beta_3} N_{3}^{\gamma_3}
+    \qquad
+    \alpha_3 + \beta_3 + \gamma_3 = 1,
+\end{equation*}
+\item Land sites produced by labor
+\begin{equation*}
+    L =  N_0^{1/(1-z)}
+    \qquad
+    z < 0, z'(N)<0
+\end{equation*}
+\item Clear factor markets with prices $p_N, p_K, p_L$
+\begin{equation*}
+    N_0 + N_1 + N_3  = N , \quad
+    K_1 + K_3  = K , \quad
+    L_1 + L_3  = L 
+\end{equation*}
+\item Cobb-Douglas preferences ($U=x_1^a x_2^b x_3^c$) with income $y$, import of good 2, and prices $q$ deliver indirect utility
+\begin{equation*}
+    U \propto y q_1^{-a} q_2^{-b} q_3^{-c}
+\end{equation*}
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Capitalists and workers}
+Different (stark) assumptions about capital ownership: 
+\begin{itemize}
+\item each laborer owns equal capital stock (Assumption A)
+\item capital owners live outside of cities (Assumption B)
+\end{itemize}
+Utility components for labor income and capital income
+\begin{align*}
+U_N &
+\propto p_N q_1^{-a} q_2^{-b} q_3^{-c}
+\\
+U_K &
+\propto \bar{p}_K \frac{\bar{K}}{\bar{N}} q_1^{-a} q_2^{-b} q_3^{-c}
+\end{align*}
+Solving for optimal and equilibrium city sizes
+\begin{itemize}
+    \item Optimum: maximize $U_N + U_K$, given the determination of $U_N$, $U_K$, and $p_K$ through simultaneous location and investment of labor and capital in cities in the economy 
+    \item Equilibrium: atomistic choices of capital owners, firms, and laborers
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Utility and factor prices}
+\begin{columns}
+\begin{column}{.48\textwidth}
+\includegraphics[width=1.2\textwidth]{../images/Henderson1974_fig1.pdf}
+\end{column}
+\begin{column}{.5\textwidth}
+\begin{itemize}
+\item $\alpha_1 > \rho_1$ (site intensity vs IRS) is sufficient for both $p_K$ and $U_N$ to exhibit interior maxima
+\item $p_K$ curve has peak to right of $U_N$ and $U_K$ peak because $U_K$ is $p_K$ deflated by $q_3^{-c}$
+\item Assumption B curves peak to right of Assumption A curves because capitalist income doesn't bid up housing prices
+\item Why isn't ``two identical cities at point C'' stable?
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Optimal city size}
+\begin{columns}
+\begin{column}{.48\textwidth}
+\includegraphics[width=1.2\textwidth]{../images/Henderson1974_fig2.pdf}
+\end{column}
+\begin{column}{.5\textwidth}
+\begin{itemize}
+\item For Assumption A, maximize the vertical sum of $U_N$ and $U_K$
+\item Planner has total population $N$ and faces integer constraint
+\item Start second city when $N$ is twice $N(U_N^*,U_K^*)$
+\item[] (Starting second city earlier is not a stable optimum)
+\item Figure 3 is more complicated due to Assumption B and the worker vs capitalist disagreement on optimal city size
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Equilibrium city size}
+\begin{columns}
+\begin{column}{.48\textwidth}
+\includegraphics[width=1.2\textwidth]{../images/Henderson1974_fig4.pdf}
+\end{column}
+\begin{column}{.5\textwidth}
+\begin{itemize}
+\item Why is $N(\text{small})$ a bit of a fudge?
+\item Atomistic equilibrium with particular dynamics is at $N(E)$, way past both peaks
+\item City corporation attains optimal city sizes under Assumption B
+\item City corporation achieves $N(J)$ under Assumption A
+\end{itemize}
+\end{column}
+\end{columns}
+{\footnotesize BDRN (2014): ``there is a coordination failure in city formation so that any population size between optimal city size and grossly oversized cities -- leaving their residents with zero consumption -- can occur in equilibrium.''\par}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Henderson (1974) on heterogeneous cities}
+\begin{itemize}
+    \item ``Our second type of city specializes in the production of another type of traded good, say, $X_2$.''
+    \item ``Different types of cities differ in size because production parameters, in particular $\alpha_i$ and $\rho_i$, differ between the traded goods of each type of city.''
+    \item ``Although utility levels will be equalized between cities, wage rates and housing prices will vary with city type and size.''
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+% -----------------------------------------
+\begin{frame}{Ahlfeldt, Redding, Sturm, Wolf (Ecma, 2015)}
+ARSW is often referred to as ``the Berlin Wall paper'':
+\begin{itemize}
+\item Develop a quantitative model of the city to identify intra-city agglomeration and dispersion forces
+\item Estimate model using data for thousands of city blocks in Berlin on land prices, workplace employment, andemployment by residential location in 1936, 1986 and 2006
+\item Use the division of Berlin in the aftermath of the Second World War and its reunification in 1989 as a source of exogenous variation in the surrounding concentration of economic activity
+\end{itemize}
+Won the \href{https://www.econometricsociety.org/society/awards}{2018 Frisch Medal} for best applied paper in \textit{Econometrica}:
+{\small ``The paper provides an outstanding example of how to credibly and transparently use a quasi-experimental approach to structurally estimate model parameters that can serve as critical inputs for counterfactual policy analyses.''
+(cf \href{http://www.econ.yale.edu/~pah29/intro.pdf}{Haile})\par}
+{\small \textcolor{gray}{Thanks to Felix for sharing \TeX\ of the following slides.}}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Dividing Berlin}
+\begin{itemize}
+{\small
+\item A protocol signed during the Second World War organized Germany into American, British, French, and Soviet occupation zones
+\item Although 200km inside the Soviet zone, Berlin was to be jointly occupied and organized into four occupation red:
+\begin{itemize}
+\item Boundaries followed pre-war district boundaries, with the same East-West orientation as the occupation zones, and created sectors of roughly equal pre-war population (prior to French sector which was created from part of the British sector)
+  \item Protocol envisioned a joint city administration (``Kommandatura'')
+    \end{itemize}
+\item Following the onset of the Cold War
+    \begin{itemize}
+    \item East and West Germany founded as separate states and separate city governments created in East and West Berlin in 1949
+    \item The adoption of Soviet-style policies of command and control in East Berlin limited economic interactions with West Berlin
+    \item To stop civilians leaving for West Germany, the East German authorities constructed the Berlin Wall in 1961
+    \end{itemize}
+}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model: Overview}
+\begin{itemize}
+\item The city consists of a set of discrete blocks indexed by $i$ 
+\item Single, freely traded (numeraire) final good
+\item Floor space can be used for residential or commercial use
+\item Firms choose a block of production and inputs of labor and floor space 
+\item Workers choose block of residence, block of employment, and consumption of the final good 
+\item Reservation level of utility $(\bar{U})$ for living outside the city
+\item[] {\small Individuals who choose Berlin and realize utility below the city-wide average cannot leave.\par}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model: Workers }
+\begin{itemize}
+\item Utility for worker $\omega$ residing in block $i$ and working in block $j$:
+\begin{equation*}
+U_{ij \omega} = \frac{B_{i} z_{ij\omega}}{d_{ij}}
+\left( \frac{c_{ij}}{\beta} \right)^{\beta } \left( \frac{\ell
+_{ij }}{1-\beta} \right)^{1-\beta },\qquad 0<\beta <1, 
+\end{equation*}
+    \begin{itemize}
+    \item Consumption of the final good ($c_{ij}$), numeraire ($p_{i}=1$)
+    \item Residential floor space ($\ell_{ij}$), price $Q_{i}$
+    \item Residential amenity $B_{i}$
+    \item Commuting costs $d_{ij}$
+    \item Idiosyncratic shock $z_{ij\omega}$ 
+    \item Wage $w_{j}$
+    \end{itemize}
+\item Indirect utility
+\begin{equation*}
+U_{ij\omega} = \frac{z_{ij\omega} B_{i} w_{j} Q_{i}^{\beta-1}}{d_{ij}},
+\end{equation*}
+\item The idiosyncratic shock to worker productivity is drawn from a Fr\'{e}chet distribution:
+\begin{equation*}
+F(z_{ij\omega})=e^{-T_{i} E_{j} z_{ij\omega}^{-\epsilon }},\qquad T_{i}, E_{j} >0,\ \epsilon >1,  
+\end{equation*}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model: Commuting decisions}
+\begin{itemize}
+\item Probability worker chooses to live in $i$ and work in $j$ is
+\begin{equation*} \label{eq:com_prob}
+\pi _{ij}= \frac{T_{i} E_{j} \left( d_{ij}
+Q_{i}^{1-\beta} \right)^{-\epsilon} \left( B_{i} w_{j} \right)^{\epsilon}}{%
+\sum_{r=1}^{S} \sum_{s=1}^{S} T_{r} E_{s} \left( d_{rs} Q_{r}^{1-\beta}
+\right)^{-\epsilon} \left( B_{r} w_{s} \right)^{\epsilon}} \equiv \frac{\Phi_{ij}}{\Phi} .
+\end{equation*}
+\item Residential and workplace choice probabilities
+\begin{equation*} \label{eq:ch_prob}
+\pi_{Ri} = \sum_{j=1}^{S} \pi_{ij} = \frac{\sum_{j=1}^{S} \Phi_{ij}}{\Phi}, \qquad  \pi_{Mj} = \sum_{i=1}^{S} \pi_{ij} = \frac{\sum_{i=1}^{S} \Phi_{ij}}{\Phi}.
+\end{equation*}
+\item Conditional on living in block $i$, the probability that a worker commutes to block $j$ follows a gravity equation:
+\begin{equation*}
+\pi _{ij|i}=\frac{ E_{j} \left( w_{j} / d_{ij} \right)^{\epsilon}}{
+\sum_{s=1}^{S} E_{s} \left( w_{s} / d_{is} \right)^{\epsilon}},
+\end{equation*}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model: Commuting }
+\begin{itemize}
+\item Employment in block $j$ equals the sum across all blocks $i$ of people living in residence times the probability of commuting from $i$ to $j$:
+\begin{equation*} \label{eq:wbo}
+H_{Mj}=\sum_{i=1}^{S} \frac{E_{j}\left(
+w_{j}/d_{ij}\right) ^{\epsilon }}{\sum_{s=1}^{S}E_{s}\left( w_{s}/d_{is}\right)
+^{\epsilon }} H_{Ri}, \qquad d_{ij} = e^{\kappa \tau_{ij}}.
+\end{equation*} \smallskip
+\item This equation be useful to determine equilibrium wages. 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model: Consumers}
+\begin{itemize}
+\item Consumers decide before idiosyncratic shocks  $z_{ij\omega}$  are realized whether to move to the city or not.
+\item Population mobility implies that expected utility equals reservation utility level:
+\begin{equation*} \label{eq:pm}
+\mathbb{E} \left[ U \right]  = \gamma \left[ \sum_{r=1}^{S} \sum_{s=1}^{S} T_{r} E_{s} \left( d_{rs}
+Q_{r}^{1-\beta} \right)^{-\epsilon} \left( B_{r} w_{s} \right)^{\epsilon} %
+\right]^{1/\epsilon} = \bar{U},  
+\end{equation*}
+\item Residential amenities are influenced by both fundamentals ($b_{i}$) and spillovers ($\Omega_{i}$)
+\[
+ B_{i} = b_{i} \Omega_{i}^{\eta}, \qquad \Omega_{i} \equiv \left[ \sum\limits_{s=1}^{S} e^{-\rho \tau_{is}} \left( \frac{H_{Rs}}{K_s} \right) \right].
+\]
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model: Production}
+\begin{itemize}
+\item A single final good (numeraire) is produced under conditions of perfect competition, constant returns to scale and zero trade costs with a larger economy:
+\[
+y_{j} = A_{j} \left( H_{Mj} \right)^{\alpha} \left( L_{Mj} \right)^{1-\alpha},\qquad 0<\alpha <1,
+\]
+\item $H_{Mj}$ is workplace employment 
+\item $L_{Mj}$ is measure of floor space used commercially
+%\item $\theta_{j}$ is the fraction of floor space allocated to commercial use
+\item Productivity ($A_j$) depends on fundamentals ($a_j$) and spillovers ($\Upsilon_{j}$):
+\[
+A_{j} = a_{j} \Upsilon_{j}^{\lambda}, \qquad \Upsilon_{j} \equiv \left[ \sum\limits_{s=1}^{S} e^{-\delta \tau_{is}} \left( \frac{H_{Ms}}{K_s} \right) \right],
+\]
+\item $\delta$ is the rate of decay of spillovers
+\item $\lambda$ captures the relative importance of spillovers
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model: Land prices}
+\begin{itemize}
+\item The share of floor space used commerically:
+\begin{equation*} \label{eq_na}
+\theta_i = 1 \quad \text{if} \qquad q_i> \xi_i Q_i,
+\end{equation*}
+\[
+\theta_i \in [0,1] \quad  \text{if} \qquad q_i = \xi_i Q_i,
+\]
+\[
+\theta_i = 0 \quad  \text{if} \qquad q_i < \xi_i Q_i.
+\]
+\item $\xi_i \geq 1$ represents 1 plus the tax equivalent of land use regulations
+\item Assume observed land price is maximum of commerical and residential price: $\mathbb{Q}_{i} = \max\{q_i,Q_i\}$
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model: Production}
+\begin{itemize}
+\item Firms choose a block of production, effective employment and commercial land use to maximize profits taking as given goods and factor prices, productivity and the locations of other firms/workers
+\item Zero profits imply for the price of commercial land $q_{j}$:
+\begin{equation*} \label{eq:zp}
+q_{j}=(1-\alpha )\left( \frac{\alpha }{w_{j}}\right) ^{\frac{\alpha }{%
+1-\alpha }}A_{j}^{\frac{1}{1-\alpha }}.
+\end{equation*}
+%\item \textcolor{blue}{Production fundamentals $(a_{j})$} and \textcolor{blue}{spillovers $(\Upsilon_{j})$} follow from the production technology:
+%\[
+%a_{j} = A_{j} \Upsilon_{j}^{-\lambda}, \qquad \Upsilon_{j} \equiv \left[ \sum\limits_{s=1}^{S} e^{-\delta \tau_{is}} \left( \frac{H_{Ms}}{K_s} \right) \right]^{-\lambda}.
+%\] \smallskip
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{ARSW model:  Land Market Clearing}
+\begin{itemize}
+\item Utility max implies demand for residential floor space:
+\begin{equation*} \label{eq:res_mc}
+(1-\theta_{i}) L_{i} = \frac{ (1-\beta) \mathbb{E}(w \mid i) }{Q_i} H_{Ri}.
+\end{equation*}
+\item Profit max implies demand for commercial floor space:
+\begin{equation*} \label{eq:com_mc}
+\theta_{i} L_{i} = H_{Mi} \left( \frac{(1-\alpha) A_{i}}{q_{i}} \right)^{\frac{1}{\alpha}}.
+\end{equation*}
+\item Floor space $L$ supplied by a competitive construction sector using geographic land $K$ and capital $M$ as inputs
+\begin{equation*}
+L_{i} = \varphi_{i} K_{i}^{1-\mu} , \qquad \varphi_{i}=M_{i}^{\mu},
+\end{equation*}
+\item Density of development $(\varphi_{i})$ from land market clearing:
+\[
+\varphi_{i} = \frac{L_{i}}{K_{i}^{1-\mu}} = \frac{(1-\theta_{i}) L_{i} + \theta_{i} L_{i}}{K_{i}^{1-\mu}}
+\]
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Equilibrium with exogenous loc. charact.}
+\begin{itemize}
+\item \textbf{Proposition 1:} Given the model's parameters $[\alpha,\beta,\mu,\epsilon,\kappa]$, the reservation utility $\bar{U}$, and vectors of exogenous location characteristics $[T,E,A,B,\phi,K,\xi,\tau]$, there exists a unique general equilibrium vector $[\pi_{M},\pi_{R},H,Q,q,w,\theta]$, where $H$ denotes total city population. 
+\item These seven components are determined by the system of seven equations: 
+commercial land market clearing, %\eqref{eq:com_mc},
+residential land market clearing, %\eqref{eq:res_mc},
+zero profits, %\eqref{eq:zp},
+no arbitrage between alternative uses of land, %\eqref{eq_na},
+residential choice probability $\pi_{Ri}$, % in \eqref{eq:ch_prob}),
+workplace choice probability $\pi_{Mi}$, % in \eqref{eq:ch_prob})),
+and indifference with reservation utility. %\eqref{eq:pm}. 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Overview of remainder of paper}
+\begin{itemize}
+\item Relate land prices to distance to pre-war CBD
+\item Estimate the model without any agglomeration effects. In counterfactuals, this model ``is unable to account quantitatively for the observed impact of division and reunification on the pat- tern of economic activity within West Berlin.''
+\item 
+Next the authors present a reduced-form empirical exercise on land price and population changes
+\item Then the authors estimate simple version of the model without agglomeration effects. They show that when doing counterfactuals (i.e. establishing / removing a wall, with its effects on where you can live, work) the counterfactual predictions are different from the data 
+\item Estimate model with local production and residential amenity externalities. These are interesting in their own right and improve model fit (they also create possibility of multiple equilibria, which must be handled carefully)
+%\item Authors observe workplace employment ($H_{Mj}$), residence employment ($H_{Ri}$) and bilateral travel times ($\tau_{ij}$ and hence $d_{ij}$ for a given $\kappa$) \medskip
+%\item Given these observed data, one can solve for the wages for which the observed values of workplace and residence employment are an equilibrium of the model \medskip
+%\item System of $S$ equations that determines unique values of the $S$ unknown wages $\{w_{j}\}$
+%
+%
+%\item Residential amenities ($B_{i}$) recovered from residential choice probabilities:
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\begin{frame}{Identification}
+%\begin{itemize}
+%
+%\huge{LATER}
+%
+%%\item Authors observe workplace employment ($H_{Mj}$), residence employment ($H_{Ri}$) and bilateral travel times ($\tau_{ij}$ and hence $d_{ij}$ for a given $\kappa$) \medskip
+%%\item Given these observed data, one can solve for the wages for which the observed values of workplace and residence employment are an equilibrium of the model \medskip
+%%\item System of $S$ equations that determines unique values of the $S$ unknown wages $\{w_{j}\}$
+%%
+%%
+%%\item Residential amenities ($B_{i}$) recovered from residential choice probabilities:
+%
+%
+%
+%\end{itemize}
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Data}
+\begin{itemize}
+\item Data on land prices, workplace employment, residence employment and bilateral travel times
+\item Data for Greater Berlin in 1936 and 2006
+\item Data for West Berlin in 1986
+\item Data at the following levels of spatial aggregation:
+    \begin{itemize}
+    \item[--] Pre-war districts (``Bezirke''), 20 in Greater Berlin, 12 in West Berlin
+    \item[--] Statistical areas (``Gebiete''), around 90 in West Berlin
+    \item[--] Statistical blocks, around 9,000 in West Berlin
+    \end{itemize}
+\item Land prices: official assessed land value of a representative undeveloped property or the fair market value of a developed property if it were not developed
+\item Geographical Information Systems (GIS) data on\\
+{\small land area, land use, building density, proximity to U-Bahn (underground) and S-Bahn (suburban) stations, schools, parks, lakes, canals and rivers, Second World War destruction, location of government buildings and urban regeneration programs\par}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Land prices in Berlin in 1936}
+Land prices are normalized to have a mean of 1 in each year.
+\begin{figure}
+\centering
+  \includegraphics[width=.95\textwidth]{../images/ARSW_Map3d1.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Land prices in West Berlin in 1936}
+\begin{figure}
+\centering
+  \includegraphics[width=.95\textwidth]{../images/ARSW_Map3d2.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Land prices in West Berlin in 1986}
+\begin{figure}
+\centering
+  \includegraphics[width=.95\textwidth]{../images/ARSW_Map3d3.pdf}
+\end{figure}
+\end{frame}
+\begin{frame}{Land prices in Berlin in 2006}
+\begin{figure}
+\centering
+  \includegraphics[width=.95\textwidth]{../images/ARSW_Map3d4.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Land prices in West Berlin in 2006}
+\begin{figure}
+\centering
+  \includegraphics[width=.95\textwidth]{../images/ARSW_Map3d5.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Diff-in-diffs specification}
+\begin{itemize}
+\item Estimate difference in difference specification for division and reunification separately (for areas in West Berlin):
+\begin{equation*}
+\Delta \ln Q_{i} = \psi + \sum_{k=1}^{K} \mathbf{1}_{ik} \beta_{k} + \ln X_{i} \zeta + \chi_{i},\label{emprent3}
+\end{equation*}
+\item $\mathbf{1}_{ik}$ is a $(0,1)$ dummy which equals one if block $i$ lies within distance grid cell $k$ from the pre-war CBD and zero otherwise
+\item Observable block characteristics ($X_{i}$): Land area, land use, distance to nearest U-Bahn station, S-Bahn station, school, lake, river or canal, and park, war destruction, government buildings and urban regeneration programs
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Division and Pre-War CBD}
+\begin{figure}
+\centering
+  \includegraphics[width=.95\textwidth]{../images/ARSW_centraldivision.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Diff-in-diffs West Berlin 1936-86}
+\begin{figure}
+\centering
+  \includegraphics[width=1\textwidth]{../images/ARSW_Table1.pdf}
+\end{figure}
+\end{frame}
+\begin{frame}{Diff-in-diffs West Berlin 1986-2006}
+\begin{figure}
+\centering
+  \includegraphics[width=1\textwidth]{../images/ARSW_Table2.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Land prices over time}
+Placebo test: Land price change from 1928 to 1936. 
+Of the change from 1936 - 1986, most of the effect is already in place by 1966.
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\textwidth]{../images/ARSW_Figure3.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Gravity regression for commuting}
+Gravity equation for commuting from residence $i$ to workplace $j$:
+\begin{equation*}
+\ln \pi_{ij} = - \nu \tau_{ij}  + \vartheta_{i} + \varsigma_{j} + e_{ij},
+\label{gravity}
+\end{equation*}
+where $\tau_{ij}$ is transit minutes, $\nu = \epsilon \kappa$, and 
+$\vartheta_{i}$ and  $\varsigma_{j}$ are fixed effects
+%\item Using estimated $\nu$, can solve for transformed wages $\omega_{j}=w_{j}^{\epsilon}$ and recover overall productivity $A_{j}$ and amenities $B_{i}$
+%\item (Without making assumptions about the relative importance of production and residential externalities versus fundamentals) 
+\begin{figure}
+\centering
+  \includegraphics[width=\textwidth]{../images/ARSW_Table3.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Backing out amenities and productivities}
+\begin{itemize}
+\item Using estimated $\nu$, and data on residence and workplace employment, one can solve for transformed wages $\omega_{j}=w_{j}^{\epsilon}$ from commuting equation (summed over origins)
+\item Recover overall productivity $A_{j}$ from zero-profit equation:
+\begin{equation*}
+\ln\left(\frac{A_{it}}{\bar{A_{t}}} \right) = (1-\alpha) \ln \left(\frac{\mathbb{Q}_{it}}{\bar{\mathbb{Q}}_t} \right) + \frac{\alpha}{\epsilon} \ln \left(\frac{\omega_{it}}{\bar{\omega}_t} \right)
+\end{equation*}
+where $\bar{A}_t = \exp(1/S \sum_{s=1}^{S} \ln A_{st})$ (geometric mean)
+\item High floor prices and wages require high final good productivity for zero profits to be satisfied 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Backing out amenities and productivities }
+\begin{itemize}
+\item Recover amenities $B_{i}$ from residential choice probabilities:
+\begin{equation*}
+\ln\left(\frac{B_{it}}{\bar{B}_{t}} \right) = \frac{1}{\epsilon} \ln \left(\frac{H_{Rit}}{\bar{H}_{Rt}} \right) +  (1-\beta) \ln \left(\frac{\mathbb{Q}_{it}}{\bar{\mathbb{Q}}_t} \right) + \frac{1}{\epsilon} \ln \left(\frac{W_{it}}{\bar{W}_t} \right)
+\end{equation*}
+where $W_{it} = \sum_{s=1}^{S} \omega_{st} / e^{\nu \tau_{ist}}$  and variables with an upper bar denote that variable's geometric mean.
+\item High floor prices and high residence employment must be explained either by high wage commuting access or high amenities.  
+\item (So far not making assumptions about the relative importance of production and residential externalities versus fundamentals) 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Backing out amenities and productivities }
+\begin{itemize}
+\item Fix other parameters ($\alpha$, ...) to values from the literature. 
+\item Estimate $\epsilon$ from dispersion of log adjusted wages backed out in the model and log wages in the data for a selected year. 
+\item Next table shows in columns 1-4 how the amenities and productivities changed over time. 
+\item Also, simulate the impact of the division on West Berlin, holding productivity, amenities constant at their 1936 values. Column 5 shows that the models prediction are off from the diff and diff results (-.4 versus -.8 log points) Similarly for column 6 (re-unification; 0 versus -.4 log points). 
+\end{itemize}
+\end{frame}
+%\begin{frame}{Commuting Data and Model Predictions}
+%\begin{figure}
+%\centering
+%  \includegraphics[width=0.9\textwidth]{graphics/ARSW_Figure4.pdf}
+%\end{figure}
+%\end{frame}
+\begin{frame}{Changes in Amenities and Productivity}
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\textwidth]{../images/ARSW_Table4.pdf}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Estimation of structural model}
+\begin{itemize}
+\item Next, use exogenous variation from Berlin's division and reunification to estimate model parameters including the agglomeration forces. 
+\item From the previous equations and definitions:
+\begin{align*}
+\Delta \ln\left(\frac{a_{it}}{\bar{a}_{t}} \right) 
+&=
+(1-\alpha) \Delta \ln \left(\frac{\mathbb{Q}_{it}}{\bar{\mathbb{Q}}_t} \right) + \frac{\alpha}{\epsilon} \Delta \ln \left(\frac{\omega_{it}}{\bar{\omega}_t} \right) - \lambda \Delta \ln \left( \frac{\Upsilon_{it}}{\bar{\Upsilon}_{t}} \right)
+\\
+\Delta \ln\left(\frac{b_{it}}{\bar{b}_{t}} \right) 
+&=
+\frac{1}{\epsilon} \Delta \ln \left(\frac{H_{Rit}}{\bar{H}_{Rt}} \right) +  (1-\beta) \Delta \ln \left(\frac{\mathbb{Q}_{it}}{\bar{\mathbb{Q}}_t} \right) \\
+&\quad
++ \frac{1}{\epsilon} \Delta \ln \left(\frac{W_{it}}{\bar{W}_t} \right)   - \eta \Delta \ln \left( \frac{\Omega_{it}}{\bar{\Omega}_{t}} \right)
+\end{align*}
+\item Production externalities $\Upsilon_{it}$ depend on travel-time weighted sum of observed workplace employment densities
+\item Residential externalities $\Omega_{it}$ depend on travel-time weighted sum of observed residence employment densities
+\item Adjusted fundamentals relative to geometric mean are structural residuals
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Parameters}
+\begin{table}[h]
+\begin{flushleft}
+{\small
+\begin{tabular}{llll} \hline\hline
+Assumed Parameter & & Source & Value \\ \hline
+Residential land & $ 1-\beta $ & Davis \& Ortalo-Magne (2011) & 0.25 \\
+Commercial land & $1-\alpha$ & Valentinyi-Herrendorf (2008) & 0.20 \\
+Fr\'{e}chet Scale & $T$ & (normalization) & 1 \\
+Expected Utility & $\bar{u}$ & (normalization) & 1000 \\ \hline\hline
+\end{tabular}
+}
+\end{flushleft}
+\end{table}
+\begin{table}[h]
+\begin{flushleft}
+{\small
+\begin{tabular}{ll} \hline\hline
+Estimated Parameter \\ \hline
+Production externalities elasticity & $\lambda$ \\
+Production externalities decay & $\delta$ \\
+Residential externalities elasticity & $\eta$ \\
+Residential externalities decay & $\rho$ \\
+Commuting semi-elasticity & $\nu=\epsilon \kappa$ \\
+Commuting heterogeneity & $\epsilon$ \\ \hline\hline
+\end{tabular}
+}
+\end{flushleft}
+\end{table}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Moment Conditions}
+\begin{itemize}
+\item Changes in adjusted fundamentals uncorrelated with exogenous change in surrounding economic activity from division/reunification
+\begin{equation*}
+\mathbb{E} \left[ \mathbb{I}_{k} \times \Delta \ln \left( a_{it} / \bar{a}_{t} \right) \right] = 0, \qquad k \in \{1, \dots, K_{\mathbb{I}}\},
+\end{equation*}
+\begin{equation*}
+\mathbb{E} \left[ \mathbb{I}_{k} \times \Delta \ln \left( b_{it} / \bar{b}_{t} \right) \right] = 0, \qquad k \in \{1, \dots, K_{\mathbb{I}}\}.
+\end{equation*}
+where $ \mathbb{I}_{k}$ are indicators for distance grid cells from pre-war CBD
+\item Other moments are fraction of workers that commute less than 30 minutes and wage dispersion
+\begin{equation*}
+\mathbb{E} \left[ \vartheta H_{Mj} - \sum_{i \in \aleph_{j}}^{S} \frac{ \omega_{j} / e^{\nu \tau_{ij}} }
+{\sum_{s=1}^{S} \omega_{s} / e^{\nu \tau_{is}} } H_{Ri} \right] = 0,
+\end{equation*}
+\begin{equation*}
+\mathbb{E} \left[ \left( 1/\epsilon \right)^{2} \ln \left( \omega_{j} \right)^{2} - \sigma_{\ln w_{i}}^{2} \right] = 0,
+\end{equation*}
+\end{itemize}
+\end{frame}
+\begin{frame}{Estimated Parameters}
+\begin{figure}
+\centering
+  \includegraphics[width=1\textwidth]{../images/ARSW_Table5.pdf}
+\end{figure}
+\end{frame}
+\begin{frame}{Localized Externalities} \vspace{-0.25in}
+\begin{figure}
+\centering
+  \includegraphics[width=.95\textwidth]{../images/ARSW_Table6.pdf}
+\end{figure}
+\end{frame}
+\begin{frame}{Counterfactuals}
+\begin{figure}
+\centering
+  \includegraphics[width=1.03\textwidth]{../images/ARSW_Table7.pdf}
+\end{figure}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{How these models work: Normative properties}
+Davis, Gregory (2021) - ``\href{https://www.nber.org/papers/w29045}{Place-Based Redistribution in Simple Location-Choice Models}''
+\begin{itemize}
+\item
+\href{https://academic.oup.com/qje/article-abstract/135/2/959/5697213}{Fajgelbaum and Gaubert (2020)} and subsequent papers
+prescribe fiscal transfers (trade deficits) to high-MU-of-tradables places
+(cf \href{https://www.brookings.edu/wp-content/uploads/2008/03/2008a_bpea_glaeser.pdf}{Glaeser and Gottlieb 2008})
+\item
+Idiosyncratic errors terms are uninsured and affect location choices, the level of utility, and marginal utility
+\item 
+Frechet vs Weibull:
+marginal utilities can differ even when allocations and elasticities for marginal households coincide,
+thus making the planning problems differ even when positive predictions coincide
+\item
+I conjecture that if you write GEV errors,
+the model is underidentified without further functional form choices
+\item
+I am skeptical that their proposed computational approach to planning problem will scale to empirical applications
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{How these models work: Positive properties}
+\href{https://matthewturner.org/papers/unpublished/Thisse_Turner_Ushchev_unp_2021.pdf}{Thisse, Turner, Ushchev (2021)}
+contrast quantitative spatial models and canonical urban model
+\begin{itemize}
+\item QSM features cross-hauling of homogeneous labor, canonical model does not
+\item Canonical model: Commuting costs are a centralizing force when employment is concentrated (e.g., the monocentric case)
+\item QSM: commuting costs are a centralizing force even when net labor flows are zero
+\end{itemize}
+Dingel, Tintelnot (2021) - ``Spatial Economics for Granular Settings''
+\begin{itemize}
+\item Go to presentation slide deck
+\end{itemize}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Next week}
+Next week, we introduce heterogeneous agents and activities:\\
+spatial sorting of skills and sectors
+\end{frame}
+% -----------------------------------------
+\end{document}
