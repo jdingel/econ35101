@@ -1,8 +1,8 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2021\
+Autumn 2022\
 Comprehension check 2\
-Due: 18 October 2021, 8:30am
+Due: Beginning of week 4 class
 
 ### Immiserizing growth in the Armington model
 

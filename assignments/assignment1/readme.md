@@ -1,15 +1,20 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2021\
+Autumn 2022\
 Assignment 1\
-Due: 18 Oct 2021, 8:30am
-
+Due: Beginning of week 4 class
 
 Your assignment is to write a function that solves a discrete approximation of Dornbusch, Fischer & Samuelson - A Ricardian Model with a Continuum of Goods (*AER* 1977).
 You will employ it to do comparative statics.
 You may do so in **Julia** or **Matlab**.
+
+### Deliverables
+
 Submit both your code and output via Canvas before the deadline.
 You may consult your classmates while working on the assignment, but each individual student must submit their own (distinct) code and output.
+The output should be a PDF containing answers to all questions below and the requested exhibits.
+
+#### Coding
 
 Your function should take four arguments:
 the productivities *a*,
@@ -35,7 +40,7 @@ output:
     *A*), strictly positive, and that sum(*b*)==1
 -   verify that *g* is a scalar in (0,1\] (as assumed in DFS III.B)
 
-I will test your function by passing arrays *a*, *b*, *L*, and *g* to your function and verifying that the output is correct.
+We will test your function by passing arrays *a*, *b*, *L*, and *g* to your function and verifying that the output is correct.
 Note that these arrays have fixed dimensionality but may be of arbitrary length.
 In particular, I might approximate the continuum of goods by using a grid of *N* = 100 or 1000 points.
 Make sure your solver can handle this.
@@ -53,6 +58,8 @@ that satisfies equation (11) \[in the case *g=1*\] or equation (22)
 \[generally\], as best can be done given the discrete approximation of
 the support of *z*. 
 Verify that your solution for the *a\[\]* and *b\[\]* provided in the TXT files matches those provided in [DFS1977\_example.pdf](DFS1977_example.pdf) when *g=1* and *g=0.9*.
+
+#### Economics
 
 In class, we said that Home's gains from trade can be written as an
 integral that depends on 
@@ -82,4 +89,5 @@ Here are a few notes on getting started in Julia:
 	You might also consider those that are [dependencies for the QuantEcon package](https://github.com/QuantEcon/QuantEcon.jl/blob/master/REQUIRE) and those listed as [Useful
     Libraries](https://lectures.quantecon.org/jl/julia_libraries.html)
     by QuantEcon.
+    You should only need a few packages (e.g., CSV, Interpolations, Plots, Random, etc.).
     Package installation can take a few minutes. Don't panic.

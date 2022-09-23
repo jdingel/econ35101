@@ -1,8 +1,8 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2021\
+Autumn 2022\
 Comprehension check 3\
-Due: 15 November 2021, 8:30am
+Due: Beginning of week 9 class
 
 ### Matsuyama (1992)
 

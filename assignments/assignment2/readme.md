@@ -1,12 +1,12 @@
 International Macroeconomics and Trade\
 BUSN 33946 & ECON 35101\
-Autumn 2021\
+Autumn 2022\
 Assignment 2\
-Due: 1 Nov 2021, 8:30am
-
-### Deliverables
+Due: Beginning of week 6 class
 
 This assignment looks at the estimation of "gravity" regressions for commuting flows between Detroit neighborhoods.
+
+### Deliverables
 
 For this assignment, please produce the following five outputs that are described in detail below:
 
@@ -23,7 +23,7 @@ For this assignment, please produce the following five outputs that are describe
 Submit all your code, the TeX output, and the compiled PDFs in one ZIP file via Canvas before the deadline.\
 You may consult your classmates while working on the assignment, but each individual student must submit their own (distinct) code and output.
 
-Please allow Jordan and I to run your code on our machines by minimizing
+Please allow us to run your code on our machines by minimizing
 your use of machine-specific filepaths.
 Define a global variable for the filepath at the top of your scripts or, preferably, write everything using [relative filepaths](https://help.github.com/articles/about-readmes/#relative-links-and-image-paths-in-readme-files).
 

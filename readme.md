@@ -14,32 +14,25 @@ We will meet in person consistent with University policies.
 
 Email: <rodrigo.adao@chicagobooth.edu> & <jdingel@chicagobooth.edu>\
 Office: Harper 381 & 380\
-Office hours: By appointment, please email
-<!--Teaching assistant: TBA-->
+Office hours: By appointment, please email\
+Teaching assistant: Raman Singh Chhina (<rschhina@uchicago.edu>)\
 Course materials: [github.com/jdingel/econ35101](http://github.com/jdingel/econ35101) and
 [canvas.uchicago.edu](https://canvas.uchicago.edu/courses/43957)\
 Class schedule: Wednesdays 8:30 AM - 11:30 AM
 
 ### Assessment
 
-Grades will be based on comprehension checks (15%), assignments (60%),
-and a final exam (25%).
+Grades will be based on comprehension checks (15%), assignments (60%), and a final exam (25%).
 
--   Comprehension checks should require little more than comprehending
-    the assigned readings.
+-   Comprehension checks should require little more than comprehending the assigned readings.
 
--   We will give three types of assignments, which require more time and
-    creativity:
+-   We will give three types of assignments, which require more time and creativity:
 
-    1.  Economics: We will ask you to derive a theoretical result or
-        survey an empirical literature.
+    1.  Economics: derive a theoretical result or survey an empirical literature.
 
-    2.  Programming: We will ask you to write a function that solves for
-        equilibrium or estimates a parameter. See comments on
-        computation below.
+    2.  Programming: write a function that solves for equilibrium or estimates a parameter(see comments on computation below)
 
-    3.  Referee reports: We will ask you to write a referee report on a
-        recent working paper.
+    3.  Referee reports: write a referee report on a recent working paper or rewrite one section of a recently published paper
 
 -   In addition to course material, the final exam may ask you to propose an original research idea, so you should be thinking about these during our class (and for the rest of your life!).
 
@@ -59,7 +52,6 @@ Economics](https://github.com/jesusfv/Comparison-Programming-Languages-Economics
 [Jonathan recommends](https://tradediversion.net/2018/09/17/why-i-encourage-econ-phd-students-to-learn-julia/)
 the [Julia language](http://www.julialang.org).
 Julia's advantages are that it is open source and typically faster than Matlab.
-Its downside is that it is a young language, so its syntax is evolving.
 To get started doing economics in Julia, see Perla, Sargent, and Stachurski's
 "[Lectures in Quantitative Economics](https://lectures.quantecon.org/jl/)."
 You may submit Julia or Matlab code as homework solutions.
@@ -71,14 +63,11 @@ Please write code for this class that is transparent and self-contained.
 
 ### Other resources
 
--   We borrow considerably from Arnaud Costinot and Dave Donaldson's PhD [class
-    materials](https://dave-donaldson.com/teaching/)
+-   We borrow considerably from Arnaud Costinot and Dave Donaldson's PhD [class materials](https://dave-donaldson.com/teaching/)
 
--   We will link to relevant [Trade
-    Diversion](https://tradediversion.net) blog posts
+-   We will link to relevant [Trade Diversion](https://tradediversion.net) blog posts
 
--   Alan Deardorff's [Glossary of International
-    Economics](http://www-personal.umich.edu/~alandear/glossary/)
+-   Alan Deardorff's [Glossary of International Economics](http://www-personal.umich.edu/~alandear/glossary/)
 
 ### Presentation and writing
 
@@ -93,14 +82,17 @@ As a well-known IO economist once said, “if I see typos in your slides, I know
 
 ## Course Outline and Reading List
 
+Jonathan teaches weeks 1 and 6-9
+and
+Rodrigo teaches weeks 2-5 and 10.
+
 We have opted for a minimalist reading list.
 Every reading listed below is required.
 We will discuss each paper and chapter that is listed in considerable detail.
 Do the readings before class each week.
 If you don't have time to do all the readings before class, we have marked the highest-priority item in each week with an exclamation point.
 
-If you’re going to be a trade economist, you ought to own the following
-books:
+If you’re going to be a trade economist, you ought to own the following books:
 
 -   Avinash Dixit and Victor Norman, [*Theory of International Trade: A
     Dual, General Equilibrium
@@ -207,6 +199,8 @@ books:
 
 #### Week 6: Increasing returns and home-market effects 
 
+-   Krugman, Paul R. 1979. "[Increasing returns, monopolistic competition, and international trade](https://doi.org/10.1016/0022-1996(79)90017-5)." *Journal of International Economics*, 9(4): 469-479.
+
 -   :exclamation: Krugman, Paul. 1980. "[Scale Economies, Product Differentiation, and
     the Pattern of
     Trade.](http://www.jstor.org.proxy.uchicago.edu/stable/1805774)"
@@ -232,6 +226,8 @@ books:
 
 #### Week 7: Models of agglomeration 
 
+-   Glaeser, Edward L., and Joshua D. Gottlieb. 2009. "[The Wealth of Cities: Agglomeration Economies and Spatial Equilibrium in the United States](https://www.aeaweb.org/articles?id=10.1257/jel.47.4.983)." *Journal of Economic Literature*, 47 (4): 983-1028.
+
 -   Henderson, J.V. 1974. "[The Sizes and Types of
     Cities](http://www.jstor.org.proxy.uchicago.edu/stable/1813316)."
     *American Economic Review*, 64(4): 640-656.
@@ -243,8 +239,6 @@ books:
     *Econometrica,* 83(6): 2127–2189.
 
 -   Dingel, Jonathan I. and Felix Tintelnot. 2021. "[Spatial Economics for Granular Settings](http://www.jdingel.com/research/DingelTintelnotSEGS.pdf)." Working paper.
-
--   Davis, Morris and Jesse Gregory. 2020. "[Place-Based Redistribution in Simple Location-Choice Models](https://www.ssc.wisc.edu/~jmgregory/md-jg-redistribution.pdf)." Working paper.
 
 #### Week 8: Spatial sorting of skills and sectors 
 
@@ -258,11 +252,11 @@ books:
     1980-2000](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/aer.20131706)."
     *American Economic Review*, 106(3): 479-524.
 
--   Davis, Donald and Jonathan I. Dingel. 2019. "[A Spatial Knowledge
+-   Davis, Donald R. and Jonathan I. Dingel. 2019. "[A Spatial Knowledge
     Economy](https://www.aeaweb.org/articles?id=10.1257/aer.20130249)."
     *American Economic Review*, 109 (1): 153-70.
 
--   Davis, Donald and Jonathan I. Dingel. 2020. "[The Comparative
+-   Davis, Donald R. and Jonathan I. Dingel. 2020. "[The Comparative
     Advantage of
     Cities.](http://faculty.chicagobooth.edu/jonathan.dingel/research/DavisDingel-TheComparativeAdvantageofCities.pdf)"
     *Journal of International Economics*.
@@ -290,11 +284,11 @@ books:
 
 #### Week 10: Heterogeneous firms 
 
--   Melitz, Marc and Daniel Trefler. 2012. "[Gains from Trade when Firms
-    Matter](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/jep.26.2.91)."
-    *Journal of Economic Perspectives,* 26(2): 91-118.
-
 -   :exclamation: Melitz, Marc J. 2003. "[The Impact of Trade on Intra-Industry
     Reallocations and Aggregate Industry
     Productivity.](http://www.jstor.org.proxy.uchicago.edu/stable/1555536)"
     *Econometrica,* 71(6): 1695-1725.
+
+-   Melitz, Marc and Daniel Trefler. 2012. "[Gains from Trade when Firms
+    Matter](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/jep.26.2.91)."
+    *Journal of Economic Perspectives,* 26(2): 91-118.
