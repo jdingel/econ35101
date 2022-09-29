@@ -126,76 +126,56 @@ If you’re going to be a trade economist, you ought to own the following books:
     Japan](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/0002828053828491)."
     *American Economic Review*, 95 (1): 208-225.
 
-#### Week 2: Deterministic Ricardian models 
+#### Week 2: Ricardian models
 
 -   :exclamation: Dornbusch, Rudiger, Stanley Fischer, and Paul Samuelson. 1977.
     "[Comparative Advantage, Trade, and Payments in a Ricardian Model with a Continuum of Goods](http://www.jstor.org.proxy.uchicago.edu/stable/1828066?seq=1#page_scan_tab_contents)."
     *American Economic Review*, 67(5): 823-839
 
--   Costinot, Arnaud. 2009. 
-    "[An Elementary Theory of Comparative Advantage](http://www.jstor.org.proxy.uchicago.edu/stable/40263857)." 
-    *Econometrica,* 77(4): 1165-1192.
-
--   Matsuyama, Kiminori. 2000. 
-    "[A Ricardian Model with a Continuum of Goods under Nonhomothetic Preferences: Demand Complementarities, Income Distribution and North-South Trade](http://www.journals.uchicago.edu.proxy.uchicago.edu/doi/full/10.1086/317684)."
-    *Journal of Political Economy*, 108(6): 1093-1120.
-
-#### Week 3: Probabilistic Ricardian models 
-
--   :exclamation: Eaton, Jonathan and Samuel Kortum. 2002. "[Technology, Geography,
-    and
-    Trade](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/abs/10.1111/1468-0262.00352)."
+-   :exclamation: Eaton, Jonathan and Samuel Kortum. 2002.
+    "[Technology, Geography, and Trade](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/abs/10.1111/1468-0262.00352)."
     *Econometrica,* 70(5): 1741-1779.
 
--   Costinot, Arnaud and David Donaldson, and Ivana Komunjer. 2012.
-    "[What Goods Do Countries Trade? A Quantitative Exploration of
-    Ricardo's
-    Ideas](http://academic.oup.com.proxy.uchicago.edu/restud/issue/79/2)."
+-   Eaton, Jonathan, and Samuel Kortum. 2012.
+    "[Putting Ricardo to Work](https://www.aeaweb.org/articles?id=10.1257/jep.26.2.65)."
+    *Journal of Economic Perspectives*, 26 (2): 65-90.
+
+-   Alvarez, Fernando and Robert E. Lucas. 2007.
+    "[General equilibrium analysis of the Eaton-Kortum model of international trade](https://doi.org/10.1016/j.jmoneco.2006.07.006)."
+    *Journal of Monetary Economics*. 54(6): 1726-1768.
+
+#### Week 3: Ricardian models
+
+-   Costinot, Arnaud, Dave Donaldson, and Ivana Komunjer. 2012.
+    "[What Goods Do Countries
+    Trade? A Quantitative Exploration of Ricardo's Ideas](http://academic.oup.com.proxy.uchicago.edu/restud/issue/79/2)."
     *Review of Economic Studies,* 79(2): 581-608.
 
-#### Week 4: Gravity and gains from trade 
+-   Caliendo, Lorenzo, and Fernando Parro. 2015.
+    "[Estimates of the Trade and Welfare Effects of NAFTA](https://doi.org/10.1093/restud/rdu035)."
+    *The Review of Economic Studies*, 82(1): 1-44.
 
--   :exclamation: Head, Keith, and Thierry Mayer. 2014. "[Gravity Equations:
-    Workhorse, Toolkit, and
-    Cookbook](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/B9780444543141000033)."
-    in *Handbook of International Economics*, Vol. 4, 131-195.
+#### Week 4: Multiple factors of production
 
--   :exclamation: Kehoe, Timothy J., Pau S. Pujolàs, Jack Rossbach. 2017.
-    "[Quantitative Trade Models: Developments and  Challenges](https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080614-115502)."
-    *Annual Review of Economics* 9:1, 295-325.
+-   Jones, Ronald W. and J. Peter Neary. 1984. "[The positive theory of international trade](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/S1573440484010042)." in *Handbook of International Economics*, Vol. 1, 1-62.
 
--   Costinot, Arnaud and Andres Rodriguez-Clare. 2014.
- "[Trade Theory
-    with Numbers: Quantifying the Consequences of
-    Globalization](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/B9780444543141000045)."
-    in *Handbook of International Economics*, Vol. 4, 197-261.
+-   Feenstra textbook, chapters 1 and 2.
 
--   Allen, Treb, Costas Arkolakis, and Yuta Takahashi. 2020.
- "[Universal
-    Gravity](https://doi.org/10.1086/704385)," *Journal of Political
-    Economy*, 128(2).
+-   Davis, Donald and David Weinstein. 2001. "[An Account of Global Factor Trade.](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/aer.91.5.1423) *American Economic Review,* 91(5): 1423-1453.
 
--   Feyrer, James. 2021.
- "[Distance, Trade, and Income -- The 1967 to 1975 Closing of the Suez Canal as a Natural Experiment](https://doi.org/10.1016/j.jdeveco.2021.102708)."
-    *Journal of Development Economics*.
+#### Week 5: Gravity and gains from trade
 
--   Feyrer, James. 2019.
- "[Trade and Income - Exploiting Time Series in Geography](https://www.aeaweb.org/articles?id=10.1257/app.20170616)."
-    *American Economic Journal: Applied Economics*, 11(4): 1-35.
+-   Head, Keith, and Thierry Mayer. 2014. "[Gravity Equations: Workhorse, Toolkit, and Cookbook](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/B9780444543141000033)." in *Handbook of International Economics*, Vol. 4, 131-195.
 
-#### Week 5: Multiple factors of production 
+-   Kehoe, Timothy J., Pau S. Pujolàs, Jack Rossbach. 2017. "[Quantitative Trade Models: Developments and Challenges](https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080614-115502)." *Annual Review of Economics* 9:1, 295-325.
 
--   Jones, Ronald W. and J. Peter Neary. 1984. "[The positive theory of
-    international
-    trade](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/S1573440484010042)."
-    in *Handbook of International Economics*, Vol. 1, 1-62.
+-   Costinot, Arnaud and Andres Rodriguez-Clare. 2014. "[Trade Theory with Numbers: Quantifying the Consequences of Globalization](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/B9780444543141000045)." in *Handbook of International Economics*, Vol. 4, 197-261.
 
--   :exclamation: Feenstra textbook, chapters [1](http://assets.press.princeton.edu/chapters/s10615.pdf) and 2.
+-   Allen, Treb, Costas Arkolakis, and Yuta Takahashi. 2020. "[Universal Gravity](https://doi.org/10.1086/704385)," *Journal of Political Economy*, 128(2).
 
--   Davis, Donald and David Weinstein. 2001. "[An Account of Global
-    Factor
-    Trade.](http://www.aeaweb.org.proxy.uchicago.edu/articles?id=10.1257/aer.91.5.1423)
-    *American Economic Review*, 91(5): 1423-1453.
+-   Feyrer, James. 2021. "[Distance, Trade, and Income -- The 1967 to 1975 Closing of the Suez Canal as a Natural Experiment](https://doi.org/10.1016/j.jdeveco.2021.102708)." *Journal of Development Economics*.
+
+-   Feyrer, James. 2019. "[Trade and Income - Exploiting Time Series in Geography](https://www.aeaweb.org/articles?id=10.1257/app.20170616)." *American Economic Journal: Applied Economics*, 11(4): 1-35.
 
 #### Week 6: Increasing returns and home-market effects 
 
