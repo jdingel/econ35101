@@ -77,8 +77,9 @@ What can be said about the magnitude of the gains from trade in this model if we
 %	\item Fajgelbaum, Grossman, Helpman (2011) link income levels to quality specialization
 %	\item Matsuyama (2015) links income levels to sectoral specialization
 \end{itemize}
-I focus on internal economies of scale, for external economies see \href{https://mitpress.mit.edu/books/market-structure-and-foreign-trade}{Helpman and Krugman (1985, p.36-38)}, \href{http://qje.oxfordjournals.org/content/125/2/829.abstract}{Grossman and Rossi-Hansberg (2010, p.829-832)}, and \href{http://eml.berkeley.edu/~arodeml/}{Kucheryavyy, Lyn, and Rodriguez-Clare (2015)}
- 
+Most of today focuses on internal economies of scale.\\
+For external economies, see \href{https://mitpress.mit.edu/books/market-structure-and-foreign-trade}{Helpman and Krugman (1985, p.36-38)}, \href{http://qje.oxfordjournals.org/content/125/2/829.abstract}{Grossman and Rossi-Hansberg (2010, p.829-832)}, \href{http://eml.berkeley.edu/~arodeml/}{Kucheryavyy, Lyn, and Rodriguez-Clare (2015)},
+and Dingel, Gottlieb, Lozinski, Mourot (2022)
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Linder hypothesis}
@@ -126,6 +127,7 @@ A third approach might be to introduce transport costs. Transporting goods from 
 \item Fajgelbaum, Grossman, and Helpman (2011) + Dingel (2017)
 \item Matsuyama (2019) ``\href{https://onlinelibrary-wiley-com.proxy.uchicago.edu/doi/10.3982/ECTA13765}{Engel's Law in the Global Economy}''
 \item Costinot, Donaldson, Kyle, and Williams (2019) ``\href{https://academic.oup.com/qje/article/134/2/843/5298504}{The More We Die, The More We Sell? A Simple Test of the Home-Market Effect}''
+\item Dingel, Gottlieb, Lozinski, Mourot (2022)
 \end{itemize}
 \end{frame}
 % -----------------------------------------
@@ -185,6 +187,41 @@ n &= L(1-\theta)/\alpha
 n &= L(1-\theta)/\alpha, \  n^* = L^*(1-\theta)/\alpha 
 &\text{(11)}
 \end{align*}
+\end{frame}
+% -----------------------------------------
+\begin{frame}{Krugman (1980), section II}
+Transport costs ($g$), relative demand (call it $r$), relative wage ($\omega \equiv w / w^{*}$), and market clearing
+\begin{align*}
+r
+&=
+\left(\frac{p}{p^{*}}\right)^{1/(1-\theta)}g^{\theta/(1-\theta)}
+\\
+r^{*}
+&=
+\left(\frac{p}{p^{*}}\right)^{-1/(1-\theta)}g^{\theta/(1-\theta)}
+&
+\text{(12)}
+\\
+B
+&=
+\frac{r^{*}n\omega}{r^{*}n+n^{*}}L^{*}
+-
+\frac{r n^{*}}{n+r n^{*}}\omega L
+\\
+&=
+\omega L L^{*} \left[\frac{r^{*}}{r^{*} L + L^{*}} - \frac{r}{L + r L^{*}}\right]
+&
+\text{(14)}
+\\
+\omega = 1 \implies r = r^{*} < 1 \implies
+\\
+B
+&=
+r L L^{*} \left[\frac{1}{r L + L^{*}} - \frac{1}{L + r L^{*}}\right]
+&
+\text{(14')}
+\end{align*}
+$L>L^{*} \iff \omega > 1$. Contrast with DFS `77.
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Krugman (1980), section III}
@@ -490,16 +527,32 @@ Attempt to relax symmetry assumption, address spatially correlated demand
 \begin{center}\includegraphics[width=.8\textwidth]{../images/CDKW_table8.pdf}\end{center}
 \end{frame}
 % -----------------------------------------
+\begin{frame}{Home-markets effect in services trade}
+\href{http://www.jdingel.com/research/DGLM_MSTMS.pdf}{Dingel, Gottlieb, Lozinski, and Mourot (2022)}
+investigate market-size effects in trade in medical services between US regions
+\begin{itemize}
+\item Build procedure-level trade matrices from Medicare claims data
+\item Derive home-market effect in fixed-price model
+\item CDKW regression shows strong HME for medical services
+\item Larger market-size effects in less common procedures
+\end{itemize}
+\end{frame}
+% -----------------------------------------
 \begin{frame}{Home-market effects}
 \begin{itemize}
 	\item Home-market effects are a hallmark of new trade theory relative to neoclassical theories
 	\item Empirical evidence is still in its infancy
-	\item Home-market effects appear important to understanding both (1) quality specialization within US manufacturing and (2) global pharmaceutical sales
+	\item Home-market effects appear important to understanding:
+	\begin{itemize}
+		\item quality specialization within US manufacturing
+		\item global pharmaceutical sales
+		\item regional variation in medical services
+	\end{itemize}
 \end{itemize}
 \end{frame}
 % -----------------------------------------
 \begin{frame}{Next week}
-Heterogeneous firms
+Up next: Models of agglomeration
 \end{frame}
 % -----------------------------------------
 \end{document}
